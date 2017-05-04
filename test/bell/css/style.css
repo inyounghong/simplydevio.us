@@ -1,0 +1,743 @@
+*{
+	padding:0;
+	margin:0;
+	font-family:'Montserrat';
+}
+
+a{
+	text-decoration:none;
+}
+
+h2 a{
+	color:#008b85!important;
+}
+
+ p a{
+ 	color:#000;
+ }
+
+/* GENERAL STYLING */
+body{
+	background:#f8f8f8;
+}
+
+/* Wrapper for each main section */
+.section{
+	padding:100px 0;
+	clear:both;
+
+}
+
+.section.o{
+	background:#fe7e00;
+}
+
+.section.y{
+	
+}
+
+.section.b{
+	background:#00ada7;
+}
+
+.clear{
+	clear:both;
+}
+
+/* Keeps content centered */
+.wrap{
+	margin:0 auto;
+	max-width:1000px;
+	padding:0 50px;
+	position:relative;
+}
+
+/* NAV BAR */
+
+.nav{
+	height:80px;
+	position:fixed;
+	top:0;
+	width:100%;
+
+	z-index:99;
+
+}
+
+.navwrap {
+	width: auto;
+	position:relative;
+	z-index:99;
+}
+
+.navwrap:hover{
+	background:#fff;
+}
+
+.logo{
+	position:absolute;
+	left:10%;
+}
+
+.logo img{
+	margin-top:5px;
+	width:70px;
+}
+
+.logo .title{
+	display:inline-block;
+	position:relative;
+	top:-22px;
+	font-weight:700;
+	text-decoration:none!important;
+	font-size:2.2em;
+	color:#fff;
+	text-shadow: 1px 1px 4px #000;
+	margin-left:20px;
+}
+
+.links {
+	float:right;
+	margin-top: 20px;
+	margin-right: 10%;
+}
+
+.link{
+	display:inline-block;
+}
+
+.link a{
+	background-color:  #00ada7;
+	display:inline-block;
+	text-align:right;
+	border-radius:5px;
+	text-transform: uppercase;
+	font-size:15px;
+	vertical-align: top;
+	padding:8px 12px;
+	margin-left: 4px;
+	transition:all .2s;
+}
+
+.link a:hover{
+	background:#fe7e00;
+}
+
+.app{
+	display:inline-block;
+	text-align:right;
+	border-radius:5px;
+
+	vertical-align: top;
+
+
+}
+
+.link a{
+	text-decoration: none;
+	color:white;
+}
+
+
+
+.nav_background{
+	background:#fff;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:80px;
+	z-index:1;
+	opacity:1;
+}
+/* HERO IMAGE SECTION */
+
+.fixed{
+		position:fixed;
+		width:100%;
+}
+
+.header_image{
+	height:850px;
+	background: url('../images/cover2.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.cover{
+	position:relative;
+	top:850px;
+	background:#f8f8f8;
+}
+
+.blurb{
+	position:absolute;
+	background: #fe7e00;
+	color:#fff!important;
+	padding:50px 70px 50px 50px;
+	font-size:4em;
+	top:400px;
+	font-weight:700;
+
+}
+
+.arrow{
+	width:100px;
+	height:80px;
+	background:url('../images/arrow_small.png') no-repeat;
+	position:absolute;
+	top:600px;
+	right:100px;
+	z-index:1000;
+	
+}
+
+
+
+/* PLACING ORDER GET PAID SECTIONS */
+
+img#diagram{
+	width:900px;
+}
+
+.request{
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center;
+    float: left;
+    
+}
+.match{
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center;
+    float: left;
+    
+}
+.deliver{
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center;
+    float: left; 
+}
+
+.image{
+	width:47%;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+.col .image{
+    width:47%;
+    margin:0 1%;
+    display:inline-block;
+    vertical-align:middle;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    transition:all 0.2s;
+}
+
+.image:hover{
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0);
+}
+
+h1{
+    text-align: center;
+    margin-bottom:30px;
+    text-transform:uppercase;
+    color:#222;
+}
+
+h1.white{
+	color:#fff;
+}
+
+h2{
+	color:#222;
+}
+
+.section p{
+	color:#222;
+}
+
+.anchor{
+	position:relative;
+	top:-100px;
+}
+
+.anchor.p{
+	top:-150px;
+}
+
+/* ABOUT SECTION */
+
+.col{
+	display:inline-block;
+	width:44%;
+	vertical-align: top;
+}
+
+.col:nth-of-type(1){
+	margin-right:10%;
+}
+
+
+/* CONTACT US SECTION */
+
+#contact{
+	padding:40px 0 50px;
+}
+
+#contact h1{
+	color:#fff;
+}
+
+#contact p{
+	color:#fff;
+}
+
+#contact .form{
+	position:absolute;
+	top:30px;
+	right:30px;
+	width:40%;
+}
+
+input, textarea{
+	padding:10px 3%;
+	margin: 4px 0;
+	width:94%;
+	border:none;
+	border-radius:3px;
+	background:#ddd;
+}
+
+::-webkit-input-placeholder {
+   color: #444;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #444;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #444; 
+}
+
+:-ms-input-placeholder {  
+   color: #444;
+}
+
+textarea{
+	height:100px;
+}
+
+button.submit{
+	padding:10px 15px;
+	text-align:center;
+	border:0;
+	width:100%;
+	background: #00ada7;
+	color:#fff;
+	font-size:16px;
+	border-radius:3px;
+	cursor:pointer;
+}
+
+button.submit:hover{
+	background:#fe7e00;
+}
+
+
+
+.error{
+	color:#fff;
+	font-size:14px;
+	margin-bottom:-10px;
+}
+
+/* FOOTER */
+
+#contact{
+	background:#222;
+
+}
+
+
+.footer, .index_footer{
+	color:#fff;
+
+	padding-right:4%;
+	display:inline-block;
+	vertical-align: top;
+	position:relative;
+}
+
+.footer{
+	padding:10px 0 0;
+	width:100%;
+	margin-bottom:-20px;
+}
+
+.index_footer{
+	padding: 30px 0 60px;
+	width:60%;
+}
+
+.footer h3{
+	text-align:left;
+	font-size:24px;
+	text-transform: uppercase;
+	margin-bottom:30px;
+}
+
+.footer a, .index_footer a{
+	color:#fff;
+}
+
+.footer p{
+	display:inline-block;
+	margin-left: 20px;
+}
+
+.footer .social{
+	position:absolute;
+	right:0;
+	top:5px;
+
+}
+
+.index_footer .social{
+	margin:20px 0
+}
+
+.index_footer .footer_links{
+	margin-top:20px;
+
+}
+
+
+/* FAQ Page */
+
+#FAQ .wrap2{
+	width:60%;
+	
+}
+
+#FAQ h1{
+	text-align:left;
+}
+
+
+#FAQ h2{
+	margin: 18px 0;
+	color:#00ada7;
+}
+
+#FAQ h3{
+	margin-bottom:15px;
+}
+
+#FAQ p{
+	margin-bottom:20px;
+}
+
+
+.sidebar{
+	position:fixed;
+	top:150px;
+	left:65%;
+	background:#fff;
+	padding:15px 20px;
+	border-radius:5px;
+}
+
+.sidebar a{
+	color:#0a192c;
+	display:block;
+	text-decoration: none;
+	margin:8px 0;
+	font-weight:bold;
+}
+
+li{
+	margin-left:20px;
+}
+
+.job{
+	cursor: pointer;
+	color:#222;
+	line-height:22px;
+	border-bottom:1px solid #ddd;
+}
+
+.job_info{
+	display:none;
+		background:#fff;
+		padding:30px 30px;
+		border-radius:10px;
+}
+
+#diagram{
+		background: #000 url('../images/bg-map.png') fixed;
+
+}
+
+#diagram{
+
+	text-align:center;
+	padding:0;
+}
+
+
+#menu_icon{
+	display:none;
+	cursor:pointer;
+}
+
+#app_button{
+	display: none;
+}
+
+@media screen and (max-width: 1000px) {
+	.links{
+		margin-right:20px;
+	}
+
+	.logo{
+		left:30px;
+	}
+
+	#app_button{
+		display:block;
+		text-align:center;
+		position:absolute;
+		top:300px;
+		width:100%;
+
+	}
+}
+
+@media screen and (max-width: 930px) {
+	.app{
+		display:none;
+	}
+
+	.blurb{
+		font-size:50px;
+	}
+
+
+}
+
+@media screen and (max-width: 700px) {
+	#menu_icon{
+		display:inline-block;
+		position:absolute;
+		top:30px;
+		right:30px;
+	}
+
+	.links{
+		display:block;
+		width:100%;
+		margin-right:0;
+		margin-top:80px;
+	}
+
+	.link{
+		display:none;
+		
+	}
+
+	.link a{
+		display:block;
+		width:100%;
+		text-align:center;
+		margin:0;
+		border-radius:0;
+	}
+
+	.col{
+		display:block;
+		width:100%;
+		margin-right:0;
+	}
+
+	.col:nth-of-type(2){
+		margin-top:50px;
+	}
+
+	.blurb{
+		font-size:50px;
+		width:100%;
+		text-align:center;
+	}
+
+	.index_footer{
+		position:relative;
+	}
+
+	.footer{
+		text-align:center;
+	}
+
+	.footer_links{
+		display:inline-block;
+	}
+
+	.footer .social{
+		position:relative;
+		display:block;
+	}
+
+	#contact .form{
+		display:block;
+		position:relative;
+		width:100%;
+		left:0px;
+		margin-top:-70px;
+	}
+
+	#FAQ .sidebar{
+		display:none;
+	}
+
+	#FAQ .wrap2{
+		width:100%;
+	}
+
+	.arrow{
+		display:none;
+	}
+
+	.header_image{
+		height:400px;
+	}
+
+	.cover{
+		top:320px;
+	}
+
+	#app_button{
+		top:100px;
+	}
+
+	.blurb{
+		top:200px;
+		padding: 20px;
+		font-size:35px;
+	}
+
+}
+
+@media screen and (min-width: 700px) {
+	.link{
+		display:inline-block!important;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.logo{
+		left:0;
+	}
+
+	.index_footer{
+		text-align:center;
+		width:90%;
+	}
+
+	.header_image{
+		height:400px;
+	}
+
+	#app_button{
+		top:100px;
+	}
+
+	.blurb{
+		top:250px;
+		font-size:30px;
+		padding: 20px 0;
+
+	}
+
+	.cover{
+		top:400px;
+	}
+
+}
+
+
+
+
+#map{
+	position:relative;
+	left:20%;
+}
+
+/* Icons and Junk */
+
+#diagram{
+
+}
+
+.wrap.ab{
+	position:absolute;
+	top:0;
+	width:100%;
+}
+
+.icon_wrap{
+	position:relative;
+	width:1000px;
+	margin:0 auto;
+}
+
+.icon_image{
+	position:absolute;
+}
+
+#earn{
+	top:520px;
+	left:50%;
+}
+#food{
+	top:1820px;
+	left:400px;
+}
+#miles{
+	top:720px;
+	left:800px;
+}
+#money{
+	top:1820px;
+	left:1000px;
+}
+
+#circle{
+	top:1320px;
+	left:700px;
+}
+#receipt{
+	top:1420px;
+	left:700px;
+}
+#route{
+	top:1220px;
+	left:800px;
+}
+#shopping{
+	top:20px;
+	left:1200px;
+}
+#studying{
+	top:20px;
+	left:400px;
+
+}

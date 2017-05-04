@@ -1,0 +1,72 @@
+.navbar > .container-fluid {
+	padding:0;
+}
+
+/* Navbar toggle */
+.navbar-toggle{
+	margin:30px 20px 0 0;
+	color:#000;
+	background:#eee;
+}
+
+/* Navbar background and border */
+.navbar-default {
+	background: url('http://staging.fiberspark.com/img/white-opaque.png');
+}
+
+.navbar, .navbar-collapse {
+	border:none;
+}
+
+/* Navbar height, border, shadow */
+.navbar-fixed-top {
+	max-height:90px;
+	height:90px;
+	
+	/* Mozilla */  
+	-moz-box-shadow: 0 6px 5px -5px rgba(102,102,102,1);  
+	/* Safari+Chrome */  
+	-webkit-box-shadow: 0 6px 5px -5px rgba(102,102,102,.7);
+	/* Opera */  
+	box-shadow: 0 6px 5px -5px rgba(102,102,102,.7);
+}
+
+/* Navbar button padding */
+.nav {
+	margin-top:0px;
+	padding:10px;
+}
+
+ul.nav.navbar-right {
+	text-transform:uppercase;
+	padding-top:23px;
+	padding-bottom:15px;
+	padding-right:30px;
+	background:transparent;
+}
+
+/* Navbar active page link */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #80000C;
+	background:transparent;
+}
+
+/* Navbar links and size */
+.navbar-default .navbar-nav>li>a {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+   color:#000;
+   font-size:16px;
+}
+
+/* Navbar links hover */
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a:hover {
+	color:#80000C;
+}
+
+@media (max-width:767px) {
+	ul.nav.navbar-right {
+		background: url('http://staging.fiberspark.com/img/white-opaque.png');
+	}
+}

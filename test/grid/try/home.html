@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gridster Demo</title>
+		
+		<link rel="stylesheet" type="text/css" href="jquery.gridster.css">
+	
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		
+
+
+<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.gridster.js" charster="utf-8"></script>
+		<script type="text/javascript" src="gridster_new.js"></script>
+		
+		<script type="text/javascript">
+		function myfunction(){
+		localStorage.clear();
+		window.location.reload();
+		}
+
+		function addWidget(){
+			var gridster = $(".gridster ul").gridster().data('gridster');
+			gridster.add_widget('<li class="new">The HTML of the widget...</li>', 1, 1);
+		}
+
+
+
+
+		</script>
+
+		
+	</head>
+	<body>
+		<section class="demo">
+			<input id="def_button" type="button" value="Set Default" onclick="myfunction()">
+			<input id="add_button" type="button" value="Add Button" onclick="addWidget()">
+			<div id="add_button">Add</div>
+
+			 <div class="controls">
+        <button class="js-seralize">Serialize</button>
+    </div>
+
+    <textarea id="log"></textarea>
+
+			<div class="gridster">
+				<ul id="hello">
+					
+					<li id="li1" data-row="1" data-col="1" data-sizex="1" data-sizey="1"></li>
+					<li id="li2" data-row="2" data-col="1" data-sizex="1" data-sizey="1"></li>
+					<li id="li3" data-row="3" data-col="1" data-sizex="1" data-sizey="1"></li>
+					<li id="li4" data-row="4" data-col="1" data-sizex="1" data-sizey="1"></li>
+
+					<li id="li5" data-row="1" data-col="2" data-sizex="1" data-sizey="1"></li>					
+					<li id="li6" data-row="2" data-col="2" data-sizex="1" data-sizey="1"></li>
+					<li id="li7" data-row="3" data-col="2" data-sizex="1" data-sizey="1"></li>
+					
+					<li id="li8" data-row="1" data-col="3" data-sizex="1" data-sizey="1"></li>				
+					<li id="li9" data-row="2" data-col="3" data-sizex="1" data-sizey="1"></li>
+					<li id="li10" data-row="3" data-col="3" data-sizex="1" data-sizey="1"></li>
+					<li id="li11" data-row="4" data-col="3" data-sizex="1" data-sizey="1"></li>
+
+					<li id="li12" data-row="1" data-col="4" data-sizex="1" data-sizey="1"></li>
+					<li id="li13" data-row="2" data-col="4" data-sizex="1" data-sizey="1"></li>
+					<li id="li14" data-row="3" data-col="4" data-sizex="1" data-sizey="1"></li>
+					<li id="li15" data-row="4" data-col="4" data-sizex="1" data-sizey="1"></li>
+
+					
+				</ul>
+			</div>
+			
+			
+		</section>
+		
+		<script>
+		$("#add_button").click(function(){
+			gridster = $(".gridster ul").gridster({
+                widget_base_dimensions: [100, 120],
+                widget_margins: [5, 5],
+                draggable: {
+                    handle: '.dragDiv'
+            	}
+	            serialize_params: function ($w, wgd) {
+		            return {
+		                id: wgd.el[0].id,
+		                col: wgd.col,
+		                row: wgd.row,
+		                htmlContent: $($w).html()
+		            };
+	    		}
+		});
+
+		 var gridster;
+
+	      $(function(){
+
+	        gridster = $(".gridster ul").gridster({
+	          widget_base_dimensions: [100, 55],
+	          widget_margins: [5, 5]
+	        }).data('gridster');
+
+
+	        $('.js-seralize').on('click', function() {
+	            var s = gridster.serialize();
+
+	            $('#log').val(JSON.stringify(s));
+	        })
+
+	      });
+	    
+		</script>
+	
+			
+	
+	</body>
+</html>

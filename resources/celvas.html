@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link rel="stylesheet" type="text/css" href="http://simplydevio.us/main.css" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+    
+    <script src="../jquery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.simplydevio.us/jscolor/jscolor.js"></script>
+    
+    <script> 
+        $(function(){
+            $("#nav").load("http://www.simplydevio.us/menu1.html");
+            $("#resnav").load("http://www.simplydevio.us/resources/resnav.html"); 
+            $("#footer").load("http://www.simplydevio.us/footer.html");
+        });
+    </script> 
+    
+    <style>
+        .celvas, .simply, .miontre{display:inline;}
+        
+        .add{width:200px;}
+    </style>
+    
+    
+    
+    <title>Celvas Creator</title>
+    <link rel="icon" href="http://www.simplydevio.us/new128.png" sizes="128x128">
+    
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-45010841-2', 'simplydevio.us');
+      ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body>
+
+
+
+    <div class="navwrap"><div id="nav">&nbsp;</div></div>
+
+<div class="section w"><div class="tri tb"></div>
+
+    <div class="content" id="resource">
+    
+        <table>
+        
+        <tr>
+        
+        <!-- Sidebar on right side -->
+        <td id="right">
+            <div id="resnav" class="sidebarNavigation">&nbsp;</div>
+        </td>
+        
+        <!-- Start main content -->
+        <td id="left">
+        
+        <div class="title">Celvas Creator</div>
+        
+        <div class="description">
+            <p>Create your own Celvas' + others with this easy-to-use tool.</p>
+            
+        </div>
+        <br>
+        
+
+                    
+                    <div id="statusButtons">
+                        <div class="celvas"><img src="http://www.simplydevio.us/images/celvas.png"></div> </div>
+                    
+                    
+
+                            <div id="addCelvas" class="add">Add a Celvas</div> <div id="removeCelvas" class="remove">Remove a Celvas</div><br>
+                            <div id="addSimply" class="add">Add a Simply</div> <div id="removeSimply" class="remove">Remove a Simply</div> <br>
+                            <div id="addMiontre" class="add">Add a Miontre</div> <div id="removeMiontre" class="remove">Remove a Miontre</div><br>
+
+                            <br>
+
+                <br>
+                </div> <!-- End of status Box -->
+            
+
+<script>
+
+$("#addCelvas").click(function(){
+  $("#statusButtons").append("<div class=\"celvas\"><img src=\"http://www.simplydevio.us/images/celvas.png\"></div> ")
+});
+$("#removeCelvas").click(function(){
+    $("#statusButtons .celvas:last").remove();
+});
+
+$("#addSimply").click(function(){
+  $("#statusButtons").append("<div class=\"simply\"><img src=\"http://www.simplydevio.us/images/simply.png\"></div> ")
+});
+$("#removeSimply").click(function(){
+    $("#statusButtons .simply:last").remove();
+});
+
+$("#addMiontre").click(function(){
+  $("#statusButtons").append("<div class=\"miontre\"><img src=\"http://www.simplydevio.us/images/miontre.gif\"></div> ")
+});
+$("#removeMiontre").click(function(){
+    $("#statusButtons .miontre:last").remove();
+});
+
+
+</script>
+                
+
+        </table>
+        
+        </div>
+    </div>
+
+<div class="section footer b">
+    <div class="tri tw">&nbsp;</div>
+
+    <div id="footer">&nbsp;</div>
+</div>

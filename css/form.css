@@ -1,0 +1,122 @@
+.head {
+  font-weight: 700;
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+  margin-top: 5px; }
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 2px 3%;
+  margin: 3px 0; }
+
+input {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+  border: 1px solid #bbb;
+  height: 28px;
+  display: inline-block;
+  width: 100%;
+  margin: 2px 5px 2px 0;
+  padding: 0 8px; }
+  input[type=range] {
+    width: 87%;
+    border: none;
+    vertical-align: middle; }
+  input[type=checkbox] {
+    width: 13px;
+    height: 15px; }
+  input:disabled {
+    background: #ddd; }
+  input.color {
+    width: 60px !important;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 5px;
+    position: relative; }
+
+label {
+  margin-right: 3px; }
+
+input.long {
+  margin: 8px 5px; }
+
+input.i85 {
+  width: 85%; }
+
+input.small {
+  width: 50px; }
+
+textarea {
+  border: 1px solid #ccc;
+  font-family: "Courier"; }
+
+.w35 {
+  vertical-align: top;
+  display: inline-block;
+  width: 35%; }
+
+.w65 {
+  vertical-align: top;
+  display: inline-block;
+  width: 63%; }
+
+.inputs {
+  vertical-align: top;
+  display: inline-block;
+  width: 70%;
+  position: relative; }
+  .inputs .w50 {
+    width: 47%;
+    display: inline-block;
+    position: relative;
+    margin-right: 4%; }
+    .inputs .w50:last-of-type {
+      margin-right: 0; }
+    .inputs .w50 [type="range"] {
+      width: 76% !important; }
+    .inputs .w50 .range_label {
+      width: 10%; }
+
+input[type="range"] {
+  width: 85% !important; }
+
+.range_label {
+  display: inline-block;
+  width: 5%; }
+
+.w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8 {
+  vertical-align: top;
+  display: inline-block; }
+
+.w1 {
+  width: 8%; }
+
+.w2 {
+  width: 15%; }
+
+.w4 {
+  width: 33%; }
+
+.w6 {
+  width: 50%; }
+
+.w7 {
+  width: 57%; }
+
+.w8 {
+  width: 65%; }
+
+.w12 input {
+  width: 92%;
+  padding: auto 2%; }
+
+/*# sourceMappingURL=form.css.map */

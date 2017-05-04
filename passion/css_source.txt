@@ -1,0 +1,267 @@
+
+
+.slide{
+    positionrelative;
+    color#fff;
+    -webkit-transitionall .2s;
+    -moz-transitionall .2s;
+    -o-transitionall .2s;
+    transitionall .2s;
+    }
+
+.caption{
+	positionabsolute;
+    bottom-100px;
+    left0px;
+    text-aligncenter;
+    -webkit-transitionall .2s;
+    -moz-transitionall .2s;
+    -o-transitionall .2s;
+    transitionall .2s;
+    width100%;
+    padding20px 0;
+}
+
+.digitalslider .caption{
+	background#f58b3d;
+    padding10px 0 15px;
+}
+
+.journalslider .caption{background#ea3f53;}
+
+
+.slidehover .caption{
+	bottom0px;
+}
+
+
+.slide h1{
+    font-familyOpen Sans;
+    text-transformuppercase;
+    font-weightbold;
+    font-size14px;
+    letter-spacing1px;
+}
+
+.slide i{
+    font-familyGeorgia;
+    font-size16px;
+}
+
+.slide b{
+    displayblock;
+    font-familyGeorgia;
+    font-size16px;
+    font-weightnormal;
+    font-styleitalic;
+}
+
+.slide bafter{
+    content  installs;
+}
+
+
+
+.slidehover img{
+    -webkit-transitionall .2s;
+    -moz-transitionall .2s;
+    -o-transitionall .2s;
+    transitionall .2s;    }
+
+
+
+ RESET AND LAYOUT
+===================================
+
+
+.bx-wrapper {
+	position relative;
+	margin 0 auto 60px;
+	padding 0;
+	zoom 1;
+    max-width100%;
+}
+
+.bx-wrapper img {
+	max-width 100%;
+	display block;
+}
+
+
+ THEME
+===================================
+
+.bx-wrapper .bx-viewport {
+	left -5px;
+    overflowhidden;
+    background#fff;
+    width100%!important;
+}
+
+
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position absolute;
+	bottom -30px;
+	width 100%;
+}
+
+ LOADER 
+
+.bx-wrapper .bx-loading {
+	min-height 50px;
+	background url(httpsimplydevio.usportfolioimagesbx_loader.gif) center center no-repeat #fff;
+	height 100%;
+	width 100%;
+	position absolute;
+	top 0;
+	left 0;
+	z-index 2000;
+}
+
+ PAGER 
+
+.bx-wrapper .bx-pager {
+	text-align center;
+	font-size .85em;
+	font-family Arial;
+	font-weight bold;
+	color #666;
+	padding-top 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display inline-block;
+	zoom 1;
+	display inline;
+	vertical-aligncenter;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background #fff;
+	text-indent -9999px;
+	display inline-block;
+	width 12px;
+	height 12px;
+	margin 0 5px;
+	outline 0;
+	-moz-border-radius 100%;
+	-webkit-border-radius 100%;
+	border-radius 100%;
+	vertical-aligncenter;
+	-webkit-transitionall .2s;
+-moz-transitionall .2s;
+-o-transitionall .2s;
+-ms-transitionall .2s;
+transitionall .2s;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager ahover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background #f58b3d;
+
+}
+
+ DIRECTION CONTROLS (NEXT  PREV) 
+
+.bx-wrapper .bx-prev {
+	left 10px;
+	background url(httpsimplydevio.usportfolioimagescontrols.png) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+	right 10px;
+	background url(httpsimplydevio.usportfolioimagescontrols.png) no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-prevhover {
+	background-position 0 0;
+}
+
+.bx-wrapper .bx-nexthover {
+	background-position -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position absolute;
+	top 50%;
+	margin-top -16px;
+	outline 0;
+	width 32px;
+	height 32px;
+	text-indent -9999px;
+	z-index 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display none;
+}
+
+ AUTO CONTROLS (START  STOP) 
+
+.bx-wrapper .bx-controls-auto {
+	text-align center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display block;
+	text-indent -9999px;
+	width 10px;
+	height 11px;
+	outline 0;
+	background url(httpsimplydevio.usportfolioimagescontrols.png) -86px -11px no-repeat;
+	margin 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-starthover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display block;
+	text-indent -9999px;
+
+	height 11px;
+	outline 0;
+	background url(httpsimplydevio.usportfolioimagescontrols.png) -86px -44px no-repeat;
+	margin 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stophover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position -86px -33px;
+}
+
+ PAGER WITH AUTO-CONTROLS HYBRID LAYOUT 
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align left;
+	width 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right 0;
+	width 35px;
+}
+
+ IMAGE CAPTIONS 
+
+.bx-wrapper .bx-caption {
+	position absolute;
+	bottom 0;
+	left 0;
+	background #6669;
+	background rgba(80, 80, 80, 0.75);
+	width 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color #fff;
+	font-family Arial;
+	display block;
+	font-size .85em;
+	padding 10px;
+}

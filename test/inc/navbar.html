@@ -1,0 +1,53 @@
+<!--<nav class="uk-navbar uk-vertical-align uk-text-center" data-uk-sticky>
+  <div class="uk-width-9-10 uk-container-center uk-vertical-align-middle">
+    <a href="../index.php" class="uk-navbar-brand">
+      <img src="/img/logo2.png">
+    </a>
+    <div class="uk-navbar-flip">
+      <ul class="uk-navbar-nav uk-visible-small">
+        <li><a class="menu-btn"><i class="uk-icon-bars"></i></a></li>
+      </ul>
+      <ul class="uk-navbar-nav uk-hidden-small">
+        <li><a <?=echoActive("about")?> href="../about.php">about us</a></li>
+        <li><a <?=echoActive("howitworks")?> href="../howitworks.php">how it works</a></li>
+        <li><a <?=echoActive("contact")?> href="../contact.php">get in touch</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<nav class="pushy pushy-left uk-visible-small">
+  <ul class="uk-text-center">
+    <li><a <?=echoActive("about")?> href="../about.php">about us</a></li>
+    <li><a <?=echoActive("howitworks")?> href="../howitworks.php">how it works</a></li>
+    <li><a <?=echoActive("contact")?> href="../contact.php">get in touch</a></li>
+  </ul>
+</nav>
+
+
+<div class="site-overlay"></div>
+
+<?php 
+  function echoActive($requestUri) {
+    $current_file_name = basename($_SERVER['REQUEST_URI'], ".php");
+
+    if ($current_file_name == $requestUri)
+    echo 'class="active"';
+  }
+?>
+
+-->
+
+<nav class="uk-navbar">
+  <div class="width">
+    <a href="index.php" class="logo">
+      <img src="http://www.simplydevio.us/test/fiberspark/img/logo2.png">
+    </a>
+    <ul class="nav_links">
+      <li><a <?=echoActive("about")?> href="#about_anchor">about us</a></li>
+      <li><a <?=echoActive("howitworks")?> href="#">how it works</a></li>
+      <li><a <?=echoActive("contact")?> href="#contact_anchor">get in touch</a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,39 @@
+$pink: #e03e56;
+$orange: #f58c3b;
+$blue: #1d2742;
+$teal: #25bda6;
+
+$w80: rgba(255,255,255,.8);
+$b80: rgba(0,0,0,.8);
+$b90: rgba(0,0,0,.9);
+
+@mixin source($size: 15px){
+	font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+	font-size: $size;
+}
+
+@mixin ubuntu($color: $w80, $size: 13px){
+	font-family:'Ubuntu';
+    text-transform:uppercase;
+    font-weight:700;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin trans($time: .2s){
+	-webkit-transition:all $time;
+    -moz-transition:all $time;
+    -o-transition:all $time;
+    transition:all $time;
+}
+
+@mixin auto($width: 1200px){
+	max-width: $width;
+    margin:0 auto;
+}
+
+@mixin radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}

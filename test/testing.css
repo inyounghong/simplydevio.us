@@ -1,0 +1,170 @@
+
+
+.folderview-top h2{}
+
+
+
+q strong{border-bottom:1px solid #ccc;}
+.lit:hover q strong{border-bottom:1px solid #888;}
+
+
+/* DO NOT TOUCH ANY CODE BELOW UNLESS YOU KNOW WHAT YOU ARE DOING */
+
+
+/* Gallery Set-Up */
+
+a.external:after{display:none;}
+
+.folderview-control{margin-right:-20px;}
+
+.folderview-art{
+padding: 0 60px 0 20px;
+margin-left: -15px;}
+
+
+/* Main Body */
+
+body {
+background: #fff url('http://fc03.deviantart.net/fs71/f/2013/212/7/c/squarelights_by_simplysilent-d6g2md1.png');
+margin-right:-15px;}
+
+
+/* Gallery Top */
+
+.folderview-top{
+margin-left:-15px;
+text-align:center;}
+
+.folder-title{
+font-size: 14px;}
+
+.folderview-top h2{
+font-size:14px;
+padding:70px 0 50px;
+border-bottom:1px solid #aaa;}
+
+
+/* Description */
+
+
+.folderview-top .description {
+color: #333;
+font-size: 14px;
+text-align:left;
+padding:50px 10%;}
+
+.folderview-top .description a{
+color:#1d2742;
+font-weight: bold;
+text-decoration:none;}
+
+
+/* Literature Thumb Formatting */
+
+img.lit, q img{display:none;}
+
+q{
+color:#888!important;
+left:20px!important;
+font-size:13px!important;
+margin-right:15px;
+margin-top:10px;}
+
+q:hover{color:#333!important;}
+
+q b{font-weight:normal!important;}
+
+q strong{
+font-family: 'Open Sans'!important;
+font-size:14px!important;
+letter-spacing:1px!important;
+margin-bottom:15px!important;
+text-transform:uppercase;
+padding-bottom:10px;}
+
+.lit *{text-align:center;}
+
+
+/* Thumb Clean-Up */
+
+.wrap{
+margin-top:-200px;
+background:#fff;}
+
+.tt-fh *{text-align:center;}
+
+.tt-w{
+	margin:10px 10px 20px;
+	padding-top:10px;
+}
+
+.tt-bb{background:none;}
+
+.tt-fh.crop-h .tt-bookendh{display:inline;}
+
+.shadow.mild{min-height:200px!important;}
+.shadow{background-image:none!important;}
+
+.tt-fh-pr{padding-right:0!important;}
+
+.thumb{
+background:#fff;
+outline:6px solid #ccc;
+padding:5px;
+margin:6px;}
+
+.thumb:hover{
+	outline:10px solid #ccc;
+}
+
+
+/* Artwork Title + Description */
+
+.details{
+
+
+margin: 10px auto 10px auto!important;
+}
+
+.tt-fh-oe{
+	background:#ddd;
+	width: 160px;
+	padding: 10px 10px;
+	margin:10px 0 5px 15px;
+}
+
+a.t:hover .tt-fh-oe, .details a:hover{text-decoration:none!important;}
+
+.details span.t{text-shadow:none;}
+
+.commentcount{}
+.commentcount a{font-size:13px;}
+
+.commentcount a, small, small a{color:#aaa!important;}
+.commentcount a:hover, small a:hover{color:#666!important;}
+
+small{
+font-size:13px;
+line-height:12px;
+display:block;}
+
+
+
+
+/* Garbage Clean-Up */
+
+
+i.icon.i3, .frame-button.submit, .frontbutton, .feedbutton, .disabled, a.mlt-link{display:none!important;}
+
+.shadow>a.thumb>img:not(.lit), .shadow>a.thumb.lit, .shadow>a.thumb.film{
+box-shadow:none;
+-webkit-box-shadow:none;}
+
+.tt-fh.crop-h .tt-bookendh-side, .tt-fh a.thumb.lit span.lit.lit-bkmrk, .tt-fh.crop-h .tt-bookendh, .tt-fh.crop-w .tt-bookendw, .tt-fh.crop-w .tt-bookendw .tt-bookendw-side, .tt-fh.crop-w .tt-bookendw .tt-bookendw-side:after, .tt-fh.crop-w .tt-bookendw .tt-bookendw-side, .tt-fh.crop-w .tt-bookendw .tt-bookendw-side:after, .tt-fh.crop-w .tt-bookendw:after{background:none;}
+
+
+.tt-fh a.t:hover, .tt-fh a.t:hover .tt-fh-oe, .tt-fh .label > a:hover {text-decoration:none!important;}
+
+a.thumb:after{background:none!important;}
+
+.shadow > a.thumb.lit, .shadow > a.thumb.film{box-shadow:none!important;}

@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="http://simplydevio.us/passion/passion.css" media="screen" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
+
+    <script src="../jquery.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <!-- bxSlider-->
+    <script src="http://www.simplydevio.us/portfolio/jquery.bxslider.min.js"></script>
+    <link href="http://www.simplydevio.us/passion/passion_sliders.css" rel="stylesheet" type="text/css" />
+
+    <!-- Super Scroll -->
+    <script type="text/javascript" src="http://www.simplydevio.us/passion/jquery.superscrollorama.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+    <script> 
+        $(function(){
+            $("#footer").load("http://www.simplydevio.us/footer.html");
+        });
+        
+        $(document).ready(function(){
+            $('.digitalslider').bxSlider({
+            slideWidth: 210,
+            minSlides: 5,
+            maxSlides: 10,
+            moveSlides: 1,
+            slideMargin: 0,
+            });
+            $('.journalslider').bxSlider({
+            slideWidth: 300,
+            minSlides: 4,
+            maxSlides: 10,
+            moveSlides: 1,
+            slideMargin: 0,
+            });
+        });
+        
+    </script> 
+    
+
+    
+    <title>My Passion</title>
+    <link rel="icon" href="http://www.simplydevio.us/new128.png" sizes="128x128">
+    
+    
+<script>
+    $(document).ready(function(){
+    $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1500);
+        return false;
+      }
+    }
+  });
+  
+$(function(){
+    var sections = {},
+        _height  = $(window).height(),
+        i        = 0;
+    
+    // Grab positions of our sections 
+    $('.section').each(function(){
+        sections[this.name] = $(this).offset().top;
+    });
+
+    $(document).scroll(function(){
+        var $this = $(this),
+            pos   = $this.scrollTop();
+            
+        for(i in sections){
+            if(sections[i] > pos && sections[i] < pos + _height){
+                $('a').removeClass('active');
+                $('#nav_' + i).addClass('active');
+            }  
+        }
+    });
+});
+});
+        
+
+});
+
+</script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-45010841-2', 'simplydevio.us');
+      ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body id="top">
+
+
+    <br />
+        
+        <div id="passion" class="chunk">
+            <div class="content">
+                <a name="section1" class="section"></a>
+                <img src="./image/passion.png">
+                <a class="jenna blink" href="#section2">Click to Explore</a>
+            </div>
+        </div>
+        
+                
+        <div id="about" class="chunk">
+            <div class="content"><br>
+                <a name="section2" class="section"></a>
+
+                <div id="bio" style="position:relative;">
+                    <span id="artist">I am an <i style="color:#ea3f53;">artist</i></span> <span id="else">, a <i style="color:#f58b3d;">coder</i>, and a <br>
+                    <i style="color:#25bda6;">creative imagineer</i>&nbsp;
+                    who is passionate about bringing to life
+                    <br> new ideas.</span>
+                </div>
+
+                <a class="jenna blink" href="#section3">Continue</a>
+            </div>
+        </div>
+        
+        <div id="poem" class="chunk">
+            <div class="content"><br>
+                <a name="section3" class="section"></a>
+
+                I am an <i id="artist" style="color:#ea3f53;">artist</i> .
+
+                <div class="norm" style="font-size:24px"><br>
+                <p>January 4th, 2012 was the day that I first stumbled across <a href="http://www.deviantart.com">DeviantART.com</a>, the world’s largest art website, and it was on that cold, unassuming Saturday that <em>my life as I know it now began</em>.</p>
+
+                <p>It was by sheer chance that I happened to come across <a href="http://yuumei.deviantart.com/gallery/">yuumei</a>'s incredible gallery, but it was those long hours spent in awe over the beauty of her digital artworks that inspired me to try <em>digital art</em>, a medium I had never even known about before.</p>
+
+                <p>As I explored deeper and deeper into digital art, I found myself <em>falling in love</em> with this medium that called to me as traditional art never had before. I adored the clarity of its brushstrokes, the vivacity of its colors, and the versatility of its infinite canvas which made me feel as though I could create <em>anything that I desired</em>.</p>
+
+
+
+                </div>
+                
+                <a class="jenna blink" href="#section4">Continue</a>
+            </div>
+        </div>
+        
+        <div class="chunk">
+            <div class="content"><br>
+                <a name="section4" class="section"></a>
+                <div class="norm" style="font-size:24px"> 
+                    
+                    <p>Suddenly, I began to spend <em>hours</em> and sometimes <em>entire days</em> at my desk with my hands flying over my tablet as I struggled to find enough time in the day to turn the thoughts of my imagination into realities. I spent the next two years soaring through all the kinds of digital art I could get my hands on, trying everything from paintings to pixel art, and <em>loving every second</em> that I spent.</p>
+                    <br><br>
+                </div>
+
+            </div>
+
+            <div class="digitalslider">
+                <div class="slide"><img src="images/taiwan1.png"><div class="caption"><h1>Taiwan</h1><i>Painting</i></div></div>
+                <div class="slide"><img src="images/sanc1.png"><div class="caption"><h1>Sanctuary</h1><i>Anime/Manga</i></div></div>
+                <div class="slide"><img src="images/magic1.png"><div class="caption"><h1>Magic</h1><i>Painting</i></div></div>
+                <div class="slide"><img src="images/hungary1.png"><div class="caption"><h1>Hungary</h1><i>Painting</i></div></div>
+                <div class="slide"><img src="images/nymph1.png"><div class="caption"><h1>Water Nymph</h1><i>Photomanipulation</i></div></div>
+                <div class="slide"><img src="images/rebirth1.png"><div class="caption"><h1>Rebirth</h1><i>Photomanipulation</i></div></div>
+                
+                <div class="slide"><img src="images/alice1.png"><div class="caption"><h1>Alice</h1><i>Drawing</i></div></div>
+                <div class="slide"><img src="images/wallace1.png"><div class="caption"><h1>To Kill a Mockingbird</h1><i>Typography</i></div></div>
+                <div class="slide"><img src="images/hopes1.png"><div class="caption"><h1>Soaring Hopes</h1><i>Painting</i></div></div>
+                <div class="slide"><img src="images/france1.png"><div class="caption"><h1>France</h1><i>Painting</i></div></div>
+                <div class="slide"><img src="images/anna1.png"><div class="caption"><h1>Anna Armona</h1><i>Drawing</i></div></div>
+                <div class="slide"><img src="images/sketch.png"><div class="caption"><h1>I, Artist (WIP)</h1><i>Anime/Manga</i></div></div>
+                <div class="slide"><img src="images/lee1.png"><div class="caption"><h1>Our Homes</h1><i>Typography</i></div></div>
+                    
+            </div>
+            <div class="content">
+
+                <a class="jenna blink" href="#section5">Continue</a>
+            </div>
+
+        </div>
+
+        <div class="chunk">
+            <div class="content"><br>
+                <a name="section5" class="section"></a>
+                <div class="norm" style="font-size:24px"><br>  
+                    <p>It was not until several months later that I realized the significance of that day, but I eventually came to understand how life-changing of a moment that was for me. For the first time, I had <em>direction, meaning, and purpose</em> in my life because I had discovered something crucial about myself.</p>
+                </div>
+                <br> 
+                <div align="center">I was an <i id="artist" style="color:#ea3f53;">artist</i> .</div>
+                <br> 
+                <div class="norm" style="font-size:24px"><br>  
+                    
+                </div>
+
+                <a class="jenna blink" href="#section6">Continue</a>
+            </div>
+        </div>
+
+        <div class="chunk">
+            <div class="content"><br>
+                <a name="section6" class="section"></a>
+                I am a <i id="coder" style="color:#f58b3d;">coder</i>.
+
+                <div class="norm" style="font-size:24px"><br>
+                    <p>But my journey did not end there. After about a year of exploring digital art, I stumbled across another fascinating discovery: <u>web design</u>.</p>
+
+                    <p>The moment I laid my eyes upon the web design languages of <u>HTML</u> and <u>CSS</u>, I was completely hooked. I threw myself into trying to crack the languages that made up the web, pouring over the codes written by other web designers and tinkering with each line one by one until I could feel my understanding beginning to grow. I published my first one-page web design in October of 2013, and since then I have continued to develop and fine-tune my skills by creating themes and skins for websites such as <u>DeviantART</u> and <u>Tumblr</u>. </p>
+<br><br>
+                </div>
+
+                <a class="jenna blink" href="#section7">Continue</a>
+
+                
+            </div>
+        </div>
+
+        <div class="chunk">
+            <div class="content"><br>
+                <a name="section7" class="section"></a>
+
+                <div class="norm" style="font-size:24px">
+                    
+                <div class="descript" style="margin-top:-20px;">Some of the skins I have designed and coded for DeviantART.</div>
+                </div>
+            </div>
+
+                <div class="journalslider">
+                    <div class="slide"><img src="images/simple.png"><div class="caption"><h1>Simple Features</h1><b>208</b></div></div>
+                    <div class="slide"><img src="images/surreal.png"><div class="caption"><h1>Surreal</h1><b>75</b></div></div>
+                    <div class="slide"><img src="images/forgotten.png" /><div class="caption"><h1>Forgotten Memories</h1><b>2,205</b></div></div>
+                    <div class="slide"><img src="images/tropical.png" /><div class="caption"><h1>Tropical Fruit</h1><b>327</b></div></div>
+                    <div class="slide"><img src="images/autumn.png"><div class="caption"><h1>Autumn Spirit</h1><b>78</b></div></div>
+                    <div class="slide"><img src="images/scattered.png"><div class="caption"><h1>ScatteredSnow</h1><b>Commission</b></div></div>
+                    <div class="slide"><img src="images/hetalia.png"><div class="caption"><h1>Hetalia Halloween</h1><b>1,106</b></div></div>
+                    <div class="slide"><img src="images/lace.png" /><div class="caption"><h1>Blue Lace</h1><b>544</b></div></div>
+                    <div class="slide"><img src="images/passion.png" /><div class="caption"><h1>Passion</h1><b>378</b></div></div>
+                    <div class="slide"><img src="images/snow.png"><div class="caption"><h1>Snow Days</h1><b>875</b></div></div>
+                
+                </div>
+            <div class="content">
+                <a class="jenna blink" href="#section8">Continue</a>
+            </div>
+        </div>
+
+        <div class="chunk">
+            <div class="content"><br>
+                <a name="section8" class="section"></a>
+
+                <div class="norm" style="font-size:24px">
+                    
+                    <p>In the past year and a half:</p>
+                    <br>
+
+                    <table>
+                        <tr>
+                            <td>I have designed and coded <h1>20</h1> free skins for DeviantART<br> which have been installed<br> <h1>10,000+</h1> times.</td>
+                            <td>I have been commissioned<br> for skins by <h1 style="color:#ea3f53;">31</h1> artists, and I have sold <h1 style="color:#ea3f53;">400+</h1> paid downloads of my themes.</td>
+                            <td><h1>3</h1> of my designs won a Daily Deviation, an award given <br>to only the top <h1>30</h1> out of 140,000 submissions<br> made to DeviantART daily.</td>
+                        </tr>
+
+                    </table>
+
+<br><br>
+                <a class="jenna blink" href="#section10">Continue</a>
+                </div>
+
+                
+            </div>
+        </div>
+
+
+         <div class="chunk">
+            <div class="content"><br>
+            <a name="section10" class="section"></a>
+                <div class="norm" style="font-size:24px">
+                    <p>I also set up my own website at <a href="http://www.simplydevio.us/resources/">simplydevio.us</a> to serve as both a platform for selling my CSS resources as well as a playground for me to practice my coding. I now not only work with the basic design languages of <u>HTML</u> and <u>CSS</u>, but also with <u>Javascript</u>, <u>jQuery</u>, <u>Python</u>, and <u>PHP</u> to make my websites more dynamic and powerful.</p>
+
+                    <p>And so I soon realized another fact:</p>
+                </div>
+                <br> 
+                <div align="center">I was a <i id="artist" style="color:#f58b3d;">coder</i> .</div>
+                <br> 
+
+                <div class="norm" style="font-size:24px">
+                    <a class="jenna blink" href="#section11">Continue</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="chunk">
+            <div class="content"><br>
+            <a name="section11" class="section"></a>
+
+                I am a <i style="color:#25bda6;">creative imagineer</i>.
+                <div class="norm" style="font-size:24px">
+
+                <p><br><b>Web development</b> allows me to mold together my love of <em>digital art</em> and <u>coding</u>, which I have come to see as two remarkably complimentary fields. There is a clear, rational logic to design just as much as there is a delicate art to programming, and I adore being able to weave together these two forms in order to <b>build, discover, dream, and create</b>.</p>
+
+                <p>I relish in the challenge of keeping up with ever-changing technology and pushing the boundaries on what can be done. Every day I strive to learn more to build products always better than my last.</p>
+
+                <br>
+
+                <a class="jenna blink" href="#section12">Continue</a>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <div class="chunk">
+            <div class="content"><br>
+                <a name="section12" class="section"></a>
+                <div class="norm" style="font-size:24px; text-align:center;">
+                <p>Because my passion is web development, and I am a</p><br>
+
+                <i style="color:#25bda6;">creative imagineer</i>.
+
+                
+                </div><br><br>
+<a style="text-align:center" class="jenna blink" href="#section13">Finish</a>
+            </div>
+        </div>
+        
+        
+        <div class="chunk">
+            <div class="content"><br>
+            <a name="section13" class="section"></a>
+
+                <div class="norm" style="font-size:24px">
+                    <p>Some final words:</p>
+
+                    <p>This webpage was lovingly hand-crafted over the course of two weeks using Photoshop, HTML, CSS, Javascript, jQuery, and copious amounts of magical fairy dust.</p>
+
+                    <p>The code required to put together this page totals at over 1000 lines, and the page sources can be viewed here for those who are curious:</p>
+
+                    <ul>
+                        <li><a href="http://www.simplydevio.us/index_code.html">HTML</a></li>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+
+<br><br><br><br><br>
+
+
+</div>
+    
+</body>
+</html>

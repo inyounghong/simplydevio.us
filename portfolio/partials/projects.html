@@ -1,0 +1,60 @@
+
+<div ng-controller="MainController">
+	<h2>Projects</h2>
+	<!-- Filter option tabs -->
+
+	<div class="filter-wrap">
+		<div class="filter-border">
+			<div class="filter-tab" ng-repeat="filter in mainFilters" ng-click="setFilter(filter)" ng-class="activeFilter(filter)">
+				<div class="img-batch"><img src="img/icon_batch.png" id="{{getImg(filter)}}"> </div>
+				{{filter.name}}
+			</div>
+		</div>
+
+		<div class="main-description">
+			{{getDescription()}}
+		</div>
+	</div>
+
+	<!-- Tag being filtered -->
+
+	<div class="tag-show" ng-show="filters.tags">
+		<b>Tag:</b> <div class="tag" ng-click="deleteTag()">{{filters.tags}} <span class="delete-tag"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span></div>
+	</div>
+
+	<!-- Projects -->
+
+	<div class="project" ng-repeat="project in projects | filter:filters">
+		<div class="row narrow">
+			<div class="col-sm-6">
+				<a target="_blank" href="{{getURL(project)}}" class="image-wrap">
+					<img src="img/{{project.img}}">
+					<br><br>
+					<img src="img/{{project.img2}}" ng-show="project.img2">
+				</a>
+			</div>
+			<div class="col-sm-6">
+				<a target="_blank" href="{{getURL(project)}}"><h3>{{project.name}}</h3></a>
+				<span class="type">{{project.type}}</span> 
+				<span class="work" ng-show="project.work">/ {{project.work}}</span>
+				<span class="installs" ng-show="{{project.installs}}">/ {{project.installs}} Installs</span>
+				<span ng-show="project.github"> /
+					<a href="{{project.github}}" class="github" >
+						<img src="img/github20.png">
+						<span>Github</span>
+					</a>
+				</span>
+
+				<div class="description" ng-bind-html="project.description"></div>
+				
+
+				<ul class="tag-wrap">
+					<li class="tag" ng-repeat="tag in project.tags" ng-click="setTag(tag)" ng-class="active(tag)"> 
+						{{tag}}
+						<span class="delete-tag" ng-show="active(tag)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>

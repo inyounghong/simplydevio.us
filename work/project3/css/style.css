@@ -1,0 +1,407 @@
+* {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro";
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+
+.c {
+  text-align: center;
+}
+
+/* Top Menu */
+.header {
+  position: relative;
+  top: 0;
+  background: #222;
+  text-align: left;
+  padding: 0 50px;
+}
+.header .menu {
+  display: inline-block;
+}
+.header .menu a {
+  padding: 15px 10px;
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.header .menu a:hover {
+  background: #444;
+}
+.header .welcome {
+  position: absolute;
+  top: 13px;
+  right: 300px;
+  color: #fff;
+}
+
+/* Body */
+body {
+  color: #222;
+  background: #fff;
+  font-size: 18px;
+}
+
+p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+p a {
+  font-weight: bold;
+}
+
+/* Headers */
+h1 {
+  text-align: center;
+  margin: 10px 0 0px;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.g {
+  background: #eee;
+}
+
+.container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+.container.lg {
+  max-width: none;
+  padding: 20px 30px 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.header_details {
+  padding: 10px 4%;
+  position: relative;
+}
+.header_details .breadcrumbs a {
+  color: #E81636;
+  font-weight: 400;
+}
+.header_details .fr {
+  float: right;
+}
+.header_details #ajax_message {
+  position: absolute;
+  top: 10px;
+  right: 180px;
+}
+.header_details .right_bar {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+}
+.header_details .right_bar a {
+  color: #E81636;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.add_button {
+  background: #E81636;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: 500;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.gallery_container {
+  position: relative;
+  padding: 20px 3%;
+  background: #eee;
+}
+
+.gallery {
+  margin: 10px -0.5%;
+  min-height: 450px;
+}
+
+.date {
+  font-size: 14px;
+  color: #444;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.photo.large {
+  width: 55%;
+  padding: 15px;
+  display: block;
+  height: 100%;
+  margin-top: 25px;
+  background: #fff;
+}
+.photo.large img {
+  width: 100%;
+}
+
+.sidebar {
+  background: #fff;
+  width: 34%;
+  position: absolute;
+  top: 44px;
+  right: 4%;
+  border: 1px solid #ccc;
+}
+.sidebar .back_link {
+  display: block;
+  padding: 10px 5%;
+  font-weight: 500;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+.sidebar .padding {
+  position: relative;
+  padding: 20px 180px 20px 5%;
+  border-bottom: 1px solid #ccc;
+}
+.sidebar .date {
+  padding: 20px 5%;
+}
+
+.photo {
+  display: inline-block;
+  width: 300px;
+  margin: 10px;
+  height: 340px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 0 3px #aaa;
+  font-weight: 400;
+}
+.photo .cover {
+  position: absolute;
+  top: 263px;
+  width: 94%;
+  padding: 5px 3%;
+}
+.photo .title {
+  font-weight: 400;
+  font-size: 24px;
+  width: 250px;
+  margin-bottom: 3px;
+}
+.photo .thumb {
+  display: inline-block;
+  width: 100%;
+  height: 260px;
+  background-size: cover !important;
+}
+.photo .title_input {
+  padding: 0px;
+  font-size: 24px;
+  width: 250px;
+  margin: 0;
+}
+
+.details {
+  font-size: 15px;
+  color: #666;
+}
+
+/* Editing */
+.editable {
+  cursor: pointer;
+}
+.editable:hover {
+  outline: 1px solid #ccc;
+}
+
+.caption_input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.linky {
+  color: #E81636;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#show_checks {
+  position: absolute;
+  top: 20px;
+  right: 5%;
+}
+
+#hidden_checks {
+  margin-top: 10px;
+}
+
+/* Home page buttons */
+.button_wrapper {
+  text-align: center;
+}
+
+.big_button {
+  display: inline-block;
+  padding: 50px 50px;
+  background: #fff;
+  margin: 0 5px;
+  text-align: center;
+}
+
+/* Form Inputs */
+input, textarea {
+  background: #fff;
+  border-radius: 5px;
+  padding: 8px 3%;
+  margin: 10px 0;
+  font-size: 18px;
+  display: block;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  color: #fff;
+  background: #E81636;
+}
+
+/* Login Form */
+form.login {
+  width: 240px;
+  background: #fff;
+  margin: 20px auto;
+  text-align: center;
+  padding: 40px;
+  border: 1px solid #ccc;
+}
+form.login input {
+  background: #eee;
+  width: 210px;
+  padding: 8px 15px;
+}
+form.login input[type="submit"] {
+  background: #E81636;
+  width: 100%;
+}
+
+/* Upload Form */
+.upload_form .col {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+.upload_form input, .upload_form textarea {
+  display: block;
+  padding: 8px 3%;
+  width: 94%;
+  border: 1px solid #ccc;
+}
+.upload_form input[type="file"] {
+  cursor: pointer;
+}
+.upload_form input[type="submit"] {
+  display: inline-block;
+  width: auto;
+  padding: 10px 20px;
+}
+.upload_form textarea {
+  height: 100px;
+}
+.upload_form .create_new {
+  margin-top: 10px;
+  display: inline-block;
+  margin-left: 55px;
+}
+.upload_form input[type="checkbox"] {
+  margin-left: 50px;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: 30px;
+}
+
+label {
+  cursor: pointer;
+}
+
+form.small_search {
+  position: absolute;
+  right: 60px;
+  top: 0px;
+}
+form.small_search input {
+  background: #eee;
+  padding: 5px 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+form.small_search .search_button {
+  background: #E81636;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.message {
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.message.success {
+  background: #ACF494;
+}
+.message.error {
+  background: #F49494;
+}
+
+/* Search Page */
+.main_side {
+  margin-right: 300px;
+}
+
+.search_side {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 200px;
+  padding: 30px 50px;
+  border-left: 1px solid #ccc;
+  min-height: 80%;
+}
+.search_side input {
+  display: block;
+  margin: 3px 0 10px;
+  background: #eee;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 180px;
+}
+.search_side .search_button {
+  background: #E81636;
+  color: #fff;
+  padding: 10px 0;
+  width: 200px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

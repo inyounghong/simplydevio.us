@@ -1,0 +1,702 @@
+// Variables
+
+$green: #89c054
+$yellow: #db594f
+$yellow2: rgba(255,196,89, 0.85)
+$orange: #E89E41
+$teal: #31a69d
+
+// Fonts
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900)
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic)
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:200,400,300,600,700)
+@import url(https://fonts.googleapis.com/css?family=Homenaje)
+
+// Mixins 
+
+=border-radius($radius)
+    -moz-border-radius:     $radius
+    -webkit-border-radius:  $radius
+    -ms-border-radius:      $radius
+    border-radius:          $radius
+
+=border-box
+    box-sizing: border-box
+
+
+// Container
+
+
+.page
+    margin-top: 54px
+    font-family: "Open Sans"
+
+.container
+    color: #333
+    padding: 50px 0
+    font-size: 15px
+    line-height: 1.5em
+    
+    &.main
+        padding-top: 100px
+
+.section
+    &.g
+        background: $green
+        *
+            color: #fff!important
+
+        li
+            color: #222!important
+    &.t
+        background: $teal
+        *
+            color: #fff!important
+
+        li
+            color: #222!important
+    &.o
+        background: $orange
+    &.y
+        background: $yellow
+
+    &.gr
+        background: #f8f8f8
+        border-top: 1px solid #ddd
+        *
+            color: #222
+
+    *
+        color: #fff
+
+
+    
+
+.message 
+    margin-bottom: 40px
+    *
+        color: rgba(255,255,255,0.9)
+
+    b
+        color: #fff
+
+    &:after
+        content: ""
+        display: block
+        left: 50%
+        margin-left: -20px
+        position: absolute
+        width: 0
+        height: 0
+        border-left: 20px solid transparent
+        border-right: 20px solid transparent
+        border-top: 20px solid $green
+    
+    &.t:after
+        border-top: 20px solid $teal
+    &.o:after
+        border-top: 20px solid $orange
+    &.y:after
+        border-top: 20px solid $yellow
+
+
+.r90
+    width: 90%
+    margin: 0 auto
+
+.row.padding
+    .col-sm-6
+        padding: 0 30px
+
+.row
+    img
+        max-width: 100%
+
+.col-sm-4, .col-sm-3
+    p
+        font-size: 16px
+
+.colored
+    background: #f8f8f8
+    position: relative
+    overflow: hidden
+    z-index: 10
+    &.orange
+        background: $orange
+    &.black
+        background: #444
+
+    &.teal
+        background: $teal
+
+    *
+        color: #fff
+
+    &.green
+        background: $green
+
+    .container
+        padding: 40px 0 20px
+
+    h4
+        color: #fff!important
+        font-weight: 500
+        margin-bottom: 40px
+
+.colored::before
+    content: ''
+    opacity: .15
+    display: block
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: -1
+    background-size: cover
+
+// Background sections
+#sri-plants
+    background: #31200A
+
+#sri-plants::before
+    background: url('../img/backgrounds/sri-plants.jpg')
+
+#field
+    background: #AD7510
+
+#field::before
+    background: url('../img/backgrounds/field.jpg')
+
+
+
+
+.r
+    text-align: right
+
+.c
+    text-align: center
+
+.l
+    text-align: left!important
+
+.b
+    font-weight: 400
+
+p.big
+    font-size: 20px
+    width: 70%
+    margin: 10px auto 20px
+    line-height: 1.5em
+
+p.main
+    font-size: 20px
+    width: 70%
+    margin: 10px auto 40px
+    line-height: 1.6em
+
+
+p
+    margin: 10px 0
+    font-size: 17px
+    line-height: 1.6em
+    font-weight: 300
+    color: #000
+
+    b
+        font-weight: 400
+
+p.med
+    width: 70%
+    margin: 10px auto 20px
+    line-height: 1.5em
+
+
+
+// Rows
+
+.row.sm p
+    font-size: 15px
+
+.floating-text
+    width: 60%
+    display: inline-block
+    vertical-align: top
+    +border-box
+
+    &.float-left
+        padding-right: 60px
+
+    &.float-right
+        padding-left: 60px
+
+.floating-image
+    width: 39%
+    display: inline-block
+    vertical-align: top
+    +border-box
+    padding-top: 15px
+
+    img
+        max-width: 100%
+
+// Headers
+
+h1
+    text-align: center
+    margin: 10px 0 30px
+    font-family: "Homenaje"
+    font-size: 40px
+
+
+h4
+    font-size: 15px
+    font-weight: bold
+    text-transform: uppercase
+    text-align: center
+    color: #999!important
+    margin: 20px 0 25px
+
+h3
+    font-family: "Homenaje"
+    margin: 10px 0
+    font-weight: 400
+    font-size: 32px
+    text-align: center
+    margin: 20px 0 15px
+    line-height: 1.3em
+
+// Button
+
+.button-wrap 
+    text-align: center
+    margin: 0 0 10px
+
+.button
+    display: inline-block
+    border: 2px solid $orange
+    color: $orange
+    font-size: 13px
+    padding: 10px 15px
+    margin: 0 5px
+    text-align: center
+    +border-box
+    text-transform: uppercase
+    font-weight: 600
+    transition: .2s all
+
+    &.w
+        border: 2px solid #fff
+        color: #fff
+        &:hover
+            background: #fff
+            color: $green
+
+    &.t
+        background: $teal
+
+    &:hover
+        color: #fff
+        background: $orange
+        text-decoration: none
+
+.button-support
+    background: $green
+    padding: 10px 15px
+    display: inline-block
+    color: #fff
+    margin-bottom: 10px
+
+
+// Navigation Bar
+
+.navbar
+    +border-radius(0)
+    position: fixed
+    z-index: 99
+    width: 100%
+    border: none
+    top: 0
+
+    .nav-background
+        width: 100%
+        z-index: 98
+        position: absolute
+        height: 54px
+        background: $orange
+
+    .container
+        z-index: 99
+        position: relative
+        padding-top: 0
+        font-size: 13px
+
+    li
+        padding: 2px 0
+
+    li:hover
+        background: $yellow
+
+
+    a
+        color: #fff!important
+        font-weight: 400
+
+    .navbar-brand
+        img
+            position: relative
+            top: -2px
+
+em
+    font-style: normal
+    font-weight: 600
+    
+
+
+.navbar-default
+    background: none
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 13px
+
+    a
+        color: #fff
+
+// Image background banner
+
+.info-banner
+    max-height: 500px
+    overflow: hidden
+    position: relative
+    background: #000
+    *
+        color: #fff
+
+    h4
+        color: #fff!important
+
+    img#bg
+        width: 100%
+        position: absolute
+        opacity: 0.4
+
+    .banner-text
+        z-index: 99
+        position: relative
+
+    
+
+
+// Quote banner
+
+.text-banner
+    background: $green
+    font-family: "Homenaje"
+    
+    .container
+        max-width: 1000px
+        margin: auto
+
+    .banner-main
+        font-size: 34px
+        line-height: 1.3em
+        padding-top: 20px
+
+    .banner-small
+        text-align: right
+        font-size: 22px
+        margin-top: 10px
+
+    *
+        color: #fff
+
+
+// Slider
+
+.banner
+    max-height: 500px
+    overflow: hidden
+    position: relative
+    background: #000
+
+    #banner-logo
+        width: 250px
+        margin-bottom: 0px
+
+
+    img#banner-img
+        width: 100%
+        opacity: 0.6
+
+    .caption
+        position: absolute
+        top: 130px
+        width: 100%
+        text-align: center
+        color: #fff
+        display: inline-block
+        font-size: 48px
+        font-weight: 200
+        font-family: "Homenaje"
+
+
+// Other banners
+
+.side-banner
+    height: 400px
+    overflow: hidden
+    position: relative
+
+    .text-box
+        position: absolute
+        left: 50%
+        top: 0
+        padding: 30px 50px
+
+.top-banner
+    height: 400px
+    background-size: cover!important
+
+.img-banner
+    height: 500px
+    background-size: cover!important
+    *
+        color: #fff
+
+#problem
+    background: url('../img/problem.jpg') no-repeat
+
+#about-us
+    background: url('../img/group.jpg') no-repeat
+    
+#vision
+    background: url('../img/about.jpg') no-repeat
+
+#activities
+    background: url('../img/backgrounds/about2.jpg') no-repeat
+
+#benefits 
+    background: url('../img/backgrounds/benefits.jpg') no-repeat
+
+#comparison
+    background: url('../img/backgrounds/comparison.jpg') no-repeat
+
+#projects
+    background: url('../img/backgrounds/header.jpg') no-repeat
+
+
+// About Us People
+
+.people_wrap
+    text-align: center
+    padding: 30px 15px
+
+    .people_img
+        width: 100px
+        height: 100px
+        display: inline-block
+        margin-bottom: 20px
+
+        img
+            width: 100%
+            +border-radius(100%)
+
+    .people_name
+        margin-bottom: 5px
+        font-weight: 600
+
+    .people_job
+        margin: 5px 0
+        font-style: italic
+
+// Icons
+
+
+.s-icon
+    opacity: .4
+    max-width: 55px
+
+// Global Impact
+
+#impact
+    p
+        text-align: left
+
+.black li:hover img:first-child
+    opacity: 1
+
+.icon-hover
+    img:first-child
+        position: absolute
+        transition: .2s all
+        opacity: 0
+
+// Projects
+
+
+.project-box
+    margin-right: 20px
+    position: relative
+    background: #fff
+    margin-bottom: 20px
+
+.project-box img
+    max-width: none
+    height: auto
+    min-width: 100%
+
+.project-image
+    overflow: hidden
+    height: 200px
+
+
+.project-box 
+    padding-bottom: 10px
+    p
+        padding: 10px 25px
+        font-size: 15px
+        margin-top: 0
+
+    h3
+        margin-bottom: 0
+
+    h5
+        background: $orange
+        color: #fff
+        margin: 0
+        padding: 15px 20px
+        display: inline-block
+        font-size: 16px
+        font-weight: 600
+        position: absolute
+        top: 153px
+
+// Principles list
+
+.img-list
+    margin-top: 30px
+    text-align: center
+    padding: 0
+
+    a
+        color: #fff
+        text-decoration: none
+        transition: .2s all
+
+        &:hover
+            opacity: 0.8
+
+    li
+        list-style-type: none
+        display: inline-block
+        padding: 20px 10px
+        width: 200px
+        text-align: center
+        font-weight: 400
+        font-size: 17px
+        cursor: pointer
+        color: #fff
+        margin: 0 5px
+        +border-radius(5px)
+        vertical-align: top
+
+    &.black li
+        color: #222!important
+        background: #fff
+
+        a
+            color: #222!important
+
+    img
+        margin-bottom: 10px
+
+
+
+
+// Steps and images
+
+.step
+    max-width: 450px
+    display: inline-block
+
+    img
+
+        max-width: 100%
+
+// Quotes
+
+.quotes
+    .col-sm-4
+        padding: 0 20px
+
+blockquote
+    padding: 0
+    border: 0
+    color: #666
+    line-height: 1.5em
+    font-weight: 300
+    font-size: 15px
+    background: #eee
+    padding: 20px
+    position: relative
+
+blockquote:after
+    content: ""
+    width: 0
+    height: 0
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-top: 20px solid #eee
+    position: absolute
+    bottom: -20px
+    right: 50px
+
+.quote-author
+    margin-top: 30px
+    font-size: 20px
+    text-align: right
+    margin-bottom: 5px
+    font-weight: 300
+    font-family: "Homenaje"
+
+.quote-details
+    font-size: 13px
+    text-align: right
+    line-height: 1.3em
+    color: #bbb
+
+// Scroll to sections
+.scroll-to
+    position: relative
+    top: -50px
+
+
+// Footer
+
+#footer
+    background: #444
+    margin-top: 20px
+
+    img
+        margin: -3px 3px 0 0
+
+    *
+        color: #fff
+        font-size: 13px
+
+    .container
+        color: #fff!important
+        padding: 50px 0 30px
+    ul
+        padding: 0
+        margin-bottom: 20px
+    li
+        list-style-type: none
+
+    .head
+        text-transform: uppercase
+        font-weight: 600
+        margin: 0 0 15px
+
+    p
+        margin: 0 0
+

@@ -1,0 +1,33 @@
+<?
+session_start();
+header('Content-type: image/png');
+$visitor = exec("python ../image.py 'synthlips'");
+$new_message1 = str_replace("visitor",$visitor, 'a visitor, ');
+$new_message2 = str_replace("visitor",$visitor, 'how very');
+$font = './uploaded_fonts/' . 'DoubleFeature20.ttf';
+# Determine the longer of the two  messages
+if (strlen($new_message2) > 0)
+{
+    if (strlen($new_message1) <= strlen($new_message2))
+    {
+        $longer_message = $new_message2;
+    }
+    else
+    {
+        $longer_message = $new_message1;
+    }
+}
+else
+{
+    $longer_message = $new_message1;
+}
+$width  = (40 * strlen($longer_message));
+$im = imagecreatetruecolor ($width,200);
+$background = imagecolorallocate($im, 8, 227, 233);
+imagefill($im,0,0,$background);
+$color = imagecolorallocate($im, 255, 10, 99);
+imagettftext($im, 33, 0, 20, 83, $color, $font, $new_message1);
+imagettftext($im, 33, 0, 200, 156, $color, $font, $new_message2);
+imagepng($im);
+imagedestroy($im);
+?>

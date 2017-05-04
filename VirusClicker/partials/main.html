@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="col-sm-8">
+
+		<div class="score">
+			{{game.score | floor}} <ng-pluralize count="game.score | floor" when="{'0': 'people', '1': ' person', other: ' people'}"></ng-pluralize> infected
+		</div>
+
+		<div class="growth">
+			{{game.growth | floorDecimal}} infections per second
+		</div>
+
+		<div class="virus" id="virus-box" >
+			<div class="click-me">click me!</div>
+			<img id="virus-img" src="img/virus-base.png" ng-click="clickVirus()">
+		</div>
+
+	</div>
+
+	<div class="col-sm-4">
+	
+		<ul class="spoke-list">
+			<li ng-repeat="spoke in spokes" ng-class="highlight(spoke)" ng-click="buySpoke(spoke)">	
+				<img src="img/{{getIcon(spoke)}}-icon.png" class="icon">
+				<div class="name">
+					{{getName(spoke)}}
+				</div>
+				<div class="count">{{spoke.count}}</div>
+				<div class="cost">{{spoke.cost}}</div>
+			</li>
+		</ul>
+
+	</div>
+</div>
+
+<script src="js/animation.js"></script>

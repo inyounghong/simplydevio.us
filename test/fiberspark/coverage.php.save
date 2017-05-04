@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fiberspark | Coverage Area</title>
+
+  <meta name="description" content="Fiberspark: A better kind of Internet.">
+  <meta name="keywords" content="Fiberspark, fiberoptic cables, Ithaca, NY">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/navbar.css" rel="stylesheet" /> 
+  <link href="css/footer.css" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-- Wrap all page content here -->
+    <div id="wrap">
+
+    <?php require ("inc/navbar.html");?>
+
+      <!-- Begin page content -->
+      <div class="container-fluid">
+                </div><!-- container-fluid -->
+<iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zqctuO4oghJk.kIvu5jB8YJ0w" wid-->
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

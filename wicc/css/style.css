@@ -1,0 +1,40 @@
+
+
+/* HEADER */
+
+.header{
+	padding: 30px 0 30px 170px;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+/* MENU */
+
+.menu{
+	margin-top: -100px;
+}
+
+.side-nav{
+	margin-top: 20px;
+}
+
+/* GENERAL BODY */
+
+h1{
+	margin-top: 20px;
+}
+
+h3{
+	margin: 20px 0 15px;
+	font-weight: 700;
+}
+
+.centerheader{
+	text-align: center;
+}
+
+p, ul, li{
+	font-family: 'Open Sans';
+	font-size: 18px;
+}
+

@@ -1,0 +1,346 @@
+*{
+    background:0;
+    padding:0;
+    margin:0;
+    border:none;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    font-size:14px;
+
+}
+
+body{
+    background:#79BAB5 url(../images/forest.jpg);
+    background-position:cover;
+
+    
+}
+
+body a{
+    color:#000;
+}
+
+/* NAV */
+
+.nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    color:#eee;
+    background:rgba(0,11,30,.9);
+    padding:10px 30px;
+    border-bottom: 1px solid rgba(255,255,255,.6);
+}
+
+h1{
+    font-size:26px;
+    font-weight:400;
+    text-transform:lowercase;
+    left:20px;
+    color:#fff;
+    font-family:'Playfair Display';
+
+}
+
+/* VIEW CONTAINER */
+
+.view_container{
+    white-space:nowrap;
+    margin-top:80px;
+    padding-left:10px;
+}
+
+.gridster{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#main_grid li{
+    background:rgba(240,240,240,.95);
+    padding:10px 10px 55px;
+    border-radius:3px;
+    cursor:default;
+    box-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+
+#main_grid .gridster{
+    height:475px;
+    width:255px;
+    overflow:auto;
+    overflow-x: hidden;
+    top:5px;
+}
+
+#main_grid ul ul{
+    
+}
+
+#main_grid li li{
+    word-break: break-word;
+    white-space: normal;
+    font-weight: 400;
+    color:#444!important;
+    background:#fff;
+    padding:5px 10px;
+    box-shadow:1px 1px 2px #aaa;
+    cursor:pointer;
+
+}
+
+.button{
+    padding:4px 0;
+    position:absolute;
+    text-align:center;
+    bottom:0;
+    left:0;
+    width:270px;
+    color:#eee;
+    background:#444;
+    cursor:pointer;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-weight:400;
+}
+
+.button span{
+    content:' Add Goal';
+    font-size:15px;
+    font-weight:300;
+    text-transform: lowercase;
+    color:#fff;
+    width:10px;
+    top:-2px;
+    overflow: hidden;
+    display:inline-block;
+    transition:.2s;
+}
+
+.button:hover{
+    background:#222;
+}
+
+.button:hover span{
+    width:90px;
+}
+
+
+
+.gridster .edit{
+    position:absolute;
+    top:5px;
+    right:2px;
+    display:none;
+    height:12px;
+    width:12px;
+    background:url(../images/small_edit.png) no-repeat;
+    opacity:.2;
+}
+
+.gridster .edit:hover{
+    opacity:.5;
+}
+
+.gridster li li:hover .edit{
+    display:block;
+}
+
+.gridster .delete, .gridster .complete{
+    display: inline-block;
+    font-size:11px;
+    color:#000;
+    text-transform: lowercase;
+    position:relative;
+    top:-2px;
+    opacity:.5;
+}
+
+.gridster .delete:hover, .gridster .complete:hover{
+    opacity:1;
+}
+
+.gridster .delete{
+    float:right;
+}
+
+.gridster .delete:before{
+    content:url(../images/delete.png);
+    height:10px;
+    width:10px;
+    opacity:.5;
+    margin-right:3px;
+}
+
+.gridster .complete{
+    float:left;
+}
+
+.gridster .complete:before{
+    content:url(../images/complete.png);
+    height:10px;
+    width:10px;
+    opacity:.5;
+    margin-right:2px;
+}
+
+
+
+textarea{
+    width:210px;
+    height:100%;
+
+    z-index:99;
+    position:relative;
+    
+}
+
+/* ------------- HEADER ----------- */
+
+.header{
+    width:230px;
+}
+
+.title, #input{
+    font-family:'Playfair Display';
+    font-weight:700;
+    font-size:20px;
+    margin:1px;
+    color:#444;
+}
+
+.title{
+    cursor: pointer;
+}
+
+#input{
+    width:100%;
+
+}
+
+.title:hover{
+    margin:0;
+    border: 1px solid #bbb;
+}
+
+.text{
+    
+}
+
+/* Grid delete X button */
+
+.ask_delete_grid{
+    background:none;
+    position:absolute;
+    top:5px;
+    right:8px;
+    display:block;
+    opacity:0;
+    opacity:.2;
+    font-size:11px;
+    cursor: pointer;
+}
+
+
+.ask_delete_grid:hover{
+    opacity:.5;
+
+}
+
+/* -------- GRID OVERLAY ----------- */
+
+.ask_overlay{
+    position: absolute;
+    top: 0;
+    background: rgba(100,100,100,.9);
+    width: 100%;
+    margin-left: -10px;
+    height: 100%;
+    text-align:center;
+    border-radius:3px;
+    z-index:9999;
+    cursor:default;
+}
+
+.delete_grid, .cancel{
+    border-radius:2px;
+    background: white;
+    display:inline-block;
+    padding:10px 10px;
+    width:120px;
+    cursor: pointer;
+    box-shadow:1px 1px 1px rgba(0,0,0,.4);
+
+}
+
+.delete_grid{
+    background:#FF4C5A;
+    color:#fff;
+    display:inline-block;
+    margin-top:80%;
+    margin-bottom:10px;
+}
+
+
+
+
+
+#main_grid li.comp{
+    background:#ddd;
+    color:#aaa;
+    box-shadow:none;
+}
+
+/* Progress Bar */
+
+.progress{
+    height:2px;
+    width:230px;
+    background:#bbb;
+    position:relative;
+    top:5px;
+}
+
+.bar{
+    background:#333;
+    height:100%;
+    transition: all .4s;
+}
+
+.task{
+    color:#aaa;
+    font-size:11px;
+    position:absolute;
+    top: 21px;
+    right: 12px;
+}
+
+/* ADD GRID BUTTON */
+
+#add_grid_button{
+    display: inline-block;
+    border: 3px dashed #fff;
+    background:rgba(0,0,0,.7);
+    width: 260px;
+    height: 321px;
+    text-align: center;
+    position: relative;
+    top: 25px;
+    left: 20px;
+    color:#fff;
+    border-radius: 5px;
+    padding-top: 240px;
+    opacity:.7;
+    text-transform:uppercase;
+    font-weight:700;
+
+}
+
+#add_grid_button:hover{
+    opacity:.9;
+    
+}
+
+
+.cheat_space{
+    width:20px;
+    display:inline-block;
+}

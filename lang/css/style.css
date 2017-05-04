@@ -1,0 +1,165 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
+* {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: Open Sans;
+}
+
+body {
+  background: #fafafa;
+}
+
+.main {
+  margin-top: 100px;
+}
+
+.pages {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 150px;
+  z-index: 99;
+  cursor: pointer;
+}
+.pages:hover {
+  background: #eee;
+}
+.pages#page_left {
+  left: 0px;
+  border-right: 1px solid #ccc;
+}
+.pages#page_right {
+  right: 0px;
+  border-left: 1px solid #ccc;
+}
+
+/* READING WRAPPER */
+.cont {
+  margin-right: 400px;
+}
+
+#reading_wrapper {
+  margin: auto;
+  max-width: 900px;
+  padding: 0 50px;
+}
+#reading_wrapper .title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#reading_box .text {
+  display: inline-block;
+  margin: 4px 0px;
+  cursor: pointer;
+  padding: 4px 3px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#reading_box .text:hover {
+  background: #eee;
+}
+#reading_box .text.clicked {
+  font-weight: 600;
+}
+#reading_box .text.clicked:hover {
+  background: none;
+}
+#reading_box .trans {
+  top: -13px;
+  position: absolute;
+  font-size: 14px;
+  color: #888;
+  font-weight: 600;
+  width: 100px;
+}
+#reading_box .trans.noun.m {
+  color: #128ED6;
+}
+#reading_box .trans.noun.f {
+  color: #F62E8C;
+}
+#reading_box .trans.noun.nt {
+  color: #1DCE0F;
+}
+
+/* SIDEBAR */
+#sidebar {
+  width: 400px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  vertical-align: top;
+  padding: 50px 0px;
+  background: #eee;
+  height: 100%;
+}
+#sidebar .tab {
+  background: #f8f8f8;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+}
+#sidebar .panel {
+  padding: 10px 15px;
+}
+#sidebar textarea {
+  width: 250px;
+}
+
+/* My texts */
+.text_wrap {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.text_wrap .menu_options {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+.text_wrap:hover {
+  background: #f8f8f8;
+}
+
+/* Translations */
+.panel .word, .panel .translation {
+  display: inline-block;
+  width: 49%;
+  margin-right: 1%;
+  font-size: 14px;
+}
+.panel .word {
+  font-weight: 600;
+}
+
+#display_load .title {
+  font-weight: 600;
+}
+#display_load .orig, #display_load .trans {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  font-size: 14px;
+}
+#display_load .orig {
+  margin-right: 4%;
+}
+
+/* Input */
+input, textarea {
+  border: 1px solid #aaa;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+}
+
+/*# sourceMappingURL=style.css.map */

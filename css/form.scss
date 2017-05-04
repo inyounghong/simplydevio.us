@@ -1,0 +1,109 @@
+@import "globals";
+
+@mixin col{
+	vertical-align:top;
+	display:inline-block;
+}
+
+.head{
+	font-weight:700;
+	display:inline-block;
+	width:25%;
+	vertical-align:top;
+	margin-top:5px;
+}
+
+input[type="text"]{
+	border:1px solid #ccc;
+
+	padding:2px 3%;
+	margin:3px 0;
+	@include trans();
+}
+
+
+
+.w35{
+	@include col;
+	width:35%;
+}
+
+.w65{
+	@include col;
+	width:63%;
+}
+
+.inputs{
+	@include col;
+	width:70%;
+	
+	position:relative;
+
+	.w50{
+		width:47%;
+		display:inline-block;
+		position:relative;
+		margin-right:4%;
+
+		&:last-of-type{
+			margin-right:0;
+		}
+
+		[type="range"]{
+			width:76%!important;
+		}
+
+		.range_label{
+			width:10%;
+		}
+
+	}
+}
+
+input[type="range"]{
+	width:85%!important;
+}
+
+.range_label{
+	display:inline-block;
+	width:5%;
+	
+}
+
+.w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8{
+	@include col;
+	input{
+		width:90%!important;
+	}
+}
+
+.w1{
+	width:8%;
+}
+
+.w2{
+	width:15%;
+}
+
+.w4{
+	width:33%;
+}
+
+.w6{
+	width:50%;
+}
+
+.w7{
+	width:57%;
+}
+
+.w8{
+	width:65%;
+}
+
+.w12{
+	input{
+		width: 92%;
+		padding: auto 2%;
+	}
+}

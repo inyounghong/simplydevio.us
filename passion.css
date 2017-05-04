@@ -1,0 +1,297 @@
+* {
+	border: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+/* ------- SAVIOR OF UNIVERSE KEY ---------
+
+#1d2741 dark blue
+#ea3f53 pink
+#25bda6 light teal
+#f58b3d orange
+
+---------------------------------- */
+
+a.section {
+    font-weight:bold;
+    font-size:25px;
+}
+
+body {
+    background:#1d2741;
+    padding-top:100px;
+}
+
+#content{
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+.chunk{
+     margin-bottom:800px;
+}
+
+.section{height:100px;}
+
+
+/* NAVIGATIONAL FORMATTING */
+
+#nav a.active {
+    color:#ea3f53!important;
+}
+
+#nav {
+    position:fixed;
+    top:0px;
+    right:0px;
+    padding:20px;
+}
+
+#nav a{
+    text-decoration:none;
+    font-size:50px;
+    display:block;
+    color:#fff;
+    margin: -30px 0;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    -o-transition:all .5s;
+    transition:all .5s;
+}
+
+
+/* PASSION FORMATTING */
+
+#passion{
+    position:relative;
+}
+
+#passion h1, #passion h2, #passion h3{
+    font-family:'essence';
+    text-transform:uppercase;
+    position:relative;
+}
+
+#passion h1{
+    font-size:118px;
+    color:#ea3f53;
+    font-family:'Lobster Two';
+    text-transform:lowercase;
+    font-style:italic;
+}
+
+#passion h2{
+    font-size:150px;
+    color:#f58b3d;
+    margin-top:-45px;
+}
+
+#passion h3{
+    font-family:'Georgia';
+    font-style:none;
+    color:#25bda6;
+    font-size:260px;
+    position:absolute;
+    left:470px;
+    top:75px;
+    display:inline-block;
+}
+
+/* ABOUT ME TRASHINESS */
+
+#about h1, #about h4{
+    font-family:'Lobster Two';
+    color:#f58b3d;
+    font-size:100px;
+    font-style:italic;
+}
+
+#about h2 span{
+    font-family:'Lobster Two';
+    font-size:100px;
+    text-transform:none;
+    font-style:italic;
+}
+
+#about h5{
+    font-family:'Georgia';
+    font-size:80px;
+    color:#f58b3d;
+    display:inline;
+}
+
+#about h2 span{color:#ea3f53;}
+#about h4{color:#25bda6;
+    font-weight:normal;}
+
+#about h2{
+    font-family:'Georgia';
+    text-transform:none;
+    color:#fff;
+    font-size:80px;
+}
+
+#about h3{
+    font-family:'Georgia';
+    text-transform:none;
+    color:#fff;
+    font-size:80px;
+    display:inline;
+}
+
+
+
+
+/* POEM FORMATTING */
+
+#poem{
+    color:#fff;
+    font-size:26px;
+    font-family:'Cambria';
+    font-style:italic;
+}
+
+#poem em{
+    font-weight:bold;
+    -webkit-transition:all .2s;
+    -moz-transition:all .2s;
+    -o-transition:all .2s;
+    transition:all .2s;
+}
+
+
+/* ESSENTIAL RANDOS */
+
+.ep{color:#ea3f53;}
+.eb{color:#25bda6;}
+.eo{color:#f58b3d;}
+
+.r{text-align:right;}
+.c{text-align:center;}
+.l{text-align:left;}
+
+
+/* Left Section */
+    
+#left{
+	float:left;
+	width:75%;
+	margin-left:5%;
+}
+
+#left p{
+    margin-top:10px;
+}
+    
+    
+/* Right Section (nav links) */
+
+#right{
+	float:right;
+	width:15%;
+	font-size:16px;
+}
+
+    
+
+.white {
+    max-width:1000px;
+    background:#fff url('http://simplydevio.us/images/white.png');
+    outline:1px solid #ddd;
+    font-size:16px;
+    margin:30px auto;
+    padding:50px;}
+
+
+
+.pp {
+height:10px;
+}
+
+.tri {
+width:0;
+height:0;
+border-left:25px solid transparent;
+border-right:25px solid transparent;
+margin:0 auto 50px;
+}
+
+.tp {border-top:20px solid #ff5176;}
+.ty {border-top:20px solid #ffa53a;}
+.tb {border-top:20px solid #5e4948;}
+.tg {border-top:20px solid #9fce54;}
+.tw {border-top:20px solid #fff;}
+
+.p {background:#ff5176;}
+.y {background:#ffa53a;}
+.b {background:#5e4948;}
+.g {background:#9fce54;}
+.w {color:#fff;}
+
+.s{	
+font-family:'Sue Ellen Francisco', cursive;
+font-weight:400;
+text-transform:uppercase;
+color:#fff;
+font-size:40px;}
+
+.c {text-align:center;}
+.l {text-align:left;}
+.r {text-align:right;}
+
+.wbox{background:url(http://simplydevio.us/images/white.png);}
+
+h1,h2,h3 {font-weight:400;}
+
+.clear {clear:both;}
+
+.cccc {width:19%;float:left;min-width:200px;}
+
+.cc {
+width:45%;
+float:left;
+min-width:300px;
+}
+
+.trans2 {
+-webkit-transition:all .2s;
+-moz-transition:all .2s;
+-o-transition:all .2s;
+-ms-transition:all .2s;
+transition:all .2s;
+}
+
+@font-face {
+font-family:Lobster Two;
+src:url(fonts/LobsterTwo-Regular.ttf), url(fonts/LobsterTwo-Regular.eot);
+}
+
+@font-face {
+font-family:Sue Ellen Francisco;
+src:url(fonts/SueEllenFrancisco.ttf), url(fonts/SueEllenFrancisco.eot);
+}
+
+
+@font-face {
+font-family:'Bebas';
+src:url(fonts/BEBASNEUE.otf), url(fonts/BEBASNEUE.eot);
+}
+
+
+
+
+
+@font-face {
+    font-family: 'essence';
+    src: url('fonts/aressence-webfont.eot');
+    src: url('fonts/aressence-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/aressence-webfont.woff') format('woff'),
+         url('fonts/aressence-webfont.ttf') format('truetype'),
+         url('fonts/aressence-webfont.svg#ar_essenceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

@@ -1,0 +1,93 @@
+*{
+    background:0;
+    padding:0;
+    margin:0;
+    border:none;
+    font-family: 'Noticia Text';
+    text-decoration: none;
+    font-size:14px;
+
+}
+
+body{
+    background:#eee;
+    
+}
+
+body a{
+    color:#000;
+}
+
+/* NAV */
+
+.nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    color:#fff;
+    background:#333;
+    padding:10px 30px;
+
+}
+
+h1{
+    font-size:26px;
+    font-weight:400;
+    left:20px;
+    color:#fff;
+    font-family: 'Over the Rainbow';
+
+
+}
+
+/* HEADER */
+
+.header{
+    background: url('../images/forest.jpg') no-repeat;
+    height:500px;
+    background-size:cover;
+    padding-top:200px;
+}
+
+.header .title{
+    color:#fff;
+    text-align:center;
+    background:rgba(0,11,30,.9);
+    padding:10px;
+    width:500px;
+    margin:0 auto;
+
+}
+
+.header .title_wrap{
+    border: 1px solid rgba(255,255,255,.6);
+    font-family: 'Playfair Display';
+    font-size:50px;
+    padding:40px 50px 40px;
+}
+
+.header .subtitle{
+    font-size:15px;
+    font-family:'Open Sans';
+    padding:0 30px;
+    margin-top:20px;
+}
+
+/* MAIN */
+
+.main{
+    padding:50px 0;
+}
+
+.section{
+    width:1000px;
+    margin: 0 auto;
+    font-size:24px;
+    color:#000;
+    line-height:40px;
+}
+
+.section span{
+    font-size:24px;
+    border-bottom:1px solid #000;
+}

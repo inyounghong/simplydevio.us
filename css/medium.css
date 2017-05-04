@@ -1,0 +1,48 @@
+/* CSS for less than 640px */
+.menuwrap{
+	display:inline-block;
+}
+
+.menu_icon{
+	display:block;
+	font-family:'Ubuntu';
+    text-transform:uppercase;
+    background:#1d2742;
+    color:rgba(255,255,255,.8);
+    font-weight:600;
+    font-size:13px;
+    display:inline-block;
+    position:relative;
+    padding:25px 15px;
+    cursor: pointer;
+}
+
+
+.menulinks{
+	width:100px;
+	display:none;
+
+	text-align:left;
+	position:absolute;
+	top:65px;
+	right: 45px;
+}
+
+.menuwrap:hover .menulinks{
+		display:block!important;
+}
+
+
+.menulink{
+
+	padding-left:30px!important;
+	display:block;
+	width:100%;
+}
+
+.left50, .right50, .left60, .right40{
+	float:none;
+	width:100%!important;
+}
+
+

@@ -1,0 +1,42 @@
+@mixin radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin trans($time: .2s){
+    -webkit-transition:all $time;
+    transition:all $time;
+}
+
+@mixin colors($color, $color_code, $color_code2){
+    .title_widget.#{$color}{
+        background:$color_code!important;
+        input{
+            background: $color_code;
+        }
+        .plus{
+            background:$color_code2;
+        }
+    }
+}
+
+
+$width:    80px;
+$blue:     #2D3645;
+$blue_l:   #3F4856;
+$red:      #F4254C;
+$red2:     mix($blue, $red, 4%);//#FA7D7D;
+$teal:     #2FD8AC;
+$teal2:    mix($blue, $teal, 5%);//#5BDAB8;
+$teal3:    $teal2;
+$yellow:   #fa9a18;
+$yellow2:  mix($blue, $yellow, 3%);//#FAC86C;
+$orange:   #aecd1f;
+$orange2:  mix($blue, $orange, 3%);
+$purple:   #7c2043;
+$purple2:  mix($blue, $purple, 3%);
+
+
+$green: #aecd1f;

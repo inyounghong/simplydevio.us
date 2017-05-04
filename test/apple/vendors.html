@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vendors</title>
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" href="css/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script> 
+			$(document).ready(function(){
+				$(".menu_icon").click(function(){
+					$(".nav ul").slideToggle(300);
+				});
+			});
+			$(document).ready(function(){
+				$("#one_panel").show();
+			  	$("#one").click(function(){
+			    	$("#one_panel").show();
+			    	$("#two_panel").hide();
+			    	$("#three_panel").hide();
+			    	$("#four_panel").hide();
+			    	$("#five_panel").hide();
+			    	$("#one").addClass("active");
+			    	$("#two").removeClass("active");
+			    	$("#three").removeClass("active");
+			    	$("#four").removeClass("active");
+			    	$("#five").removeClass("active");
+			  	});
+			  	$("#two").click(function(){
+			    	$("#two_panel").show();
+			    	$("#one_panel").hide();
+			    	$("#three_panel").hide();
+			    	$("#four_panel").hide();
+			    	$("#five_panel").hide();
+			    	$("#one").removeClass("active");
+			    	$("#two").addClass("active");
+			    	$("#three").removeClass("active");
+			    	$("#four").removeClass("active");
+			    	$("#five").removeClass("active");
+			  	});
+			  	$("#three").click(function(){
+			    	$("#three_panel").show();
+			    	$("#two_panel").hide();
+			    	$("#one_panel").hide();
+			    	$("#four_panel").hide();
+			    	$("#five_panel").hide();
+			    	$("#one").removeClass("active");
+			    	$("#two").removeClass("active");
+			    	$("#three").addClass("active");
+			    	$("#four").removeClass("active");
+			    	$("#five").removeClass("active");
+			  	});			  	
+			  	$("#four").click(function(){
+			    	$("#three_panel").hide();
+			    	$("#two_panel").hide();
+			    	$("#one_panel").hide();
+			    	$("#four_panel").show();
+			    	$("#five_panel").hide();
+			    	$("#one").removeClass("active");
+			    	$("#two").removeClass("active");
+			    	$("#three").removeClass("active");
+			    	$("#four").addClass("active");
+			    	$("#five").removeClass("active");
+			  	});
+			  	$("#five").click(function(){
+			    	$("#three_panel").hide();
+			    	$("#two_panel").hide();
+			    	$("#one_panel").hide();
+			    	$("#four_panel").hide();
+			    	$("#five_panel").show();
+			    	$("#one").removeClass("active");
+			    	$("#two").removeClass("active");
+			    	$("#three").removeClass("active");
+			    	$("#four").removeClass("active");
+			    	$("#five").addClass("active");
+			  	});
+			});
+		</script>
+	</head>
+	<body class="body">
+		<nav class="nav">
+			<div class="menu_icon"></div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="events.html">Schedule</a></li>
+				<li><a href="vendors.html">Vendors</a></li>
+				<li><a href="directions.html">Directions</a></li>
+
+			</ul>
+		</nav>
+		<div class="main">
+			<div class="section">
+				<h1>Vendors</h1>
+			</div>
+			<div class="section">
+				<div class="wrap_two">
+					<div class="label_wrap">
+						<div class="label active" id="one">Food</div>
+						<div class="label" id="two">Wine &amp; Beer</div>
+						<div class="label" id="three">Exhibitors</div>
+						<div class="label" id="four">Artisans</div>
+						<div class="label" id="five">Farmers</div>
+					</div>
+				</div>
+
+				<div class="panel" id="one_panel">
+					<h2>Food</h2>
+					<ul class="leftcol">
+						<li>B&amp;B Kettle Korn</li>
+						<li>Bella pizza</li>
+						<li>Ben &amp; Jerry's</li>
+						<li>Blooming Onion</li>
+						<li>Curly Fries</li>
+						<li>Camel Apples</li>
+						<li>Collegetown Crepes</li>
+						<li>Dondee's Fish 'n Chips</li>
+						<li>Fresh Lemonade</li>
+						<li>Funnel cakes</li>
+						<li>Gorgers Taco &amp; Subs</li>
+						<li>Hot Candied Apples</li>
+						<li>Island Cow Ice Cream</li>
+						<li>Kettle Corn Shop</li>
+						<li>Lao Village</li>
+					</ul>
+					<ul class="rightcol">
+						
+						<li>New Delhi Diamonds</li>
+						<li>New York Almond Company</li>
+						<li>On The Street - Greek Cuisine</li>
+						<li>Pumpkin Funnel Cake</li>
+						<li>PDR's Mac'n Cheese</li>
+						<li>PDR's Sausage &amp; Dogs</li>
+						<li>Sangam Restaurant</li>
+						<li>Silent City Coffee</li>
+						<li>Star Truck</li>
+						<li>Taste of Thai</li>
+						<li>Taste of Thai Express</li>
+						<li>Tellez Mexican Catering</li>
+						<li>Tibetan Momobar</li>
+						<li>Travelers Kitchen - Potato Pancake</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+
+				<div class="panel" id="two_panel">
+					<h2>Wine &amp; Beer</h2>
+					<ul>
+						<li>Ashley Lynn Winery</li>
+						<li>Bandwagon Brewpub</li>
+						<li>Bellwether Hard Cider</li>
+						<li>Cortland Beer Company</li>
+						<li>Daring Drake Farm &amp; Blackduck Cidery</li>
+						<li>Eve's Cidery</li>
+						<li>Montezuma Winery</li>
+						<li>Six Mile Creek Vineyards</li>
+						<li>Thousand Islands Winery</li>
+					</ul>
+				</div>
+
+				<div class="panel" id="three_panel">
+					<h2>Exhibitors</h2>
+					<ul>
+						<li>Barried Treasures</li>
+						<li>Christian Science Reading Room</li>
+						<li>Field &amp; Stream</li>
+						<li>Finger Lakes School of Massage</li>
+						<li>Indigo Moon</li>
+						<li>Ithaca Family Chiropractic</li>
+						<li>Mid-Atlantic Waterproofing</li>
+						<li>Simply Alexis Photography</li>
+					</ul>
+				</div>
+
+				<div class="panel" id="four_panel">
+					<h2>Handmade Artisans</h2>
+					<ul class="leftcol">
+						<li>Art on You</li>
+						<li>BeJeweled</li>
+						<li>Bible Wick Candles</li>
+						<li>Bloom</li>
+						<li>Breezeland Boutique &amp; Bella Vanca Designs</li>
+						<li>Captivate by Erica</li>
+						<li>Cayuga Botanicals</li>
+						<li>Cloz's</li>
+						<li>Colin D. Young Photography</li>
+						<li>Dave's Art Den</li>
+						<li>dna jewelry designs</li>
+						<li>Drake Hill Woodworking</li>
+						<li>East Street Tins</li>
+						<li>EDD Paper Creations</li>
+						<li>Eight PM Designs</li>
+						<li>F. Oliver's</li>
+						<li>Family Jewelz</li>
+						<li>Festive Face Painting</li>
+						<li>Festive Face Painting</li>
+						<li>forclaudiasssayke</li>
+						<li>Four Leaf Soap LLC</li>
+						<li>Fudge Lady</li>
+						<li>Gayane's Gifts and Crafts</li>
+						<li>Golden Hands Design/Cloud 9 Jewels</li>
+						<li>Helenas Organic Garden-Nature's Apothecary</li>
+						<li>Hen's Teeth Primitives</li>
+						<li>Hooked Productions</li>
+						<li>HRLMS Creations</li>
+						<li>Imaginative Creations</li>
+					</ul>
+					<ul class="rightcol">
+						<li>Katie Vaz Design</li>
+						<li>Kingsley Street Artisan Soaps</li>
+						<li>Laurel O'Brien</li>
+						<li>Leather &amp; Lace</li>
+						<li>Luna Sea Trading</li>
+						<li>Metal Magic</li>
+						<li>Michelle DaRin Jewelry</li>
+						<li>Moonlight</li>
+						<li>Patricia Originals</li>
+						<li>Rose Gottlieb</li>
+						<li>S &amp; J Woodcrafts</li>
+						<li>Schoolyard Sugarbush</li>
+						<li>Second Season Mittens</li>
+						<li>Seneca Cottage Fudge Kitchen</li>
+						<li>Shaman's Crossing</li>
+						<li>Shelley Murphy</li>
+						<li>Silver Serenity Design Studio</li>
+						<li>Silver-Man</li>
+						<li>Simply Divine Details</li>
+						<li>Southwest Expressions</li>
+						<li>Spinnin' Threads</li>
+						<li>Stone Arch Farm</li>
+						<li>Sugarhill Farm</li>
+						<li>Sunshine's Creative Designs</li>
+						<li>Surprenant's Berry Farm</li>
+						<li>The Art and Found</li>
+						<li>The Memorable Image</li>
+						<li>What the Fork?</li>
+						<li>Whisker Biscuits</li>
+						<li>whiskeysourproductionss</li>
+						<li>Wildflower Graphics</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+
+				<div class="panel" id="five_panel">
+					<h2>Farmer’s</h2>
+					<ul>
+						<li>AppleGrove farm</li>
+						<li>Ba-Li Cravings</li>
+						<li>Baker's Acres</li>
+						<li>Comics For Collectors</li>
+						<li>Cornell Orchards ISOHO</li>
+						<li>Laughing Goat Fiber</li>
+						<li>Little Grey Bakery</li>
+						<li>Littltree Orchards</li>
+						<li>Maple River Syrup company</li>
+						<li>Teeter's Farm</li>
+						<li>Tompkins county 4-H Exchange Club</li>
+						<li>Tucker's Catering</li>
+						<li>Walter Osip</li>
+						<li>Ward's Maple Products</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<a href="credits.html">Credits</a>
+		</div>
+	</body>
+</html>

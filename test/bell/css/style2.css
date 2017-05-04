@@ -1,0 +1,126 @@
+*{
+	padding:0;
+	margin:0;
+	font-family:'Montserrat';
+}
+
+a{
+	text-decoration:none;
+}
+
+
+/* GENERAL STYLING */
+body{
+	background:#f8f8f8;
+}
+
+/* Wrapper for each main section */
+.section{
+	padding:100px 0;
+	clear:both;
+
+}
+
+.section p{
+	color:#222;
+}
+
+.anchor{
+	position:relative;
+	top:-100px;
+}
+
+.anchor.p{
+	top:-150px;
+}
+
+/* FOOTER */
+
+.footer p {
+	color:#f8f8f8;
+}
+
+.logofooter .titlelogo{
+	display:inline-block;
+	position:relative;
+	top:-22px;
+	font-weight:700;
+	text-decoration:none!important;
+	font-size:2.2em;
+	color:#fe7e00;
+	text-shadow: 1px 1px 4px #000;
+}
+
+#contact{
+	background:#222;
+
+}
+
+
+.footer {
+	color:#fff;
+
+	padding-right:4%;
+	display:inline-block;
+	vertical-align: top;
+	position:relative;
+}
+
+.footer {
+	padding:10px 0 0;
+	width:100%;
+	margin-bottom:-20px;
+}
+
+.footer a {
+	color:#fff;
+}
+
+/* FAQ Page */
+
+#FAQ h1 {
+	text-align:center;
+	margin-bottom:30px;
+        color:#222;    
+}
+
+#FAQ a:hover {
+	text-decoration: none;
+	background-color: #d1d1d1;
+}
+
+#FAQ a:visited {
+	text-decoration: none;
+}
+
+#FAQ h2{
+	margin: 18px 0;
+	color:#222;
+}
+
+#FAQ p a:link {
+	text-decoration: none;
+	color: #00ada7;
+}
+
+#FAQ h3 a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+#FAQ h4{
+	margin-bottom:15px;
+}
+
+#FAQ h4 a{
+	color:#444!important;
+}
+
+#FAQ p{
+	margin-bottom:20px;
+}
+
+li{
+	margin-left:20px;
+}
+

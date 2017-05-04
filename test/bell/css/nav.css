@@ -1,0 +1,21 @@
+/* Special styling for nav bar on every page except the homepage */
+
+.navbar-default{
+	background:#00ada7;
+}
+
+.navbar-brand span{
+	color:#fff!important;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color:#fff!important;
+}
+
+.login{
+	background:#fff!important;
+}
+
+.navbar-default .navbar-nav>.login>a{
+	color:#00ada7!important;
+}

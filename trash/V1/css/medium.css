@@ -1,0 +1,28 @@
+main{
+	max-width:500px;
+	padding-bottom: 10px;
+}
+
+p{
+	padding:0 30px;
+}
+
+.col:nth-child(2){
+	margin:0;
+}
+
+.col{
+	display:block;
+	max-width:none;
+	margin-top:40px;
+	text-align:left;
+}
+
+.col .button{
+	margin-bottom:100px;
+}
+
+.col3.logo{
+	width:200px;
+	line-height:20px;
+}

@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /passion/
+Disallow: /test/
+Disallow: /trash/
+Disallow: /wicc/

@@ -1,0 +1,447 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.body{
+	max-width: 1000px;
+	margin: 0px auto 50px;
+	background: #ddd url('../images/wood.jpg');
+	font-family: 'Raleway';
+	font-weight:500;
+	color:#333;
+	padding: 70px 5% 0;
+}
+
+.section a{
+	color:#55c436;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.nav{
+	background: #ddd url('../images/ricepaper2.png');
+	margin-bottom: 50px;
+	padding:30px 3%;
+	display:inline-block;
+	vertical-align: top;
+	margin-right:3%;
+	position:relative;
+	width:12%;
+	font-size: 15px;
+	border-top: 10px solid #55c436;
+}
+
+nav li{
+	list-style-type: none;
+	width:100%;
+	border-bottom: 1px solid #ddd;
+}
+
+nav li a{
+	text-decoration: none;
+	color: #333;
+	display: block;
+	padding: 17px 0;
+	text-transform: uppercase;
+	font-family: 'Raleway';
+	font-weight: 800;
+
+}
+
+nav li:last-child{
+	border:none;
+}
+
+
+
+.header{
+	background: rgba(0,0,0,.8);
+	display:inline-block;
+	top:100px;
+	position:relative;
+	z-index: 10;
+	padding:20px 40px;
+}
+
+.main{
+	width: 78%;
+	display:inline-block;
+}
+
+.section{
+	background: #ddd url('../images/ricepaper2.png');
+	padding:30px 5% 50px;
+	border-top: 10px solid #55c436;
+	margin-bottom:40px;
+}
+
+.section img{
+	max-width: 95%;
+}
+
+.section{
+	padding: 50px 7% 20px;
+	position: relative;
+
+}
+
+.section:after, .nav:after{
+	content: '';
+	background: url('../images/border.png') repeat-x;
+	position:absolute;
+	bottom:-10px;
+	left:0;
+	width:100%;
+	display:block;
+	height:10px;
+}
+
+.section h1{
+	font-size:40px;
+	text-align:center;
+	background:url('../images/small_logo.png') no-repeat center center;
+	padding:10px 0 15px;
+	margin:-15px 0 0;
+}
+
+
+
+.section h2{
+	font-size:30px;
+	margin-bottom:20px;
+}
+
+.section p{
+	line-height: 1.5em;
+	margin-bottom:20px;
+	font-size: 17px;
+}
+
+
+.main_title{
+	text-align:center;
+	margin-top:-30px;
+	padding: 30px 0;
+	background: url('../images/logo_gray.png') center center no-repeat;
+}
+
+.main_title h4{
+	font-size:30px;
+	font-family:'Droid Serif';
+	font-style:italic;
+}
+
+.main_title h5{
+	font-size:50px;
+	text-transform:uppercase;
+	border-top:1px solid #aaa;
+	border-bottom:1px solid #aaa;
+	display:inline-block;
+	padding:20px 0;
+	margin:20px 0 20px;
+}
+
+.main_title h6{
+	font-size:24px;
+}
+
+
+/* EVENTS */
+
+.label_wrap{
+	border-bottom:3px solid #ccc;
+	display:inline-block;
+	margin:0 auto;
+}
+
+.wrap_two{
+	position:absolute;
+	text-align: center;
+	width: 90%;
+}
+
+.label{
+	display: inline-block;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 700;
+	position:relative;
+	bottom:-3px;
+	color:#888;
+}
+
+.active{
+	color:#333;
+	border-bottom:3px solid #55c436;
+}
+
+.panel{
+	display:none;
+	min-height:400px;
+	margin-top:70px;
+	padding-bottom:20px;
+}
+
+.event, .perform{
+	margin-top:10px;
+	line-height:1.4em;
+}
+
+.time{
+	font-weight: 700;
+}
+
+.name{
+	font-weight: 700;
+}
+
+.desc{
+	margin: 0px 0 20px;
+}
+
+.table_time{
+	width:170px;
+}
+
+table{
+	margin:20px 0;
+}
+
+hr{
+	margin:40px 20px;
+	border:none;
+	border-bottom:1px solid #aaa;
+}
+
+.credit{
+	font-size:12px;
+	color:#bbb;
+}
+
+.img_wrap{
+	height:220px;
+	
+	overflow:hidden;
+}
+
+.fl{
+	display:inline-block;
+	float:left;
+	margin-right:20px;
+}
+
+.section ul li{
+	margin:5px 0 5px 20px;
+}
+
+.maps{
+	border:5px solid #ccc;
+	width:95%;
+}
+
+/* SLIDER */
+
+#slides {
+      display: none;
+      position:relative;
+    }
+
+
+    #slides .slidesjs-navigation {
+      margin-top:3px;
+    }
+
+    #slides .slidesjs-previous,
+    #slides .slidesjs-next {
+      position:absolute;
+      
+      top:40%;
+      z-index:100;
+      font-size: 30px;
+    }
+
+
+#slides .slidesjs-previous{
+	left:0px;
+}
+
+#slides .slidesjs-next{
+	right:0px;
+}
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      text-align: center;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+    	display:inline-block;
+      margin: 0 1px!important;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      color: #ccc;
+      background: #ccc;
+      margin: 5px 3px 30px;
+      font-size:0;
+      overflow: hidden;
+    }
+
+   #slides img{
+   	padding-left:5%;
+   	width:90%!important;
+   }
+
+
+    #slides a:link,
+    #slides a:visited {
+      
+    }
+
+    #slides a.active {
+      background:#55c436;
+      color:#55c436;
+      height:12px;
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+
+/* FOOTER */
+
+.footer{
+	text-align: right;
+}
+
+.footer a{
+	text-decoration: none;
+	color:#fff;
+	font-weight:600;
+	font-size: 13px;
+	text-transform: uppercase;
+	padding-right:30px;
+}
+
+.leftcol{
+	float:left;
+	width:45%;
+	margin-right:3%;
+}
+
+.rightcol{
+	float:right;
+	width:45%;
+}
+
+.clear{
+	clear:both;
+}
+
+
+
+@media screen and (max-width: 850px) {
+	.body{
+		padding-top:20px;
+	}
+
+	.nav{
+		display:block;
+		width:100%;
+		padding:0;
+		text-align:center;
+	}
+
+	.nav ul{
+		margin: 0 3%;
+		display:block;
+	}
+
+	.nav li{
+		display:inline-block;
+		width:auto;
+		border-bottom:none;
+		padding: 10px 1.5%;
+	}
+
+	.nav li a{
+		display:inline-block;
+	}
+
+	.main{
+		display:block;
+		width:100%;
+	}
+
+
+	.section h1:after{
+		display:none;
+	}
+
+}
+
+
+@media screen and (max-width: 650px) {
+	.label_wrap{
+		border-bottom:0px;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.body{
+		padding:0 3% 0 3%;
+	}
+	.nav .menu_icon{
+		content:url('../images/menu.png');
+		height:25px;
+		width:25px;
+		margin-bottom:5px;
+		display:inline-block;
+		cursor: pointer;
+	}
+
+	.nav{
+		background: #55c436;
+
+	}
+
+	.nav ul{
+		background: #ddd url('../images/ricepaper2.png');
+		margin:0;
+		display:none;
+	}
+
+	.nav li{
+		display:block;
+		border-bottom:1px solid #ccc;
+		margin:0 5%;
+		padding:0px 1.5%;
+	}
+
+	.label_wrap{
+		border-bottom:0;
+	}
+
+	.panel{
+		margin-top:90px;
+	}
+
+	.leftcol, .rightcol{
+		display:block;
+		float:none;
+		width:100%;
+	}
+}
+
+@media screen and (min-width: 511px) {
+	.nav ul{
+		display:block!important;
+	}
+}

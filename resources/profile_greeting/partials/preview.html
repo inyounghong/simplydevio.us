@@ -1,0 +1,23 @@
+<div class="editingPreview">
+    <div class="top">
+        <div id="daWidget">
+            <div id="daHeader">Profile Widget</div>
+            <div id="daInside">
+                <p class="mb10">Showing visitors for:
+                    <a href="http://simplysilent.deviantart.com" target="_blank" id="displayUsername">SimplySilent</a>
+                </p>
+                <img src="#" id="previewImage" class="hide">
+                <div id="loading" class="c"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+            </div>
+        </div>
+
+        <div class="c">
+            <a ng-click="refresh()"><i class="fa fa-refresh"></i> Refresh with latest visitor</a>
+        </div>
+    </div>
+
+    <div class="c bottom">
+        <p class="mb10">To show visitors for your own profile, click below:</p>
+        <div class="button small-caps" id="getCode" ng-click="getCode()"><i class="fa fa-check-circle"></i> Get Code</div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ithaca Apple Harvest Festival</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<!-- jQuery library (served from Google) -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ 		<script src="js/jquery.slides.min.js"></script>
+	
+		<script>
+			$(document).ready(function(){
+				$(".menu_icon").click(function(){
+					$(".nav ul").slideToggle(300);
+				});
+			});
+	    $(function(){
+	      $("#slides").slidesjs({
+	        width: 940,
+	        height: 528,
+	        navigation: false
+	      });
+	    });
+
+		</script>
+	</head>
+	<body class="body">
+		<nav class="nav">
+			<div class="menu_icon"></div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="events.html">Schedule</a></li>
+				<li><a href="vendors.html">Vendors</a></li>
+				<li><a href="directions.html">Directions</a></li>
+			</ul>
+		</nav>
+	<div class="main">
+		<div class="section">
+			<div class="main_title">
+
+				<h4>Ithaca's</h4>
+				<h5>Apple Harvest Festival</h5>
+				<h6>October 3 - 5, 2014</h6>
+			</div>
+		</div>
+
+		<div class="section">
+			<p>Ithaca's <strong>Apple Harvest Festival</strong> is an annual three day celebration of food, fun, and apples! Join us to enjoy plenty of apple's, local produce, fresh baked goods, family entertainment, games, rides, prizes, and live performances on two stages. </p>
+
+
+			
+			<h3>Dates</h3><br>
+			<ul>
+				<li>Friday, October 3rd (12PM - 6PM)</li>
+				<li>Saturday, October 4th (10AM-6PM)</li>
+				<li>Sunday, October 5th (10AM-6PM)</li>	
+			</ul>
+			<br><br>
+			<div id="slides">
+				<img src="images/festival.jpg" alt="Apple Harvest Festival"/>
+				<img src="images/pie.jpg" alt="Apple Pie Bake-Off"/>
+				<img src="images/apples.jpg"  alt="Apples"/>
+
+				<img src="images/kid.jpg"  alt="Child eating"/>
+				<img src="images/performance.jpg"  alt="Festival Performance"/>
+				<img src="images/rides.jpg" alt="Carnival Rides" />
+				<img src="images/students.jpg"  alt="Students"/>
+				<img src="images/slide.jpg"  alt="Slide"/>
+				<a href="#" class="slidesjs-previous slidesjs-navigation">&lt;</a>
+				<a href="#" class="slidesjs-next slidesjs-navigation">></a>
+			</div>
+
+		
+			<br><br>
+		</div>
+		<br><br>
+	</div>
+		<div class="footer">
+			<a href="credits.html">Credits</a>
+		</div>
+	</body>
+</html>

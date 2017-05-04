@@ -1,0 +1,232 @@
+/* new layout */
+@import "../../../css/globals";
+@import "new_form";
+
+.description {
+    margin-bottom:30px;
+    p {
+        margin: 0px 0!important;
+    }
+}
+
+.editingBox {
+    background: #fff;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .editingSideBar {
+        padding: 30px 30px;
+        background: $pink;
+        width: 400px;
+        box-sizing: border-box;
+        height: 500px;
+        overflow-y: scroll;
+        position: absolute;
+
+        .button {
+            background: $w80;
+            color: $pink!important;
+            width: 100%;
+            height: auto;
+        }
+
+        .chunk {
+            margin: 10px 0;
+
+            h2 {
+                color: $w80;
+                font-weight: 700;
+                font-size: 14px!important;
+                text-transform: uppercase;
+                display: inline-block;
+                vertical-align: top;
+                width: 100px;
+            }
+
+            .input {
+                display: inline-block;
+                width: 235px;
+            }
+
+            label {
+                color: #fff;
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .editingPreview {
+        margin-left: 400px;
+        width: 64%;
+        position: relative;
+        height: 500px;
+        box-sizing: border-box;
+        display: inline-block;
+        text-align: center;
+
+        .top {
+            max-height: 386px;
+            overflow-y: scroll;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .bottom {
+            position: absolute;
+            left: 0px;
+            padding: 15px 32px 25px 0;
+            bottom: 0px;
+            width: 100%;
+            background: #f8f8f8;
+        }
+
+
+        /* Preview Box */
+        #daWidget {
+            background: $daBgColor;
+            border: 1px solid $daBorderColor;
+            @include radius(5px);
+            width: 500px;
+            display: inline-block;
+            margin-bottom: 10px;
+
+            #daHeader {
+                background: $daHeadColor;
+                padding: 5px 10px;
+                margin-bottom: 5px;
+                border-bottom: 1px solid $daBorderColor;
+            }
+
+            #daInside {
+                position: relative;
+                padding: 5px 10px 20px 10px;
+                min-height: 100px;
+
+                #previewImage {
+                    z-index: 98;
+                    position: relative;
+                }
+            }
+
+            #loading {
+                position: absolute;
+                width: 100%;
+                top: 38px;
+            }
+        }
+    }
+}
+
+// popup
+#popup{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    text-align: center;
+    display: none;
+
+    #mask {
+        background: #000;
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    #popupBox {
+        background: #fff;
+        padding: 50px;
+        height: 350px;
+        min-height: 300px;
+        max-width: 500px;
+        margin: 50px auto 50px;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .slides {
+        text-align: left;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        .button {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+        }
+    }
+
+    #slide2, #slide3 {
+        display: none;
+    }
+
+    #popupLoad {
+        position: absolute;
+        top: 2px;
+        left: 220px;
+        z-index: -1;
+    }
+}
+
+.font-sm{
+    font-size: 14px;
+}
+
+
+#termsCheckbox {
+    margin: 5px 0;
+
+    label {
+        display: inline-block;
+        margin-top: -23px;
+        margin-left: 30px;
+    }
+}
+
+.button {
+    background: #e03e56;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    font-weight: 700;
+    color: $w80!important;
+    font-size: 13px;
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &.purchase-button {
+        float: right;
+        margin-top: -10px;
+    }
+}
+
+
+.code {
+    padding: 10px 20px;
+    background: #eee;
+    box-sizing: border-box;
+    min-width: 100%;
+    color: #444;
+    min-height: 70px;
+    font-family: courier;
+    font-size: 14px;
+    margin-top: 15px;
+}

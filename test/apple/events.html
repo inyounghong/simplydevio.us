@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Schedule</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script> 
+		$(document).ready(function(){
+				$(".menu_icon").click(function(){
+					$(".nav ul").slideToggle(300);
+				});
+			});
+			$(document).ready(function(){
+				$("#fri_panel").show();
+			  	$("#fri").click(function(){
+			    	$("#fri_panel").show();
+			    	$("#sat_panel").hide();
+			    	$("#sun_panel").hide();
+			    	$("#fri").addClass("active");
+			    	$("#sat").removeClass("active");
+			    	$("#sun").removeClass("active");
+			  	});
+			  	$("#sat").click(function(){
+			    	$("#sat_panel").show();
+			    	$("#fri_panel").hide();
+			    	$("#sun_panel").hide();
+			    	$("#fri").removeClass("active");
+			    	$("#sat").addClass("active");
+			    	$("#sun").removeClass("active");
+			  	});
+			  	$("#sun").click(function(){
+			    	$("#sun_panel").show();
+			    	$("#sat_panel").hide();
+			    	$("#fri_panel").hide();
+			    	$("#fri").removeClass("active");
+			    	$("#sat").removeClass("active");
+			    	$("#sun").addClass("active");
+			  	});
+			});
+		</script>
+	</head>
+	<body class="body">
+		<nav class="nav">
+			<div class="menu_icon"></div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="events.html">Schedule</a></li>
+				<li><a href="vendors.html">Vendors</a></li>
+				<li><a href="directions.html">Directions</a></li>
+
+			</ul>
+		</nav>
+		<div class="main">
+			<div class="section">
+				<h1>Schedule</h1>
+			</div>
+
+			<div class="section">
+
+				<div class="wrap_two">
+					<div class="label_wrap">
+						<div class="label active" id="fri">Friday</div>
+						<div class="label" id="sat">Saturday</div>
+						<div class="label" id="sun">Sunday</div>
+					</div>
+				</div>
+
+				<div class="panel" id="fri_panel">
+					<h2>Events</h2>
+					<div class="event">
+						<span class="time">5:00 PM - 8:00 PM</span>
+						<span class="name">-- First Friday Gallery Night</span>
+						<div class="desc">A walkable tour of <a href="http://www.gallerynightithaca.com">downtown galleries</a></div>
+					</div>
+					<div class="event">
+						<span class="time">8:00 PM</span>
+						<span class="name">-- Feature Movie: Pulp Fiction</span>
+						<div class="desc">State Theater</div>
+					</div>
+					<br>
+					<h2>Performances</h2>
+					<p>None</p>
+				</div>
+
+				<div class="panel" id="sat_panel">
+					<h2>Events</h2>
+					
+					<div class="event">
+						<span class="time">10:00 AM - 4:00 PM</span>
+						<span class="name">-- 2nd Annual Sweet Ride Car Show</span>
+						<div class="desc">Press Bay Alley: Festival goers can expect to find DJed music, door prizes, and more.  All proceeds donated to the Rotary International End Polio Now Campaign and is sponsored by businesses in and around Press Bay Alley, Life’s So Sweet Chocolates, Brightworks Computer Consulting, Amuse, Boxy Bikes, Ithaca Generator and the Downtown Ithaca Alliance.</div>
+					</div>
+					<div class="event">
+						<span class="time">10:00 AM - 5:30 PM</span>
+						<span class="name">-- First People’s Festival</span>
+						<div class="desc">Dewitt Park</div>
+					</div>
+					<br>
+					<h2>Performances</h2>
+					<strong>State Street Stage</strong>
+					<table>
+						<tr>
+							<td class="table_time">10:00 - 10:45 AM</td>
+							<td class="table_event">IC Voicestream</td>
+						</tr>
+						<tr>
+							<td>11:00 - 11:45 AM</td>
+							<td>Evan D. Williams</td>
+						</tr>
+						<tr>
+							<td>12:00 - 12:45 PM</td>
+							<td>Vitamin L</td>
+						</tr>
+						<tr>
+							<td>12:45 - 1:15 PM</td>
+							<td>Danza Romani</td>
+						</tr>
+						<tr>
+							<td>1:15 - 1:45 PM</td>
+							<td>June with Chandani Belly Dance Troupe</td>
+						</tr>
+						<tr>
+							<td>2:00 - 4:00 PM</td>
+							<td>Ageless Jazz Band</td>
+						</tr>
+						<tr>
+							<td>4:00 - 6:00 PM</td>
+							<td>Samuel B. Lupowitz &amp; The Ego Band</td>
+						</tr>					
+					</table>
+
+					<strong>Aurora Street Fairway Stage</strong>
+					<table>
+						<tr>
+							<td class="table_time">10:00 - 10:45 AM</td>
+							<td class="table_event">IC Voicestream</td>
+						</tr>
+						<tr>
+							<td>11:00 - 12:00 PM</td>
+							<td>Moreland the Magician</td>
+						</tr>
+						<tr>
+							<td>12:00 - 12:45 PM</td>
+							<td>ICircus</td>
+						</tr>
+						<tr>
+							<td>1:00 - 3:00 PM</td>
+							<td>Jomo and Johnnycake</td>
+						</tr>
+						<tr>
+							<td>3:00 - 4:00 PM</td>
+							<td>Sundown Sally</td>
+						</tr>
+						<tr>
+							<td>4:00 - 6:00 PM</td>
+							<td>Regina O'Brien</td>
+						</tr>					
+					</table>
+        
+				</div>
+				
+				<div class="panel" id="sun_panel">
+
+					<h2>Events</h2>
+					<div class="event">
+						<span class="time">12:00 PM</span>
+						<span class="name">-- Apple Pie Bake Off and Judging</span>
+						<div class="desc">State Street Stage: Competition opens to the public to put their baking skills to the test. Pies will be scored on Appearance, Crust, Filling and Overall Flavor/Taste.  It is $10 to enter this bake off competition and the first place winner gains bragging rights, one Apple IPod Shuffle and a $50 cash prize.</div>
+					</div>
+					<div class="event">
+						<span class="time">10:00 AM - 4:00 PM</span>
+						<span class="name">-- 2nd Annual Sweet Ride Car Show</span>
+						<div class="desc">Press Bay Alley: Festival goers can expect to find DJed music, door prizes, and more.  All proceeds donated to the Rotary International End Polio Now Campaign and is sponsored by businesses in and around Press Bay Alley, Life’s So Sweet Chocolates, Brightworks Computer Consulting, Amuse, Boxy Bikes, Ithaca Generator and the Downtown Ithaca Alliance.</div>
+					</div>
+
+					<br>
+					<h2>Performances</h2>
+					<strong>State Street Stage</strong>
+					<table>
+						<tr>
+							<td class="table_time">11:00 - 12:00 PM</td>
+							<td class="table_event">Mirage Belly Dance</td>
+						</tr>
+						<tr>
+							<td>1:00 - 2:45 PM</td>
+							<td>Allen Rose &amp; The Restless Elements</td>
+						</tr>
+						<tr>
+							<td>3:00 - 4:00 PM</td>
+							<td> Anna Coogan  &amp; Johnny Dowd</td>
+						</tr>
+						<tr>
+							<td>4:00 - 6:00 PM</td>
+							<td>Steve Southworth &amp; the Rockabilly Rays</td>
+						</tr>					
+					</table>	
+
+
+					<strong>Aurora Street Fairway Stage</strong>
+					<table>
+						<tr>
+							<td class="table_time">12:00 - 12:45 PM</td>
+							<td class="table_event">ICircus</td>
+						</tr>
+						<tr>
+							<td>1:00 - 3:00 PM</td>
+							<td>East Hill Classic Jazz Duo</td>
+						</tr>
+						<tr>
+							<td>3:00 - 4:00 PM</td>
+							<td>Luke Gustafson</td>
+						</tr>
+						<tr>
+							<td>4:00 - 6:00 PM</td>
+							<td>The Notorious Stringbusters</td>
+						</tr>					
+					</table>														
+				</div>
+			</div>
+
+		</div>
+		<div class="footer">
+			<a href="credits.html">Credits</a>
+		</div>
+	</body>
+</html>

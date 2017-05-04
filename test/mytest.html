@@ -1,0 +1,30 @@
+<html>
+<body>
+<?php
+if(isset($_POST['submit_button'])) 
+{ 
+    $url = $_POST['url'];
+
+    $output = exec("python h.py $url");
+    echo "<h1>Output from python: $output</h1>";
+
+    echo "User has submitted the query and entered:<br>";
+}
+?>
+
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+
+URL: <textarea rows="10" cols="80" name="url" size="50"></textarea>
+
+
+<br><br>
+
+<input type="submit" value="Get output" >
+<br><br><br>
+
+<?php
+$url = $_POST['url'];
+?>
+
+</form>
+</html>
