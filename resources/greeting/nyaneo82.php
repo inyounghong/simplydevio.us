@@ -1,10 +1,10 @@
 <?
 session_start();
 header('Content-type: image/png');
-$visitor = exec("python ../image_with_name.py 'nyaneo'");
-$new_message1 = str_replace("visitor",$visitor, 'Hello, visitor!');
-$new_message2 = str_replace("visitor",$visitor, 'Hi, visitor!');
-$font = './uploaded_fonts/' . 'brain_flower.ttf';
+$visitor = exec("python ../image_with_name.py 'Nyaneo'");
+$new_message1 = str_replace("visitor",$visitor, 'visitor visitoromy');
+$new_message2 = str_replace("visitor",$visitor, 'Hey, visitor!');
+$font = './uploaded_fonts/' . 'Storyboo.TTF';
 # Determine the longer of the two  messages
 if (strlen($new_message2) > 0)
 {
@@ -21,13 +21,13 @@ else
 {
     $longer_message = $new_message1;
 }
-$width  = (18 * strlen($longer_message));
-$im = imagecreatetruecolor ($width,77);
-$background = imagecolorallocate($im, 255, 255, 255);
+$width  = (50 * strlen($longer_message));
+$im = imagecreatetruecolor ($width,200);
+$background = imagecolorallocate($im, 46, 46, 46);
 imagefill($im,0,0,$background);
-$color = imagecolorallocate($im, 0, 0, 0);
-imagettftext($im, 38, 0, 67, 193, $color, $font, $new_message1);
-imagettftext($im, 38, 0, 69, 50, $color, $font, $new_message2);
+$color = imagecolorallocate($im, 255, 255, 255);
+imagettftext($im, 50, 0, 200, 106, $color, $font, $new_message1);
+imagettftext($im, 50, 0, 0, 61, $color, $font, $new_message2);
 imagepng($im);
 imagedestroy($im);
 ?>

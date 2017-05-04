@@ -2,10 +2,10 @@
 session_start();
 header('Content-type: image/png');
 
-$visitor = exec("python ../image_with_name.py 'twitter-light'");
-$new_message1 = str_replace("visitor",$visitor, 'Hey, visitor! ');
+$visitor = exec("python ../image_with_name.py 'Twitter-light'");
+$new_message1 = str_replace("visitor",$visitor, 'Welcome to my page, visitor!  ♥');
 $new_message2 = str_replace("visitor",$visitor, '');
-$font = './uploaded_fonts/' . 'Rock.TTF';
+$font = './uploaded_fonts/' . 'KGSevenSixteen.ttf';
 
 # Determine the longer of the two  messages
 if (strlen($new_message2) > 0)
@@ -26,10 +26,10 @@ else
 
 $width  = (10 * strlen($longer_message));
 $im = imagecreatetruecolor ($width,50);
-$background = imagecolorallocate($im, 255, 178, 178);
+$background = imagecolorallocate($im, 255, 255, 255);
 imagefill($im,0,0,$background);
 
-$color = imagecolorallocate($im, 0, 0, 0);
+$color = imagecolorallocate($im, 174, 60, 45);
 
 imagettftext($im, 15, 0, 0, 20, $color, $font, $new_message1);
 imagettftext($im, 15, 0, 0, 50, $color, $font, $new_message2);

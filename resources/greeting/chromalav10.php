@@ -2,7 +2,7 @@
 session_start();
 header('Content-type: image/png');
 
-$visitor = exec("python ../image.py 'chromalav'");
+$visitor = exec("python ../image.py 'Chromalav'");
 $new_message1 = str_replace("visitor",$visitor, 'Hey, visitor!');
 $new_message2 = str_replace("visitor",$visitor, 'Welcome to my Deviantart!');
 $font = './uploaded_fonts/' . 'Lobster.ttf';
@@ -24,15 +24,15 @@ else
     $longer_message = $new_message1;
 }
 
-$width  = (13 * strlen($longer_message));
-$im = imagecreatetruecolor ($width,59);
-$background = imagecolorallocate($im, 252, 252, 252);
+$width  = (11 * strlen($longer_message));
+$im = imagecreatetruecolor ($width,48);
+$background = imagecolorallocate($im, 247, 247, 247);
 imagefill($im,0,0,$background);
 
-$color = imagecolorallocate($im, 255, 0, 119);
+$color = imagecolorallocate($im, 255, 0, 76);
 
-imagettftext($im, 18, 0, 32, 20, $color, $font, $new_message1);
-imagettftext($im, 18, 0, 0, 50, $color, $font, $new_message2);
+imagettftext($im, 18, 0, 22, 23, $color, $font, $new_message1);
+imagettftext($im, 18, 0, 0, 40, $color, $font, $new_message2);
 
 imagepng($im);
 imagedestroy($im);
