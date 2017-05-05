@@ -41,7 +41,7 @@
                     <div class="box_white hy">
                         <p class="description"><em>May 2017:</em> New Features for Profile Greeting</p>
                         <div class="large_wrap preview">
-                            <a href="resources/profile_directory.php" class="sc_image"><img src="resources/images/greeting.jpg" width="130" style="margin-left:0px;"></a>
+                            <a href="resources/profile_greeting" class="sc_image"><img src="resources/images/greeting.jpg" width="130" style="margin-left:0px;"></a>
                             <div class="sc_info">
                                 <h1><a href="resources/profile_greeting">Profile Greeting</a></h1>
                                 <p>New features include: Transparent backgrounds, text centering, greetings for groups</p>
