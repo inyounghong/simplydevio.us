@@ -1,1 +1,0 @@
-<?php session_start(); include "../info.php"; ?>
