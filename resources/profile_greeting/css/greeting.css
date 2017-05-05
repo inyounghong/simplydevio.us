@@ -318,12 +318,15 @@ input[type=text] {
 #popup #popupBox {
   background: #fff;
   padding: 50px;
-  height: 350px;
-  min-height: 300px;
   max-width: 500px;
   margin: 50px auto 50px;
   position: relative;
   z-index: 1002;
+}
+
+#popup .scroll {
+  height: 350px;
+  overflow-y: scroll;
 }
 
 #popup .slides {
