@@ -1,7 +1,7 @@
 <?
 session_start();
 header('Content-type: image/png');
-$visitor = 'tororopls';
+$visitor = exec('python ../python/image.py championx91 visitor');
 $new_message1 = str_replace('visitor', $visitor, 'Greetings, visitor enjoy your stay!');
 $new_message2 = str_replace('visitor', $visitor, '');
 
