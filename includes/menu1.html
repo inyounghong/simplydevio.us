@@ -3,7 +3,7 @@
 <div class="navwrap">
     <div id="nav">
         <div class="simply">
-            <a href="http://www.simplydevio.us/index.php">simplydevio.us</a>
+            <a href="/index.php">simplydevio.us</a>
         </div>
         <div class="menuwrap">
             <div class="menu_icon" id="menu_icon" onclick="
@@ -43,15 +43,12 @@
             $(".menulinks").slideDown(200);
         }
     }
-  
+
     function outsideClickListener(){
         if(!$(event.target).closest($('#menu_icon').parent()).length) {
             $(".menulinks").slideUp(200);
-            
+
         }
     }
 
   </script>
-
-
-

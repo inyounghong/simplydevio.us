@@ -17,7 +17,8 @@
         <div class="input">
             <select ng-model="imageData.font" ng-change="inputUpdate()" ng-options="item for item in fonts"></select>
             <label for="file"><i class="fa fa-upload"></i> Upload a new font</label>
-            <input ng-model="imageData.file" ng-change="submitUploadForm()" type="file" name="file" class="hide hover" id="file">
+            Data file: {{imageData.file}}
+            <input ng-model="imageData.file" custom-on-change="submitUploadFont" type="file" name="file" class="hover" id="file">
         </div>
     </div>
 

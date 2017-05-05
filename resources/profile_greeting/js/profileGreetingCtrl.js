@@ -14,7 +14,7 @@ angular.module('myApp')
     $scope.checkPassword = checkPassword;
     $scope.checkUsername = checkUsername;
     $scope.inputUpdate = updateDisplayImageStyle;
-    $scope.submitUploadForm = submitUploadForm;
+    $scope.submitUploadFont = submitUploadFont;
 
     $scope.imageData = {};
 
@@ -249,7 +249,7 @@ angular.module('myApp')
         $("#uploadForm").show();
     }
 
-    function submitUploadForm(){
+    function submitUploadFont() {
         $("#uploadForm").submit();
     }
 });

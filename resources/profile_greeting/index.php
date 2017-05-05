@@ -44,6 +44,7 @@
     <script src="../../libraries/minicolors/jquery.minicolors.js"></script>
     <script src="../../libraries/minicolors/angular-minicolors.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/customOnChange.js"></script>
     <script src="js/profileGreetingCtrl.js"></script>
 
 </body>

@@ -12,5 +12,6 @@ if (isset($_FILES["file"])) {
             }
         }
     }
+    echo "not submitted file";
 }
 ?>
