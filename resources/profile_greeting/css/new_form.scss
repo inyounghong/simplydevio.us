@@ -148,4 +148,17 @@ input[type=text] {
     input[type=range]:focus::-ms-fill-lower {
       background: #ec8b9a;
     }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $w60;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: $w60;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: $w60;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: $w60;
+    }
 }
