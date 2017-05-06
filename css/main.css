@@ -3,6 +3,10 @@
   margin-bottom: 10px;
 }
 
+.mb0 {
+  margin-bottom: 0px !important;
+}
+
 .t {
   background: #25bda6 !important;
 }
