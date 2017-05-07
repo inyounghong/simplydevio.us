@@ -9,23 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../css/form.css" media="screen" />
-    
+
     <?php include '../includes/fonts.html' ?>
-    
+
     <script src="../js/jquery.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/jscolor.js"></script>
-    
-   
+
+
     <link rel="icon" href="../images/new128.png" sizes="128x128">
-    
-    
+
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-45010841-2', 'simplydevio.us');
       ga('send', 'pageview');
     </script>
@@ -47,7 +47,7 @@ $(document).ready(function(){
 function checkit()
 {
     var css = '<style type="text/css">\n\n';
- 
+
 // HTML BUILDING
     var htmlstring = '<div class=\"columns\">\n';
     // Include an arrow on hover?
@@ -58,17 +58,17 @@ function checkit()
     else{
         var arrow = '';
     }
-    
-    // Looping through the appropriate number of names and links 
-    
+
+    // Looping through the appropriate number of names and links
+
     //  LEFT SIDE DIRECTORY BUTTONS
     var check = '';
     if (document.getElementById('singleColumn').checked){
         check = ' class="long" ';
     }
-    
+
     for(var i = 0; i < $('#button_names').children().length - 1; i++)
-    {   
+    {
         htmlstring += '<a href="' + example.butLink[i].value + '"' + check + '>' + example.butName[i].value + arrow + '</a>';
     }
 
@@ -89,9 +89,9 @@ function checkit()
         document.getElementById('statusBox').className = "hidden";
         document.getElementById('status_colors').className = "hidden";
     };
-    
+
     htmlstring += '</div>';
-    
+
 // DONE WITH HTML BUILDING
 // CSS BUILDING
     var textstring = '*{background:none; border:none; padding:0; margin:0;} \n\n';
@@ -101,16 +101,16 @@ function checkit()
     textstring += '.gr-box br{display:none;}\n';
     textstring += 'a{text-decoration:none; font-weight:normal;}\n';
     textstring += '.external{display:block;}\n\n';
-    
+
     textstring += '.gr-box{\n';
     textstring += 'z-index:99!important;\n'
     textstring += 'line-height:1.1em!important;\n'
     textstring += 'font-family:' + value('buttonFontFamily') + ';\n';
     textstring += 'text-align:center;\n';
     textstring += 'font-size:' + value('buttonSize') + 'px;}\n\n';
-    
+
     var top = value('topMargin');
-    
+
     textstring += '.text{\n';
     textstring += 'max-width:' + value('maxWidth') + 'px;\n';
     textstring += 'margin:' + top + 'px auto 0;}\n\n';
@@ -143,27 +143,27 @@ function checkit()
     textstring += '.columns a:hover{\n';
     textstring += 'color: #' + value('buttonHoverColor') + ';\n';
     textstring += 'background: #' + value('buttonHoverBackground') + ';}\n\n';
-    
+
     textstring += '.columns a span{\n';
     textstring += 'display:none;\n';
     textstring += 'font-size:0.85em;}\n\n';
-    
+
     textstring += '.columns a:hover span{display:inline;}\n\n';
 
     var status_margin = value('sideMargin');
     var num = example.butStatus.length;
     var statusWidth = (100 - ((num - 1) * status_margin)) / num;
-    
-    
+
+
     if (!checked('includeStatus')){
         height = parseInt(value('buttonSize')) + 15;
         textstring += '.status{padding-bottom:' + height + 'px;}\n\n';
-    
+
         textstring += '.status .col{\n';
         textstring += 'text-align:center;\ndisplay:inline-block;\n';
         textstring += 'margin-right: ' + status_margin + '%;\n';
         textstring += 'width: ' + statusWidth + '%;}\n\n';
-        
+
         textstring += '.col a{\n';
         textstring += 'display:block;';
         textstring += 'color: #' + value('statusColor') + '!important;\n';
@@ -178,29 +178,29 @@ function checkit()
         else{
             textstring += '}\n\n';
         }
-        
+
         textstring += '.status .col a:hover{\n';
         textstring += 'color: #' + value('statusHoverColor') + '!important;\n';
         textstring += 'background: #' + value('statusHoverBackground') + ';}\n\n';
 
         textstring += '.status .col:last-of-type{\n';
         textstring += 'margin-right:0;}\n\n';
-        
+
         textstring += '.status .description{\n';
         textstring += 'margin-top:8px;\nposition:absolute;\nwidth:100%;\nleft:0;\ndisplay:none;\n';
         textstring += 'color: #' + value('descriptionColor') + ';}\n\n';
-        
+
         textstring += '.col:hover .description {display:block;}\n';
     }
     else{
-        
+
     }
-    
+
 // CUSTOM BOX HTML BUILDING
     var widgetstring = '<div class=\"popup2-moremenu\"><div class=\"floaty-boat\"><br><img src=\"';
     widgetstring += value('customBackground');
     widgetstring += '\"></div></div><div class=\"gr-box gr-genericbox\">';
-    
+
     // Write textstring to the textarea.
     document.getElementById("button_size_range").innerHTML = value("buttonSize");
     document.getElementById("button_padding_range").innerHTML = value("buttonPadding");
@@ -209,10 +209,10 @@ function checkit()
     document.getElementById("button_radius_range").innerHTML = value("buttonRadius");
     document.getElementById("top_margin_range").innerHTML = value("topMargin");
     document.getElementById("width_range").innerHTML = value("maxWidth");
-    
+
     // document.forms['example'].output.value = textstring;
-    
-    if (value('password') == 'miontre') 
+
+    if (value('password') == 'miontre')
     {
         document.getElementById("cssArea").value = textstring;
         document.getElementById("htmlArea").value = htmlstring;
@@ -222,7 +222,7 @@ function checkit()
     else
     {
     }
-        
+
     var complete_css = '<style>#preview_box a{font-weight:400;}';
     complete_css += textstring;
     complete_css += '.gr-box a{text-decoration:none;} .gr-box{padding: 20px 10px 40px;} .description{max-width:800px;}';
@@ -239,8 +239,8 @@ function checkit()
 <div class="section" id="resource">
     <div id="left">
         <div class="title">Profile Directory Creator</div>
-        <div class="map"><a href="index.php">Resources</a> > Profile Creator</div>
-    
+        <div class="map"><a href="/#!/resources">Resources</a> > Profile Creator</div>
+
             <!-- Start Journal Box Section -->
             <?php include 'includes/note.html' ?>
             <div class="cols lft">
@@ -252,68 +252,68 @@ function checkit()
                     <div id="status_link" class="tabby not_selected">Status</div>
                     <div id="buy_link" class="tabby not_selected">Purchase</div>
                 </div>
-                
+
                 <div id="tab_one" class="tab_page visible">
-                    
+
                     <div class="head">Background</div>
                     <div class="inputs">
                         <input name="" id="customBackground" placeholder="Image Source URL">
                         <div class="tooltip"><a href="http://www.simplydevio.us/resources/image_tutorial.php">?</a><div class="tool_info"><span>Click for a tutorial</span></div></div>
                     </div>
-                    
+
                     <div class="head">Font Name</div>
                     <div class="inputs">
                         <input id="buttonFontFamily" value="Verdana">
                         <div class="tooltip">?<div class="tool_info"><span>Use a websafe font or Google Font here</span></div></div>
                     </div>
-                    
+
                     <div class="head">Font Size</div>
                     <div class="inputs">
                         <input id="buttonSize" type="range" min="0" max="30" value="14">
                         <div class="range_label" id="button_size_range">14</div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="head">Position</div>
                     <div class="inputs">
                         <input id="topMargin" type="range" min="0" max="100" value="10">
                         <div class="range_label" id="top_margin_range">10</div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="head">Padding</div>
                     <div class="inputs">
                         <input id="buttonPadding" type="range" min="0" max="30" value="10">
                         <div class="range_label" id="button_padding_range">10</div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="head">Margin</div>
                     <div class="inputs">
                         <input id="buttonMargin" type="range" min="0" max="20" value="5">
                         <div class="range_label" id="button_margin_range">5</div>
                         <input id="sideMargin" type="range" min="0" max="3.0" value="1.0" step="0.1">
                         <div class="range_label" id="side_margin_range">5</div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="head">Roundness</div>
                     <div class="inputs">
                         <input id="buttonRadius" type="range" min="0" max="20" value="0">
                         <div class="range_label" id="button_radius_range">0</div>
-                    </div> 
+                    </div>
 
                     <div class="head">Width</div>
                     <div class="inputs">
                         <input id="maxWidth" type="range" min="0" max="500" value="500">
                         <div class="range_label" id="width_range">10</div>
-                    </div> 
+                    </div>
                     <div class="head"></div>
                     <div class="inputs">
                         <input type="checkbox" id="includeArrow"  class="check"> <label for="includeArrow">Include arrow (&#10152;) on hover</label><br>
                         <input type="checkbox" id="includeStatus" class="check"><label for="includeStatus"> Exclude Status Buttons</label><br>
                         <label><input type="checkbox" id="singleColumn"  class="check"> Single-Column Layout</label>
-                    </div> 
+                    </div>
 
                 </div>
-                
-            
+
+
                 <div id="tab_two" class="tab_page hidden">
                 <table>
                     <tr>
@@ -344,7 +344,7 @@ function checkit()
                         <td>Normal</td>
                         <td><input id="statusBackground" class="color" maxlength="6" value="FFA53A"></td>
                         <td>Hover</td>
-                        <td><input id="statusHoverBackground" class="color" maxlength="6" value="9FCE54"></td> 
+                        <td><input id="statusHoverBackground" class="color" maxlength="6" value="9FCE54"></td>
                     </tr>
                     <tr>
                         <td>Text Color</td>
@@ -362,10 +362,10 @@ function checkit()
                     </tr>
                 </table>
                 <input type="checkbox" id="includeTransition" class="check"><label for="includeTransition"> Include Transitions</label>
-                
+
             </div>
-                
-                
+
+
             <div id="tab_three" class="tab_page hidden">
                 <div id="button_names" class="w4">
                     <b>Button Name</b>
@@ -384,14 +384,14 @@ function checkit()
                     <input name="butLink" class="url" placeholder="http://">
                 </div>
                 <br>
-                
+
                 <div id="addLeft" class="add">Add Button</div><br>
                 <div id="removeLeft" class="remove">Remove a Row</div>
             </div>
             <div id="tab_four" class="tab_page hidden">
-                
+
                 <div id="statusBox" class="visible">
-                    
+
                     <div id="statusButtons">
                         <div id="statusNames" class="w4">
                             <b>Button Name</b>
@@ -414,10 +414,10 @@ function checkit()
                         <input name="butDescription" value="Digital Chibis and Pixel Icons (OPEN)">
                         <input name="butDescription" value="Digital Chibis and Pixel Icons (OPEN)">
                     </div>
-                    
+
                     <div id="addStatus" class="add">Add Another Button</div><br>
                     <div id="removeStatus" class="remove">Remove a Button</div>
-                
+
                 </div> <!-- End of status Box -->
             </div>
             <div id="tab_five" class="tab_page hidden">
@@ -510,8 +510,8 @@ $("#buy_link").click(toggle);
                 <div class="notice">DeviantART has a max height of 350px, so anything below this line will be cut off!</div>
             </div>
             </div>
-        
-            
+
+
             <div class="cols lft">
                 Need help using the codes below? Read this step-by-step <a href="http://www.simplydevio.us/resources/profile_tutorial.php" target="_blank">tutorial</a>.
                 <br><br>
@@ -538,14 +538,14 @@ $("#buy_link").click(toggle);
                     </div>
                 </div>
             </div>
-            
+
             <br><br>
             </div>
         </td>
-        
+
         </tr>
         </table>
-        
+
         </div>
     </div>
 <div class="section footer b">
