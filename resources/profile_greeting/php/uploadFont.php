@@ -7,8 +7,8 @@ if (isset($_FILES["file"])) {
 
     if (($_FILES["file"]["size"] < 2000000) && in_array($extension, $allowedExts)) {
         if ($_FILES["file"]["error"] == 0) {
-            if (!file_exists("uploaded_fonts/" . $filename)) {
-              move_uploaded_file($_FILES["file"]["tmp_name"], "uploaded_fonts/" . $filename);
+            if (!file_exists("resources/profile_greeting/uploaded_fonts/" . $filename)) {
+              move_uploaded_file($_FILES["file"]["tmp_name"], "resources/profile_greeting/uploaded_fonts/" . $filename);
             }
         }
     }

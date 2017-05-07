@@ -20,7 +20,7 @@
 
 
 
-    
+
 
     <script src="../js/jquery.js"></script>
 
@@ -28,15 +28,15 @@
 
     <script type="text/javascript" src="js/jscolor.js"></script>
 
-    
+
 
     <title>Gallery Directory Creator</title>
 
     <link rel="icon" href="../images/new128.png" sizes="128x128">
 
-    
 
-    
+
+
 
     <script>
 
@@ -48,7 +48,7 @@
 
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    
+
 
       ga('create', 'UA-45010841-2', 'simplydevio.us');
 
@@ -86,9 +86,9 @@ function checkit()
 
     var css = '<style type="text/css">\n\n';
 
-    
 
- 
+
+
 
 // HTML BUILDING
 
@@ -116,11 +116,11 @@ function checkit()
 
     }
 
-    
+
 
     // Counting buttons
 
-    
+
 
     for(var i = 0; i <= example.butName.length; i++){
 
@@ -132,7 +132,7 @@ function checkit()
 
     // Sizes
 
-    
+
 
     var size = parseFloat(document.getElementById('buttonSize').value);
 
@@ -140,25 +140,25 @@ function checkit()
 
     var padding = parseFloat(document.getElementById('buttonPadding').value) * 2;
 
-    
+
 
     // Determining the height of the directory and the image
 
-    
+
 
     var blankHeight = ((size + margin + padding) * buttonNumber);
 
-    
+
 
     //  LEFT SIDE DIRECTORY BUTTONS
 
-    
+
 
     for(var i = 0; i < example.butName.length; i++)
 
     {
 
-        
+
 
         htmlstring += '<div class=\"wrap\"><a class=\"button\" href=\"' + example.butLink[i].value + '">';
 
@@ -170,11 +170,11 @@ function checkit()
 
     }
 
-    
+
 
     htmlstring += '</div>\n\n<div class=\"clear\"></div>';
 
-    
+
 
 // DONE WITH HTML BUILDING
 
@@ -198,7 +198,7 @@ function checkit()
 
     textstring += '.external{display:block;}\n\n';
 
-    
+
 
     textstring += '.gr-box{\n';
 
@@ -212,13 +212,13 @@ function checkit()
 
     textstring += 'font-size:' + document.getElementById('buttonSize').value + 'px;}\n\n';
 
-    
+
 
     var top = document.getElementById('topMargin').value;
 
 
 
-    
+
 
     textstring += '.text{\n';
 
@@ -228,11 +228,11 @@ function checkit()
 
     textstring += 'margin:' + top + 'px auto;}\n\n';
 
-    
+
 
     textstring += '.left{width:45%;}\n\n';
 
-    
+
 
     textstring += '.image{\n';
 
@@ -244,7 +244,7 @@ function checkit()
 
     textstring += 'top:0;}\n\n';
 
-    
+
 
     textstring += '.celvas{\n';
 
@@ -254,7 +254,7 @@ function checkit()
 
     textstring += 'display:inline-block;}\n\n';
 
-    
+
 
     textstring += 'img{\n';
 
@@ -302,7 +302,7 @@ function checkit()
 
         }
 
-    
+
 
     textstring += '.button:hover{\n';
 
@@ -310,7 +310,7 @@ function checkit()
 
     textstring += 'background: #' + document.getElementById('buttonHoverBackground').value + ';}\n\n';
 
-    
+
 
     textstring += '.button span{\n';
 
@@ -318,7 +318,7 @@ function checkit()
 
     textstring += 'font-size:0.85em;}\n\n';
 
-    
+
 
     textstring += '.button:hover span{display:inline;}\n\n';
 
@@ -338,13 +338,13 @@ function checkit()
 
     widgetstring += '\"></div></div><div class=\"gr-box gr-genericbox\">';
 
-    
-
-    
 
 
 
-    
+
+
+
+
 
     // Write textstring to the textarea.
 
@@ -362,15 +362,15 @@ function checkit()
 
 
 
-    
+
 
 
 
     // document.forms['example'].output.value = textstring;
 
-    
 
-    if (document.getElementById('password').value == 'pandas') 
+
+    if (document.getElementById('password').value == 'pandas')
 
     {
 
@@ -392,7 +392,7 @@ function checkit()
 
     }
 
-        
+
 
 
 
@@ -440,11 +440,11 @@ function checkit()
 
     <div id="left">
 
-        
+
 
         <div class="title">Gallery Directory Creator</div>
 
-        <div class="map"><a href="index.php">Resources</a> > Gallery Creator</div>
+        <div class="map"><a href="/#!/resources">Resources</a> > Gallery Creator</div>
 
 
 
@@ -474,7 +474,7 @@ function checkit()
 
                 </div>
 
-                
+
 
                 <table id="tab_one" class="tab_page visible">
 
@@ -494,7 +494,7 @@ function checkit()
 
                         <td colspan="4"><input id="buttonFontFamily" value="Verdana"><a title="Use a Web Safe Font or Google Font here" class="tooltip">[?]</a></td>
 
-                    </tr>   
+                    </tr>
 
                     <tr>
 
@@ -502,7 +502,7 @@ function checkit()
 
                         <td><input id="buttonSize" type="range" min="0" max="30" value="14"><span class="range_label" id="button_size_range">14</span></td>
 
-                    </tr>   
+                    </tr>
 
                     <tr>
 
@@ -546,9 +546,9 @@ function checkit()
 
                 </table>
 
-                
 
-            
+
+
 
                 <div id="tab_two" class="tab_page hidden">
 
@@ -586,27 +586,27 @@ function checkit()
 
                 </table>
 
-                
+
 
 
 
                 <input type="checkbox" id="includeTransition" class="check"><label for="includeTransition">Include Transitions</label>
 
-                
+
 
             </div>
 
-                
 
-                
+
+
 
             <div id="tab_three" class="tab_page hidden">
 
-                
+
 
                 <div id="leftButtons">
 
-                
+
 
                     <table class="aButton">
 
@@ -694,7 +694,7 @@ function checkit()
 
                 <input id="password" class="password" placeholder="Password">
 
-                
+
 
                 <div id="message"></div>
 
@@ -834,7 +834,7 @@ $("#status_link").click(toggle);
 
             </div>
 
-            
+
 
             <div class="cols rgt">
 
@@ -852,11 +852,11 @@ $("#status_link").click(toggle);
 
             </div>
 
-            
 
 
 
-            
+
+
 
 
 
@@ -914,7 +914,7 @@ $("#status_link").click(toggle);
 
             </div><!-- End cols lft -->
 
-            
+
 
             <br><br>
 

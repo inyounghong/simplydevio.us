@@ -6,7 +6,11 @@
     <meta name="keywords" content="deviantart, simplysilent, profile, directory, css, journal, skin">
     <meta name="author" content="SimplySilent">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="resources/profile_greeting/css/greeting.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="libraries/minicolors/jquery.minicolors.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/new128.png" sizes="128x128">
 
@@ -23,6 +27,7 @@
 <body>
 
     <?php include 'includes/menu1.html' ?>
+    <?php include 'resources/profile_greeting/php/uploadFont.php' ?>
 
     <!-- View -->
     <div ng-view></div>
@@ -37,6 +42,11 @@
     <!-- JS Files -->
     <script src="js/mainApp.js"></script>
     <script src="js/mainController.js"></script>
+    <script src="libraries/minicolors/jquery.minicolors.js"></script>
+    <script src="libraries/minicolors/angular-minicolors.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/customOnChange.js"></script>
+    <script src="resources/profile_greeting/profileGreetingCtrl.js"></script>
 
 </body>
 </html>

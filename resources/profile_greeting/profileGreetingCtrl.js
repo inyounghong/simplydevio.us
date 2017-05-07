@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('mainApp')
 .controller('ProfileGreetingCtrl', function ($scope) {
     'use strict';
 
@@ -94,13 +94,12 @@ angular.module('myApp')
         pass = pass.trim().toLowerCase();
         $scope.imageData.username = "";
         $.ajax({
-            url: 'php/checkGreetingPassword.php',
+            url: '/resources/profile_greeting/php/checkGreetingPassword.php',
             type: 'get',
             data: {password: pass},
             success: function(res) {
                 handlePasswordCheck(res);
                 isLocked = false;
-                console.log($scope.imageData.username);
             },
             error: function(xhr, desc, err) {
                 console.log(xhr);
@@ -203,13 +202,12 @@ angular.module('myApp')
 
     // AJAX call to create image from given [i] image details
     function postCreateImage(i, hidePopup) {
-        console.log(i);
         return $.ajax({
-            url: 'php/createImage.php',
+            url: '/resources/profile_greeting/php/createImage.php',
             type: 'get',
             data: i,
             success: function(data) {
-                $("#previewImage").attr("src", "user_greetings/display.php?" + new Date().getTime());
+                $("#previewImage").attr("src", "/resources/profile_greeting/user_greetings/display.php?" + new Date().getTime());
                 $("#loading").hide();
                 $("#daWidget").css("opacity", "1");
                 $("#previewImage").show();
@@ -230,7 +228,7 @@ angular.module('myApp')
     // Gets an array of all the fonts on the server
     function getFontList() {
         $.ajax({
-            url: 'php/getFontList.php',
+            url: '/resources/profile_greeting/php/getFontList.php',
             type: 'get',
             success: function(data) {
                 $scope.fonts = data;

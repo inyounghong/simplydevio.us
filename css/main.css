@@ -115,7 +115,7 @@
 body {
   font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
   font-size: 15px;
-  background: #eee url(http://www.simplydevio.us/images/stripessmall2.png);
+  background: #f8f8f8;
   color: #222;
   height: 100%;
   position: relative;
@@ -461,12 +461,12 @@ p.description {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -34px;
-  margin-top: -34px;
-  width: 50px;
-  height: 50px;
-  padding-left: 18px;
-  padding-top: 18px;
+  margin-left: -30px;
+  margin-top: -30px;
+  width: 60px;
+  height: 60px;
+  padding-left: 15px;
+  padding-top: 15px;
   opacity: 0;
 }
 
@@ -727,7 +727,7 @@ td.lg, td.full {
 
 @media screen and (max-width: 1200px) {
   input[type=range] {
-    width: 80% !important;
+    width: 80%;
   }
   td.split_range [type=range] {
     width: 75% !important;
