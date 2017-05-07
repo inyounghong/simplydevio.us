@@ -61,7 +61,7 @@
                     <div class="head">Background</div>
                     <div class="inputs">
                         <input class="i85" id="customBackground" placeholder="Image Source URL">
-                        <div class="tooltip"><a href="http://www.simplydevio.us/resources/image_tutorial.php">?</a><div class="tool_info"><span>Click for a tutorial</span></div></div>
+                        <div class="tooltip"><a href="http://www.simplydevio.us/resources/image_tutorial.php" target="_blank">?</a><div class="tool_info"><span>Click for a tutorial</span></div></div>
                     </div>
 
                     <div class="head">Font Name</div>
@@ -266,7 +266,7 @@
                 <input id="password" class="password i85" placeholder="Password">
                 <div id="message"></div>
                 <br>
-                <a href="http://fav.me/d73p9tr" class="buy">Purchase Password</a>
+                <a href="http://fav.me/d73p9tr" class="buy"  target="_blank">Purchase Password</a>
             </div>
 
             </form>
@@ -318,7 +318,7 @@
         <div class="versionlog">
             <ul>
                 <li>v.3 Updated July 7, 2015</li>
-                <li><a href="profile_directory_v2.php">v.2</a> Updated January, 2015</li>
+                <li><a href="profile_directory_v2.php" target="_blank">v.2</a> Updated January, 2015</li>
         </div>
 
         </div>
