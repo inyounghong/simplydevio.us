@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('mainApp')
 .directive('customOnChange', function() {
   return {
     restrict: 'A',

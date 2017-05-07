@@ -9,20 +9,20 @@
     <title>Gallery Slideshow Creator for DeviantART</title>
 
     <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
-    
+
     <script src="../js/jquery.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/jscolor.js"></script>
     <script type="text/javascript" src="js/slideshow.js"></script>
-    
+
     <link rel="icon" href="../images/new128.png" sizes="128x128">
-    
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-45010841-2', 'simplydevio.us');
       ga('send', 'pageview');
     </script>
@@ -32,9 +32,9 @@
     <?php include '../includes/menu1.html' ?>
 <div class="section" id="resource">
     <div id="left">
-        
+
         <div class="title">Gallery Slideshow Creator</div>
-        <div class="map"><a href="index.php">Resources</a> > Slideshow #1 Creator</div>
+        <div class="map"><a href="/#!/resources">Resources</a> > Slideshow #1 Creator</div>
             <!-- Start Journal Box Section -->
             <div class="cols lft">
             <form action="" id="profileDirectory" name="example" onchange="checkit()" onsubmit="checkit(); return false">
@@ -43,7 +43,7 @@
                     <div id="buttons_link" class="tabby not_selected">Images</div>
                     <div id="button_name_link" class="tabby not_selected">Purchase</div>
                 </div>
-                
+
                 <table id="tab_one" class="tab_page visible">
                     <tr>
                         <td style="width:110px;"><h2>Background </h2></td>
@@ -68,7 +68,7 @@
                 </table>
             <div id="tab_two" class="tab_page hidden">
                 <table id="leftButtons">
-                
+
                     <tr>
                         <td class="w50"><b>Page URL</b> <a title="The URL of you want the image to redirect to when clicked." class="tooltip" href="image_tutorial.php">[?]</a></td>
                         <td class="full"><b>Image URL</b> <a title="Click for a tutorial on how to find Image URL's" class="tooltip" href="image_tutorial.php">[?]</a></td>
@@ -152,15 +152,15 @@ $("#button_name_link").click(toggle);
 <br><br>
             </form>
         </div>
-                
+
             <div class="cols rgt">
                 <div class="right_preview_box" style="margin-left:50px;">
                     <div class="box_heading">Preview</div>
                     <div id="preview_box" style="max-height:400px; overflow:hidden;"></div>
-                    
+
                 </div>
             </div>
-            
+
             <div class="cols lft">
                 Need help using the codes below? Read this step-by-step <a href="profile_tutorial.php" target="_blank">tutorial</a>.
                 <br><br>
@@ -187,7 +187,7 @@ $("#button_name_link").click(toggle);
                     </div>
                 </div>
             </div><!-- End cols left -->
-            
+
             <br><br>
             </div>
         </div>

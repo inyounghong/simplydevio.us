@@ -9,26 +9,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="../css/main2.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../css/form.css" media="screen" />
-    
+
     <?php include '../includes/fonts.html' ?>
-    
+
     <script src="../js/jquery.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/jscolor.js"></script>
     <script type="text/javascript" src="js/profile_tabs.js"></script>
     <script type="text/javascript" src="js/profile_directory.js"></script>
-    
-    
-   
+
+
+
     <link rel="icon" href="../images/new128.png" sizes="128x128">
-    
-    
+
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-45010841-2', 'simplydevio.us');
       ga('send', 'pageview');
     </script>
@@ -42,8 +42,8 @@
 <div class="section" id="resource">
     <div id="left">
         <div class="title">Profile Directory Creator</div>
-        <div class="map"><a href="index.php">Resources</a> > Profile Creator</div>
-    
+        <div class="map"><a href="/#!/resources">Resources</a> > Profile Creator</div>
+
             <!-- Start Journal Box Section -->
 
             <div class="cols lft">
@@ -55,15 +55,15 @@
                     <div id="status_link" class="tabby not_selected">Status</div>
                     <div id="buy_link" class="tabby not_selected">Purchase</div>
                 </div>
-                
+
                 <div id="page1" class="tab_page selected">
-                    
+
                     <div class="head">Background</div>
                     <div class="inputs">
                         <input class="i85" id="customBackground" placeholder="Image Source URL">
                         <div class="tooltip"><a href="http://www.simplydevio.us/resources/image_tutorial.php">?</a><div class="tool_info"><span>Click for a tutorial</span></div></div>
                     </div>
-                    
+
                     <div class="head">Font Name</div>
                     <div class="inputs">
                         <input class="i85" id="buttonFontFamily" value="Open Sans">
@@ -76,53 +76,53 @@
                         <input type="checkbox" id="bold"  class="check"> <label for="bold">Bold</label>
                         <input type="checkbox" id="letter_spacing"  class="check"> <label for="letter_spacing">Letter Spacing</label>
                     </div>
-                    
+
                     <div class="head">Font Size</div>
                     <div class="inputs">
                         <input id="buttonSize" type="range" min="0" max="30" value="14">
                         <div class="range_label" id="button_size_range">14</div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="head">Position</div>
                     <div class="inputs">
                         <input id="topMargin" type="range" min="0" max="100" value="10">
                         <div class="range_label" id="top_margin_range">10</div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="head">Padding</div>
                     <div class="inputs">
                         <input id="buttonPadding" type="range" min="0" max="30" value="10">
                         <div class="range_label" id="button_padding_range">10</div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="head">Margin</div>
                     <div class="inputs">
                         <input id="buttonMargin" type="range" min="0" max="20" value="5">
                         <div class="range_label" id="button_margin_range">5</div>
                         <input id="sideMargin" type="range" min="0" max="3.0" value="1.0" step="0.1">
                         <div class="range_label" id="side_margin_range">5</div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="head">Roundness</div>
                     <div class="inputs">
                         <input id="buttonRadius" type="range" min="0" max="50" value="0">
                         <div class="range_label" id="button_radius_range">0</div>
-                    </div> 
+                    </div>
 
                     <div class="head">Width</div>
                     <div class="inputs">
                         <input id="maxWidth" type="range" min="0" max="500" value="500">
                         <div class="range_label" id="width_range">10</div>
-                    </div> 
+                    </div>
                     <div class="head"></div>
                     <div class="inputs">
                         <input type="checkbox" id="includeArrow"  class="check"> <label for="includeArrow">Include arrow (&#10152;) on hover</label><br>
                         <input type="checkbox" id="includeStatus" class="check"><label for="includeStatus"> Exclude Status Buttons</label><br>
-                    </div> 
+                    </div>
 
                 </div>
-                
-            
+
+
                 <div class="tab_page" id="page2">
                 <table>
                     <tr>
@@ -153,7 +153,7 @@
                         <td>Normal</td>
                         <td><input id="statusBackground" class="color" maxlength="6" value="FFA53A"></td>
                         <td>Hover</td>
-                        <td><input id="statusHoverBackground" class="color" maxlength="6" value="9FCE54"></td> 
+                        <td><input id="statusHoverBackground" class="color" maxlength="6" value="9FCE54"></td>
                     </tr>
                     <tr>
                         <td>Text Color</td>
@@ -183,10 +183,10 @@
                 </table>
 
                 <input type="checkbox" id="includeTransition" class="check" checked><label for="includeTransition"> Include Transitions</label>
-                
+
             </div>
-                
-                
+
+
             <div class="tab_page" id="page3">
                 <b>Columns</b>&nbsp;&nbsp;&nbsp;
                 <input type="text" id="num_cols" class="small" value="2"><br>
@@ -220,16 +220,16 @@
 
                 </div>
 
-                
+
                 <div id="addLeft" class="add">Add Button</div><br>
                 <div id="removeLeft" class="remove">Remove a Row</div>
             </div>
 
 
             <div class="tab_page" id="page4">
-                
+
                 <div id="statusBox" class="visible">
-                    
+
                     <div id="statusButtons">
                         <div id="statusNames" class="w4">
                             <b>Button Name</b>
@@ -252,10 +252,10 @@
                         <input name="butDescription" value="Digital Chibis and Pixel Icons (OPEN)">
                         <input name="butDescription" value="Digital Chibis and Pixel Icons (OPEN)">
                     </div>
-                    
+
                     <div id="addStatus" class="add">Add Another Button</div><br>
                     <div id="removeStatus" class="remove">Remove a Button</div>
-                
+
                 </div> <!-- End of status Box -->
             </div>
 
@@ -279,8 +279,8 @@
                 <div class="notice">DeviantART has a max height of 350px, so anything below this line will be cut off!</div>
             </div>
             </div>
-        
-            
+
+
             <div class="cols lft">
                 Need help using the codes below? Read this step-by-step <a href="http://www.simplydevio.us/resources/profile_tutorial.php" target="_blank">tutorial</a>.
                 <br><br>
@@ -307,11 +307,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <br><br>
             </div>
         </td>
-        
+
         </tr>
         </table>
 
@@ -320,7 +320,7 @@
                 <li>v.3 Updated July 7, 2015</li>
                 <li><a href="profile_directory_v2.php">v.2</a> Updated January, 2015</li>
         </div>
-        
+
         </div>
     </div>
 <div class="section footer b">

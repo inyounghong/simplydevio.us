@@ -12,14 +12,14 @@
     <script type="text/javascript" src="js/jscolor.js"></script>
     <title>Full-Size Gallery Directory Creator</title>
     <link rel="icon" href="../images/new128.png" sizes="128x128">
-    
-    
+
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-45010841-2', 'simplydevio.us');
       ga('send', 'pageview');
     </script>
@@ -37,24 +37,24 @@ $(document).ready(function(){
 function checkit()
 {
     var css = '<style type="text/css">\n\n';
-    
- 
+
+
 // HTML BUILDING
     var htmlstring = '<div class=\"right\">\n\n';
-    
+
     // Counting buttons
-    
+
     for(var i = 0; i <= example.butName.length; i++){
         var buttonNumber = i;
     }
     // Sizes
-    
+
     var size = parseFloat(document.getElementById('buttonSize').value);
     var margin = parseFloat(document.getElementById('buttonMargin').value);
     var padding = parseFloat(document.getElementById('buttonPadding').value) * 2;
-    
+
     // Determining the height of the directory and the image
-    
+
     var blankHeight = ((size + margin + padding + 2) * buttonNumber) - 1;
     var imageURLs = [];
     var imageLinks = [];
@@ -65,9 +65,9 @@ function checkit()
         imageLinks.push(example.imgLink[i].value);
         imageZooms.push(example.imageZoom[i].value);
     }
-     
+
     //  DIRECTORY BUTTONS
-    
+
     for(var i = 0; i < example.butName.length; i++)
     {
         if(i == 0)
@@ -83,9 +83,9 @@ function checkit()
         htmlstring += '<a href="' + imageLinks[i] + '" class="image">';
         htmlstring += '<img src="' + imageURLs[i] + '" width="' + imageZooms[i] + '"></a></div>\n\n';
     }
-    
+
     htmlstring += '</div>';
-    
+
 // DONE WITH HTML BUILDING
 // CSS BUILDING
     var textstring = '*{background:none; border:none; padding:0; margin:0;} \n\n';
@@ -94,31 +94,31 @@ function checkit()
     textstring += '.gr-top, .bottom, a.external:after, .right br {display:none;}\n';
     textstring += 'a{text-decoration:none; font-weight:normal;}\n';
     textstring += '.external{display:block;}\n\n';
-    
+
     textstring += '.gr-box{\n';
     textstring += 'z-index:99!important;\n';
     textstring += 'line-height:1.2em;\n';
     textstring += 'font-family:' + document.getElementById('buttonFontFamily').value + ';\n';
     textstring += 'font-size:' + document.getElementById('buttonSize').value + 'px;}\n\n';
-    
+
     var top = document.getElementById('topMargin').value;
     textstring += '.text{\n';
     textstring += 'position:relative;\n';
     textstring += 'max-width:550px;\n';
     textstring += 'overflow:hidden;\n';
     textstring += 'margin:' + top + 'px auto;}\n\n';
-    
+
     if (document.getElementById('buttonSide').checked)
-    { 
+    {
         textstring += '.right{margin-left:65%;}\n';
-        textstring += '.image{left:0;}\n';    
+        textstring += '.image{left:0;}\n';
     }
     else
     {
         textstring += '.image{left:35%;}\n';
         textstring += '';}
     textstring += '.wrap{right:0;}\n\n';
-    
+
     textstring += '.image{\n';
     textstring += 'display:none;\n'
     textstring += 'position:absolute;\n';
@@ -144,7 +144,7 @@ function checkit()
     textstring += 'transition:all .2s;}\n\n';
     textstring += '.image:hover:after{opacity:1;}\n';
     textstring += '.image:hover img{opacity:0.3;}\n\n';
-    
+
     textstring += 'img{\n';
     textstring += 'position:relative;\n';
     textstring += 'max-width:750px!important;\n';
@@ -170,7 +170,7 @@ function checkit()
     textstring += '.main .button{\n';
     textstring += 'background: #' + document.getElementById('buttonBackgroundGal').value + ';\n';
     textstring += 'color: #' + document.getElementById('buttonColorGal').value + '!important;}\n\n';
-    
+
     textstring += '.button:hover{\n';
     textstring += 'color: #' + document.getElementById('buttonHoverColor').value + '!important;\n';
     textstring += 'background: #' + document.getElementById('buttonHoverBackground').value + ';\n';
@@ -179,24 +179,24 @@ function checkit()
     textstring += '.main .button:hover{\n';
     textstring += 'background: #' + document.getElementById('buttonHoverBackgroundGal').value + '!important;\n';
     textstring += 'color: #' + document.getElementById('buttonHoverColorGal').value + '!important;}\n\n';
-    
+
     textstring += '.button:hover span{display:inline;}\n\n';
 // CUSTOM BOX HTML BUILDING
     var widgetstring = '<div class=\"popup2-moremenu\"><div class=\"floaty-boat\"><br><img src=\"';
     widgetstring += document.getElementById('customBackground').value;
     widgetstring += '\"></div></div><div class=\"gr-box gr-genericbox\">';
-    
-    
-    
+
+
+
     // Write textstring to the textarea.
     document.getElementById("button_size_range").innerHTML = document.getElementById("buttonSize").value;
     document.getElementById("button_padding_range").innerHTML = document.getElementById("buttonPadding").value;
     document.getElementById("button_margin_range").innerHTML = document.getElementById("buttonMargin").value;
     document.getElementById("top_margin_range").innerHTML = document.getElementById("topMargin").value;
-    
+
     // document.forms['example'].output.value = textstring;
-    
-    if (document.getElementById('password').value == 'oomoo') 
+
+    if (document.getElementById('password').value == 'oomoo')
     {
         document.getElementById("cssArea").value = textstring;
         document.getElementById("htmlArea").value = htmlstring;
@@ -206,7 +206,7 @@ function checkit()
     else
     {
     }
-        
+
     var complete_css = '<style>#preview_box a{font-weight:400;}';
     complete_css += textstring;
     complete_css += '.gr-box a{text-decoration:none;} .gr-box{ max-width:800px; padding: 20px 10px;} .description{max-width:800px;}';
@@ -221,10 +221,10 @@ function checkit()
     <?php include '../includes/menu1.html' ?>
 <div class="section" id="resource">
     <div id="left">
-        
+
         <div class="title">Fullsize Gallery Directory Creator</div>
-        <div class="map"><a href="index.php">Resources</a> > Gallery Creator</div>
-    
+        <div class="map"><a href="/#!/resources">Resources</a> > Gallery Creator</div>
+
             <?php include 'includes/note.html' ?>
             <div class="cols lft">
             <form action="" id="profileDirectory" name="example" onsubmit="checkit(); return false">
@@ -244,11 +244,11 @@ function checkit()
                         <tr>
                             <td><b>Font Name</b></td>
                             <td colspan="4"><input id="buttonFontFamily" value="Verdana" onchange="checkit()"><a title="Use a Web Safe Font or Google Font here" class="tooltip">[?]</a></td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td><b>Font Size</b></td>
                             <td><input id="buttonSize" type="range" min="0" max="30" value="14" onchange="checkit()"><span class="range_label" id="button_size_range">14</span></td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td><b>Position</b></td>
                             <td><input id="topMargin" type="range" min="0" max="100" value="10" onchange="checkit()"><span class="range_label" id="top_margin_range">10</span></td>
@@ -265,11 +265,11 @@ function checkit()
                     <br>
                     <input type="checkbox" id="buttonSide" class="check" onchange="checkit()" checked><label for="buttonSide">Right-side Buttons</label><br>
                     <input type="checkbox" id="includeTransition" class="check" onchange="checkit()" checked><label for="includeTransition">Include Transitions</label>&nbsp;&nbsp;&nbsp;
-                    <input type="checkbox" id="includeShadow" class="check" onchange="checkit()" checked><label for="includeShadow">Include Shadow</label> 
+                    <input type="checkbox" id="includeShadow" class="check" onchange="checkit()" checked><label for="includeShadow">Include Shadow</label>
                     <input id="shadow" class="color" maxlength="6" value="222222" onchange="checkit()">
                 </div>
-                
-            
+
+
                 <div id="box2" class="tab_page hidden">
                 <table>
                     <tr>
@@ -316,10 +316,10 @@ function checkit()
                     </tr>
                 </table>
                 <br>
-            
-                
+
+
             </div>
-                
+
             <!-- BUTTONS TAB -->
             <div id="box3" class="tab_page hidden">
                 <div id="leftButtons">
@@ -327,7 +327,7 @@ function checkit()
                         $i = 0;
                         while($i < 5)
                         {
-                            echo 
+                            echo
                             '<table class="aButton">
                                 <tr>
                                     <td class="w35"><input class="name" name="butName" value="My Gallery" onchange="checkit()"> </td>
@@ -356,7 +356,7 @@ function checkit()
                     $i = 0;
                     while($i < 5)
                     {
-                        echo 
+                        echo
                         '<table class="aButton range_s">
                             <tr>
                                 <td class="w50"><input name="imgLink" class="url" placeholder="Page URL" onchange="checkit()"></td>
@@ -436,7 +436,7 @@ $("#tab5").click(function(){
             </form>
         </div>
         <div class="cols rgt">
-            
+
             <div class="right_preview_box">
                 <div class="box_heading">Preview</div>
                 <div id="preview_box"></div>
@@ -470,7 +470,7 @@ $("#tab5").click(function(){
                 </div>
             </div> <!-- End cols left -->
             </div>
-        
+
         </div>
     </div>
 <div class="section footer b">
