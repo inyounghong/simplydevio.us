@@ -217,12 +217,11 @@ angular.module('mainApp')
         css += 'font-size:' + j.buttonSize + 'px;\n';
         css += '}\n\n';
 
-        var top = j.topMargin;
         j.sideMargin = parseInt(j.sideMargin);
 
         css += '.gr-body{\n';
         css += 'max-width:' + j.maxWidth + 'px;\n';
-        css += 'margin:' + top + 'px auto 0\n';
+        css += 'margin:' + j.topMargin + 'px auto 0\n';
         css += '}\n\n';
 
         console.log(j.buttonColor);
@@ -336,12 +335,12 @@ angular.module('mainApp')
         complete_css += css;
         complete_css += '.gr-box a{text-decoration:none;} .gr-box{padding: 20px 10px 40px;}  .description{max-width:800px;}';
         complete_css += '.maxheight{position:absolute;top:370px;display:block;border-top:1px dotted #777; width:100%; text-align:center; padding-top:5px;}';
-        complete_css += '.gr-box{background:url("' + $scope.j.customBackground + '") no-repeat;</style>';
+        complete_css += '.daInside{background:url("' + $scope.j.customBackground + '") no-repeat;</style>';
         return complete_css;
     }
 
     function getCompleteHtml(html) {
-        var complete_html = '<div class="gr-box"><div class="gr-top"><div class="gr"><h2><img src="http:/\/st.deviantart.net/minish/gruzecontrol/icons/journal.gif?2" style="vertical-align:middle"><a href="#">Devious Journal Entry</a></h2><span class="timestamp">Tue Oct 22, 2013, 7:04 AM</span></div></div><div class="body"><div class="text">';
+        var complete_html = '<div class="gr-box"><div class="gr-top"><div class="gr"><h2><img src="http:/\/st.deviantart.net/minish/gruzecontrol/icons/journal.gif?2" style="vertical-align:middle"><a href="#">Devious Journal Entry</a></h2><span class="timestamp">Tue Oct 22, 2013, 7:04 AM</span></div></div><div class="gr-body"><div class="text">';
         complete_html += html;
         complete_html += '</div><div class="bottom"><a class="a commentslink" href="http://sta.sh/023q9vb62a0q#comments">No Comments</a></div></div>';
         return complete_html;

@@ -1,6 +1,215 @@
+// New Layout May 2017
+@import "globals";
+
+.description {
+    margin-bottom:30px;
+    p {
+        margin: 0px 0!important;
+    }
+}
+
+.editingBox {
+    background: #fff;
+    position: relative;
+    height: 500px;
+    box-sizing: border-box;
+
+    .editingSideBar {
+        background: $pink;
+        width: 400px;
+        box-sizing: border-box;
+        height: 500px;
+        position: absolute;
+
+        .button {
+            background: $w80;
+            color: $pink!important;
+            width: 100%;
+            height: auto;
+        }
+
+
+    }
+
+    .editingPreview {
+        margin-left: 400px;
+        width: 64%;
+        position: relative;
+        height: 500px;
+        box-sizing: border-box;
+        display: inline-block;
+        text-align: center;
+
+        .top {
+            max-height: 386px;
+            overflow-y: scroll;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .bottom {
+            position: absolute;
+            left: 0px;
+            padding: 15px 32px 25px 0;
+            bottom: 0px;
+            width: 100%;
+            background: #eee;
+        }
+
+
+        /* Preview Box */
+        .daWidget {
+            background: $daBgColor;
+            border: 1px solid $daBorderColor;
+            @include radius(5px);
+            width: 500px;
+            display: inline-block;
+            margin-bottom: 10px;
+
+            .daHeader {
+                background: $daHeadColor;
+                padding: 5px 10px;
+                border-bottom: 1px solid $daBorderColor;
+            }
+
+            .daInside {
+                position: relative;
+                padding: 5px 10px 20px 10px;
+                min-height: 100px;
+
+                #previewImage {
+                    z-index: 98;
+                    position: relative;
+                }
+            }
+
+            #loading {
+                position: absolute;
+                width: 100%;
+                top: 38px;
+            }
+        }
+    }
+}
+
+// popup
+#popup{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    text-align: center;
+    display: none;
+
+    #mask {
+        background: #000;
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    #popupBox {
+        background: #fff;
+        padding: 50px;
+        max-width: 500px;
+        margin: 50px auto 50px;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .scroll {
+        height: 350px;
+        overflow-y: scroll;
+    }
+
+    .slides {
+        text-align: left;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        .button {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+        }
+    }
+
+    #slide2, #slide3 {
+        display: none;
+    }
+
+    #popupLoad {
+        position: absolute;
+        top: 2px;
+        left: 220px;
+        z-index: -1;
+    }
+}
+
+.font-sm{
+    font-size: 14px;
+}
+
+
+#termsCheckbox {
+    margin: 5px 0;
+
+    label {
+        display: inline-block;
+        margin-top: -23px;
+        margin-left: 30px;
+    }
+}
+
+.button {
+    background: #e03e56;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    font-weight: 700;
+    color: $w80!important;
+    font-size: 13px;
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &.purchase-button {
+        float: right;
+        margin-top: -10px;
+    }
+}
+
+
+.code {
+    padding: 10px 20px;
+    background: #eee;
+    box-sizing: border-box;
+    min-width: 100%;
+    color: #444;
+    min-height: 70px;
+    font-family: courier;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
 .tab_page {
     background: $pink;
-    padding: 30px 5%;
+    padding: 20px 30px;
     width: 100%;
 }
 
@@ -26,9 +235,7 @@ input[type=text] {
     color: $pink;
 }
 
-.rangeWithLabel {
-    width: 90%!important;
-}
+
 
 .chunk {
     margin: 10px 0;
@@ -46,12 +253,17 @@ input[type=text] {
     .input {
         display: inline-block;
         width: 69%;
+
     }
 
-    label {
-        color: #fff;
-        opacity: 0.8;
+    .fa-trash {
+        margin-top:7px;
+        cursor: pointer;
+        &:hover {
+            color: #FFFFFF;
+        }
     }
+
 }
 
 /*
@@ -73,29 +285,29 @@ input[type=text] {
 
 .newForm {
     color: $w80;
-    font-size: 14px;
+
     a{
         color: $w80;
     }
 
-    label {
-        cursor: pointer;
-    }
     input[type=text], input[type="file"], select {
+        font-size: 14px;
         box-sizing: border-box;
         background: rgba(255, 255, 255, 0.4);
         border: none;
         @include radius(0);
         width: 100%;
-        padding: 7px 10px;
+        padding: 5px 10px;
         height: auto;
         color: #fff;
-        font-size: 13px;
+
         -webkit-appearance: none;
     }
     input.color {
-        padding: 5px 10px!important;
+        padding-top: 5px!important;
+        padding-bottom: 5px!important;
         width: 100%!important;
+        text-transform: uppercase;
     }
     .colorLabel {
         display: inline-block;
@@ -130,6 +342,7 @@ input[type=text] {
         background: $w80;
         border-radius: 100%;
         width: 18px;
+        position: relative;
         height: 18px;
         line-height: 18px;
         margin: 3px 0 0 5px;
@@ -137,14 +350,40 @@ input[type=text] {
         text-align: center;
     }
 
+    /* Check box */
+
+    input[type=checkbox] {
+        margin-right: 2px;
+    }
+
+    label {
+        font-size: 14px;
+        color: #fff;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+
+
     /* Range */
     input[type=range] {
       -webkit-appearance: none;
       width: 100%;
       padding: 0;
       height: auto;
-      margin: 5px 0 20px;
+      margin: 12px 0;
       background: none;
+    }
+
+    .rangeWithLabel {
+        width: 88%!important;
+    }
+
+    .range_label {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        margin-left: 3px;
     }
 
     input[type=range]:focus {

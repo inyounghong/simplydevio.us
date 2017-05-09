@@ -7,9 +7,9 @@
     <meta name="author" content="SimplySilent">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/main_copy.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="resources/css/greeting.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/new_form.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="libraries/minicolors/jquery.minicolors.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/new128.png" sizes="128x128">
