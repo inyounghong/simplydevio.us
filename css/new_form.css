@@ -1,4 +1,8 @@
 /* Classes */
+.mt10 {
+  margin-top: 10px;
+}
+
 .mb10 {
   margin-bottom: 10px;
 }
@@ -109,6 +113,7 @@
   position: relative;
   padding: 5px 10px 20px 10px;
   min-height: 100px;
+  box-sizing: border-box;
 }
 
 .editingBox .editingPreview .daWidget .daInside #previewImage {
@@ -385,6 +390,10 @@ input[type=text] {
   color: #fff;
   opacity: 0.8;
   cursor: pointer;
+}
+
+.newForm .col-xs-1 input[type=checkbox] {
+  margin-top: 8px;
 }
 
 .newForm input[type=range] {

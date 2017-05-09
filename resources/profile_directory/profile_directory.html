@@ -1,3 +1,5 @@
+<ng-include src="'/resources/profile_directory/partials/popup.html'"></ng-include>
+
 <div class="wrapper">
     <div class="mainContent">
 
@@ -11,7 +13,6 @@
                     <div id="buttons_link" class="tabby" ng-class="isSelected('tab2')" ng-click="changeTab('tab2')">Colors</div>
                     <div id="button_name_link" class="tabby" ng-class="isSelected('tab3')" ng-click="changeTab('tab3')">Buttons</div>
                     <div id="status_link" class="tabby" ng-class="isSelected('tab4')" ng-click="changeTab('tab4')">Status</div>
-                    <div id="buy_link" class="tabby" ng-class="isSelected('tab5')" ng-click="changeTab('tab5')">Purchase</div>
                 </div>
 
                 <div id="tab_one" class="tab_page" ng-show="tab === 'tab1'" >
@@ -28,10 +29,6 @@
 
                 <div id="tab_four" class="tab_page" ng-show="tab === 'tab4'">
                     <ng-include src="'/resources/profile_directory/partials/tab4.html'"></ng-include>
-                </div>
-
-                <div id="tab_five" class="tab_page" ng-show="tab === 'tab5'">
-                    <ng-include src="'/resources/profile_directory/partials/tab5.html'"></ng-include>
                 </div>
             </form>
 

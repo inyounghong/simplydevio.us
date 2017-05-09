@@ -1,10 +1,17 @@
 <div class="editingPreview">
-    <div class="daWidget">
-        <div class="daHeader">Featured Deviation Widget</div>
-        <div class="daInside">
-            <div ng-bind-html="trustAsHtml(previewCss)"></div>
-            <div id="preview_box" ng-bind-html="trustAsHtml(previewHtml)"></div>
-            <div class="notice">DeviantART has a max height of 350px, so anything below this line will be cut off!</div>
+    <div class="top">
+        <div class="daWidget">
+            <div class="daHeader">Featured Deviation Widget</div>
+            <div class="daInside">
+                <div ng-bind-html="trustAsHtml(previewCss)"></div>
+                <div id="preview_box" ng-bind-html="trustAsHtml(previewHtml)"></div>
+            </div>
         </div>
+        <p>DeviantART has a max widget height of 350px, so anything bigger than this will be cut off!</p>
+    </div>
+
+    <div class="c bottom">
+        <p class="mb10">To get the code for this profile directory, click below:</p>
+        <div class="button small-caps" id="getCode" ng-click="getCode()"><i class="fa fa-check-circle"></i> Get Code</div>
     </div>
 </div>

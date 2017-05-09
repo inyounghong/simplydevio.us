@@ -16,6 +16,8 @@ angular.module('mainApp')
     $scope.deleteStatusButton = deleteStatusButton;
     $scope.checkPassword = checkPassword;
     $scope.checkit = checkit;
+    $scope.getCode = getCode;
+    $scope.hidePopup = hidePopup;
 
     var NUM_BUTTONS = 5;
     var NUM_STATUS_BUTTONS = 3;
@@ -24,6 +26,14 @@ angular.module('mainApp')
     checkit();
 
     $scope.$watch("j", checkit, true);
+
+    function getCode() {
+        $("#popup").fadeIn(100);
+    }
+
+    function hidePopup() {
+        $("#popup").fadeOut(100);
+    }
 
     // Allow Html to be printed in DOM
     function trustAsHtml(string) {
@@ -92,7 +102,6 @@ angular.module('mainApp')
         $scope.password = "";
 
         setUpButtons();
-        console.log("done with setup function");
     }
 
     // Sets up buttons for tabs 3 and 4
@@ -203,7 +212,7 @@ angular.module('mainApp')
         css += '*{background:none; border:none; padding:0; margin:0;} \n\n';
         css += '.gr{padding:0 !important;}\n';
         css += '.gr-top img, .gr1, .gr2, .gr3 {display:none;}\n';
-        css += '.gr-top, .bottom, a.external:after {display:none;}\n';
+        css += '.gr-top, .gr-box .bottom, a.external:after {display:none;}\n';
         css += '.gr-box br{display:none;}\n';
         css += 'a{text-decoration:none; font-weight:normal;}\n';
         css += '.external{display:block;}\n\n';
@@ -223,8 +232,6 @@ angular.module('mainApp')
         css += 'max-width:' + j.maxWidth + 'px;\n';
         css += 'margin:' + j.topMargin + 'px auto 0\n';
         css += '}\n\n';
-
-        console.log(j.buttonColor);
 
         css += '/* Main Buttons */\n';
         css += '.profileButton{\n';
@@ -307,20 +314,22 @@ angular.module('mainApp')
     }
 
     function checkPassword() {
+        $scope.passwordMessage = "";
+        console.log($scope.password);
 
         var pass = $scope.password.toLowerCase().trim();
-        var success = "Thanks for purchasing! Your codes have been created below.";
-        var fail = "Incorrect password.";
+        console.log("sending password " + pass);
 
         $.ajax({
             url: '/resources/profile_directory/php/checkPassword.php',
             type: 'get',
             data: {password: pass},
             success: function(res) {
+                console.log("response: " + res);
                 if (res == "true") {
-                    $scope.passwordMessage = success;
+
                 } else {
-                    $scope.passwordMessage = fail;
+                    $scope.passwordMessage = "Incorrect password.";
                 }
             },
             error: function(xhr, desc, err) {
@@ -348,7 +357,6 @@ angular.module('mainApp')
 
     function checkit() {
         console.log("checkit");
-        console.log($scope.j.buttonBackground);
 
         var htmlstring = getHtml();
         var textstring = getCss();

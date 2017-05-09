@@ -76,6 +76,7 @@
                 position: relative;
                 padding: 5px 10px 20px 10px;
                 min-height: 100px;
+                box-sizing: border-box;
 
                 #previewImage {
                     z-index: 98;
@@ -361,6 +362,10 @@ input[type=text] {
         color: #fff;
         opacity: 0.8;
         cursor: pointer;
+    }
+
+    .col-xs-1 input[type=checkbox] {
+        margin-top: 8px;
     }
 
 

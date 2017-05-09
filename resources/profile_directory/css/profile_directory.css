@@ -3,6 +3,11 @@
   overflow-y: scroll;
 }
 
+.daInside {
+  max-height: 350px;
+  overflow: hidden;
+}
+
 .color {
   padding-left: 38px !important;
 }
