@@ -1,0 +1,45 @@
+<div class="wrapper">
+    <div class="mainContent">
+
+        <div class="title">Profile Directory Creator</div>
+        <div class="map"><a href="index.php">Resources</a> > Profile Creator</div>
+
+        Tab: {{tab}}<br>
+        <div class="editingBox">
+            <form action="" id="profileDirectory" class="newForm editingSidebar">
+                <div class="tab_menu normal">
+                    <div id="custom_box_link" class="tabby" ng-class="isSelected('tab1')" ng-click="changeTab('tab1')">Directory</div>
+                    <div id="buttons_link" class="tabby" ng-class="isSelected('tab2')" ng-click="changeTab('tab2')">Colors</div>
+                    <div id="button_name_link" class="tabby" ng-class="isSelected('tab3')" ng-click="changeTab('tab3')">Buttons</div>
+                    <div id="status_link" class="tabby" ng-class="isSelected('tab4')" ng-click="changeTab('tab4')">Status</div>
+                    <div id="buy_link" class="tabby" ng-class="isSelected('tab5')" ng-click="changeTab('tab5')">Purchase</div>
+                </div>
+
+                <div id="tab_one" class="tab_page" ng-show="tab === 'tab1'" >
+                    <ng-include src="'/resources/profile_directory/partials/tab1.html'"></ng-include>
+                </div>
+
+                <div id="tab_two" class="tab_page" ng-show="tab === 'tab2'" >
+                    <ng-include src="'/resources/profile_directory/partials/tab2.html'"></ng-include>
+                </div>
+
+                <div id="tab_three" class="tab_page" ng-show="tab === 'tab3'" >
+                    <ng-include src="'/resources/profile_directory/partials/tab3.html'"></ng-include>
+                </div>
+
+                <div id="tab_four" class="tab_page" ng-show="tab === 'tab4'">
+                    <ng-include src="'/resources/profile_directory/partials/tab4.html'"></ng-include>
+                </div>
+
+                <div id="tab_five" class="tab_page" ng-show="tab === 'tab5'">
+                    <ng-include src="'/resources/profile_directory/partials/tab5.html'"></ng-include>
+                </div>
+            </form>
+
+            <ng-include src="'/resources/profile_directory/partials/preview.html'"></ng-include>
+        </div>
+
+        <ng-include src="'/resources/profile_directory/partials/codes.html'"></ng-include>
+
+    </div>
+</div>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="resources/profile_greeting/css/greeting.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="resources/css/greeting.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="libraries/minicolors/jquery.minicolors.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/new128.png" sizes="128x128">
@@ -38,15 +38,20 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+
 
     <!-- JS Files -->
-    <script src="js/mainApp.js"></script>
-    <script src="js/mainController.js"></script>
+    <script src="mainApp.js"></script>
+    <script src="mainController.js"></script>
     <script src="libraries/minicolors/jquery.minicolors.js"></script>
     <script src="libraries/minicolors/angular-minicolors.js"></script>
+
     <!-- <script src="js/app.js"></script> -->
     <script src="js/customOnChange.js"></script>
+
     <script src="resources/profile_greeting/profileGreetingCtrl.js"></script>
+    <script src="resources/profile_directory/profileDirectoryCtrl.js"></script>
 
 </body>
 </html>

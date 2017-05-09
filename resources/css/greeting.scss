@@ -1,5 +1,5 @@
 /* new layout */
-@import "../../../css/globals";
+@import "../../css/globals";
 @import "new_form";
 
 .description {
@@ -32,29 +32,7 @@
             height: auto;
         }
 
-        .chunk {
-            margin: 10px 0;
 
-            h2 {
-                color: $w80;
-                font-weight: 700;
-                font-size: 14px!important;
-                text-transform: uppercase;
-                display: inline-block;
-                vertical-align: top;
-                width: 100px;
-            }
-
-            .input {
-                display: inline-block;
-                width: 235px;
-            }
-
-            label {
-                color: #fff;
-                opacity: 0.8;
-            }
-        }
     }
 
     .editingPreview {
@@ -84,7 +62,7 @@
 
 
         /* Preview Box */
-        #daWidget {
+        .daWidget {
             background: $daBgColor;
             border: 1px solid $daBorderColor;
             @include radius(5px);
@@ -92,14 +70,14 @@
             display: inline-block;
             margin-bottom: 10px;
 
-            #daHeader {
+            .daHeader {
                 background: $daHeadColor;
                 padding: 5px 10px;
                 margin-bottom: 5px;
                 border-bottom: 1px solid $daBorderColor;
             }
 
-            #daInside {
+            .daInside {
                 position: relative;
                 padding: 5px 10px 20px 10px;
                 min-height: 100px;

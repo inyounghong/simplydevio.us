@@ -28,6 +28,12 @@
   cursor: pointer;
 }
 
+.tab_page {
+  background: #e03e56;
+  padding: 30px 5%;
+  width: 100%;
+}
+
 /*
  * NORMAL FORMS
  */
@@ -48,9 +54,47 @@ input[type=text] {
   color: #e03e56;
 }
 
+.rangeWithLabel {
+  width: 90% !important;
+}
+
+.chunk {
+  margin: 10px 0;
+}
+
+.chunk h2 {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+  font-size: 14px !important;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+}
+
+.chunk .input {
+  display: inline-block;
+  width: 69%;
+}
+
+.chunk label {
+  color: #fff;
+  opacity: 0.8;
+}
+
 /*
  * NEW FORM (COLORED BACKGROUND)
  */
+.newForm .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.newForm .col-xs-1, .newForm .col-sm-1, .newForm .col-md-1, .newForm .col-lg-1, .newForm .col-xs-2, .newForm .col-sm-2, .newForm .col-md-2, .newForm .col-lg-2, .newForm .col-xs-3, .newForm .col-sm-3, .newForm .col-md-3, .newForm .col-lg-3, .newForm .col-xs-4, .newForm .col-sm-4, .newForm .col-md-4, .newForm .col-lg-4, .newForm .col-xs-5, .newForm .col-sm-5, .newForm .col-md-5, .newForm .col-lg-5, .newForm .col-xs-6, .newForm .col-sm-6, .newForm .col-md-6, .newForm .col-lg-6, .newForm .col-xs-7, .newForm .col-sm-7, .newForm .col-md-7, .newForm .col-lg-7, .newForm .col-xs-8, .newForm .col-sm-8, .newForm .col-md-8, .newForm .col-lg-8, .newForm .col-xs-9, .newForm .col-sm-9, .newForm .col-md-9, .newForm .col-lg-9, .newForm .col-xs-10, .newForm .col-sm-10, .newForm .col-md-10, .newForm .col-lg-10, .newForm .col-xs-11, .newForm .col-sm-11, .newForm .col-md-11, .newForm .col-lg-11, .newForm .col-xs-12, .newForm .col-sm-12, .newForm .col-md-12, .newForm .col-lg-12 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .newForm {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
@@ -85,6 +129,20 @@ input[type=text] {
 .newForm input.color {
   padding: 5px 10px !important;
   width: 100% !important;
+}
+
+.newForm .colorLabel {
+  display: inline-block;
+  width: 25%;
+}
+
+.newForm .color-sm {
+  display: inline-block;
+  width: 70%;
+}
+
+.newForm .minicolors {
+  width: 100%;
 }
 
 .newForm select:not([multiple]) {
@@ -235,30 +293,6 @@ input[type=text] {
   height: auto;
 }
 
-.editingBox .editingSideBar .chunk {
-  margin: 10px 0;
-}
-
-.editingBox .editingSideBar .chunk h2 {
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 700;
-  font-size: 14px !important;
-  text-transform: uppercase;
-  display: inline-block;
-  vertical-align: top;
-  width: 100px;
-}
-
-.editingBox .editingSideBar .chunk .input {
-  display: inline-block;
-  width: 235px;
-}
-
-.editingBox .editingSideBar .chunk label {
-  color: #fff;
-  opacity: 0.8;
-}
-
 .editingBox .editingPreview {
   margin-left: 400px;
   width: 64%;
@@ -286,7 +320,7 @@ input[type=text] {
   background: #eee;
 }
 
-.editingBox .editingPreview #daWidget {
+.editingBox .editingPreview .daWidget {
   background: #dae4d9;
   border: 1px solid #a6b2a6;
   -webkit-border-radius: 5px;
@@ -297,25 +331,25 @@ input[type=text] {
   margin-bottom: 10px;
 }
 
-.editingBox .editingPreview #daWidget #daHeader {
+.editingBox .editingPreview .daWidget .daHeader {
   background: #e6ede4;
   padding: 5px 10px;
   margin-bottom: 5px;
   border-bottom: 1px solid #a6b2a6;
 }
 
-.editingBox .editingPreview #daWidget #daInside {
+.editingBox .editingPreview .daWidget .daInside {
   position: relative;
   padding: 5px 10px 20px 10px;
   min-height: 100px;
 }
 
-.editingBox .editingPreview #daWidget #daInside #previewImage {
+.editingBox .editingPreview .daWidget .daInside #previewImage {
   z-index: 98;
   position: relative;
 }
 
-.editingBox .editingPreview #daWidget #loading {
+.editingBox .editingPreview .daWidget #loading {
   position: absolute;
   width: 100%;
   top: 38px;

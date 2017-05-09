@@ -1,8 +1,7 @@
 <?
 session_start();
 header('Content-type: image/png');
-<<<<<<< HEAD
-$visitor = 'Porsheee';
+$visitor = 'deletiac';
 $new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my page!');
 
@@ -11,17 +10,6 @@ $text_width1 = $text_box1[2] - $text_box1[0];
 $full_width1 = $text_width1 + (20 * 2);
 
 $text_box2 = imagettfbbox(15, 0, '../uploaded_fonts/arberkley.ttf', $new_message2);
-=======
-$visitor = 'Lanasy';
-$new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
-$new_message2 = str_replace('visitor', $visitor, 'Welcome to my page!');
-
-$text_box1 = imagettfbbox(15, 0, '../uploaded_fonts/lobster.ttf', $new_message1);
-$text_width1 = $text_box1[2] - $text_box1[0];
-$full_width1 = $text_width1 + (20 * 2);
-
-$text_box2 = imagettfbbox(15, 0, '../uploaded_fonts/lobster.ttf', $new_message2);
->>>>>>> 2bcc90bb1df937ef14ad11b636b9b4b691afb337
 $text_width2 = $text_box2[2] - $text_box2[0];
 $full_width2 = $text_width2 + (20 * 2);
 
@@ -47,13 +35,8 @@ imagesavealpha($im, true);
 $background = imagecolorallocate($im, 0, 0, 0);
 imagefill($im,0,0,$background);
 $color = imagecolorallocate($im, 255, 255, 255);
-<<<<<<< HEAD
 imagettftext($im, 15, 0, $x1, $y1, $color, '../uploaded_fonts/arberkley.ttf', $new_message1);
 imagettftext($im, 15, 0, $x2, $y2, $color, '../uploaded_fonts/arberkley.ttf', $new_message2);
-=======
-imagettftext($im, 15, 0, $x1, $y1, $color, '../uploaded_fonts/lobster.ttf', $new_message1);
-imagettftext($im, 15, 0, $x2, $y2, $color, '../uploaded_fonts/lobster.ttf', $new_message2);
->>>>>>> 2bcc90bb1df937ef14ad11b636b9b4b691afb337
 imagepng($im);
 imagedestroy($im);
 ?>

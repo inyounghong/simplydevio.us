@@ -1,0 +1,76 @@
+<div class="chunk">
+    <h2>Background
+        <div class="tooltip"><a href="http://www.simplydevio.us/resources/image_tutorial.php">?</a><div class="tool_info"><span>Click for a tutorial</span></div></div>
+    </h2>
+    <div class="input">
+        <input type="text" ng-model="j.customBackground" placeholder="Image Source URL" ng-change="checkit()">
+    </div>
+</div>
+<div class="chunk">
+    <h2>Font Name
+        <div class="tooltip">?<div class="tool_info"><span>Use a websafe font or Google Font here</span></div></div>
+    </h2>
+    <div class="input">
+        <input type="text" ng-model="j.buttonFontFamily" ng-change="checkit()">
+    </div>
+</div>
+<div class="chunk">
+    <h2>Font Style</h2>
+    <div class="input">
+        <label><input type="checkbox" ng-model="statusItalic" class="check" ng-change="checkit()"> Italic</label>
+        <label><input type="checkbox" ng-model="statusBold" class="check" ng-change="checkit()"> Bold</label>
+        <label><input type="checkbox" ng-model="statusLetterSpacing" class="check" ng-change="checkit()"> Letter Spacing</label>
+    </div>
+
+</div>
+<div class="chunk">
+    <h2>Font Size</h2>
+    <div class="input">
+        <input ng-model="j.buttonSize" type="range" class="rangeWithLabel" min="0" max="30">
+        <div class="range_label">{{j.buttonSize}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2>Position</h2>
+    <div class="input">
+        <input ng-model="j.topMargin" type="range" class="rangeWithLabel" min="0" max="100">
+        <div class="range_label">{{j.topMargin}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2>Padding</h2>
+    <div class="input">
+        <input ng-model="j.buttonPadding" type="range" class="rangeWithLabel" min="0" max="30">
+        <div class="range_label">{{j.buttonPadding}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2>Margin</h2>
+    <div class="input">
+        <input ng-model="j.buttonMargin" type="range" class="rangeWithLabel" min="0" max="20">
+        <div class="range_label">{{j.buttonMargin}}</div>
+        <input ng-model="j.sideMargin" type="range" class="rangeWithLabel" min="0" max="3.0" step="0.1">
+        <div class="range_label">{{j.sideMargin}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2>Roundness</h2>
+    <div class="input">
+        <input ng-model="j.buttonRadius" type="range" class="rangeWithLabel" min="0" max="20">
+        <div class="range_label">{{j.buttonRadius}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2>Width</h2>
+    <div class="input">
+        <input ng-model="j.maxWidth" type="range" class="rangeWithLabel" min="0" max="500">
+        <div class="range_label">{{j.maxWidth}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2></h2>
+    <div class="input">
+        <label><input type="checkbox" id="includeArrow" ng-model="j.includeArrow" class="check"> Include arrow (&#10152;) on hover</label>
+        <label><input type="checkbox" ng-model="j.excludeStatus" class="check"> Exclude Status Buttons</label><br>
+    </div>
+</div>

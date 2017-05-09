@@ -1,0 +1,38 @@
+<div class="chunk">
+    <h2>Columns</h2>
+    <div class="input">
+        <input type="text" ng-model="j.numCols">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-4">
+        <b>Button Name</b>
+    </div>
+    <div class="col-xs-6">
+        <b>URL or Widget URL</b>
+    </div>
+    <div class="col-xs-1">
+        <b>Long</b>
+    </div>
+</div>
+
+<div ng-repeat="button in j.buttons" class="row">
+    {{index}}
+    <div class="col-xs-1">
+        <i class="fa fa-trash" class="link" ng-click="deleteButton($index)"></i>
+    </div>
+    <div class="col-xs-4">
+        <input type="text" class="name" ng-model="button.name">
+    </div>
+    <div class="col-xs-6">
+        <input type="text" class="url" ng-model="button.url" placeholder="http://">
+    </div>
+    <div class="col-xs-1">
+        <input type="checkbox" ng-model="button.long">
+    </div>
+</div>
+
+<div class="addButton link" ng-click="addButton()"><i class="fa fa-plus"></i> Add Button</div>

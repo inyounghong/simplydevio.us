@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-xs-1">
+
+    </div>
+    <div class="col-xs-3">
+        <b>Button Name</b>
+    </div>
+    <div class="col-xs-7">
+        <b>URL / Description</b>
+    </div>
+</div>
+
+<div ng-repeat="button in j.statusButtons track by $index" class="row chunk">
+    <div class="col-xs-1">
+        <i class="fa fa-trash" class="link" ng-click="deleteStatusButton($index)"></i>
+    </div>
+    <div class="col-xs-3">
+        <input type="text" class="name" ng-model="button.name">
+    </div>
+    <div class="col-xs-7">
+        <input type="text" class="url" ng-model="button.url" placeholder="http://">
+        <input type="text" ng-model="button.url" placeholder="Description">
+    </div>
+</div>
+
+<div class="addButton link" ng-click="addStatusButton()"><i class="fa fa-plus"></i> Add Button</div>
