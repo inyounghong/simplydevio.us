@@ -251,41 +251,23 @@ hr {
   float: right;
 }
 
-/* Tabbing Menu */
-.hidden {
-  display: none !important;
-}
-
-.visible {
-  display: block !important;
-}
-
 .tab_menu {
-  width: 100.4%;
-  margin-left: 2px;
+  width: 100.6%;
   color: rgba(255, 255, 255, 0.8);
+  margin-left: 2px;
 }
 
-.tab_menu .selected, .tab_menu .tabby:hover {
-  background: #A1334A !important;
+.tab_menu .selected {
+  background: #e03e56;
+  color: #fff;
+}
+
+.tab_menu .tabby:hover {
   color: #fff;
 }
 
 .tab_menu .not_selected {
-  background: #e03e56;
-}
-
-.ctab_menu {
-  margin-left: 2px;
-}
-
-.ctab_menu .not_selected {
-  background: #f58c3b;
-}
-
-.ctab_menu .selected, .ctab_menu .tabby:hover {
-  background: #D17732 !important;
-  color: #fff;
+  background: #A1334A;
 }
 
 .tabby {
@@ -300,23 +282,6 @@ hr {
   text-align: center;
   cursor: pointer;
   width: 25%;
-}
-
-.tab_menu.five .tabby {
-  width: 74px;
-}
-
-.tab_page.cpage {
-  height: 150px;
-}
-
-.tab_page.cpage textarea {
-  border: 1px solid #ccc;
-  display: block;
-  width: 85%;
-  max-width: 85%;
-  padding: 15px 5%;
-  height: 240px;
 }
 
 .small .tab_page.cpage {

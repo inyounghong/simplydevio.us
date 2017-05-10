@@ -27,7 +27,7 @@
 <div class="chunk">
     <h2>Font Size</h2>
     <div class="input">
-        <input ng-model="j.buttonSize" type="range" class="rangeWithLabel" min="0" max="30">
+        <input ng-model="j.buttonSize" type="range" class="rangeWithLabel" min="1" max="30">
         <div class="range_label">{{j.buttonSize}}</div>
     </div>
     <h2>Position</h2>
@@ -62,13 +62,15 @@
 
     <h2>Width</h2>
     <div class="input">
-        <input ng-model="j.maxWidth" type="range" class="rangeWithLabel" min="0" max="500">
+        <input ng-model="j.maxWidth" type="range" class="rangeWithLabel" min="100" max="500">
         <div class="range_label">{{j.maxWidth}}</div>
     </div>
 
     <h2></h2>
     <div class="input">
         <label><input type="checkbox" id="includeArrow" ng-model="j.includeArrow" class="check"> Include arrow (&#10152;) on hover</label><br>
-        <label><input type="checkbox" ng-model="j.excludeStatus" class="check"> Exclude Status Buttons</label>
+        <label><input type="checkbox" ng-model="j.includeStatus" class="check"> Include Status Buttons</label><br>
+        <label><input type="checkbox" ng-model="j.includeTransitions">
+         Include Transitions</label>
     </div>
 </div>

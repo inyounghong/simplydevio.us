@@ -1,6 +1,5 @@
 <div class="row">
     <div class="col-xs-1">
-
     </div>
     <div class="col-xs-4">
         <b>Button Name</b>
@@ -19,8 +18,23 @@
     </div>
     <div class="col-xs-7">
         <input type="text" class="url" ng-model="button.url" placeholder="http://">
-        <input type="text" ng-model="button.url" placeholder="Description" class="mt10">
+        <input type="text" ng-model="button.description" placeholder="Description" class="mt10">
     </div>
 </div>
 
-<div class="addButton link" ng-click="addStatusButton()"><i class="fa fa-plus"></i> Add Button</div>
+<div class="addButton" ng-click="addStatusButton()"><i class="fa fa-plus"></i> Add Button</div>
+
+hello
+<div class="chunk">
+    <h2>Style</h2>
+    <div class="input">
+        <label class="mr10"><input type="checkbox" ng-model="j.statusItalic"> Italic</label>
+        <label class="mr10"><input type="checkbox" ng-model="j.statusBold"> Bold</label>
+        <label><input type="checkbox" ng-model="j.statusLetterSpacing"> Letter Spacing</label>
+    </div>
+    <h2>Font Size</h2>
+    <div class="input">
+        <input ng-model="j.statusSize" type="range" class="rangeWithLabel" min="1" max="30">
+        <div class="range_label">{{j.statusSize}}</div>
+    </div>
+</div>

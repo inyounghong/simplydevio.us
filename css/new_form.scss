@@ -21,6 +21,10 @@
         height: 500px;
         position: absolute;
 
+        &.sidebarPadding {
+            padding: 30px;
+        }
+
         .button {
             background: $w80;
             color: $pink!important;
@@ -197,12 +201,12 @@
     padding: 10px 20px;
     background: #eee;
     box-sizing: border-box;
-    min-width: 100%;
+    min-width: 90%;
     color: #444;
     min-height: 70px;
     font-family: courier;
-    font-size: 14px;
-    margin-top: 15px;
+    font-size: 12px;
+    margin: 10px 0;
 }
 
 .tab_page {
@@ -211,6 +215,16 @@
     width: 100%;
 }
 
+.addButton {
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+        color: #FFF;
+    }
+    .fa {
+        margin-right: 3px;
+    }
+}
 
 /*
  * NORMAL FORMS
@@ -223,6 +237,12 @@ input[type=text] {
     width: 100%;
     padding: 10px 10px;
     background: #eee;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 /* Error messages */
@@ -307,6 +327,7 @@ input[type=text] {
         padding-bottom: 5px!important;
         width: 100%!important;
         text-transform: uppercase;
+        text-align: center;
     }
     .colorLabel {
         display: inline-block;
@@ -318,6 +339,9 @@ input[type=text] {
     }
     .minicolors {
         width: 100%;
+    }
+    .minicolors-theme-bootstrap .minicolors-swatch {
+        top: 6px;
     }
 
 
@@ -374,7 +398,7 @@ input[type=text] {
       width: 100%;
       padding: 0;
       height: auto;
-      margin: 12px 0;
+      margin: 5px 0 15px;
       background: none;
     }
 

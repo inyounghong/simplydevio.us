@@ -88,20 +88,28 @@ angular.module('mainApp')
         $scope.j.buttonRadius = 0;
         $scope.j.maxWidth = 500;
 
-        $scope.j.buttonBackground = "#5E4948";
-        $scope.j.buttonBackgroundHover = "#FFFFFF";
-        $scope.j.buttonColor = "#FFFFFF";
-        $scope.j.buttonColorHover = "#FFFFFF";
+        var green = "#9FCE54";
+        var white = "#FFFFFF";
+        var yellow = "#FFA53A";
+        var brown = "#5E4948";
 
-        $scope.j.statusBackground = "#FFA53A";
-        $scope.j.statusBackgroundHover = "#FFFFFF";
-        $scope.j.statusColor = "#9FCE54";
-        $scope.j.statusColorHover = "#FFFFFF";
+        $scope.j.buttonBackground = brown;
+        $scope.j.buttonBackgroundHover = green;
+        $scope.j.buttonColor = white;
+        $scope.j.buttonColorHover = white;
 
-        $scope.j.descriptionColor =  "#FFFFFF";
+        $scope.j.statusBackground = yellow;
+        $scope.j.statusBackgroundHover = green;
+        $scope.j.statusColor = white;
+        $scope.j.statusColorHover = white;
+
+        $scope.j.descriptionColor = white;
 
         $scope.j.numCols = 2;
         $scope.data.password = "";
+
+        $scope.j.includeStatus = true;
+        $scope.j.includeTransitions = true;
 
         setUpButtons();
     }
@@ -141,9 +149,9 @@ angular.module('mainApp')
     function getStatusHtml(j) {
         var html = '<div class="status">\n';
 
-        if (j.excludeStatus) {
+        if (j.includeStatus) {
             angular.forEach($scope.j.statusButtons, function(button) {
-                html += '<div class="col"><a href="' + button.url + '">' + button.name + '</a>\n';
+                html += '<div class="col"><a class="profileButton" href="' + button.url + '">' + button.name + '</a>\n';
                 html += '<div class="description">' + button.description + '</div></div>';
             });
         }
@@ -198,6 +206,7 @@ angular.module('mainApp')
         var status_italic = "normal";
         var status_bold = "400";
         var status_letter_spacing = "0";
+        console.log("italic"+ j.statusItalic);
         if (j.statusItalic){
             status_italic = "italic";
         }
@@ -250,7 +259,7 @@ angular.module('mainApp')
         css += 'font-style: ' + italic + ';\n';
         css += 'font-weight: ' + bold + '!important;\n';
         css += 'letter-spacing: ' + letter_spacing + ';\n';
-        if (j.includeTransition){
+        if (j.includeTransitions){
             css += 'transition:all 0.2s;\n';
         }
         css += '}\n\n';
@@ -260,8 +269,8 @@ angular.module('mainApp')
         css += '}\n\n';
 
         css += '.profileButton:hover{\n';
-        css += 'color: ' + j.buttonHoverColor + '!important;\n';
-        css += 'background: ' + j.buttonHoverBackground + ';\n';
+        css += 'color: ' + j.buttonColorHover + '!important;\n';
+        css += 'background: ' + j.buttonBackgroundHover + ';\n';
         css += '}\n\n';
 
         css += '/* Button Arrows */\n';
@@ -272,19 +281,17 @@ angular.module('mainApp')
 
         css += '.profileButton:hover span{display:inline;}\n\n';
 
-        var status_margin = j.sideMargin;
-        var num = $scope.j.buttons.length;
-        var statusWidth = (100 - ((num * status_margin))) / num;
+        var num = $scope.j.statusButtons.length;
+        var statusWidth = (100 - (num * j.sideMargin)) / num;
 
-
-        if (!j.excludeStatus){
+        if (j.includeStatus){
             var height = parseInt(j.buttonSize) + 15;
             css += '/* Status Buttons */\n';
             css += '.status{padding-bottom:' + height + 'px;}\n\n';
 
             css += '.status .col{\n';
             css += 'text-align:center;\ndisplay:inline-block;\n';
-            css += 'margin-right: ' + status_margin + '%;\n';
+            css += 'margin-right: ' + j.sideMargin + '%;\n';
             css += 'width: ' + statusWidth + '%;\n';
             css += '}\n\n';
 
@@ -296,8 +303,8 @@ angular.module('mainApp')
             css += '}\n\n';
 
             css += '.status .col a:hover{\n';
-            css += 'color: ' + j.statusHoverColor + '!important;\n';
-            css += 'background: ' + j.statusHoverBackground + ';\n';
+            css += 'color: ' + j.statusColorHover + '!important;\n';
+            css += 'background: ' + j.statusBackgroundHover + ';\n';
             css += '}\n\n';
 
             css += '/* Status Description */\n';
@@ -306,7 +313,6 @@ angular.module('mainApp')
             css += 'font-style: ' + status_italic + ';\n';
             css += 'font-weight: ' + status_bold + '!important;\n';
             css += 'letter-spacing: ' + status_letter_spacing + ';\n';
-            css += 'font-size: ' + j.status_font_size + 'px;\n';
             css += 'color: ' + j.descriptionColor + ';\n';
             css += '}\n\n';
 
@@ -342,7 +348,7 @@ angular.module('mainApp')
             $scope.passwordMessage = passMsg;
             $("#passwordMessage").fadeIn(100);
         }
-        else if ($scope.data.terms1) { // Terms not checked
+        else if (!$scope.data.terms) { // Terms not checked
             $scope.passwordMessage = termMsg;
             $("#passwordMessage").fadeIn(100);
         }

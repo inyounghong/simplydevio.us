@@ -71,6 +71,6 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
 angular.module('mainApp').config(function (minicolorsProvider) {
   angular.extend(minicolorsProvider.defaults, {
     control: 'hue',
-    position: 'top left'
+    position: 'bottom left'
   });
 });

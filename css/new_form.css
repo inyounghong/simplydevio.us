@@ -58,6 +58,10 @@
   position: absolute;
 }
 
+.editingBox .editingSideBar.sidebarPadding {
+  padding: 30px;
+}
+
 .editingBox .editingSideBar .button {
   background: rgba(255, 255, 255, 0.8);
   color: #e03e56 !important;
@@ -225,18 +229,31 @@
   padding: 10px 20px;
   background: #eee;
   box-sizing: border-box;
-  min-width: 100%;
+  min-width: 90%;
   color: #444;
   min-height: 70px;
   font-family: courier;
-  font-size: 14px;
-  margin-top: 15px;
+  font-size: 12px;
+  margin: 10px 0;
 }
 
 .tab_page {
   background: #e03e56;
   padding: 20px 30px;
   width: 100%;
+}
+
+.addButton {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.addButton:hover {
+  color: #FFF;
+}
+
+.addButton .fa {
+  margin-right: 3px;
 }
 
 /*
@@ -249,6 +266,13 @@ input[type=text] {
   width: 100%;
   padding: 10px 10px;
   background: #eee;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }
 
 /* Error messages */
@@ -333,6 +357,7 @@ input[type=text] {
   padding-bottom: 5px !important;
   width: 100% !important;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .newForm .colorLabel {
@@ -347,6 +372,10 @@ input[type=text] {
 
 .newForm .minicolors {
   width: 100%;
+}
+
+.newForm .minicolors-theme-bootstrap .minicolors-swatch {
+  top: 6px;
 }
 
 .newForm select:not([multiple]) {
@@ -396,7 +425,7 @@ input[type=text] {
   width: 100%;
   padding: 0;
   height: auto;
-  margin: 12px 0;
+  margin: 5px 0 15px;
   background: none;
 }
 
