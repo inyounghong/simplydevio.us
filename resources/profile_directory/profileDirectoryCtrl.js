@@ -2,7 +2,8 @@ angular.module('mainApp')
 .controller('ProfileDirectoryCtrl', function ($scope, $sce) {
     'use strict';
 
-    $scope.j = {};
+    $scope.j = {}; // Watched data
+    $scope.data = {}; // Not watched (password)
     $scope.tab = "tab1";
     $scope.ctab = "ctab1";
 
@@ -21,6 +22,7 @@ angular.module('mainApp')
 
     var NUM_BUTTONS = 5;
     var NUM_STATUS_BUTTONS = 3;
+    var isLocked = true;
 
     setUp();
     checkit();
@@ -99,7 +101,7 @@ angular.module('mainApp')
         $scope.j.descriptionColor =  "#FFFFFF";
 
         $scope.j.numCols = 2;
-        $scope.password = "";
+        $scope.data.password = "";
 
         setUpButtons();
     }
@@ -313,25 +315,17 @@ angular.module('mainApp')
         return css;
     }
 
+    // Check password
     function checkPassword() {
-        $scope.passwordMessage = "";
-        console.log($scope.password);
-
-        var pass = $scope.password.toLowerCase().trim();
-        console.log("sending password " + pass);
+        $("#passwordMessage").fadeOut(100);
+        var pass = $scope.data.password.toLowerCase().trim();
+        console.log("sending pass" + pass);
 
         $.ajax({
             url: '/resources/profile_directory/php/checkPassword.php',
             type: 'get',
             data: {password: pass},
-            success: function(res) {
-                console.log("response: " + res);
-                if (res == "true") {
-
-                } else {
-                    $scope.passwordMessage = "Incorrect password.";
-                }
-            },
+            success: handlePasswordCheck,
             error: function(xhr, desc, err) {
                 console.log(xhr);
                 console.log("Details: " + desc + "\nError:" + err);
@@ -339,35 +333,63 @@ angular.module('mainApp')
         });
     }
 
+    // Handle response from checkPassword
+    function handlePasswordCheck(res) {
+        var passMsg = "Incorrect password!";
+        var termMsg = "Please agree to the terms of use!";
+
+        if (res == "false") { // Wrong password
+            $scope.passwordMessage = passMsg;
+            $("#passwordMessage").fadeIn(100);
+        }
+        else if ($scope.data.terms1) { // Terms not checked
+            $scope.passwordMessage = termMsg;
+            $("#passwordMessage").fadeIn(100);
+        }
+        else { // All correct
+            $("#slide1").fadeOut(0);
+            $("#slide2").fadeIn(200);
+            isLocked = false;
+            checkit();
+        }
+        $scope.$apply();
+    }
+
     function getCompleteCss(css) {
-        var complete_css = '<style>#preview_box a{font-weight:400;}';
-        complete_css += css;
-        complete_css += '.gr-box a{text-decoration:none;} .gr-box{padding: 20px 10px 40px;}  .description{max-width:800px;}';
-        complete_css += '.maxheight{position:absolute;top:370px;display:block;border-top:1px dotted #777; width:100%; text-align:center; padding-top:5px;}';
-        complete_css += '.daInside{background:url("' + $scope.j.customBackground + '") no-repeat;</style>';
-        return complete_css;
+        var completeCss = '<style>#preview_box a{font-weight:400;}';
+        completeCss += css;
+        completeCss += '.gr-box a{text-decoration:none;} .gr-box{padding: 20px 10px 40px;}  .description{max-width:800px;}';
+        completeCss += '.maxheight{position:absolute;top:370px;display:block;border-top:1px dotted #777; width:100%; text-align:center; padding-top:5px;}';
+        completeCss += '.daInside{background:url("' + $scope.j.customBackground + '") no-repeat;</style>';
+        return completeCss;
     }
 
     function getCompleteHtml(html) {
-        var complete_html = '<div class="gr-box"><div class="gr-top"><div class="gr"><h2><img src="http:/\/st.deviantart.net/minish/gruzecontrol/icons/journal.gif?2" style="vertical-align:middle"><a href="#">Devious Journal Entry</a></h2><span class="timestamp">Tue Oct 22, 2013, 7:04 AM</span></div></div><div class="gr-body"><div class="text">';
-        complete_html += html;
-        complete_html += '</div><div class="bottom"><a class="a commentslink" href="http://sta.sh/023q9vb62a0q#comments">No Comments</a></div></div>';
-        return complete_html;
+        var completeHtml = '<div class="gr-box"><div class="gr-top"><div class="gr"><h2><img src="http:/\/st.deviantart.net/minish/gruzecontrol/icons/journal.gif?2" style="vertical-align:middle"><a href="#">Devious Journal Entry</a></h2><span class="timestamp">Tue Oct 22, 2013, 7:04 AM</span></div></div><div class="gr-body"><div class="text">';
+        completeHtml += html;
+        completeHtml += '</div><div class="bottom"><a class="a commentslink" href="http://sta.sh/023q9vb62a0q#comments">No Comments</a></div></div>';
+        return completeHtml;
     }
 
     function checkit() {
         console.log("checkit");
 
-        var htmlstring = getHtml();
-        var textstring = getCss();
+        // Generate codes
+        var html = getHtml();
+        var css = getCss();
+        var completeCss = getCompleteCss(css);
+        var completeHtml = getCompleteHtml(html);
 
-        var widgetstring = '<div class="popup2-moremenu"><div class="floaty-boat"><br><img src="' + $scope.j.customBackground + '"></div></div><div class="gr-box gr-genericbox">';
+        // Change preview HTML and CSS
+        $scope.previewCss = completeCss;
+        $scope.previewHtml = completeHtml;
 
-        var complete_css = getCompleteCss(textstring);
-        var complete_html = getCompleteHtml(htmlstring);
-
-        $scope.previewCss = complete_css;
-        $scope.previewHtml = complete_html;
+        // Show user codes if unlocked
+        if (!isLocked) {
+            $scope.userCss = css;
+            $scope.userHtml = html;
+            $scope.userWidget = '<div class="popup2-moremenu"><div class="floaty-boat"><br><img src="' + $scope.j.customBackground + '"></div></div><div class="gr-box gr-genericbox">';
+        }
     }
 
 });

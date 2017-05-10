@@ -198,12 +198,6 @@
   margin: 5px 0;
 }
 
-#termsCheckbox label {
-  display: inline-block;
-  margin-top: -23px;
-  margin-left: 30px;
-}
-
 .button {
   background: #e03e56;
   padding: 10px 15px;
@@ -254,6 +248,7 @@ input[type=text] {
   height: auto;
   width: 100%;
   padding: 10px 10px;
+  background: #eee;
 }
 
 /* Error messages */

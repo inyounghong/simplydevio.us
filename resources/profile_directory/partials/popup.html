@@ -8,11 +8,11 @@
             <div class="scroll">
                 <p>To receive the codes needed to create your profile directory, please <a href="http://fav.me/d73p9tr" target="_blank">purchase the password</a> and type it in below.</p>
                 <b>Important!</b> You must be a Premium Member for this greeting to work on your page.
-                {{password}}
-                <input type="text" class="password" ng-model="password" placeholder="Password">
+
+                <input type="text" class="password" ng-model="data.password" placeholder="Password">
                 <div id="termsCheckbox" class="font-sm">
-                    <input type="checkbox" id="terms1" ng-model="terms1">
-                    <label for="terms1">I agree to not share this password with anyone else, and I agree to only creating profile greetings for my own profile or a group that I am an admin for.</label>
+                    <label><input type="checkbox" ng-model="data.terms">
+                    I agree to not share this password with anyone else, and I agree to only creating profile directories for my own profile or a group that I am an admin for.</label>
                 </div>
             </div>
 
@@ -22,18 +22,19 @@
 
         <!-- Slide 2 -->
         <div id="slide2" class="slides">
-            <h3>Step 3: Add Code to your Profile</h3>
+            <h3>Step 2: Copy Codes</h3>
 
             <div class="scroll">
-                <p>Copy and paste the following code into a widget on your profile page.</p>
-                <b>Important!</b> You must have a Visitors widget on your profile page for this greeting to work.
+                <p>Copy and paste the following HTML and CSS code into a journal, and the widget code into the Featured Deviation Widget. Please read this step-by-step <a href="http://www.simplydevio.us/resources/profile_tutorial.php" target="_blank">tutorial</a> for more details.</p>
 
-                <textarea class="code" id="recommended"></textarea>
-                <p>Greets visible deviants by name and displays "visitor" for all other visitors.</p>
-                <div class="relative">
-                    <div id="generatedImage"></div>
-                    <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" id="popupLoad"></i>
-                </div>
+                <p>HTML</p>
+                <textarea class="code">{{userHtml}}</textarea>
+
+                <p>CSS</p>
+                <textarea class="code">{{userCss}}</textarea>
+
+                <p>Widget HTML</p>
+                <textarea class="code">{{userWidget}}</textarea>
             </div>
         </div>
 

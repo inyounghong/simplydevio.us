@@ -118,13 +118,14 @@ angular.module('mainApp')
             $("#passwordMessage").fadeIn(100);
         }
         else if (!$("#terms1").is(":checked")){
-            $("#passwordMessage").html(termMsg);
+            $scope.passwordMessage = termMsg
             $("#passwordMessage").fadeIn(100);
         }
         else{
             $("#slide1").fadeOut(0);
             $("#slide2").fadeIn(200);
         }
+        $scope.$apply();
     }
 
     // Slide 3 show codes
