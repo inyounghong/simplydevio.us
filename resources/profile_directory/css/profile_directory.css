@@ -1,17 +1,19 @@
 .editingBox .tab_page {
-  height: 450px;
+  height: 500px;
   overflow-y: scroll;
 }
 
+.editingBox, .editingSidebar, .editingPreview {
+  height: 550px !important;
+}
+
 .daInside {
-  max-height: 350px;
+  margin-bottom: 25px !important;
   overflow: hidden;
 }
 
-.color {
-  padding-left: 38px !important;
-}
-
-.minicolors-theme-bootstrap .minicolors-swatch {
-  top: 6px;
+.gr-box {
+  padding: 25px 10px 0px;
+  max-height: 375px;
+  overflow: hidden;
 }

@@ -35,7 +35,7 @@ hr {
     max-width: 1200px;
     padding: 50px 50px;
     box-sizing: border-box;
-    margin: 0 auto 50px;
+    margin: 0 auto;
 }
 
 .mainContent {
@@ -230,7 +230,9 @@ form {
     }
 }
 
-
+ul {
+    list-style-position: inside;
+}
 
 /* Front Page Slightly */
 ul.updates {

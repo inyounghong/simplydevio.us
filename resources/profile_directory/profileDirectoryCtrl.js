@@ -102,6 +102,8 @@ angular.module('mainApp')
         $scope.j.statusBackgroundHover = green;
         $scope.j.statusColor = white;
         $scope.j.statusColorHover = white;
+        $scope.j.statusSize = 14;
+        $scope.j.statusMarginTop = 5;
 
         $scope.j.descriptionColor = white;
 
@@ -111,7 +113,23 @@ angular.module('mainApp')
         $scope.j.includeStatus = true;
         $scope.j.includeTransitions = true;
 
+        setUpStyles();
         setUpButtons();
+    }
+
+    function setUpStyles() {
+        $scope.j.style = {};
+        $scope.j.descriptionStyle = {};
+        $scope.j.transitionStyle = {};
+        setUpStyle($scope.j.style);
+        setUpStyle($scope.j.descriptionStyle);
+        setUpStyle($scope.j.transitionStyle);
+    }
+
+    function setUpStyle(style) {
+        style.italic = false;
+        style.bold = false;
+        style.letterSpacing = false;
     }
 
     // Sets up buttons for tabs 3 and 4
@@ -163,19 +181,13 @@ angular.module('mainApp')
         var j = $scope.j;
         var html = '<div class="columns">\n';
 
-        // Include arrow
-        var arrow = "";
-        if (j.includeArrow) {
-            arrow = ' <span>&#10152;</span>';
-        }
-
         // Add regular buttons
         angular.forEach($scope.j.buttons, function(button) {
             var long = "";
             if (button.long) {
                 long = ' long';
             }
-            html += '<a class="profileButton' + long + '" href="' + button.url + '">' + button.name + arrow + '</a>';
+            html += '<a class="profileButton' + long + '" href="' + button.url + '">' + button.name  + '</a>';
         });
 
         html += '</div>\n\n';
@@ -185,37 +197,33 @@ angular.module('mainApp')
         return html;
     }
 
+    function getStyle(style) {
+        var o = {};
+        o.italic = "normal";
+        o.bold = "400";
+        o.letterSpacing = "0";
+
+        if (style.italic) {
+            o.italic = "italic";
+        }
+        if (style.bold) {
+            o.bold = "bold";
+        }
+        if (style.letterSpacing) {
+            o.letterSpacing = "1px";
+        }
+        return o;
+    }
+
 
     // Returns CSS
     function getCss() {
         var j = $scope.j;
         var num_cols = j.numCols;
-        var italic = "normal";
-        var bold = "400";
-        var letter_spacing = "0";
-        if (j.italic){
-            italic = "italic";
-        }
-        if (j.bold){
-            bold = "bold";
-        }
-        if (j.letterSpacing){
-            letter_spacing = "1px";
-        }
 
-        var status_italic = "normal";
-        var status_bold = "400";
-        var status_letter_spacing = "0";
-        console.log("italic"+ j.statusItalic);
-        if (j.statusItalic){
-            status_italic = "italic";
-        }
-        if (j.statusBold){
-            status_bold = "bold";
-        }
-        if (j.statusLetterSpacing){
-            status_letter_spacing = "1px";
-        }
+        var style = getStyle(j.style);
+        var descriptionStyle = getStyle(j.descriptionStyle);
+        var transitionStyle = getStyle(j.transitionStyle);
 
         var css = '';
 
@@ -256,9 +264,9 @@ angular.module('mainApp')
         css += '-moz-border-radius:' + j.buttonRadius + 'px;\n';
         css += 'border-radius:' + j.buttonRadius + 'px;\n';
         css += 'padding:' + j.buttonPadding + 'px 0px;\n';
-        css += 'font-style: ' + italic + ';\n';
-        css += 'font-weight: ' + bold + '!important;\n';
-        css += 'letter-spacing: ' + letter_spacing + ';\n';
+        css += 'font-style: ' + style.italic + ';\n';
+        css += 'font-weight: ' + style.bold + '!important;\n';
+        css += 'letter-spacing: ' + style.letterSpacing + ';\n';
         if (j.includeTransitions){
             css += 'transition:all 0.2s;\n';
         }
@@ -271,15 +279,10 @@ angular.module('mainApp')
         css += '.profileButton:hover{\n';
         css += 'color: ' + j.buttonColorHover + '!important;\n';
         css += 'background: ' + j.buttonBackgroundHover + ';\n';
+        css += 'font-style: ' + transitionStyle.italic + ';\n';
+        css += 'font-weight: ' + transitionStyle.bold + '!important;\n';
+        css += 'letter-spacing: ' + transitionStyle.letterSpacing + ';\n';
         css += '}\n\n';
-
-        css += '/* Button Arrows */\n';
-        css += '.profileButton span{\n';
-        css += 'display:none;\n';
-        css += 'font-size:0.85em;\n';
-        css += '}\n\n';
-
-        css += '.profileButton:hover span{display:inline;}\n\n';
 
         var num = $scope.j.statusButtons.length;
         var statusWidth = (100 - (num * j.sideMargin)) / num;
@@ -310,9 +313,11 @@ angular.module('mainApp')
             css += '/* Status Description */\n';
             css += '.status .description{\n';
             css += 'position:absolute;\nwidth:100%;\nleft:0;\ndisplay:none;\n';
-            css += 'font-style: ' + status_italic + ';\n';
-            css += 'font-weight: ' + status_bold + '!important;\n';
-            css += 'letter-spacing: ' + status_letter_spacing + ';\n';
+            css += 'margin-top: ' + j.statusMarginTop + ';\n';
+            css += 'font-size: ' + j.statusSize + ';\n';
+            css += 'font-style: ' + descriptionStyle.italic + ';\n';
+            css += 'font-weight: ' + descriptionStyle.bold + '!important;\n';
+            css += 'letter-spacing: ' + descriptionStyle.letterSpacing + ';\n';
             css += 'color: ' + j.descriptionColor + ';\n';
             css += '}\n\n';
 
@@ -364,8 +369,7 @@ angular.module('mainApp')
     function getCompleteCss(css) {
         var completeCss = '<style>#preview_box a{font-weight:400;}';
         completeCss += css;
-        completeCss += '.gr-box a{text-decoration:none;} .gr-box{padding: 20px 10px 40px;}  .description{max-width:800px;}';
-        completeCss += '.maxheight{position:absolute;top:370px;display:block;border-top:1px dotted #777; width:100%; text-align:center; padding-top:5px;}';
+        completeCss += '.gr-box a{text-decoration:none;}  .description{max-width:800px;}';
         completeCss += '.daInside{background:url("' + $scope.j.customBackground + '") no-repeat;</style>';
         return completeCss;
     }
@@ -378,7 +382,6 @@ angular.module('mainApp')
     }
 
     function checkit() {
-        console.log("checkit");
 
         // Generate codes
         var html = getHtml();

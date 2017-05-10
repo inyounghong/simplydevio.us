@@ -17,9 +17,9 @@
 <div class="chunk top">
     <h2>Font Style</h2>
     <div class="input">
-        <label class="mr10"><input type="checkbox" ng-model="j.italic" class="check"> Italic</label>
-        <label class="mr10"><input type="checkbox" ng-model="j.bold" class="check"> Bold</label>
-        <label><input type="checkbox" ng-model="j.letterSpacing" class="check"> Letter Spacing</label>
+        <label class="mr10"><input type="checkbox" ng-model="j.style.italic" class="check"> Italic</label>
+        <label class="mr10"><input type="checkbox" ng-model="j.style.bold" class="check"> Bold</label>
+        <label><input type="checkbox" ng-model="j.style.letterSpacing" class="check"> Letter Spacing</label>
     </div>
 
 </div>
@@ -68,9 +68,16 @@
 
     <h2></h2>
     <div class="input">
-        <label><input type="checkbox" id="includeArrow" ng-model="j.includeArrow" class="check"> Include arrow (&#10152;) on hover</label><br>
-        <label><input type="checkbox" ng-model="j.includeStatus" class="check"> Include Status Buttons</label><br>
         <label><input type="checkbox" ng-model="j.includeTransitions">
-         Include Transitions</label>
+         Gradual Transitions</label>
+    </div>
+</div>
+
+<div class="chunk">
+    <h2>Transition</h2>
+    <div class="input">
+        <label class="mr10"><input type="checkbox" ng-model="j.transitionStyle.italic" class="check"> Italic</label>
+        <label class="mr10"><input type="checkbox" ng-model="j.transitionStyle.bold" class="check"> Bold</label>
+        <label><input type="checkbox" ng-model="j.transitionStyle.letterSpacing" class="check"> Letter Spacing</label>
     </div>
 </div>
