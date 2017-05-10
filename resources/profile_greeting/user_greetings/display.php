@@ -5,11 +5,11 @@ $visitor = 'LuciferArtz';
 $new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my page!');
 
-$text_box1 = imagettfbbox(15, 0, '../uploaded_fonts/arberkley.ttf', $new_message1);
+$text_box1 = imagettfbbox(15, 0, '../uploaded_fonts/blkchcry.TTF', $new_message1);
 $text_width1 = $text_box1[2] - $text_box1[0];
 $full_width1 = $text_width1 + (20 * 2);
 
-$text_box2 = imagettfbbox(15, 0, '../uploaded_fonts/arberkley.ttf', $new_message2);
+$text_box2 = imagettfbbox(15, 0, '../uploaded_fonts/blkchcry.TTF', $new_message2);
 $text_width2 = $text_box2[2] - $text_box2[0];
 $full_width2 = $text_width2 + (20 * 2);
 
@@ -34,9 +34,9 @@ imagealphablending($im, true);
 imagesavealpha($im, true);
 $background = imagecolorallocate($im, 0, 0, 0);
 imagefill($im,0,0,$background);
-$color = imagecolorallocate($im, 255, 255, 255);
-imagettftext($im, 15, 0, $x1, $y1, $color, '../uploaded_fonts/arberkley.ttf', $new_message1);
-imagettftext($im, 15, 0, $x2, $y2, $color, '../uploaded_fonts/arberkley.ttf', $new_message2);
+$color = imagecolorallocate($im, 214, 26, 26);
+imagettftext($im, 15, 0, $x1, $y1, $color, '../uploaded_fonts/blkchcry.TTF', $new_message1);
+imagettftext($im, 15, 0, $x2, $y2, $color, '../uploaded_fonts/blkchcry.TTF', $new_message2);
 imagepng($im);
 imagedestroy($im);
 ?>

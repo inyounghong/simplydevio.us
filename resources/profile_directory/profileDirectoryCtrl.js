@@ -87,6 +87,7 @@ angular.module('mainApp')
         $scope.j.sideMargin = 1;
         $scope.j.buttonRadius = 0;
         $scope.j.maxWidth = 500;
+        $scope.j.customBackground = "";
 
         var green = "#9FCE54";
         var white = "#FFFFFF";
