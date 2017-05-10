@@ -330,7 +330,6 @@ angular.module('mainApp')
     function checkPassword() {
         $("#passwordMessage").fadeOut(100);
         var pass = $scope.data.password.toLowerCase().trim();
-        console.log("sending pass" + pass);
 
         $.ajax({
             url: '/resources/profile_directory/php/checkPassword.php',
