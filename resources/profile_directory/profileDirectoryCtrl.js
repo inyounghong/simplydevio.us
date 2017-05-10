@@ -369,7 +369,7 @@ angular.module('mainApp')
     function getCompleteCss(css) {
         var completeCss = '<style>#preview_box a{font-weight:400;}';
         completeCss += css;
-        completeCss += '.gr-box a{text-decoration:none;}  .description{max-width:800px;}';
+        completeCss += '.gr-box a{text-decoration:none;} .status .description{max-width:800px;}';
         completeCss += '.daInside{background:url("' + $scope.j.customBackground + '") no-repeat;</style>';
         return completeCss;
     }
