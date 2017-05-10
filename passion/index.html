@@ -7,31 +7,29 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" type="text/css" href="http://simplydevio.us/passion/passion.css" media="screen" />
-    
+    <link rel="stylesheet" type="text/css" href="passion.css" media="screen" />
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Zeyada' rel='stylesheet' type='text/css'>
 
-    <script src="../jquery.js"></script>
-
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
     <!-- bxSlider-->
-    <script src="http://www.simplydevio.us/portfolio/jquery.bxslider.min.js"></script>
-    <link href="http://www.simplydevio.us/passion/passion_sliders.css" rel="stylesheet" type="text/css" />
+    <script src="jquery.bxslider.min.js"></script>
+    <link href="passion_sliders.css" rel="stylesheet" type="text/css" />
 
     <!-- Super Scroll -->
-    <script type="text/javascript" src="http://www.simplydevio.us/passion/jquery.superscrollorama.js"></script>
+    <script type="text/javascript" src="jquery.superscrollorama.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
-    <script> 
+    <script>
         $(function(){
             $("#footer").load("http://www.simplydevio.us/footer.html");
         });
-        
+
         $(document).ready(function(){
             $('.digitalslider').bxSlider({
             slideWidth: 210,
@@ -48,15 +46,15 @@
             slideMargin: 0,
             });
         });
-        
-    </script> 
-    
 
-    
+    </script>
+
+
+
     <title>My Passion</title>
     <link rel="icon" href="http://www.simplydevio.us/new128.png" sizes="128x128">
-    
-    
+
+
 <script>
     $(document).ready(function(){
     $(function() {
@@ -72,13 +70,13 @@
       }
     }
   });
-  
+
 $(function(){
     var sections = {},
         _height  = $(window).height(),
         i        = 0;
-    
-    // Grab positions of our sections 
+
+    // Grab positions of our sections
     $('.section').each(function(){
         sections[this.name] = $(this).offset().top;
     });
@@ -86,17 +84,17 @@ $(function(){
     $(document).scroll(function(){
         var $this = $(this),
             pos   = $this.scrollTop();
-            
+
         for(i in sections){
             if(sections[i] > pos && sections[i] < pos + _height){
                 $('a').removeClass('active');
                 $('#nav_' + i).addClass('active');
-            }  
+            }
         }
     });
 });
 });
-        
+
 
 });
 
@@ -107,7 +105,7 @@ $(function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-45010841-2', 'simplydevio.us');
       ga('send', 'pageview');
     </script>
@@ -118,7 +116,7 @@ $(function(){
 
 
     <br />
-        
+
         <div id="passion" class="chunk">
             <div class="content">
                 <a name="section1" class="section"></a>
@@ -126,8 +124,8 @@ $(function(){
                 <a class="jenna blink" href="#section2">Click to Explore</a>
             </div>
         </div>
-        
-                
+
+
         <div id="about" class="chunk">
             <div class="content">
                 <a name="section2" class="section"></a><br>
@@ -142,7 +140,7 @@ $(function(){
                 <a class="jenna blink" href="#section3">Continue</a>
             </div>
         </div>
-        
+
         <div id="poem" class="chunk">
             <div class="content">
                 <a name="section3" class="section"></a><br>
@@ -159,16 +157,16 @@ $(function(){
 
 
                 </div>
-                
+
                 <a class="jenna blink" href="#section4">Continue</a>
             </div>
         </div>
-        
+
         <div class="chunk">
             <div class="content">
                 <a name="section4" class="section"></a><br>
-                <div class="norm" style="font-size:24px"> 
-                    
+                <div class="norm" style="font-size:24px">
+
                     <p>Suddenly, I began to spend <em>hours</em> and sometimes <em>entire days</em> at my desk with my hands flying over my tablet as I struggled to find enough time in the day to turn the thoughts of my imagination into realities. I spent the next two years soaring through all the kinds of digital art I could get my hands on, trying everything from paintings to pixel art, and <em>loving every second</em> of it. Below are some of my artworks:</p>
                     <br><br>
                 </div>
@@ -182,7 +180,7 @@ $(function(){
                 <div class="slide"><img src="images/hungary1.png"><div class="caption"><h1>Hungary</h1><i>Painting</i></div></div>
                 <div class="slide"><img src="images/nymph1.png"><div class="caption"><h1>Water Nymph</h1><i>Photomanipulation</i></div></div>
                 <div class="slide"><img src="images/rebirth1.png"><div class="caption"><h1>Rebirth</h1><i>Photomanipulation</i></div></div>
-                
+
                 <div class="slide"><img src="images/alice1.png"><div class="caption"><h1>Alice</h1><i>Drawing</i></div></div>
                 <div class="slide"><img src="images/wallace1.png"><div class="caption"><h1>To Kill a Mockingbird</h1><i>Typography</i></div></div>
                 <div class="slide"><img src="images/hopes1.png"><div class="caption"><h1>Soaring Hopes</h1><i>Painting</i></div></div>
@@ -190,7 +188,7 @@ $(function(){
                 <div class="slide"><img src="images/anna1.png"><div class="caption"><h1>Anna Armona</h1><i>Drawing</i></div></div>
                 <div class="slide"><img src="images/sketch.png"><div class="caption"><h1>I, Artist (WIP)</h1><i>Anime/Manga</i></div></div>
                 <div class="slide"><img src="images/lee1.png"><div class="caption"><h1>Our Homes</h1><i>Typography</i></div></div>
-                    
+
             </div>
             <div class="content">
 
@@ -202,14 +200,14 @@ $(function(){
         <div class="chunk">
             <div class="content">
                 <a name="section5" class="section"></a><br>
-                <div class="norm" style="font-size:24px"><br>  
+                <div class="norm" style="font-size:24px"><br>
                     <p>It was not until several months later that I realized the significance of that day, but I eventually came to understand how life-changing of a moment that was for me. For the first time, I had <em>direction, meaning, and purpose</em> in my life because I had discovered something crucial about myself.</p>
                 </div>
-                <br> 
+                <br>
                 <div align="center">I was an <i id="artist" style="color:#ea3f53;">artist</i> .</div>
-                <br> 
-                <div class="norm" style="font-size:24px"><br>  
-                    
+                <br>
+                <div class="norm" style="font-size:24px"><br>
+
                 </div>
 
                 <a class="jenna blink" href="#section6">Continue</a>
@@ -230,7 +228,7 @@ $(function(){
 
                 <a class="jenna blink" href="#section7">Continue</a>
 
-                
+
             </div>
         </div>
 
@@ -239,7 +237,7 @@ $(function(){
                 <a name="section7" class="section"></a><br>
 
                 <div class="norm" style="font-size:24px">
-                    
+
                 <div class="descript" style="margin-top:-20px;">Some of the skins I have designed and coded for DeviantART.</div>
                 </div>
             </div>
@@ -254,7 +252,7 @@ $(function(){
                     <div class="slide"><img src="images/lace.png" /><div class="caption"><h1>Blue Lace</h1><b>544</b></div></div>
                     <div class="slide"><img src="images/passion.png" /><div class="caption"><h1>Passion</h1><b>378</b></div></div>
                     <div class="slide"><img src="images/snow.png"><div class="caption"><h1>Snow Days</h1><b>875</b></div></div>
-                
+
                 </div>
             <div class="content">
                 <a class="jenna blink" href="#section8">Continue</a>
@@ -266,7 +264,7 @@ $(function(){
                 <a name="section8" class="section"></a><br>
 
                 <div class="norm" style="font-size:24px">
-                    
+
                     <p>Here is a quick summary of some of my major accomplishments in the past 18 months:</p>
                     <br>
 
@@ -283,7 +281,7 @@ $(function(){
                 <a class="jenna blink" href="#section10">Continue</a>
                 </div>
 
-                
+
             </div>
         </div>
 
@@ -296,9 +294,9 @@ $(function(){
 
                     <p>And so I soon realized another fact:</p>
                 </div>
-                <br> 
+                <br>
                 <div align="center">I was a <i id="artist" style="color:#f58b3d;">coder</i> .</div>
-                <br> 
+                <br>
 
                 <div class="norm" style="font-size:24px">
                     <a class="jenna blink" href="#section11">Continue</a>
@@ -324,8 +322,8 @@ $(function(){
             </div>
         </div>
 
-        
-        
+
+
         <div class="chunk">
             <div class="content">
                 <a name="section12" class="section"></a><br>
@@ -336,13 +334,13 @@ $(function(){
 
                 <i style="color:#25bda6;">web development</i>.
 
-                
+
                 </div><br><br>
 <a style="text-align:center" class="jenna blink" href="#section13">Finish</a>
             </div>
         </div>
-        
-        
+
+
         <div class="chunk">
             <div class="content">
             <a name="section13" class="section"></a><br>
@@ -369,6 +367,6 @@ $(function(){
         </div>
 
 </div>
-    
+
 </body>
 </html>
