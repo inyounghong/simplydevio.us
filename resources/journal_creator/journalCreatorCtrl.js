@@ -96,51 +96,51 @@ angular.module('mainApp')
         return str;
     }
 
-    function getBackground(e) {
-        return "background: " + e.color + ";\n";
-    }
+    // Get CSS functions
 
+    function getBackground(e) {
+        return "background: " + e.background.color + ";\n";
+    }
     function getImage(e) {
-        if (!e.useImage) {
+        if (!e.image.useImage) {
             return "";
         }
-        return "background-image: url('" + e.url + "')" + e.repeat + " " + e.horizontal + " " + e.vertical + ";\n";
+        return "background-image: url('" + e.image.url + "')" + e.image.repeat + " " + e.image.horizontal + " " + e.image.vertical + ";\n";
     }
-
     function getRadius(e) {
         return "border-radius: " + e.radius + "px;\n";
     }
-
     function getBorder(e) {
-        return "border: " + e.width + "px " + e.style + " " + e.color + ";\n";
+        return "border: " + e.border.width + "px " + e.border.style + " " + e.border.color + ";\n";
     }
-
     function getTextAlign(e) {
         return "text-align: " + e.align + ";\n";
     }
+
 
     function generateCss() {
 
         var j = $scope.j;
         var css = "<style>";
+        var end = "}\n\n";
 
         // GR-BOX SECTION
         css += '.gr-box{\n';
-        css += getBackground(j.box.background);
-        css += getImage(j.box.image);
+        css += getBackground(j.box);
+        css += getImage(j.box);
         css += getRadius(j.box);
-        css += getBorder(j.box.border);
+        css += getBorder(j.box);
 
         if (j.box.maxWidth && j.box.width.trim() != '') {
             css += 'max-width: ' +j.box.width + 'px;\n';
             css += 'margin: 0 auto;\n';
         }
-        css += '}\n';
+        css += end;
 
         // GR TOP
         css += '.gr-top{\n';
-        css += getBackground(j.top.background);
-        css += getImage(j.top.image);
+        css += getBackground(j.top);
+        css += getImage(j.top);
         css += getTextAlign(j.top);
 
         // var percent = document.getElementById('topalign').value;
@@ -148,9 +148,134 @@ angular.module('mainApp')
         // var bottom_padding = j.top.height - top_padding;
         // var side_padding = document.getElementById('toppadding').value;
         // css += '\npadding: ' + top_padding + 'px ' + side_padding + '% ' + bottom_padding + 'px ' + side_padding + '%;';
-        css += '}\n\n';
+        css += end;
+
+        // GR-TOP TITLE JUNK
+        css += '.gr-top h2, .gr-top h2 a{\n';
+        // font_color_imp('titlecolor');
+        css += getColor(j.title);
+        css += getFontFamily(j.top);
+        css += getFontSize(j.title);
+        css += getTextAlign(j.title);
+        // text_transform(document.example.titletransform.options[document.example.titletransform.selectedIndex].value);
+        css += end;
+
+        // GR-TOP TIMESTAMP JUNK
+        css += '.gr-top .timestamp{\n';
+        css += getColor(j.timestamp);
+        css += getFontFamily(j.timestamp);
+        css += getFontSize(j.timestamp);
+        // text_transform(document.example.timetransform.options[document.example.timetransform.selectedIndex].value);
+        css += end;
+
+
+        // TEXT
+        css += '.text{\n';
+        css += getBackground(j.text);
+        css += getImage(j.text);
+        css += getRadius(j.text);
+        css += getBorder(j.text);
+        css += getColor(j.text);
+        css += getFontFamily(j.text);
+        css += getFontSize(j.text);
+
+        // text_align(document.example.mainalign.options[document.example.mainalign.selectedIndex].value);
+        // css += '\nline-height: ' + document.getElementById('mainline').value + 'px;';
+
+        // css += '\npadding: '
+        //
+        // var verpadding = document.getElementById('verpadding').value;
+        // var horpadding = document.getElementById('horpadding').value;
+        // vPixel(verpadding);
+        // hPercent(horpadding);
+        //
+        // css += vpix + hper + vpix + hper + ';';
+        //
+        // css += '\nmargin: '
+        //
+        // var verpadding = document.getElementById('vermargin').value;
+        // var horpadding = document.getElementById('hormargin').value;
+        // vPixel(verpadding);
+        // hPercent(horpadding)
+
+        // css += vpix + hper + vpix + hper + ';';
+        css += end;
+
+
+        css += '.text a{';
+        css += getColor(j.link);
+        css += getFontFamily(j.link);
+        css += end;
+
+        // Blockquote
+        css += 'blockquote{\n';
+        css += getBackground(j.blockquote);
+        css += getImage(j.blockquote);
+        css += getRadius(j.blockquote);
+        css += getBorder(j.blockquote);
+        css += getFontDetails(j.blockquote);
+
+        // text_align(document.example.blockalign.options[document.example.blockalign.selectedIndex].value);
+        // css += 'padding:' + document.getElementById('blockpadding').value + 'px;\n';
+        css += end;
+
+        // GR-BOTTOM JUNK
+        css += '.bottom{\n';
+        css += getBackground(j.bottom);
+        css += getImage(j.bottom);
+        // var height = document.getElementById('botheight').value;
+        // var percent = document.getElementById('botalign').value;
+        // var top_padding = Math.round(percent * 0.01 * height);
+        // var bottom_padding = height - top_padding;
+        // var side_padding = document.getElementById('botpadding').value;
+        // css += '\npadding: ' + top_padding + 'px ' + side_padding + '% ' + bottom_padding + 'px ' + side_padding + '%;';
+        //
+        // // Comment Align
+        // css += '\ntext-align: ' + document.example.commentalign.options[document.example.commentalign.selectedIndex].value + ';';
+        css += end;
+
+
+        // GR-BOTTOM COMMENTSLINK JUNK
+        css += '.commentslink{\n';
+        css += getFontDetails(j.comments);
+
+        css += end;
+
+        css += '.credit{\n';
+        css += 'left:0;\n';
+        css += 'width:100%;\n';
+        css += 'text-align:center;\n';
+        css += 'position: absolute;\n';
+        css += 'bottom: 10px;}\n\n';
+        
+        css += '.credit, .credit a{\n';
+        css += 'text-decoration:none;'
+        css += 'color: #222!important;\n';
+        css += 'font-size: 10px;}\n\n';
 
         return css  + "</style>";
+    }
+
+    function getFontDetails() {
+        var css = "";
+        css += getColor(j.comments);
+        css += getFontFamily(j.comments);
+        css += getFontSize(j.comments);
+        css += getTextTransform(j.comments);
+        return css;
+    }
+
+    function getTextTransform(e) {
+        return "text-transform: " + e.textTransform + ";\n";
+    }
+    function getColor(e) {
+        return "color: " + e.color + ";\n";
+    }
+    function getFontFamily(e) {
+        return "font-family: " + e.family + ";\n";
+    }
+    function getFontSize(e) {
+        return "font-size: " + e.size + "px;\n";
     }
 
     function checkit(){
@@ -163,133 +288,10 @@ angular.module('mainApp')
         console.log($scope.previewCss);
         return;
 
-    // GR-TOP TITLE JUNK
-        textstring += '.gr-top h2, .gr-top h2 a{\n';
-        font_color_imp('titlecolor');
-        font_family('titlefont');
-        font_size('titlesize');
-        text_align(document.example.titlealign.options[document.example.titlealign.selectedIndex].value);
-        text_transform(document.example.titletransform.options[document.example.titletransform.selectedIndex].value);
-        textstring += '}\n\n';
-
-    // GR-TOP TIMESTAMP JUNK
-        textstring += '.gr-top .timestamp{\n';
-        font_color('timecolor');
-        font_family('timefont');
-        font_size('timesize');
-        text_transform(document.example.timetransform.options[document.example.timetransform.selectedIndex].value);
-        textstring += '}\n\n';
-
-
-     // TEXT JUNK
-
-        textstring += '.text{\n';
-
-        background_color('txtbackcolor', 'txtTransparent');
-        bpos = document.example.txtbrep.options[document.example.txtbrep.selectedIndex].value;
-        brep = document.example.txtbpos.options[document.example.txtbpos.selectedIndex].value;
-        background_image('txtbackimage');
-        border_radius('textradius');
-
-        // Text Color
-        font_color('maincolor');
-        font_family('mainfont');
-        font_size('mainsize');
-        text_align(document.example.mainalign.options[document.example.mainalign.selectedIndex].value);
-        textstring += '\nline-height: ' + document.getElementById('mainline').value + 'px;';
-
-        // Text Padding
-        textstring += '\npadding: '
-
-        var verpadding = document.getElementById('verpadding').value;
-        var horpadding = document.getElementById('horpadding').value;
-        vPixel(verpadding);
-        hPercent(horpadding);
-
-        textstring += vpix + hper + vpix + hper + ';';
-
-        // Text Margin
-        textstring += '\nmargin: '
-
-        var verpadding = document.getElementById('vermargin').value;
-        var horpadding = document.getElementById('hormargin').value;
-        vPixel(verpadding);
-        hPercent(horpadding)
-
-        textstring += vpix + hper + vpix + hper + ';';
-        textstring += '}\n\n';
-        textstring += '.text a{';
-        font_color_imp('linkcolor');
-        font_family('linkfont');
-        textstring += '}\n\n';
-        // Blockquote
-        textstring += 'blockquote{\n';
-        background_color('blockbackcolor', 'blockTransparent');
-        bpos = document.example.blockbrep.options[document.example.blockbrep.selectedIndex].value
-        brep = document.example.blockbpos.options[document.example.blockbpos.selectedIndex].value
-        background_image('blockbackimage');
-        font_color_imp('blockcolor');
-        font_family('blockfont');
-        font_size('blocksize');
-        text_align(document.example.blockalign.options[document.example.blockalign.selectedIndex].value);
-        text_transform(document.example.blocktransform.options[document.example.blocktransform.selectedIndex].value);
-        border_radius('blockradius');
-        textstring += 'padding:' + document.getElementById('blockpadding').value + 'px;\n';
-        textstring += '}\n\n';
-
-
-     // GR-BOTTOM JUNK
-
-        textstring += '.bottom{\n';
-        background_color('botbackcolor', 'botTransparent');
-
-        bpos = document.example.botbrep.options[document.example.botbrep.selectedIndex].value
-        brep = document.example.botbpos.options[document.example.botbpos.selectedIndex].value
-        background_image('botbackimage');
-        var height = document.getElementById('botheight').value;
-        var percent = document.getElementById('botalign').value;
-        var top_padding = Math.round(percent * 0.01 * height);
-        var bottom_padding = height - top_padding;
-        var side_padding = document.getElementById('botpadding').value;
-        textstring += '\npadding: ' + top_padding + 'px ' + side_padding + '% ' + bottom_padding + 'px ' + side_padding + '%;';
-
-        // Comment Align
-        textstring += '\ntext-align: ' + document.example.commentalign.options[document.example.commentalign.selectedIndex].value + ';';
-
-        textstring += '}\n\n';
-
-    // GR-BOTTOM COMMENTSLINK JUNK
-        textstring += '.commentslink{\n';
-        font_color_imp('commentcolor');
-        font_family('commentfont');
-        font_size('commentsize');
-        text_transform(document.example.commenttransform.options[document.example.commenttransform.selectedIndex].value);
-
-        textstring += '}\n\n';
-
-        textstring += '.credit{\n';
-        textstring += 'left:0;\n';
-        textstring += 'width:100%;\n';
-        textstring += 'text-align:center;\n';
-        textstring += 'position: absolute;\n';
-        textstring += 'bottom: 10px;}\n\n';
-        textstring += '.credit, .credit a{\n';
-        textstring += 'text-decoration:none;'
-        textstring += 'color: #222!important;\n';
-        textstring += 'font-size: 10px;}\n\n';
-
         textstring += 'hr{\n';
         textstring += 'border-bottom: 1px solid #' + document.getElementById('hr_color').value + ';\n';
         textstring += 'margin: 15px 0 5px;\n';
-        textstring += '}\n\n'
-
-        // Write textstring to the textarea.
-        document.getElementById("top_align_range").innerHTML = document.getElementById("topalign").value + '%';
-        document.getElementById("top_padding_range").innerHTML = document.getElementById("toppadding").value + '%';
-        document.getElementById("bot_align_range").innerHTML = document.getElementById("botalign").value + '%';
-        document.getElementById("bot_padding_range").innerHTML = document.getElementById("botpadding").value + '%';
-        // document.forms['example'].output.value = textstring;
-
+        textstring += end
 
         var clear = "";
         clear += '*{background:none; \nborder:none; \npadding:0; \nmargin:0;} \n\n';
@@ -306,14 +308,6 @@ angular.module('mainApp')
         return complete_css;
     }
 
-    function setup() {
-
-
-        var complete_html = '<div class="gr-box"><div class="gr-top"><div class="gr"><h2><img src="http:/\/st.deviantart.net/minish/gruzecontrol/icons/journal.gif?2" style="vertical-align:middle"><a href="#">Devious Journal Entry</a></h2><span class="timestamp">Tue Oct 22, 2013, 7:04 AM</span></div></div><div class="body"><div class="text">';
-        complete_html += gatsby;
-        complete_html += '<div class="credit">Created at <a href="http://www.simplydevio.us/resources/basic_journal.php">simplydevio.us</a></div></div><div class=\"bottom\"><a class=\"a commentslink\" href=\"http://sta.sh/023q9vb62a0q#comments\">No Comments</a></div></div>';
-        document.getElementById('preview_box').innerHTML = '<style>' + checkit() + '</style>' + complete_html;
-    }
 
     // Adjusts the placement of the sidebar
     $(window).scroll(function (event) {
