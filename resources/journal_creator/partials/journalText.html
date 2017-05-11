@@ -1,0 +1,10 @@
+<div ng-repeat="e in [j.text.background]" ng-include="'/resources/journal_creator/inputs/background.html'"></div>
+<div ng-repeat="e in [j.text.image]" ng-include="'/resources/journal_creator/inputs/image.html'"></div>
+
+<div ng-repeat="e in [j.text.border]" ng-include="'/resources/journal_creator/inputs/border.html'"></div>
+<div ng-repeat="e in [j.text]" ng-include="'/resources/journal_creator/inputs/radius.html'"></div>
+
+<div ng-repeat="e in [j.text]" ng-include="'/resources/journal_creator/inputs/text.html'"></div>
+
+<span class="heading">Line Height</span>
+<input id="mainline" type="range" min="0" max="25" value="16"><span class="range_label" id="main_line_range"></span>

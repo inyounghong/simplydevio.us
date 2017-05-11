@@ -1,0 +1,63 @@
+<form action="" id="profileDirectory" name="example" onchange="update()" onsubmit="update(); return false">
+    <!-- Journal Box -->
+    <div id="block1" class="block selected">Journal Box</div>
+    <div id="tab1" class="side_page">
+        <ng-include src="'/resources/journal_creator/partials/journalBox.html'"></ng-include>
+    </div>
+
+    <!-- Journal Top -->
+    <div id="block2" class="block">Journal Top</div>
+    <div id="tab2" class="side_page">
+        <ng-include src="'/resources/journal_creator/partials/journalTop.html'"></ng-include>
+    </div>
+
+    <!-- Title and Time Stamp -->
+    <div id="block6" class="block">Title &amp; Timestamp</div>
+    <div id="tab6" class="side_page">
+        <ng-include src="'/resources/journal_creator/partials/journalTitle.html'"></ng-include>
+    </div>
+
+    <!-- Journal Text -->
+    <div id="block3" class="block">Journal Text</div>
+    <div id="tab3" class="side_page show">
+        <ng-include src="'/resources/journal_creator/partials/journalText.html'"></ng-include>
+    </div>
+    <!-- Journal Text -->
+    <div id="block7" class="block">Padding &amp; Margin</div>
+    <div id="tab7" class="side_page">
+        <b>Padding</b>
+        <br><span class="heading">Sides</span><input id="horpadding" type="range" min="0" max="20" value="5"><span class="range_label" id="hor_padding_range"></span>
+        <br><span class="heading">Vertical</span><input id="verpadding" type="range" min="0" max="100" value="30"><span class="range_label" id="ver_padding_range"></span>
+        <br>
+
+        <b>Margin</b>
+        <br><span class="heading">Sides</span><input id="hormargin" type="range" min="0" max="20" value="5"><span class="range_label" id="hor_margin_range"></span>
+        <br><span class="heading">Vertical</span><input id="vermargin" type="range" min="0" max="100" value="30"><span class="range_label" id="ver_margin_range"></span>
+    </div>
+    <!-- Journal Bottom -->
+    <div id="block4" class="block">Journal Bottom</div>
+    <div id="tab4" class="side_page">
+        <ng-include src="'/resources/journal_creator/partials/journalBottom.html'"></ng-include>
+    </div>
+    <!-- Blockquote -->
+    <div id="block5" class="block">Block Quote</div>
+    <div id="tab5" class="side_page">
+        <?php background('blockbackcolor', '5E4948', 'blockTransparent');?>
+        <?php use_image('useimageblock', 'blockimagerow', 'blockbackimage', 'blockbrep', 'blockbpos');?>
+        <br><br>
+        <b>Text</b><br>
+        <?php font_css_transform('blockcolor', 'FFFFFF', 'blockfont', 'Verdana', 'blockalign', 'blocktransform', 'blocksize', '30', '14', 'block_size_range');?>
+
+        <br><span class="heading">Roundness</span>
+        <input id="blockradius" type="range" min="0" max="50" value="0"><span class="range_label" id="block_radius_range"></span>
+        <br><span class="heading">Padding</span>
+        <input id="blockpadding" type="range" min="0" max="50" value="20"><span class="range_label" id="block_padding_range"></span>
+    </div>
+
+    <!-- Extras -->
+    <div id="block8" class="block">Extras</div>
+    <div id="tab8" class="side_page">
+        <b>Hr (Divider)</b><br>
+        <input id="hr_color" class="color" maxlength="6" value="888888">
+    </div>
+</form>

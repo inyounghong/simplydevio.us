@@ -1,0 +1,18 @@
+
+<div ng-repeat="e in [j.top.background]" ng-include="'/resources/journal_creator/inputs/background.html'"></div>
+<div ng-repeat="e in [j.top.image]" ng-include="'/resources/journal_creator/inputs/image.html'"></div>
+
+<b>Journal Top</b>
+<div class="chunk">
+    <h2>Height</h2>
+    <div class="input">
+        <input type="range" ng-model="j.top.height" class="rangeWithLabel" min="0" max="300">
+        <div class="range_label">{{j.top.height}}</div>
+    </div>
+
+    <h2>Padding</h2>
+    <div class="input">
+        <input type="range" ng-model="j.top.padding" class="rangeWithLabel" min="0" max="30">
+        <div class="range_label">{{j.top.padding}}</div>
+    </div>
+</div>

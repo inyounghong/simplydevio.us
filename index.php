@@ -52,6 +52,7 @@
 
     <script src="resources/profile_greeting/profileGreetingCtrl.js"></script>
     <script src="resources/profile_directory/profileDirectoryCtrl.js"></script>
+    <script src="resources/journal_creator/journalCreatorCtrl.js"></script>
 
 </body>
 </html>

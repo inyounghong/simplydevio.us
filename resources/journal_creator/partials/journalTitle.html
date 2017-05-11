@@ -1,0 +1,13 @@
+<b>Title</b>
+<div ng-repeat="e in [j.title]" ng-include="'/resources/journal_creator/inputs/text.html'"></div>
+
+<div class="chunk">
+    <h2>Position</h2>
+    <div class="input">
+        <input type="range" ng-model="j.title.position" class="rangeWithLabel" min="0" max="50">
+        <div class="range_label">{{j.title.position}}</div>
+    </div>
+</div>
+
+<b>Time Stamp</b>
+<div ng-repeat="e in [j.timestamp]" ng-include="'/resources/journal_creator/inputs/text.html'"></div>
