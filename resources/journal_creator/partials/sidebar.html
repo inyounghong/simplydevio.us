@@ -1,26 +1,26 @@
-<form action="" id="profileDirectory" name="example" onchange="update()" onsubmit="update(); return false">
+<form id="profileDirectory">
     <!-- Journal Box -->
     <div id="block1" class="block selected">Journal Box</div>
     <div id="tab1" class="side_page">
-        <ng-include src="'/resources/journal_creator/partials/journalBox.html'"></ng-include>
+        <ng-include src="'/resources/journal_creator/tabs/journalBox.html'"></ng-include>
     </div>
 
     <!-- Journal Top -->
     <div id="block2" class="block">Journal Top</div>
     <div id="tab2" class="side_page">
-        <ng-include src="'/resources/journal_creator/partials/journalTop.html'"></ng-include>
+        <ng-include src="'/resources/journal_creator/tabs/journalTop.html'"></ng-include>
     </div>
 
     <!-- Title and Time Stamp -->
     <div id="block6" class="block">Title &amp; Timestamp</div>
     <div id="tab6" class="side_page">
-        <ng-include src="'/resources/journal_creator/partials/journalTitle.html'"></ng-include>
+        <ng-include src="'/resources/journal_creator/tabs/journalTitle.html'"></ng-include>
     </div>
 
     <!-- Journal Text -->
     <div id="block3" class="block">Journal Text</div>
-    <div id="tab3" class="side_page show">
-        <ng-include src="'/resources/journal_creator/partials/journalText.html'"></ng-include>
+    <div id="tab3" class="side_page">
+        <ng-include src="'/resources/journal_creator/tabs/journalText.html'"></ng-include>
     </div>
     <!-- Journal Text -->
     <div id="block7" class="block">Padding &amp; Margin</div>
@@ -36,27 +36,18 @@
     </div>
     <!-- Journal Bottom -->
     <div id="block4" class="block">Journal Bottom</div>
-    <div id="tab4" class="side_page">
-        <ng-include src="'/resources/journal_creator/partials/journalBottom.html'"></ng-include>
+    <div id="tab4" class="side_page show">
+        <ng-include src="'/resources/journal_creator/tabs/journalBottom.html'"></ng-include>
     </div>
     <!-- Blockquote -->
     <div id="block5" class="block">Block Quote</div>
-    <div id="tab5" class="side_page">
-        <?php background('blockbackcolor', '5E4948', 'blockTransparent');?>
-        <?php use_image('useimageblock', 'blockimagerow', 'blockbackimage', 'blockbrep', 'blockbpos');?>
-        <br><br>
-        <b>Text</b><br>
-        <?php font_css_transform('blockcolor', 'FFFFFF', 'blockfont', 'Verdana', 'blockalign', 'blocktransform', 'blocksize', '30', '14', 'block_size_range');?>
-
-        <br><span class="heading">Roundness</span>
-        <input id="blockradius" type="range" min="0" max="50" value="0"><span class="range_label" id="block_radius_range"></span>
-        <br><span class="heading">Padding</span>
-        <input id="blockpadding" type="range" min="0" max="50" value="20"><span class="range_label" id="block_padding_range"></span>
+    <div id="tab5" class="side_page show">
+        <ng-include src="'/resources/journal_creator/tabs/blockquote.html'"></ng-include>
     </div>
 
     <!-- Extras -->
     <div id="block8" class="block">Extras</div>
-    <div id="tab8" class="side_page">
+    <div id="tab8" class="side_page show">
         <b>Hr (Divider)</b><br>
         <input id="hr_color" class="color" maxlength="6" value="888888">
     </div>

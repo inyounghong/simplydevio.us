@@ -3,13 +3,19 @@ angular.module('mainApp')
     'use strict';
 
     $scope.j = {}; // Watched data
+    $scope.trustAsHtml = trustAsHtml;
 
     setUp();
-    // checkit();
+    checkit();
 
     // $scope.$watch("j", checkit, true);
 
     var web_safe_fonts = ["georgia", "palatino linotype", "book antiqua", "palatino", "times new roman", "times", "serif", "sans-serif", "cursive", "arial", "helvetica", "comic sans ms", "impact", "lucida sans unicode", "tahoma", "trebuchet ms", "verdana", "geneva", "courier new", "lucida console"];
+
+    // Allow Html to be printed in DOM
+    function trustAsHtml(string) {
+        return $sce.trustAsHtml(string);
+    };
 
     function setUp() {
         $scope.j = {
@@ -21,13 +27,13 @@ angular.module('mainApp')
             text: {},
             bottom: {},
             comments: {},
+            blockquote: {}
         };
 
         Object.keys($scope.j).forEach(function(key,index) {
             fullSetUp($scope.j[key]);
         });
 
-        $scope.j.box = {}
         $scope.j.box.maxWidth = false;
         $scope.j.box.width = "900";
 
@@ -39,10 +45,10 @@ angular.module('mainApp')
         setUpImage(e);
         setUpBorder(e);
         setUpBackground(e);
+        e.radius = 0;
     }
 
     function setUpText(e) {
-        // e = {};
         e.color = "#000";
         e.family = "Verdana";
         e.align = "left";
@@ -51,6 +57,7 @@ angular.module('mainApp')
 
     function setUpImage(e) {
         e.image = {};
+        e.image.useImage = false;
         e.image.repeat = "repeat";
     }
 
@@ -62,6 +69,8 @@ angular.module('mainApp')
 
     function setUpBorder(e) {
         e.border = {};
+        e.border.width = 1;
+        e.border.color = "#000";
         e.border.style = "none";
     }
 
@@ -87,49 +96,72 @@ angular.module('mainApp')
         return str;
     }
 
+    function getBackground(e) {
+        return "background: " + e.color + ";\n";
+    }
 
-    function checkit(){
-        return;
-        // var font_string = importFonts();
-        textstring = "";
+    function getImage(e) {
+        if (!e.useImage) {
+            return "";
+        }
+        return "background-image: url('" + e.url + "')" + e.repeat + " " + e.horizontal + " " + e.vertical + ";\n";
+    }
+
+    function getRadius(e) {
+        return "border-radius: " + e.radius + "px;\n";
+    }
+
+    function getBorder(e) {
+        return "border: " + e.width + "px " + e.style + " " + e.color + ";\n";
+    }
+
+    function getTextAlign(e) {
+        return "text-align: " + e.align + ";\n";
+    }
+
+    function generateCss() {
+
+        var j = $scope.j;
+        var css = "<style>";
 
         // GR-BOX SECTION
+        css += '.gr-box{\n';
+        css += getBackground(j.box.background);
+        css += getImage(j.box.image);
+        css += getRadius(j.box);
+        css += getBorder(j.box.border);
 
-        textstring += '.gr-box{\n';
+        if (j.box.maxWidth && j.box.width.trim() != '') {
+            css += 'max-width: ' +j.box.width + 'px;\n';
+            css += 'margin: 0 auto;\n';
+        }
+        css += '}\n';
 
-        background_color('boxbackcolor', 'boxTransparent');
-        bpos = document.example.boxbpos.options[document.example.boxbpos.selectedIndex].value
-        brep = document.example.boxbrep.options[document.example.boxbrep.selectedIndex].value
-        background_image('boxbackimage');
-        border_radius('boxradius');
+        // GR TOP
+        css += '.gr-top{\n';
+        css += getBackground(j.top.background);
+        css += getImage(j.top.image);
+        css += getTextAlign(j.top);
 
-        // Max Width
-        var boxwidth = document.getElementById('boxwidth');
+        // var percent = document.getElementById('topalign').value;
+        // var top_padding = Math.round(percent * 0.01 * j.top.height);
+        // var bottom_padding = j.top.height - top_padding;
+        // var side_padding = document.getElementById('toppadding').value;
+        // css += '\npadding: ' + top_padding + 'px ' + side_padding + '% ' + bottom_padding + 'px ' + side_padding + '%;';
+        css += '}\n\n';
 
-        if (document.getElementById('includemaxwidth').checked && boxwidth.value != '') {
-            textstring += '\nmax-width: ' + boxwidth.value + 'px;';
-            textstring += '\nmargin: 0 auto;';}
-        else {
-            textstring += ''; }
-        use_border('useboxborder', 'boxbordercolor', 'boxborderwidth', 'boxborderstyle');
-        textstring += '}\n\n';
-     // GR-TOP JUNK
+        return css  + "</style>";
+    }
 
-        textstring += '.gr-top{\n';
+    function checkit(){
 
-        background_color('topbackcolor', 'topTransparent');
-        bpos = document.example.topbrep.options[document.example.topbrep.selectedIndex].value
-        brep = document.example.topbpos.options[document.example.topbpos.selectedIndex].value
-        background_image('topbackimage');
-        var height = document.getElementById('topheight').value;
-        var percent = document.getElementById('topalign').value;
-        var top_padding = Math.round(percent * 0.01 * height);
-        var bottom_padding = height - top_padding;
-        var side_padding = document.getElementById('toppadding').value;
-        textstring += '\npadding: ' + top_padding + 'px ' + side_padding + '% ' + bottom_padding + 'px ' + side_padding + '%;';
-        text_align(document.example.timealign.options[document.example.timealign.selectedIndex].value)
+        // var font_string = importFonts();
+        var css = generateCss();
 
-        textstring += '}\n\n';
+        $scope.previewCss = css;
+
+        console.log($scope.previewCss);
+        return;
 
     // GR-TOP TITLE JUNK
         textstring += '.gr-top h2, .gr-top h2 a{\n';
@@ -274,9 +306,7 @@ angular.module('mainApp')
         return complete_css;
     }
 
-    function setup()
-    {
-        var gatsby = '<p><h1>Heading 1</h1><b>In my younger</b> and more vulnerable years my father gave me some advice that I’ve been turning over in my mind ever since. "Whenever you feel like criticizing any one," he told me, "just remember that all the people in this world haven’t had the advantages that you’ve had." <a class="username" href="http://simplysilent.deviantart.com">SimplySilent</a></p> <br><blockquote>&lt;blockquote> He didn’t say any more, but we’ve always been unusually communicative in a reserved way, and I understood that he meant a great deal more than that. In consequence, I’m inclined to reserve all judgments, a habit that has opened up many curious natures to me and also made me the victim of not a few veteran bores. &lt;/blockquote></blockquote><br> <p>The abnormal mind is quick to detect and attach itself to this quality when it appears in a normal person, and so it came about that in college I was unjustly accused of being a politician, because I was privy to the secret griefs of wild, unknown men. </p><p>This is a divider &lt;hr>:</p><hr><br>  Most of the confidences were unsought—frequently I have feigned sleep, preoccupation, or a hostile levity when I realized by some unmistakable sign that an intimate revelation was quivering on the horizon; for the intimate revelations of young men, or at least the terms in which they express them, are usually plagiaristic and marred by obvious suppressions. Reserving judgments is a matter of infinite hope.</p> ';
+    function setup() {
 
 
         var complete_html = '<div class="gr-box"><div class="gr-top"><div class="gr"><h2><img src="http:/\/st.deviantart.net/minish/gruzecontrol/icons/journal.gif?2" style="vertical-align:middle"><a href="#">Devious Journal Entry</a></h2><span class="timestamp">Tue Oct 22, 2013, 7:04 AM</span></div></div><div class="body"><div class="text">';
