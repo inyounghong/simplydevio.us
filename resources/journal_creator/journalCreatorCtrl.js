@@ -1,16 +1,39 @@
+var DARK = "#5E4948";
+
 angular.module('mainApp')
 .controller('JournalCreatorCtrl', function ($scope, $sce) {
     'use strict';
 
     $scope.j = {}; // Watched data
     $scope.trustAsHtml = trustAsHtml;
+    $scope.toggleTab = toggleTab;
+    $scope.tab = 0;
+    $scope.tabs = [];
+
+    for (var i = 1; i < $(".side_page").length; i++) {
+        $scope.tabs[i] = false;
+    }
+    $scope.tabs[1] = true;
 
     setUp();
     checkit();
 
-    // $scope.$watch("j", checkit, true);
+    $scope.$watch("j", checkit, true);
 
     var web_safe_fonts = ["georgia", "palatino linotype", "book antiqua", "palatino", "times new roman", "times", "serif", "sans-serif", "cursive", "arial", "helvetica", "comic sans ms", "impact", "lucida sans unicode", "tahoma", "trebuchet ms", "verdana", "geneva", "courier new", "lucida console"];
+
+
+    function toggleTab(t) {
+        var tab = $("#tab" + t);
+        if (tab.css("display") == "none") { // Show tab
+            tab.slideDown(200);
+            $scope.tabs[t] = true;
+        } else {
+            tab.slideUp(200);
+            $scope.tabs[t] = false;
+        }
+    }
+
 
     // Allow Html to be printed in DOM
     function trustAsHtml(string) {
@@ -35,7 +58,9 @@ angular.module('mainApp')
         });
 
         $scope.j.box.maxWidth = false;
-        $scope.j.box.width = "900";
+        $scope.j.box.width = 900;
+
+        $scope.j.top.background.color = DARK;
 
         console.log($scope.j);
     }
@@ -82,7 +107,7 @@ angular.module('mainApp')
 
     function importFonts(){
         var str = "";
-        var els = [$("#titlefont"), $("#timefont"), $("#mainfont"), $("#linkfont"), $("#blockfont"), $("#commentfont")];
+        var els = [j.title.font, j.timestamp.font, j.text.font, j.link.font, j.blockquote.font, j.comment.font];
         var imported = [];
         for (var i = 0; i < els.length; i++) {
             var font = els[i].val().toLowerCase();
@@ -99,6 +124,9 @@ angular.module('mainApp')
     // Get CSS functions
 
     function getBackground(e) {
+        if (e.background.transparent) {
+            return "";
+        }
         return "background: " + e.background.color + ";\n";
     }
     function getImage(e) {
@@ -108,15 +136,14 @@ angular.module('mainApp')
         return "background-image: url('" + e.image.url + "')" + e.image.repeat + " " + e.image.horizontal + " " + e.image.vertical + ";\n";
     }
     function getRadius(e) {
-        return "border-radius: " + e.radius + "px;\n";
+        return "border-radius: " + px(e.radius) + ";\n";
     }
     function getBorder(e) {
-        return "border: " + e.border.width + "px " + e.border.style + " " + e.border.color + ";\n";
+        return "border: " + px(e.border.width) + e.border.style + " " + e.border.color + ";\n";
     }
     function getTextAlign(e) {
         return "text-align: " + e.align + ";\n";
     }
-
 
     function generateCss() {
 
@@ -130,7 +157,6 @@ angular.module('mainApp')
         css += getImage(j.box);
         css += getRadius(j.box);
         css += getBorder(j.box);
-
         if (j.box.maxWidth && j.box.width.trim() != '') {
             css += 'max-width: ' +j.box.width + 'px;\n';
             css += 'margin: 0 auto;\n';
@@ -142,22 +168,18 @@ angular.module('mainApp')
         css += getBackground(j.top);
         css += getImage(j.top);
         css += getTextAlign(j.top);
-
-        // var percent = document.getElementById('topalign').value;
-        // var top_padding = Math.round(percent * 0.01 * j.top.height);
-        // var bottom_padding = j.top.height - top_padding;
-        // var side_padding = document.getElementById('toppadding').value;
-        // css += '\npadding: ' + top_padding + 'px ' + side_padding + '% ' + bottom_padding + 'px ' + side_padding + '%;';
+        var top_padding = Math.round(j.title.position * 0.01 * j.top.height);
+        var bottom_padding = j.top.height - top_padding;
+        css += 'padding: ' + px(top_padding) + per(j.top.padding) + px(bottom_padding) + ';\n';
         css += end;
 
         // GR-TOP TITLE JUNK
         css += '.gr-top h2, .gr-top h2 a{\n';
-        // font_color_imp('titlecolor');
         css += getColor(j.title);
         css += getFontFamily(j.top);
         css += getFontSize(j.title);
         css += getTextAlign(j.title);
-        // text_transform(document.example.titletransform.options[document.example.titletransform.selectedIndex].value);
+        css += getTextTransform(j.title);
         css += end;
 
         // GR-TOP TIMESTAMP JUNK
@@ -165,9 +187,8 @@ angular.module('mainApp')
         css += getColor(j.timestamp);
         css += getFontFamily(j.timestamp);
         css += getFontSize(j.timestamp);
-        // text_transform(document.example.timetransform.options[document.example.timetransform.selectedIndex].value);
+        css += getTextTransform(j.timestamp);
         css += end;
-
 
         // TEXT
         css += '.text{\n';
@@ -178,29 +199,11 @@ angular.module('mainApp')
         css += getColor(j.text);
         css += getFontFamily(j.text);
         css += getFontSize(j.text);
-
-        // text_align(document.example.mainalign.options[document.example.mainalign.selectedIndex].value);
-        // css += '\nline-height: ' + document.getElementById('mainline').value + 'px;';
-
-        // css += '\npadding: '
-        //
-        // var verpadding = document.getElementById('verpadding').value;
-        // var horpadding = document.getElementById('horpadding').value;
-        // vPixel(verpadding);
-        // hPercent(horpadding);
-        //
-        // css += vpix + hper + vpix + hper + ';';
-        //
-        // css += '\nmargin: '
-        //
-        // var verpadding = document.getElementById('vermargin').value;
-        // var horpadding = document.getElementById('hormargin').value;
-        // vPixel(verpadding);
-        // hPercent(horpadding)
-
-        // css += vpix + hper + vpix + hper + ';';
+        css += getTextAlign(j.text);
+        css += getLineHeight(j.text);
+        css += 'padding: ' + px(j.paddingV) + per(j.paddingH) + ';\n';
+        css += 'margin: ' + px(j.marginV) + per(j.marginH) + ';\n';
         css += end;
-
 
         css += '.text a{';
         css += getColor(j.link);
@@ -213,32 +216,30 @@ angular.module('mainApp')
         css += getImage(j.blockquote);
         css += getRadius(j.blockquote);
         css += getBorder(j.blockquote);
-        css += getFontDetails(j.blockquote);
-
-        // text_align(document.example.blockalign.options[document.example.blockalign.selectedIndex].value);
-        // css += 'padding:' + document.getElementById('blockpadding').value + 'px;\n';
+        css += getColor(j.blockquote);
+        css += getFontFamily(j.blockquote);
+        css += getFontSize(j.blockquote);
+        css += getTextTransform(j.blockquote);
+        css += getTextAlign(j.blockquote);
+        css += 'padding:' + px(j.blockquote.padding) + ';\n';
         css += end;
 
         // GR-BOTTOM JUNK
         css += '.bottom{\n';
         css += getBackground(j.bottom);
         css += getImage(j.bottom);
-        // var height = document.getElementById('botheight').value;
-        // var percent = document.getElementById('botalign').value;
-        // var top_padding = Math.round(percent * 0.01 * height);
-        // var bottom_padding = height - top_padding;
-        // var side_padding = document.getElementById('botpadding').value;
-        // css += '\npadding: ' + top_padding + 'px ' + side_padding + '% ' + bottom_padding + 'px ' + side_padding + '%;';
-        //
-        // // Comment Align
-        // css += '\ntext-align: ' + document.example.commentalign.options[document.example.commentalign.selectedIndex].value + ';';
+        var top_padding = Math.round(j.bottom.align * 0.01 * j.bottom.height);
+        var bottom_padding = j.bottom.height - top_padding;
+        css += '\npadding: ' + px(top_padding) + per(j.bottom.paddingH) + px(bottom_padding) + ';\n';
+        css += getTextAlign(j.bottom);
         css += end;
-
 
         // GR-BOTTOM COMMENTSLINK JUNK
         css += '.commentslink{\n';
-        css += getFontDetails(j.comments);
-
+        css += getColor(j.comments);
+        css += getFontFamily(j.comments);
+        css += getFontSize(j.comments);
+        css += getTextTransform(j.comments);
         css += end;
 
         css += '.credit{\n';
@@ -247,7 +248,7 @@ angular.module('mainApp')
         css += 'text-align:center;\n';
         css += 'position: absolute;\n';
         css += 'bottom: 10px;}\n\n';
-        
+
         css += '.credit, .credit a{\n';
         css += 'text-decoration:none;'
         css += 'color: #222!important;\n';
@@ -256,15 +257,24 @@ angular.module('mainApp')
         return css  + "</style>";
     }
 
-    function getFontDetails() {
-        var css = "";
-        css += getColor(j.comments);
-        css += getFontFamily(j.comments);
-        css += getFontSize(j.comments);
-        css += getTextTransform(j.comments);
-        return css;
-    }
+    // function getFontDetails() {
+    //     var css = "";
+    //     css += getColor(j.comments);
+    //     css += getFontFamily(j.comments);
+    //     css += getFontSize(j.comments);
+    //     css += getTextTransform(j.comments);
+    //     return css;
+    // }
 
+    function px(n) {
+        return n + "px ";
+    }
+    function per(n) {
+        return n + "% ";
+    }
+    function getLineHeight(e) {
+        return 'line-height: ' + px(e.lineHeight) + ';\n';
+    }
     function getTextTransform(e) {
         return "text-transform: " + e.textTransform + ";\n";
     }
@@ -275,17 +285,17 @@ angular.module('mainApp')
         return "font-family: " + e.family + ";\n";
     }
     function getFontSize(e) {
-        return "font-size: " + e.size + "px;\n";
+        return "font-size: " + px(e.size) + ";\n";
     }
 
     function checkit(){
+        console.log("check");
 
         // var font_string = importFonts();
         var css = generateCss();
 
         $scope.previewCss = css;
 
-        console.log($scope.previewCss);
         return;
 
         textstring += 'hr{\n';
@@ -321,27 +331,5 @@ angular.module('mainApp')
 
         }
     });
-
-    function sidebarFlip(){
-        for (var i = 1; i <= $('.block').length; i++) {
-            // When user clicks the block, the tab appears
-            $('#block' + i).click(function(){
-                $(this).addClass('selected'); // Selected
-                id_name = $(this).attr('id');
-                num = id_name.slice(-1);
-                $('#tab' + num).slideToggle();
-                for (i = 1; i <= $('.block').length; i++) {
-                    // All the other tabs slide up
-                    if (i != parseInt(num)){
-                        $('#tab' + i).slideUp();
-                        $('#block' + i).removeClass('selected');
-                    }
-                }
-            });
-        }
-    }
-    sidebarFlip();
-
-
 
 });

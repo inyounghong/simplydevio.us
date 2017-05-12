@@ -8,7 +8,8 @@
     <div class="input">
         <label><input type="checkbox" class="check" ng-model="j.box.maxWidth">Include Max Width</label>
         <div ng-show="j.box.maxWidth">
-           <input ng-model="j.box.width" class="pixellong" maxlength="4"> px
+            <input type="range" ng-model="j.box.width" class="rangeWithLabel" min="300" max="1000">
+            <div class="range_label">{{j.box.width}}</div>
         </div>
     </div>
 </div>
@@ -17,9 +18,14 @@
 <div ng-repeat="e in [j.box]" ng-include="'/resources/journal_creator/inputs/radius.html'"></div>
 
 <div class="chunk">
-    <h2>Links</h2>
+    <h2>Link Color</h2>
     <div class="input">
-        <input minicolors type="text" ng-model="j.link.color">
+        <input minicolors type="text" ng-model="j.link.color" class="color">
+    </div>
+</div>
+<div class="chunk">
+    <h2>Link Font</h2>
+    <div class="input">
         <input type="text" ng-model="j.link.font" placeholder="Font">
     </div>
 </div>

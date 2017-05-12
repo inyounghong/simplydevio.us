@@ -1,11 +1,62 @@
 /* Style sheet with the new design for the Journal Skin Creator */
-.main_window {
-  margin-left: 400px;
+/* Classes */
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb0 {
+  margin-bottom: 0px !important;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.t {
+  background: #25bda6 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+.relative {
   position: relative;
 }
 
-.styled-select {
-  display: inline-block;
+.hover {
+  cursor: pointer;
+}
+
+#tab1 {
+  display: block;
+}
+
+h2.sub {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.main_window {
+  margin-left: 400px;
+  position: relative;
+  padding: 40px;
+}
+
+.main_window #preview_box {
+  margin-bottom: 50px;
 }
 
 .sidebar {
@@ -16,31 +67,21 @@
   left: 0;
   height: 100%;
   overflow: auto;
-  background: #d8d8d8;
-  border-right: 1px solid #aaa;
+  background: #A1334A;
 }
 
-.side_page {
+.sidebar .side_page {
   padding: 20px;
   display: none;
-  border-bottom: 1px solid #ccc;
   background: #e03e56;
-}
-
-.tab_page {
-  min-height: 250px;
-}
-
-.show {
-  display: block;
 }
 
 .block {
   font-family: 'Open Sans';
-  font-size: 15px;
-  color: #222;
-  border-bottom: 1px solid #ccc;
-  padding: 8px 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
   position: relative;
   cursor: pointer;
   font-weight: 600;
@@ -55,40 +96,19 @@
 }
 
 .block:hover {
-  background: #eee;
+  background: #A1334A;
+  color: #fff;
 }
 
 .block.selected {
-  background: #eee;
+  background: #A1334A;
 }
 
 .block.selected:after {
   content: url(../../images/arrow-up.png);
 }
 
-input[type=range] {
-  width: 150px;
-  padding: 0;
-}
-
-input.font {
-  width: 175px;
-}
-
-.heading {
-  width: 85px;
-  display: inline-block;
-}
-
-.preview_box a {
-  color: none !important;
-}
-
 .gr-box, .gr-body {
   position: relative;
   overflow: hidden;
-}
-
-input.url {
-  width: 251px !important;
 }

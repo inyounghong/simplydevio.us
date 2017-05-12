@@ -1,17 +1,21 @@
 <div class="chunk">
 	<h2>Font</h2>
 	<div class="input color-wrap">
-		<input minicolors type="text" ng-model="e.color">
-		<input type="text" ng-model="e.family" class="font">
+		<input minicolors type="text" ng-model="e.color" class="color mb10">
+		<input type="text" ng-model="e.family">
 	</div>
+</div>
 
+<div class="chunk">
 	<h2>Style</h2>
 	<div class="input style-wrap">
 		<div ng-model="e.bold" class="style-buttons bold" ng-class="{'active': e.bold}" ng-click="hi()">Bold</div>
 		<div ng-model="e.italic" class="style-buttons italic" ng-class="{'active': e.italic}" ng-click="changeStyle(e.italic)">Italic</div>
 		<div ng-model="e.underline" class="style-buttons underline" ng-class="{'active': e.underline}" ng-click="changeStyle(e.underline)">Underline</div>
 	</div>
+</div>
 
+<div class="chunk">
 	<h2>Align</h2>
 	<div class="input">
 		<select ng-model="e.align">
@@ -20,7 +24,9 @@
 			<option value="right">Right</option>
 		</select>
 	</div>
+</div>
 
+<div class="chunk">
 	<h2>Font Size</h2>
 	<div class="input">
 		<input ng-model="e.size" class="rangeWithLabel" type="range" min="6" max="80">
