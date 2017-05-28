@@ -3,12 +3,20 @@
   margin-top: 10px;
 }
 
-.mb10 {
-  margin-bottom: 10px;
+.mt30 {
+  margin-top: 30px;
 }
 
 .mb0 {
   margin-bottom: 0px !important;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
 }
 
 .mr10 {
@@ -391,6 +399,10 @@ button:focus {
 .newForm select {
   height: 32px;
   margin: 2px 0 4px;
+}
+
+.newForm select.half {
+  width: 49%;
 }
 
 .newForm .tooltip {

@@ -358,6 +358,10 @@ button:focus {
     select {
         height: 32px;
         margin: 2px 0 4px;
+
+        &.half {
+            width: 49%;
+        }
     }
 
     /* Tool tips */
