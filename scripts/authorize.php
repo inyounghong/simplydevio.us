@@ -1,5 +1,5 @@
 <?php
 header("Content-Type: application/json");
-echo '({code: "' . $_GET["code"] . '"})';
+echo $_GET['callback'] . '({code: "' . $_GET["code"] . '"})';
 
 ?>
