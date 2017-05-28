@@ -17,6 +17,10 @@
 	// 	console.log(data);
 	// })
 
+        function logResults(data) {
+            console.log(data);
+        }
+
 		function authorize() {
 			console.log("authorizing");
 
@@ -27,6 +31,7 @@
 				type: "GET",
 			  	url: "https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://www.simplydevio.us/scripts/authorize.php&scope=browse&state=mysessionid&callback=?",
 		    	dataType: 'jsonp',
+                jsonpCallback: "logResults"
 			})
 			.success(function(data) {
 				console.log("done");
