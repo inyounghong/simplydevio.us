@@ -1,4 +1,9 @@
 var DARK = "#5E4948";
+var WEB_SAFE_FONTS = ["georgia", "palatino linotype", "book antiqua", "palatino", "times new roman", "times", "serif", "sans-serif", "cursive", "arial", "helvetica", "comic sans ms", "impact", "lucida sans unicode", "tahoma", "trebuchet ms", "verdana", "geneva", "courier new", "lucida console"];
+
+var N = ';\n';
+var END = "}\n\n";
+
 
 angular.module('mainApp')
 .controller('JournalCreatorCtrl', function ($scope, $sce) {
@@ -20,8 +25,6 @@ angular.module('mainApp')
 
     $scope.$watch("j", checkit, true);
 
-    var web_safe_fonts = ["georgia", "palatino linotype", "book antiqua", "palatino", "times new roman", "times", "serif", "sans-serif", "cursive", "arial", "helvetica", "comic sans ms", "impact", "lucida sans unicode", "tahoma", "trebuchet ms", "verdana", "geneva", "courier new", "lucida console"];
-
 
     function toggleTab(t) {
         var tab = $("#tab" + t);
@@ -33,7 +36,6 @@ angular.module('mainApp')
             $scope.tabs[t] = false;
         }
     }
-
 
     // Allow Html to be printed in DOM
     function trustAsHtml(string) {
@@ -50,17 +52,32 @@ angular.module('mainApp')
             text: {},
             bottom: {},
             comments: {},
-            blockquote: {}
+            blockquote: {},
+            hr: {}
         };
 
         Object.keys($scope.j).forEach(function(key,index) {
             fullSetUp($scope.j[key]);
         });
 
+        $scope.j.box.background.color = "CEEAF5";
         $scope.j.box.maxWidth = false;
         $scope.j.box.width = 900;
 
-        $scope.j.top.background.color = DARK;
+        $scope.j.top.background.color = "FFFFFF";
+        $scope.j.top.positionH = "center";
+        $scope.j.top.positionV = "center";
+        $scope.j.top.align = "center";
+        $scope.j.top.height = 60;
+        $scope.j.top.paddingV = 15;
+
+        $scope.j.title.size = 22;
+
+        $scope.j.text.background.color = "FFFFFF";
+        $scope.j.text.paddingH = 5;
+        $scope.j.text.paddingV = 0;
+        $scope.j.text.marginH = 5;
+        $scope.j.text.marginV = 10;
 
         console.log($scope.j);
     }
@@ -106,12 +123,14 @@ angular.module('mainApp')
     }
 
     function importFonts(){
+        var j = $scope.j;
         var str = "";
-        var els = [j.title.font, j.timestamp.font, j.text.font, j.link.font, j.blockquote.font, j.comment.font];
+        var e = [j.title, j.timestamp, j.text, j.link, j.blockquote, j.comments];
         var imported = [];
-        for (var i = 0; i < els.length; i++) {
-            var font = els[i].val().toLowerCase();
-            if (web_safe_fonts.indexOf(font) == -1 && imported.indexOf(font) == -1){
+
+        for (var i = 0; i < e.length; i++) {
+            var font = e[i].family.toLowerCase().trim();
+            if (WEB_SAFE_FONTS.indexOf(font) == -1 && imported.indexOf(font) == -1){
                 imported.push(font);
                 font = capitalize(font);
                 var font_name = font.replace(" ", "+");
@@ -145,11 +164,24 @@ angular.module('mainApp')
         return "text-align: " + e.align + ";\n";
     }
 
+
+    function getHeight(e) {
+        return 'height: ' + px(e.height) + N;
+    }
+    function getBoxSizing() {
+        return 'box-sizing: border-box' + N;
+    }
+
     function generateCss() {
 
         var j = $scope.j;
         var css = "<style>";
-        var end = "}\n\n";
+
+
+        css += '*{background:none; \nborder:none; \npadding:0; \nmargin:0;} \n\n';
+        css += '.gr{padding:0 !important;}\n';
+        css += '.gr-top img, .gr1, .gr2, .gr3 {display:none;}\n';
+        css += 'a.external:after {display:none;}\n\n';
 
         // GR-BOX SECTION
         css += '.gr-box{\n';
@@ -157,30 +189,33 @@ angular.module('mainApp')
         css += getImage(j.box);
         css += getRadius(j.box);
         css += getBorder(j.box);
+        css += 'padding: ' + j.box.padding + N;
         if (j.box.maxWidth && j.box.width.trim() != '') {
             css += 'max-width: ' +j.box.width + 'px;\n';
             css += 'margin: 0 auto;\n';
         }
-        css += end;
+        css += END;
 
         // GR TOP
         css += '.gr-top{\n';
         css += getBackground(j.top);
         css += getImage(j.top);
         css += getTextAlign(j.top);
-        var top_padding = Math.round(j.title.position * 0.01 * j.top.height);
-        var bottom_padding = j.top.height - top_padding;
-        css += 'padding: ' + px(top_padding) + per(j.top.padding) + px(bottom_padding) + ';\n';
-        css += end;
+        css += 'padding: ' + px(j.top.positionTop) + px(j.top.paddingH) + 0 + N;
+        css += getHeight(j.top);
+        css += getBoxSizing();
+        css += END;
+
+        console.log(css);
 
         // GR-TOP TITLE JUNK
         css += '.gr-top h2, .gr-top h2 a{\n';
         css += getColor(j.title);
         css += getFontFamily(j.top);
         css += getFontSize(j.title);
-        css += getTextAlign(j.title);
         css += getTextTransform(j.title);
-        css += end;
+        css += 'margin-bottom: ' + j.title.margin + N;
+        css += END;
 
         // GR-TOP TIMESTAMP JUNK
         css += '.gr-top .timestamp{\n';
@@ -188,7 +223,7 @@ angular.module('mainApp')
         css += getFontFamily(j.timestamp);
         css += getFontSize(j.timestamp);
         css += getTextTransform(j.timestamp);
-        css += end;
+        css += END;
 
         // TEXT
         css += '.text{\n';
@@ -201,14 +236,14 @@ angular.module('mainApp')
         css += getFontSize(j.text);
         css += getTextAlign(j.text);
         css += getLineHeight(j.text);
-        css += 'padding: ' + px(j.paddingV) + per(j.paddingH) + ';\n';
-        css += 'margin: ' + px(j.marginV) + per(j.marginH) + ';\n';
-        css += end;
+        css += 'padding: ' + px(j.text.paddingV) + per(j.text.paddingH) + N;
+        css += 'margin: ' + px(j.text.marginV) + per(j.text.marginH) + N;
+        css += END;
 
         css += '.text a{';
         css += getColor(j.link);
         css += getFontFamily(j.link);
-        css += end;
+        css += END;
 
         // Blockquote
         css += 'blockquote{\n';
@@ -221,8 +256,8 @@ angular.module('mainApp')
         css += getFontSize(j.blockquote);
         css += getTextTransform(j.blockquote);
         css += getTextAlign(j.blockquote);
-        css += 'padding:' + px(j.blockquote.padding) + ';\n';
-        css += end;
+        css += 'padding:' + px(j.blockquote.padding) + N;
+        css += END;
 
         // GR-BOTTOM JUNK
         css += '.bottom{\n';
@@ -230,9 +265,9 @@ angular.module('mainApp')
         css += getImage(j.bottom);
         var top_padding = Math.round(j.bottom.align * 0.01 * j.bottom.height);
         var bottom_padding = j.bottom.height - top_padding;
-        css += '\npadding: ' + px(top_padding) + per(j.bottom.paddingH) + px(bottom_padding) + ';\n';
+        css += '\npadding: ' + px(top_padding) + per(j.bottom.paddingH) + px(bottom_padding) + N;
         css += getTextAlign(j.bottom);
-        css += end;
+        css += END;
 
         // GR-BOTTOM COMMENTSLINK JUNK
         css += '.commentslink{\n';
@@ -240,7 +275,12 @@ angular.module('mainApp')
         css += getFontFamily(j.comments);
         css += getFontSize(j.comments);
         css += getTextTransform(j.comments);
-        css += end;
+        css += END;
+
+        css += 'hr{\n';
+        css += 'border-bottom: 1px solid #' + j.hr.color + N;
+        css += 'margin: 15px 0 5px;\n';
+        css += END;
 
         css += '.credit{\n';
         css += 'left:0;\n';
@@ -291,31 +331,11 @@ angular.module('mainApp')
     function checkit(){
         console.log("check");
 
-        // var font_string = importFonts();
+        var font_string = importFonts();
         var css = generateCss();
 
-        $scope.previewCss = css;
+        $scope.previewCss = font_string + css;
 
-        return;
-
-        textstring += 'hr{\n';
-        textstring += 'border-bottom: 1px solid #' + document.getElementById('hr_color').value + ';\n';
-        textstring += 'margin: 15px 0 5px;\n';
-        textstring += end
-
-        var clear = "";
-        clear += '*{background:none; \nborder:none; \npadding:0; \nmargin:0;} \n\n';
-        clear += '.gr{padding:0 !important;}\n';
-        clear += '.gr-top img, .gr1, .gr2, .gr3 {display:none;}\n';
-        clear += 'a.external:after {display:none;}\n\n';
-
-        document.getElementById("textstringArea").value = clear + textstring;
-
-        var complete_css = font_string + clear + textstring;
-        complete_css += '#preview_box{line-height:1em;} #preview_box h2{display:block;} #preview_box h1{font-weight:bold; font-size:18px; color:#414d4c; font-size:18pt; font-family:"Trebuchet MS"; margin-bottom:15px;}';
-        complete_css += textstring;
-
-        return complete_css;
     }
 
 

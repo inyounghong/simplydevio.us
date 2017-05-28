@@ -65,7 +65,24 @@ h2.sub {
     }
 }
 
+/* DA Styling */
 .gr-box, .gr-body{
     position:relative;
     overflow:hidden;
+}
+
+#preview_box{
+    line-height:1em;
+}
+
+#preview_box h2{
+    display:block;
+}
+#preview_box h1{
+    font-weight:bold;
+    font-size:18px;
+    color:#414d4c;
+    font-size:18pt;
+    font-family:"Trebuchet MS";
+    margin-bottom:15px;
 }

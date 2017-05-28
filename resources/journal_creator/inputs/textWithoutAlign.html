@@ -9,13 +9,11 @@
 <div class="chunk">
 	<h2>Style</h2>
 	<div class="input style-wrap">
-		<div ng-model="e.bold" class="style-buttons bold" ng-class="{'active': e.bold}" ng-click="changeStyle(e.bold)">Bold</div>
+		<div ng-model="e.bold" class="style-buttons bold" ng-class="{'active': e.bold}" ng-click="hi()">Bold</div>
 		<div ng-model="e.italic" class="style-buttons italic" ng-class="{'active': e.italic}" ng-click="changeStyle(e.italic)">Italic</div>
 		<div ng-model="e.underline" class="style-buttons underline" ng-class="{'active': e.underline}" ng-click="changeStyle(e.underline)">Underline</div>
 	</div>
 </div>
-
-<div ng-repeat="e in [e]" ng-include="'/resources/journal_creator/inputs/align.html'"></div>
 
 <div class="chunk">
 	<h2>Font Size</h2>
