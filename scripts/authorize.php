@@ -1,4 +1,5 @@
 <?php
-echo $_GET["code"];
+header("Content-Type: application/json");
+echo '{code: ' . $_GET["code"] . '}';
 
 ?>
