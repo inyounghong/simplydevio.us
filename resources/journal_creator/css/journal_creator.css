@@ -80,6 +80,27 @@ h2.sub {
   background: #e03e56;
 }
 
+.sidebar .style-buttons {
+  display: inline-block;
+  width: 34%;
+  box-sizing: border-box;
+  padding: 4px 0;
+  font-size: 14px;
+  text-align: center;
+  margin-right: -2%;
+  cursor: pointer;
+  border: 2px solid #ec8b9a;
+}
+
+.sidebar .style-buttons:hover {
+  color: white;
+}
+
+.sidebar .style-buttons.selected {
+  background: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+
 .block {
   font-family: 'Open Sans';
   text-transform: uppercase;

@@ -1,19 +1,16 @@
 <div class="chunk">
     <h2>Image</h2>
     <div class="input">
-        <label><input type="checkbox" ng-model="e.useImage">Use Image</label>
+        <input type="text" ng-model="e.image" placeholder="http://">
 
-        <div ng-show="e.useImage">
-            <input type="text" ng-model="e.url" placeholder="http://">
-
-            <select ng-model="e.repeat" ng-change="checkCss()">
+            <!-- <select ng-model="e.repeat" ng-change="checkCss()">
             	<option value="repeat" selected="selected">Repeat Image</option>
             	<option value="repeat-x">Repeat Horizontally</option>
             	<option value="repeat-y">Repeat Vertically</option>
             	<option value="no-repeat">No Repeat</option>
-            </select>
+            </select> -->
 
-            <div ng-show="e.repeat == 'repeat-y'">
+            <!-- <div ng-show="e.repeat == 'repeat-y' || e.repeat == e.repeat == 'no-repeat'">
             	<select ng-model="e.horizontal" ng-change="checkCss()">
             		<option value="left">Left</option>
             		<option value="center">Center</option>
@@ -21,13 +18,12 @@
             	</select>
             </div>
 
-            <div ng-show="e.repeat == 'repeat-x'">
+            <div ng-show="e.repeat == 'repeat-x' || e.repeat == e.repeat == 'no-repeat'">
             	<select ng-model="e.vertical" ng-change="checkCss()">
             		<option value="top">Top</option>
             		<option value="center">Center</option>
             		<option value="bottom">Bottom</option>
             	</select>
-            </div>
-        </div>
+            </div> -->
     </div>
 </div>

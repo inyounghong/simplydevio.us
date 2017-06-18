@@ -34,6 +34,27 @@ h2.sub {
         display:none;
         background: $pink;
     }
+
+    .style-buttons {
+        display: inline-block;
+        width: 34%;
+        box-sizing: border-box;
+        padding: 4px 0;
+        font-size: 14px;
+        text-align: center;
+        margin-right: -2%;
+        cursor: pointer;
+        // background: $w40;
+        border: 2px solid $pink50;
+
+        &:hover {
+            color: white;
+        }
+        &.selected {
+            background: $w40;
+            color: white;
+        }
+    }
 }
 
 .block{

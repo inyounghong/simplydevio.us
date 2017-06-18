@@ -5,26 +5,20 @@
 
 <div ng-show="j.top.align != 'center'">
     <div class="chunk">
-        <h2>Padding</h2>
+        <h2>Side Padding</h2>
         <div class="input">
-            <input type="range" ng-model="j.top.paddingH" class="rangeWithLabel" min="0" max="20">
+            <input type="range" ng-model="j.top.paddingH" class="rangeWithLabel" min="0" max="100">
             <div class="range_label">{{j.top.paddingH}}</div>
         </div>
     </div>
 </div>
 
 <div class="chunk">
-    <h2>Height</h2>
+    <h2>Padding</h2>
     <div class="input">
-        <input type="range" ng-model="j.top.height" class="rangeWithLabel" min="0" max="300">
-        <div class="range_label">{{j.top.height}}</div>
+        <input type="range" ng-model="j.top.paddingV" class="rangeWithLabel" min="0" max="100">
+        <div class="range_label">{{j.top.paddingV}}</div>
     </div>
-
-    <h2>Top Position</h2>
-    <div class="input">
-        <input type="range" ng-model="j.top.positionTop" class="rangeWithLabel" min="0" max="{{j.top.height}}">
-        <div class="range_label">{{j.top.positionTop}}</div>
-    </div>
-
-
 </div>
+
+<div ng-repeat="e in [j.top]" ng-include="'/resources/journal_creator/inputs/radius.html'"></div>

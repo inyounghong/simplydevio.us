@@ -2,14 +2,11 @@
 <div ng-repeat="e in [j.bottom.image]" ng-include="'/resources/journal_creator/inputs/image.html'"></div>
 
 
-<b>Journal Bottom</b>
 <br><span class="heading">Height</span>
 <input id="botheight" type="range" min="0" max="300" value="100"><span class="range_label" id="bot_height_range"></span>
 <br><span class="heading">Padding</span>
 <input id="botpadding" type="range" min="0" max="30" value="5"><span class="range_label" id="bot_padding_range"></span>
 
-<b>Comments</b><br>
-<div ng-repeat="e in [j.comments]" ng-include="'/resources/journal_creator/inputs/text.html'"></div>
 
-<span class="heading">Position</span>
-<input id="botalign" type="range" min="0" max="100" value="50"><span class="range_label" id="bot_align_range"></span>
+<div ng-repeat="e in [j.bottom]" ng-include="'/resources/journal_creator/inputs/font.html'"></div>
+<div ng-repeat="e in [j.bottom]" ng-include="'/resources/journal_creator/inputs/fontSize.html'"></div>
