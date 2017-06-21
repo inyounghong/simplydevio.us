@@ -1,6 +1,6 @@
 .editingBox .tab_page {
   height: 500px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .editingBox, .editingSidebar, .editingPreview {
