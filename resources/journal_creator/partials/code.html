@@ -1,0 +1,23 @@
+
+<div class="col-sm-6">
+    <div class="cTabMenu">
+        <div id="cTab1" class="cTab" ng-class="{'selected' : isSelectedCTab(1)}" ng-click="setCTab(1)">Main CSS</div>
+        <div id="cTab2" class="cTab" ng-class="{'selected' : isSelectedCTab(2)}" ng-click="setCTab(2)">Header</div>
+        <div id="cTab3" class="cTab" ng-class="{'selected' : isSelectedCTab(3)}" ng-click="setCTab(3)">Footer</div>
+    </div>
+    <div class="cPageWrap">
+        <div id="cpage1" class="cPage" ng-show="isSelectedCTab(1)">
+            <p>Paste into the main Skin CSS section of your journal.</p>
+            <textarea>{{displayCss}}</textarea>
+        </div>
+        <div id="cpage2" class="cPage" ng-show="isSelectedCTab(2)">
+            <p>Paste into the Header CSS section of your journal.</p>
+            <textarea>{{displayHeader}}</textarea>
+        </div>
+        <div id="cpage3" class="cPage" ng-show="isSelectedCTab(3)">
+            <p>Paste into the Footer CSS section of your journal.</p>
+            <textarea><div class="credit">Created at <a href="http://www.simplydevio.us/resources/basic_journal.php">simplydevio.us</a></div>
+            </textarea>
+        </div>
+    </div>
+</div>

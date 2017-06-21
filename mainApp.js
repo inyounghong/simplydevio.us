@@ -19,6 +19,11 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
             controller: 'ProfileDirectoryCtrl',
             css: 'resources/profile_directory/css/profile_directory.css'
         })
+        .when('/resources/journal_creator', {
+            templateUrl: 'resources/journal_creator/journal_creator.html',
+            controller: 'JournalCreatorCtrl',
+            css: 'resources/journal_creator/css/journal_creator.css'
+        })
         .when('/scripts', {
             templateUrl: 'scripts/scripts.html',
             controller: 'MainController',

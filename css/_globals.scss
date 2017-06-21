@@ -5,6 +5,8 @@ $orange: #f58c3b;
 $blue: #1d2742;
 $teal: #25bda6;
 
+$w30: rgba(255,255,255,.3);
+$w40: rgba(255,255,255,.4);
 $w60: rgba(255,255,255,.6);
 $w80: rgba(255,255,255,.8);
 $b80: rgba(0,0,0,.8);
@@ -52,11 +54,15 @@ $daBorderColor: #a6b2a6;
 .mt30 {
 	margin-top: 30px;
 }
-.mb10 {
-    margin-bottom: 10px;
-}
+
 .mb0 {
 	margin-bottom: 0px!important;
+}
+.mb5 {
+	margin-bottom: 5px;
+}
+.mb10 {
+    margin-bottom: 10px;
 }
 .mr10 {
 	margin-right: 10px;
@@ -68,6 +74,9 @@ $daBorderColor: #a6b2a6;
 
 .hide {
 	display: none;
+}
+.visible {
+	display: block;
 }
 
 .fa {

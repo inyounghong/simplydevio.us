@@ -1,0 +1,119 @@
+/* Style sheet with the new design for the Journal Skin Creator */
+/* Classes */
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mb0 {
+  margin-bottom: 0px !important;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.t {
+  background: #25bda6 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+.relative {
+  position: relative;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.main_window {
+  margin-left: 400px;
+  position: relative;
+  padding: 40px;
+}
+
+.main_window #preview_box {
+  margin-bottom: 50px;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  width: 400px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  background: #A1334A;
+}
+
+.sidebar .side_page {
+  padding: 20px;
+  display: none;
+  background: #e03e56;
+}
+
+.block {
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 12px 20px;
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.block:hover {
+  background: #A1334A;
+  color: #fff;
+}
+
+.block.selected {
+  background: #A1334A;
+}
+
+/* DA Styling */
+.gr-box, .gr-body {
+  position: relative;
+  overflow: hidden;
+}
+
+#preview_box {
+  line-height: 1em;
+}
+
+#preview_box h2 {
+  display: block;
+}
+
+.text h1 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #414d4c;
+  font-size: 18pt;
+  font-family: "Trebuchet MS";
+  margin-bottom: 15px;
+}

@@ -17,7 +17,6 @@ body {
     position:relative;
 }
 
-
 a, a:hover{
     text-decoration:none;
     color: $pink;
@@ -54,43 +53,6 @@ hr {
     letter-spacing: -1px;
 }
 
-#left {
-    @include auto();
-    line-height: 1.5em;
-
-    p {
-        margin-top: 10px;
-    }
-
-    .narrow {
-        max-width: 700px;
-    }
-
-    .descript {
-        font-size: 18px;
-        margin-bottom: 10px;
-        margin-top: 30px;
-    }
-
-    .descript a {
-        color: #333;
-        font-weight: 600;
-    }
-
-    .descript a:hover {
-        text-decoration: underline;
-    }
-
-    h2 {
-        font-size: 16px;
-        font-weight: bold;
-    }
-}
-
-.nonpaddingLeft #left {
-    padding: 0 10% 0 10%;
-    width: 80%;
-}
 
 .section {
     list-style: inside;
