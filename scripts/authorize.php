@@ -1,4 +1,5 @@
 <?php
+
 // header("Content-Type: application/json");
 // echo $_GET['callback'] . '({code: "' . $_GET["code"] . '"})';
 
@@ -20,4 +21,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $result = curl_exec ($ch);
 curl_close ($ch);
 echo $result;
+
+echo $_GET["code"];
+
+
 ?>

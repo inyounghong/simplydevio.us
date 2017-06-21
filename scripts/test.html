@@ -17,6 +17,7 @@
 	// 	console.log(data);
 	// })
 
+
         function logResults(data) {
             console.log(data);
         }
@@ -45,6 +46,23 @@
             // $.getJSON('https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://www.simplydevio.us/scripts/authorize.php&scope=browse&state=mysessionidcallback=?','firstname=Jeff',function(res){
             //     alert('Your name is '+res.fullname);
             // });
+
+		function authorize() {
+			console.log("authorizing");
+
+			// $.get("https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://localhost:8888/scripts/test.php&scope=browse&state=mysessionid").done(function (data) {
+			//     console.log(data);
+			// });
+			$.ajax({
+				type: "GET",
+			  	url: "https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://localhost:8888/scripts/authorize.php&scope=browse&state=mysessionid",
+		    	dataType: 'jsonp',
+			})
+			.success(function(data) {
+				console.log("done");
+				console.log(data);
+			})
+
 		}
 
 		$(document).ready(function(){
@@ -76,6 +94,7 @@
 			});
 		});
 
+
         function getWatchers() {
             var username = "simplysilent";
             var token = "13a5ef8b6225d642f2de44e6a0d739914f5ee7f1f8775c1e79";
@@ -90,6 +109,8 @@
                 }
 			});
         }
+	}
+
 	</script>
 </head>
 <body>
@@ -101,7 +122,11 @@
 		}
 	?> -->
 
+
 	<a href="https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://localhost:8888/scripts/authorize.php&scope=browse&state=mysessionid">Start</a>
+
+	<a href="https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://localhost:8888/scripts/test.php&scope=browse&state=mysessionid">Go</a>
+
 	<br><br>
 
 	<!-- <?php echo
@@ -113,7 +138,9 @@
 	<input type="text" id="code" value="<?php echo $code ?>">
 	<div class="button" id="submit">Submit</div>
 
+
     <div onclick="getWatchers()">get watchers</div>
+
 
 	<div id="log">None</div>
 </body>

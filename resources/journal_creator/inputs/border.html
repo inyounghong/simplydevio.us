@@ -1,0 +1,25 @@
+<div class="chunk">
+    <h2>Border</h2>
+    <div class="input">
+        <select ng-model="e.style">
+            <option value="none">None</option>
+            <option value="solid">Solid Border</option>
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+        </select>
+    </div>
+
+    <div class="range-wrap" ng-show="e.style != 'none'">
+        <h2 class="sub">Color</h2>
+        <div class="input">
+            <input minicolors type="text" ng-model="e.color" class="color">
+        </div>
+
+        <h2 class="sub">Thickness</h2>
+        <div class="input">
+            <input type="range" ng-model="e.width" class="rangeWithLabel" min="1" max="10">
+            <div class="range_label">{{e.width}}</div>
+        </div>
+    </div>
+</div>

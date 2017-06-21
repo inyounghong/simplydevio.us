@@ -35,10 +35,10 @@
     <?php include 'includes/new_footer.html'; ?>
 
     <!-- JS Libraries -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+    <script type="text/javascript" src="libraries/jquery-3.2.1.min.js"></script>
+    <script src="libraries/angular.min.js"></script>
+    <script src="libraries/angular-route.min.js"></script>
+    <script src="libraries/angular-sanitize.min.js"></script>
 
 
     <!-- JS Files -->
@@ -50,8 +50,15 @@
     <!-- <script src="js/app.js"></script> -->
     <script src="js/customOnChange.js"></script>
 
+    <!-- Services/Factories -->
+    <script src="resources/journal_creator/journalService.js"></script>
+    <script src="resources/journal_creator/tabFactory.js"></script>
+    <script src="resources/factories/cTabFactory.js"></script>
+
+    <!-- Controllers -->
     <script src="resources/profile_greeting/profileGreetingCtrl.js"></script>
     <script src="resources/profile_directory/profileDirectoryCtrl.js"></script>
+    <script src="resources/journal_creator/journalCreatorCtrl.js"></script>
 
 </body>
 </html>

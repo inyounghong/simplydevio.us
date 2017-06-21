@@ -3,12 +3,20 @@
   margin-top: 10px;
 }
 
-.mb10 {
-  margin-bottom: 10px;
+.mt30 {
+  margin-top: 30px;
 }
 
 .mb0 {
   margin-bottom: 0px !important;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
 }
 
 .mr10 {
@@ -21,6 +29,10 @@
 
 .hide {
   display: none;
+}
+
+.visible {
+  display: block;
 }
 
 .fa {
@@ -239,7 +251,7 @@
 
 .tab_page {
   background: #e03e56;
-  padding: 20px 30px;
+  padding: 15px 20px;
   width: 100%;
 }
 
@@ -284,11 +296,7 @@ button:focus {
   color: #e03e56;
 }
 
-.chunk {
-  margin: 10px 0;
-}
-
-.chunk h2 {
+form h2 {
   color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
   font-size: 14px !important;
@@ -296,6 +304,15 @@ button:focus {
   display: inline-block;
   vertical-align: top;
   width: 100px;
+}
+
+form h2.sub {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.chunk {
+  margin: 10px 0;
 }
 
 .chunk .input {
@@ -340,7 +357,7 @@ button:focus {
 .newForm input[type=text], .newForm input[type="file"], .newForm select {
   font-size: 14px;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -393,6 +410,10 @@ button:focus {
   margin: 2px 0 4px;
 }
 
+.newForm select.half {
+  width: 49%;
+}
+
 .newForm .tooltip {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 100%;
@@ -430,7 +451,11 @@ button:focus {
 }
 
 .newForm .rangeWithLabel {
-  width: 88% !important;
+  width: 91% !important;
+}
+
+.newForm .rangeWithBigLabel {
+  width: 86% !important;
 }
 
 .newForm .range_label {
@@ -448,7 +473,7 @@ button:focus {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  background: #ec8b9a;
+  background: #e97889;
 }
 
 .newForm input[type=range]::-webkit-slider-thumb {
@@ -464,7 +489,7 @@ button:focus {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  background: #ec8b9a;
+  background: #e97889;
 }
 
 .newForm input[type=range]::-moz-range-thumb {
@@ -484,7 +509,7 @@ button:focus {
 }
 
 .newForm input[type=range]::-ms-fill-upper {
-  background: #ec8b9a;
+  background: #e97889;
 }
 
 .newForm input[type=range]::-ms-thumb {
@@ -497,7 +522,7 @@ button:focus {
 }
 
 .newForm input[type=range]:focus::-ms-fill-lower {
-  background: #ec8b9a;
+  background: #e97889;
 }
 
 .newForm ::-webkit-input-placeholder {
@@ -518,4 +543,91 @@ button:focus {
 .newForm :-moz-placeholder {
   /* Firefox 18- */
   color: rgba(255, 255, 255, 0.6);
+}
+
+/* Small tabs (tabby) */
+.cTabMenu {
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 2px;
+}
+
+.cTabMenu .ctab {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  float: left;
+  padding: 12px 0;
+  margin: 0 -2px;
+  text-align: center;
+  cursor: pointer;
+  width: 25%;
+  background: #A1334A;
+}
+
+.cTabMenu .ctab.selected {
+  background: #e03e56;
+  color: #fff;
+}
+
+.cTabMenu .ctab:hover {
+  color: #fff;
+}
+
+.style-buttons {
+  display: inline-block;
+  width: 33.5%;
+  box-sizing: border-box;
+  padding: 3px 0;
+  font-size: 14px;
+  text-align: center;
+  margin-right: -2%;
+  cursor: pointer;
+  border: 2px solid #e97889;
+}
+
+.style-buttons:hover {
+  color: white;
+}
+
+.style-buttons.selected {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.cPageWrap {
+  clear: both;
+}
+
+.cPageWrap .cPage {
+  color: #FFF;
+  padding: 20px;
+  background: #e03e56;
+}
+
+.cPageWrap textarea {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-family: courier;
+  font-size: 11px;
+}
+
+.rules {
+  background: #EEE;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.rules h2 {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 10px;
 }
