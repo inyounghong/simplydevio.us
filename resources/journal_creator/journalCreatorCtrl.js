@@ -1,9 +1,11 @@
-var DARK = "#5E4948";
-var YELLOW = "#ffd65a";
-var WEB_SAFE_FONTS = ["georgia", "palatino linotype", "book antiqua", "palatino", "times new roman", "times", "serif", "sans-serif", "cursive", "arial", "helvetica", "comic sans ms", "impact", "lucida sans unicode", "tahoma", "trebuchet ms", "verdana", "geneva", "courier new", "lucida console"];
+const DARK = "#5E4948";
+const YELLOW = "#ffd65a";
+const BLUE = "#00576e";
+const WEB_SAFE_FONTS = ["georgia", "palatino linotype", "book antiqua", "palatino", "times new roman", "times", "serif", "sans-serif", "cursive", "arial", "helvetica", "comic sans ms", "impact", "lucida sans unicode", "tahoma", "trebuchet ms", "verdana", "geneva", "courier new", "lucida console"];
 
-var N = ';\n';
-var END = "}\n\n";
+const N = ';\n';
+const END = "}\n\n";
+const PAGE_URL = "http://www.simplydevio.us/#!/resources/journal_creator";
 
 
 angular.module('mainApp')
@@ -12,27 +14,47 @@ angular.module('mainApp')
 
     $scope.j = {}; // Watched data
     $scope.trustAsHtml = trustAsHtml;
+
+    // Variables
+    $scope.pageUrl = PAGE_URL;
+
+    // Sidebar tabs
     $scope.toggleTab = toggleTab;
-    $scope.tab = 0;
-    $scope.selectedTab = 1;
+    $scope.selectedTab = 'box';
     $scope.isSelected = isSelected;
+
+    // Code tabs
+    $scope.setCTab = setCTab;
+    $scope.isSelectedCTab = isSelectedCTab;
+    $scope.selectedCTab = 1;
+
+    function setCTab(t) {
+        $scope.selectedCTab = t;
+    }
+
+    function isSelectedCTab(t) {
+        return $scope.selectedCTab === t;
+    }
 
     setUp();
     checkit();
-
-    $scope.$watch("j", checkit, true);
+    
+    setTimeout(function() {
+        $("#tab-box").show();
+        $scope.$watch("j", checkit, true);
+    }, 100);
 
     function isSelected(t) {
         return $scope.selectedTab == t;
     }
 
     function toggleTab(t) {
-        var tab = $("#tab" + t);
+        var tab = $("#tab-" + t);
         if (isSelected(t)) { // Hide
             tab.slideUp(200);
             $scope.selectedTab = -1;
         } else { // Show
-            $("#tab" + $scope.selectedTab).slideUp(200);
+            $("#tab-" + $scope.selectedTab).slideUp(200);
             tab.slideDown(200);
             $scope.selectedTab = t;
         }
@@ -54,7 +76,7 @@ angular.module('mainApp')
             bottom: {},
             comments: {},
             blockquote: {},
-            hr: {}
+            header: {}
         };
 
         Object.keys($scope.j).forEach(function(key,index) {
@@ -65,22 +87,37 @@ angular.module('mainApp')
         $scope.j.box.background.image = "resources/journal_creator/images/yellow_pattern.jpg";
         $scope.j.box.maxWidth = false;
         $scope.j.box.width = 900;
+        $scope.j.box.radius = 10;
+        $scope.j.box.padding = 50;
 
         $scope.j.top.background.color = "FFFFFF";
         $scope.j.top.align = "center";
-        $scope.j.top.paddingV = 26;
+        $scope.j.top.paddingV = 25;
 
-        $scope.j.title.family = "Patrick Hand SC";
         $scope.j.title.size = 42;
+        $scope.j.title.bold = true;
+        $scope.j.title.margin = 10;
 
-        $scope.j.timestamp.family = "Patrick Hand SC";
         $scope.j.timestamp.size = 18;
+
+        $scope.j.header.size = 32;
 
         $scope.j.text.background.color = "FFFFFF";
         $scope.j.text.paddingH = 4;
         $scope.j.text.paddingV = 20;
         $scope.j.text.marginH = 0;
         $scope.j.text.marginV = 18;
+        $scope.j.text.family = "Verdana";
+        $scope.j.text.lineHeight = 19;
+
+        $scope.j.blockquote.family = "Verdana";
+        $scope.j.blockquote.background.color = YELLOW;
+        $scope.j.blockquote.padding = 20;
+
+        $scope.j.bottom.background.color = "FFFFFF";
+        $scope.j.bottom.size = 20;
+        $scope.j.bottom.padding = 10;
+        $scope.j.bottom.bold = true;
 
         console.log($scope.j);
     }
@@ -89,14 +126,14 @@ angular.module('mainApp')
         setUpText(e);
         setUpBorder(e);
         setUpBackground(e);
-        e.radius = 0;
+        e.radius = 10;
     }
 
     function setUpText(e) {
-        e.color = "#000";
-        e.family = "Verdana";
+        e.color = BLUE;
+        e.family = "Patrick Hand SC";
         e.align = "left";
-        e.size = 15;
+        e.size = 13;
     }
 
     function setUpBackground(e) {
@@ -148,17 +185,20 @@ angular.module('mainApp')
         if (e.background.image.trim()) {
             image = " url('" + e.background.image + "')";
         }
-        return "background: " + color + image +  ";\n";
+        return "background: " + color + image +  N;
     }
 
     function getRadius(e) {
-        return "border-radius: " + px(e.radius) + ";\n";
+        var str = "border-radius: " + px(e.radius) + N;
+        str += "-moz-border-radius: " + px(e.radius) + N;
+        str += "-webkit-moz-border-radius: " + px(e.radius) + N;
+        return str;
     }
     function getBorder(e) {
-        return "border: " + px(e.border.width) + e.border.style + " " + e.border.color + ";\n";
+        return "border: " + px(e.border.width) + e.border.style + " " + e.border.color + N;
     }
     function getTextAlign(e) {
-        return "text-align: " + e.align + ";\n";
+        return "text-align: " + e.align + N;
     }
 
 
@@ -212,6 +252,7 @@ angular.module('mainApp')
         css += 'padding: ' + px(j.top.paddingV) + px(j.top.paddingH) + N;
         // css += getHeight(j.top);
         // css += getBoxSizing();
+        css += getRadius(j.top);
         css += END;
 
         // GR-TOP TITLE JUNK
@@ -219,9 +260,9 @@ angular.module('mainApp')
         css += getColor(j.title);
         css += getFontFamily(j.title);
         css += getFontSize(j.title);
-        css += getTextTransform(j.title);
         css += getStyles(j.title);
-        css += 'margin-bottom: ' + j.title.margin + N;
+        css += 'line-height: ' + px(j.title.size) + N;
+        css += 'margin-bottom: ' + px(j.title.margin) + N;
         css += END;
 
         // GR-TOP TIMESTAMP JUNK
@@ -248,43 +289,41 @@ angular.module('mainApp')
         css += END;
 
         css += '.text a{';
-        css += getColor(j.link);
-        css += getFontFamily(j.link);
+        css += getColor(j.text);
+        css += getFontFamily(j.text);
         css += END;
 
         // Blockquote
         css += 'blockquote{\n';
         css += getBackground(j.blockquote);
         css += getRadius(j.blockquote);
-        css += getBorder(j.blockquote);
         css += getColor(j.blockquote);
         css += getFontFamily(j.blockquote);
         css += getFontSize(j.blockquote);
-        css += getTextTransform(j.blockquote);
-        css += getTextAlign(j.blockquote);
         css += 'padding:' + px(j.blockquote.padding) + N;
         css += END;
 
         // GR-BOTTOM JUNK
         css += '.bottom{\n';
         css += getBackground(j.bottom);
-        var top_padding = Math.round(j.bottom.align * 0.01 * j.bottom.height);
-        var bottom_padding = j.bottom.height - top_padding;
-        css += '\npadding: ' + px(top_padding) + per(j.bottom.paddingH) + px(bottom_padding) + N;
-        css += getTextAlign(j.bottom);
+        css += 'padding: ' + px(j.bottom.padding) + px(0) + N;
+        css += 'text-align: center' + N;
+        css += getRadius(j.bottom);
         css += END;
 
         // GR-BOTTOM COMMENTSLINK JUNK
         css += '.commentslink{\n';
-        css += getColor(j.comments);
-        css += getFontFamily(j.comments);
-        css += getFontSize(j.comments);
-        css += getTextTransform(j.comments);
+        css += getColor(j.bottom);
+        css += getFontFamily(j.bottom);
+        css += getFontSize(j.bottom);
+        css += getStyles(j.bottom);
         css += END;
 
-        css += 'hr{\n';
-        css += 'border-bottom: 1px solid #' + j.hr.color + N;
-        css += 'margin: 15px 0 5px;\n';
+        css += '.text h1{\n';
+        css += getColor(j.header);
+        css += getFontFamily(j.header);
+        css += getFontSize(j.header);
+        css += getTextAlign(j.header);
         css += END;
 
         css += '.credit{\n';
@@ -339,8 +378,10 @@ angular.module('mainApp')
         var font_string = importFonts();
         var css = generateCss();
 
+        $scope.displayCss = css;
+        $scope.displayHeader = "";
+
         $scope.previewCss = "<style>" + font_string + css + "</style>";
-        console.log($scope.previewCss)
     }
 
 

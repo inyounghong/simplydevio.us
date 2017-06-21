@@ -1,6 +1,8 @@
 // New Layout May 2017
 @import "globals";
 
+$rangeBgColor: #e97889;
+
 .description {
     margin-bottom:30px;
     p {
@@ -312,7 +314,7 @@ button:focus {
     input[type=text], input[type="file"], select {
         font-size: 14px;
         box-sizing: border-box;
-        background: rgba(255, 255, 255, 0.4);
+        background: $w30;
         border: none;
         @include radius(0);
         width: 100%;
@@ -407,7 +409,11 @@ button:focus {
     }
 
     .rangeWithLabel {
-        width: 88%!important;
+        width: 91%!important;
+    }
+
+    .rangeWithBigLabel {
+        width: 86%!important;
     }
 
     .range_label {
@@ -425,7 +431,7 @@ button:focus {
       width: 100%;
       height: 10px;
       cursor: pointer;
-      background: #ec8b9a;
+      background: $rangeBgColor;
     }
 
     input[type=range]::-webkit-slider-thumb {
@@ -441,7 +447,7 @@ button:focus {
       width: 100%;
       height: 10px;
       cursor: pointer;
-      background: #ec8b9a;
+      background: $rangeBgColor;
     }
 
     input[type=range]::-moz-range-thumb {
@@ -461,7 +467,7 @@ button:focus {
     }
 
     input[type=range]::-ms-fill-upper {
-      background: #ec8b9a;
+      background: $rangeBgColor;
     }
 
     input[type=range]::-ms-thumb {
@@ -474,7 +480,7 @@ button:focus {
     }
 
     input[type=range]:focus::-ms-fill-lower {
-      background: #ec8b9a;
+      background: $rangeBgColor;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -489,4 +495,85 @@ button:focus {
     :-moz-placeholder { /* Firefox 18- */
         color: $w60;
     }
+}
+
+/* Small tabs (tabby) */
+
+.cTabMenu {
+    color: $w80;
+    margin-left: 2px;
+
+    .ctab {
+        @include ubuntu;
+        float: left;
+        padding: 12px 0;
+        margin: 0 -2px;
+        text-align: center;
+        cursor: pointer;
+        width: 25%;
+        background: $pink_dark;
+
+        &.selected {
+            background: $pink;
+            color: #fff;
+        }
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+// Style Input Buttons
+
+.style-buttons {
+    display: inline-block;
+    width: 33.5%;
+    box-sizing: border-box;
+    padding: 3px 0;
+    font-size: 14px;
+    text-align: center;
+    margin-right: -2%;
+    cursor: pointer;
+    border: 2px solid $rangeBgColor;
+
+    &:hover {
+        color: white;
+    }
+    &.selected {
+        background: $w30;
+        color: white;
+    }
+}
+
+// Code Tab and Pages
+
+.cPageWrap {
+    clear: both;
+
+    .cPage {
+        color: #FFF;
+        padding: 20px;
+        background: $pink;
+    }
+
+    textarea {
+        margin-top: 15px;
+        background: $w30;
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        font-family: courier;
+        font-size: 11px;
+    }
+}
+
+.rules {
+    h2 {
+        @include ubuntu;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    background: #EEE;
+    padding: 20px;
+    font-size: 13px;
 }

@@ -35,34 +35,15 @@ h2.sub {
         background: $pink;
     }
 
-    .style-buttons {
-        display: inline-block;
-        width: 34%;
-        box-sizing: border-box;
-        padding: 4px 0;
-        font-size: 14px;
-        text-align: center;
-        margin-right: -2%;
-        cursor: pointer;
-        // background: $w40;
-        border: 2px solid $pink50;
 
-        &:hover {
-            color: white;
-        }
-        &.selected {
-            background: $w40;
-            color: white;
-        }
-    }
 }
 
 .block{
     font-family:'Open Sans';
     text-transform: uppercase;
-    font-size:14px;
+    font-size: 13px;
     color: $w80;
-    padding: 10px 20px;
+    padding: 12px 20px;
     position:relative;
     cursor:pointer;
     font-weight:600;
@@ -99,7 +80,7 @@ h2.sub {
 #preview_box h2{
     display:block;
 }
-#preview_box h1{
+.text h1{
     font-weight:bold;
     font-size:18px;
     color:#414d4c;

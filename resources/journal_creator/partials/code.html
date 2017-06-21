@@ -1,23 +1,23 @@
-<div class="cols even">
-    <div class="ctab_menu">
-        <div id="ctab1" class="tabby selected">Main CSS</div>
-        <div id="ctab2" class="tabby not_selected">Header</div>
-        <div id="ctab3" class="tabby not_selected">Footer</div>
-    </div>
 
-    <div id="cbox1" class="tab_page cpage visible">
-        <b>Main CSS</b>
-        <p>Paste into the main Skin CSS section of your journal.</p>
-        <textarea id="textstringArea"></textarea>
+<div class="col-sm-6">
+    <div class="cTabMenu">
+        <div id="cTab1" class="cTab" ng-class="{'selected' : isSelectedCTab(1)}" ng-click="setCTab(1)">Main CSS</div>
+        <div id="cTab2" class="cTab" ng-class="{'selected' : isSelectedCTab(2)}" ng-click="setCTab(2)">Header</div>
+        <div id="cTab3" class="cTab" ng-class="{'selected' : isSelectedCTab(3)}" ng-click="setCTab(3)">Footer</div>
     </div>
-    <div id="cbox2" class="tab_page cpage hidden">
-        <b>HTML Code</b>
-        <p>Paste into the Header CSS section of your journal.</p>
-        <textarea id="htmlArea" class="textArea"></textarea>
-    </div>
-    <div id="cbox3" class="tab_page cpage hidden">
-        <b>CSS Code</b>
-        <p>Paste into the Footer CSS section of your journal.</p>
-        <textarea id="cssArea" class="textArea"><div class="credit">Created at <a href="http://www.simplydevio.us/resources/basic_journal.php">simplydevio.us</a></div></textarea>
+    <div class="cPageWrap">
+        <div id="cpage1" class="cPage" ng-show="isSelectedCTab(1)">
+            <p>Paste into the main Skin CSS section of your journal.</p>
+            <textarea>{{displayCss}}</textarea>
+        </div>
+        <div id="cpage2" class="cPage" ng-show="isSelectedCTab(2)">
+            <p>Paste into the Header CSS section of your journal.</p>
+            <textarea>{{displayHeader}}</textarea>
+        </div>
+        <div id="cpage3" class="cPage" ng-show="isSelectedCTab(3)">
+            <p>Paste into the Footer CSS section of your journal.</p>
+            <textarea><div class="credit">Created at <a href="http://www.simplydevio.us/resources/basic_journal.php">simplydevio.us</a></div>
+            </textarea>
+        </div>
     </div>
 </div>
