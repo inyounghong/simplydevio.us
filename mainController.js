@@ -10,31 +10,31 @@ angular.module('mainApp')
         name: "Profile Directory",
         description: "Pretty up and organize your profile with a fancy profile directory.",
         url: root + 'profile_directory',
-        img: 'profile.png'
+        img: 'profile_directory.png'
     };
     var profileGreeting = {
         name: "Profile Greeting",
         description: "Greet your visitors with a personalized welcome message.",
         url: root + 'profile_greeting',
-        img: 'greeting.jpg'
+        img: 'greeting.png'
     };
     var fullGallery = {
         name: "Full Gallery Directory",
         description: "Show off your best works with a gallery directory. Full-sized images put the emphasis on your artwork.",
-        url: root + '/resources/full_gallery_directory.php',
-        img: 'full_gallery.png'
+        url: '/resources/full_gallery_directory.php',
+        img: 'full_gallery_directory.png'
     };
     var galleryDirectory = {
         name: "Gallery Directory",
         description: "Show off your best works with a gallery directory.",
-        url: root + '/resources/gallery_directory.php',
-        img: 'gallery.png'
+        url: '/resources/gallery_directory.php',
+        img: 'gallery_directory.png'
     };
     var slideshow = {
         name: "Gallery Slideshow",
         description: "Create a gallery slideshow to display your best artworks in style.",
-        url: root + '/resources/slideshow.php',
-        img: 'slideshow.png'
+        url: '/resources/slideshow.php',
+        img: 'gallery_slideshow.png'
     };
 
     $scope.resourceItems = [profileDirectory, profileGreeting, fullGallery, galleryDirectory, slideshow];
@@ -43,7 +43,14 @@ angular.module('mainApp')
         name: "Journal Creator",
         description: "Make your own DeviantART Journal skins using this free and easy-to-use tool.",
         url: '/resources/basic_journal.php',
-        img: 'journal.png'
+        img: 'journal_creator.png'
+    };
+
+    $scope.tutorial = {
+        name: "Adding Profile CSS",
+        description: "Learn how to use CSS on your profile page.",
+        url: '/resources/profile_tutorial.php',
+        img: 'tutorial.png'
     };
 
 })
