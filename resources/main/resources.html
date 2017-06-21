@@ -7,20 +7,27 @@
         </div>
 
         <div class="row">
+            <!-- Left: Premium Resources -->
             <div class="col-sm-6">
-                <ng-include src="'/resources/main/partials/profile_resources.html'"></ng-include>
+                <div class="box_heading p max">Premium Profile Resources</div>
+                <div class="box_white hp">
+                    <p class="description">CSS Creators for customizing profile pages. Each requires a password, which can be purchased on deviantART.</p>
+                    <br>
+
+                    <div class="large_wrap" ng-repeat="item in resourceItems">
+                        <resource item="item"></resource>
+                    </div>
+
+                </div>
             </div>
 
+            <!-- Right -->
             <div class="col-sm-6">
                 <div class="box_heading y max">Journal Skins</div>
                 <div class="box_white hy">
                     <p class="description">Free resources for DA Journal Skins.</p>
                     <div class="large_wrap">
-                        <a href="/resources/basic_journal.php" class="sc_image"><img src="/resources/images/journal.png" width="300"></a>
-                        <div class="sc_info">
-                            <h1>Journal Creator</h1>
-                            <p>Make your own DeviantART Journal skins using this free and easy-to-use tool.</p>
-                        </div>
+                        <resource item="journalCreator"></resource>
                     </div>
                 </div>
                 <div class="box_heading g max">Tutorials</div>
