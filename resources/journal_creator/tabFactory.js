@@ -1,9 +1,8 @@
 angular.module('mainApp')
 .service('TabFactory', function() {
 
-    _selectedTab = 'box';
-
     var f = {};
+    f.selectedTab;
     f.isSelected = isSelected;
     f.toggleTab = toggleTab;
     return f;
@@ -12,16 +11,17 @@ angular.module('mainApp')
         var tab = $("#tab-" + t);
         if (isSelected(t)) { // Hide
             tab.slideUp(200);
-            _selectedTab = -1;
+            f.selectedTab = -1;
         } else { // Show
-            $("#tab-" + _selectedTab).slideUp(200);
+            $("#tab-" + f.selectedTab).slideUp(200);
             tab.slideDown(200);
-            _selectedTab = t;
+            f.selectedTab = t;
         }
     }
 
     function isSelected(t) {
-        return _selectedTab == t;
+        console.log(f.selectedTab);
+        return f.selectedTab == t;
     }
 
 });

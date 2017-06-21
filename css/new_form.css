@@ -296,11 +296,7 @@ button:focus {
   color: #e03e56;
 }
 
-.chunk {
-  margin: 10px 0;
-}
-
-.chunk h2 {
+form h2 {
   color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
   font-size: 14px !important;
@@ -308,6 +304,15 @@ button:focus {
   display: inline-block;
   vertical-align: top;
   width: 100px;
+}
+
+form h2.sub {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.chunk {
+  margin: 10px 0;
 }
 
 .chunk .input {

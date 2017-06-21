@@ -48,15 +48,6 @@
   cursor: pointer;
 }
 
-#tab1 {
-  display: block;
-}
-
-h2.sub {
-  font-weight: 400;
-  text-transform: none;
-}
-
 .main_window {
   margin-left: 400px;
   position: relative;
@@ -95,14 +86,6 @@ h2.sub {
   font-weight: 600;
 }
 
-.block:after {
-  content: url(../../images/arrow-down.png);
-  position: absolute;
-  right: 10px;
-  top: 6px;
-  opacity: .3;
-}
-
 .block:hover {
   background: #A1334A;
   color: #fff;
@@ -110,10 +93,6 @@ h2.sub {
 
 .block.selected {
   background: #A1334A;
-}
-
-.block.selected:after {
-  content: url(../../images/arrow-up.png);
 }
 
 /* DA Styling */

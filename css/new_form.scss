@@ -256,20 +256,24 @@ button:focus {
     color: $pink;
 }
 
-
+form h2 {
+    color: $w80;
+    font-weight: 700;
+    font-size: 14px!important;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    &.sub {
+        font-weight: 400;
+        text-transform: none;
+    }
+}
 
 .chunk {
     margin: 10px 0;
 
-    h2 {
-        color: $w80;
-        font-weight: 700;
-        font-size: 14px!important;
-        text-transform: uppercase;
-        display: inline-block;
-        vertical-align: top;
-        width: 100px;
-    }
+
 
     .input {
         display: inline-block;

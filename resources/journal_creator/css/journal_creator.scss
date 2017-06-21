@@ -1,15 +1,6 @@
 /* Style sheet with the new design for the Journal Skin Creator */
 @import "../../../css/globals";
 
-#tab1 {
-    display: block;
-}
-
-h2.sub {
-    font-weight: 400;
-    text-transform: none;
-}
-
 .main_window{
     margin-left:400px;
     position:relative;
@@ -34,8 +25,6 @@ h2.sub {
         display:none;
         background: $pink;
     }
-
-
 }
 
 .block{
@@ -48,22 +37,12 @@ h2.sub {
     cursor:pointer;
     font-weight:600;
 
-    &:after{
-        content:url(../../images/arrow-down.png);
-        position:absolute;
-        right:10px;
-        top:6px;
-        opacity:.3;
-    }
     &:hover {
         background: $pink_dark;
         color: #fff;
     }
     &.selected {
         background: $pink_dark;
-        &:after{
-            content:url(../../images/arrow-up.png);
-        }
     }
 }
 
