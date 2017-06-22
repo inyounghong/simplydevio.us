@@ -52,9 +52,11 @@
     <script src="js/customOnChange.js"></script>
 
     <!-- Services/Factories -->
+    <script src="resources/services/ImportFontService.js"></script>
     <script src="resources/journal_creator/journalService.js"></script>
     <script src="resources/journal_creator/tabFactory.js"></script>
     <script src="resources/factories/cTabFactory.js"></script>
+
 
     <!-- Controllers -->
     <script src="resources/profile_greeting/profileGreetingCtrl.js"></script>

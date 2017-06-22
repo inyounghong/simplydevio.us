@@ -6,7 +6,7 @@ const PAGE_URL = "http://www.simplydevio.us/#!/resources/journal_creator";
 const BG_IMAGE_URL = "http://www.simplydevio.us/resources/journal_creator/images/yellow_pattern.jpg";
 
 angular.module('mainApp')
-.controller('JournalCreatorCtrl', function ($scope, $sce, JournalService, TabFactory, CTabFactory) {
+.controller('JournalCreatorCtrl', function ($scope, $sce, JournalService, TabFactory, CTabFactory, ImportFontService) {
     'use strict';
 
     $scope.j = {}; // Watched data
@@ -37,13 +37,18 @@ angular.module('mainApp')
     function checkit(){
         console.log("check");
 
-        var font_string = JournalService.importFonts($scope.j);
+        var fontImportString = generateFontImportString($scope.j);
         var css = JournalService.generateCss($scope.j);
 
         $scope.displayCss = css;
         $scope.displayHeader = "";
 
-        $scope.previewCss = "<style>" + font_string + css + "</style>";
+        $scope.previewCss = "<style>" + fontImportString + css + "</style>";
+    }
+
+    function generateFontImportString (j) {
+        var stringList = [j.title.family, j.timestamp.family, j.text.family, j.link.family, j.blockquote.family, j.comments.family];
+        return ImportFontService.importFonts(stringList);
     }
 
     // Allow Html to be printed in DOM

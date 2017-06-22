@@ -1,5 +1,5 @@
 angular.module('mainApp')
-.controller('ProfileDirectoryCtrl', function ($scope, $sce) {
+.controller('ProfileDirectoryCtrl', function ($scope, $sce, ImportFontService) {
     'use strict';
 
     $scope.j = {}; // Watched data
@@ -367,11 +367,16 @@ angular.module('mainApp')
     }
 
     function getCompleteCss(css) {
-        var completeCss = '<style>#preview_box a{font-weight:400;}';
+        var completeCss = '';
+        completeCss += ImportFontService.importFonts([$scope.j.buttonFontFamily]) + '\n\n';
+        completeCss += '#preview_box a{font-weight:400;}';
         completeCss += css;
         completeCss += '.gr-box a{text-decoration:none;} .status .description{max-width:800px;}';
-        completeCss += '.daInside{background:url("' + $scope.j.customBackground + '") no-repeat;</style>';
-        return completeCss;
+        completeCss += '.daInside{background:url("' + $scope.j.customBackground + '") no-repeat;';
+
+        // Add google fonts
+
+        return '<style>' + completeCss + '</style>';
     }
 
     function getCompleteHtml(html) {

@@ -3,10 +3,6 @@ angular.module('mainApp')
 
     this.setUpJournal = setUpJournal;
     this.generateCss = generateCss;
-    this.importFonts = importFonts;
-
-    const WEB_SAFE_FONTS = ["georgia", "palatino linotype", "book antiqua", "palatino", "times new roman", "times", "serif", "sans-serif", "cursive", "arial", "helvetica", "comic sans ms", "impact", "lucida sans unicode", "tahoma", "trebuchet ms", "verdana", "geneva", "courier new", "lucida console"];
-
 
     // Returns an object with default Journal values
     function setUpJournal() {
@@ -213,21 +209,7 @@ angular.module('mainApp')
         return css;
     }
 
-    function importFonts(j) {
-        var str = "";
-        var e = [j.title, j.timestamp, j.text, j.link, j.blockquote, j.comments];
-        var imported = [];
 
-        for (var i = 0; i < e.length; i++) {
-            var font = e[i].family.toLowerCase().trim();
-            if (WEB_SAFE_FONTS.indexOf(font) == -1 && imported.indexOf(font) == -1){
-                imported.push(font);
-                var font_name = e[i].family.replace(/\s/g, "+");
-                str += "@import url(http://fonts.googleapis.com/css?family=" + font_name + ");\n";
-            }
-        }
-        return str;
-    }
 
     // Helper functions
 
