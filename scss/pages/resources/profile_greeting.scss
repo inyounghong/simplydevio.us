@@ -2,10 +2,6 @@
 @import "base/fonts";
 @import "base/layout";
 @import "components/new_form";
-
-.editingBox {
-    .editingSidebar {
-        // padding: 30px 30px;
-        // overflow-y: scroll;
-    }
-}
+@import "components/tooltips";
+@import "components/editing_box";
+@import "components/popup";

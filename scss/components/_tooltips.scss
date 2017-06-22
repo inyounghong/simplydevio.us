@@ -1,0 +1,54 @@
+.tooltip {
+    background: $w80;
+    border-radius: 100%;
+    width: 18px;
+    position: relative;
+    height: 18px;
+    line-height: 18px;
+    margin: 3px 0 0 5px;
+    text-transform: none;
+    text-align: center;
+    display: inline-block;
+    color: $pink;
+    z-index:100;
+
+    a{
+        font-weight: 700;
+        color: $pink!important;
+    }
+
+    .tool_info {
+        @include radius(3px);
+        display: none;
+        line-height: 18px;
+        font-size: 14px;
+        background: $b90;
+        color: #fff;
+        padding: 10px 15px;
+        font-weight: 400;
+
+        &:before {
+            content: '';
+            position: relative;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid $b90;
+            display: block;
+            left: -25px;
+            top: 0px;
+        }
+        span {
+            display: block;
+            margin-top: -20px;
+        }
+    }
+    &:hover .tool_info {
+        display: block;
+        position: absolute;
+        width: 200px;
+        left: 30px;
+        top: -5px;
+    }
+}

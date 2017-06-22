@@ -2,176 +2,8 @@
 
 $rangeBgColor: #e97889;
 
-.description {
-    margin-bottom:30px;
-    p {
-        margin: 0px 0!important;
-    }
-}
-
-.editingBox {
-    background: #fff;
-    position: relative;
-    height: 500px;
-    box-sizing: border-box;
-
-    .editingSideBar {
-        background: $pink;
-        width: 400px;
-        box-sizing: border-box;
-        height: 500px;
-        position: absolute;
-
-        &.sidebarPadding {
-            padding: 30px;
-        }
-
-        .button {
-            background: $w80;
-            color: $pink!important;
-            width: 100%;
-            height: auto;
-        }
-
-
-    }
-
-    .editingPreview {
-        margin-left: 400px;
-        width: 64%;
-        position: relative;
-        height: 500px;
-        box-sizing: border-box;
-        display: inline-block;
-        text-align: center;
-
-        .top {
-            max-height: 386px;
-            overflow-y: scroll;
-            padding: 50px;
-            box-sizing: border-box;
-        }
-
-        .bottom {
-            position: absolute;
-            left: 0px;
-            padding: 15px 32px 25px 0;
-            bottom: 0px;
-            width: 100%;
-            background: #eee;
-        }
-
-
-        /* Preview Box */
-        .daWidget {
-            background: $daBgColor;
-            border: 1px solid $daBorderColor;
-            @include radius(5px);
-            width: 500px;
-            display: inline-block;
-            margin-bottom: 10px;
-
-            .daHeader {
-                background: $daHeadColor;
-                padding: 5px 10px;
-                border-bottom: 1px solid $daBorderColor;
-            }
-
-            .daInside {
-                position: relative;
-                padding: 0px 10px 20px 10px;
-                min-height: 100px;
-                box-sizing: border-box;
-
-                #previewImage {
-                    z-index: 98;
-                    position: relative;
-                }
-            }
-
-            #loading {
-                position: absolute;
-                width: 100%;
-                top: 38px;
-            }
-        }
-    }
-}
-
-// popup
-#popup{
-    position: fixed;
-    height: 100%;
-    top: 0;
-    z-index: 1001;
-    width: 100%;
-    text-align: center;
-    display: none;
-
-    #mask {
-        background: #000;
-        opacity: 0.5;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-    }
-
-    #popupBox {
-        background: #fff;
-        padding: 50px;
-        max-width: 500px;
-        margin: 50px auto 50px;
-        position: relative;
-        z-index: 1002;
-    }
-
-    .scroll {
-        height: 350px;
-        overflow-y: auto;
-    }
-
-    .slides {
-        text-align: left;
-
-        h3 {
-            text-align: center;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        p {
-            margin: 15px 0;
-        }
-
-        .button {
-            position: absolute;
-            bottom: 50px;
-            right: 50px;
-        }
-    }
-
-    #slide2, #slide3 {
-        display: none;
-    }
-
-    #popupLoad {
-        position: absolute;
-        top: 2px;
-        left: 220px;
-        z-index: -1;
-    }
-}
-
 .font-sm{
     font-size: 14px;
-}
-
-
-#termsCheckbox {
-    margin: 5px 0;
-
-    label {
-    }
 }
 
 .button {
@@ -274,8 +106,6 @@ form h2 {
 .chunk {
     margin: 10px 0;
 
-
-
     .input {
         display: inline-block;
         width: 69%;
@@ -369,19 +199,6 @@ form h2 {
         &.half {
             width: 49%;
         }
-    }
-
-    /* Tool tips */
-    .tooltip {
-        background: $w80;
-        border-radius: 100%;
-        width: 18px;
-        position: relative;
-        height: 18px;
-        line-height: 18px;
-        margin: 3px 0 0 5px;
-        text-transform: none;
-        text-align: center;
     }
 
     /* Check box */
@@ -502,31 +319,6 @@ form h2 {
     }
 }
 
-/* Small tabs (tabby) */
-
-.cTabMenu {
-    color: $w80;
-    margin-left: 2px;
-
-    .ctab {
-        @include ubuntu;
-        float: left;
-        padding: 12px 0;
-        margin: 0 -2px;
-        text-align: center;
-        cursor: pointer;
-        width: 25%;
-        background: $pink_dark;
-
-        &.selected {
-            background: $pink;
-            color: #fff;
-        }
-        &:hover {
-            color: #fff;
-        }
-    }
-}
 
 // Style Input Buttons
 
@@ -548,37 +340,4 @@ form h2 {
         background: $w30;
         color: white;
     }
-}
-
-// Code Tab and Pages
-
-.cPageWrap {
-    clear: both;
-
-    .cPage {
-        color: #FFF;
-        padding: 20px;
-        background: $pink;
-    }
-
-    textarea {
-        margin-top: 15px;
-        background: $w30;
-        width: 100%;
-        height: 150px;
-        padding: 10px;
-        font-family: courier;
-        font-size: 11px;
-    }
-}
-
-.rules {
-    h2 {
-        @include ubuntu;
-        color: #000;
-        margin-bottom: 10px;
-    }
-    background: #EEE;
-    padding: 20px;
-    font-size: 13px;
 }

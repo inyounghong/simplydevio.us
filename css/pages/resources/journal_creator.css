@@ -206,7 +206,7 @@ a, a:hover {
     min-height: 450px;
     line-height: 1.5em; }
 
-.title {
+.header .title {
   font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
   font-size: 44px;
   margin-top: 17px;
@@ -214,113 +214,23 @@ a, a:hover {
   line-height: 50px;
   margin-bottom: 25px;
   letter-spacing: -1px; }
-
-.map {
+.header .map {
   font-family: 'Ubuntu';
   text-transform: uppercase;
   font-weight: 700;
   color: #aaa;
   font-size: 14px;
   margin-bottom: 20px; }
-  .map a {
+  .header .map a {
     font-family: 'Ubuntu';
     text-transform: uppercase;
     font-weight: 700;
     color: #e03e56;
     font-size: 14px; }
-
-.description p {
+.header .description {
   margin-bottom: 30px; }
-
-.box_heading {
-  font-family: 'Ubuntu';
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 13px;
-  padding: 13px 30px 13px;
-  width: 100%;
-  position: relative;
-  z-index: 10; }
-
-.box_white {
-  background: #fff;
-  padding: 30px 30px 20px;
-  box-shadow: 0 0 10px #ddd;
-  margin-bottom: 40px; }
-  .box_white p {
-    margin-bottom: 20px; }
-
-.large_wrap {
-  padding: 5px 0; }
-  .large_wrap.preview {
-    background: #eee;
-    padding: 25px 30px; }
-  .large_wrap .sc_info {
-    min-height: 130px;
-    margin-left: 155px; }
-    .large_wrap .sc_info h1 {
-      font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
-      font-size: 24px;
-      font-weight: 300;
-      padding-top: 5px;
-      margin-bottom: 15px;
-      color: #e03e56; }
-  .large_wrap .sc_image {
-    width: 130px;
-    height: 130px;
-    overflow: hidden;
-    float: left;
-    position: relative;
-    background: #1d2742; }
-    .large_wrap .sc_image:after {
-      -webkit-transition: all 0.2s;
-      -moz-transition: all 0.2s;
-      -o-transition: all 0.2s;
-      transition: all 0.2s;
-      -webkit-border-radius: 100%;
-      -moz-border-radius: 100%;
-      border-radius: 100%;
-      content: url("http://www.simplydevio.us/images/wsearch.png");
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-left: -30px;
-      margin-top: -30px;
-      width: 60px;
-      height: 60px;
-      padding-left: 15px;
-      padding-top: 15px;
-      opacity: 0; }
-    .large_wrap .sc_image:hover img {
-      opacity: .6; }
-    .large_wrap .sc_image:hover:after {
-      opacity: 1; }
-
-.tab_menu {
-  width: 100.6%;
-  color: rgba(255, 255, 255, 0.8);
-  margin-left: 2px; }
-  .tab_menu .selected {
-    background: #e03e56;
-    color: #fff; }
-  .tab_menu .tabby:hover {
-    color: #fff; }
-  .tab_menu .not_selected {
-    background: #A1334A; }
-
-.tabby {
-  font-family: 'Ubuntu';
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 13px;
-  display: inline-block;
-  padding: 12px 0;
-  margin: 0 -2px;
-  text-align: center;
-  cursor: pointer;
-  width: 25%; }
+  .header .description p {
+    margin: 0px 0 !important; }
 
 .button_wrap {
   text-align: center;
@@ -342,174 +252,8 @@ a, a:hover {
 ul {
   list-style-position: inside; }
 
-ul.updates {
-  padding: 10px 30px;
-  background: #eee;
-  margin: 20px 0px 0;
-  list-style-type: none; }
-  ul.updates li {
-    margin: 15px 0; }
-
-/* NEW TOOL TIPS */
-.tooltip {
-  display: inline-block;
-  position: absolute;
-  color: #e03e56;
-  z-index: 100; }
-  .tooltip a {
-    font-weight: 700;
-    color: #e03e56 !important; }
-  .tooltip .tool_info {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    display: none;
-    line-height: 18px;
-    font-size: 14px;
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    padding: 10px 15px;
-    font-weight: 400; }
-    .tooltip .tool_info:before {
-      content: '';
-      position: relative;
-      width: 0;
-      height: 0;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-right: 10px solid rgba(0, 0, 0, 0.9);
-      display: block;
-      left: -25px;
-      top: 0px; }
-    .tooltip .tool_info span {
-      display: block;
-      margin-top: -20px; }
-  .tooltip:hover .tool_info {
-    display: block;
-    position: absolute;
-    width: 200px;
-    left: 30px;
-    top: -5px; }
-
-.description {
-  margin-bottom: 30px; }
-  .description p {
-    margin: 0px 0 !important; }
-
-.editingBox {
-  background: #fff;
-  position: relative;
-  height: 500px;
-  box-sizing: border-box; }
-  .editingBox .editingSideBar {
-    background: #e03e56;
-    width: 400px;
-    box-sizing: border-box;
-    height: 500px;
-    position: absolute; }
-    .editingBox .editingSideBar.sidebarPadding {
-      padding: 30px; }
-    .editingBox .editingSideBar .button {
-      background: rgba(255, 255, 255, 0.8);
-      color: #e03e56 !important;
-      width: 100%;
-      height: auto; }
-  .editingBox .editingPreview {
-    margin-left: 400px;
-    width: 64%;
-    position: relative;
-    height: 500px;
-    box-sizing: border-box;
-    display: inline-block;
-    text-align: center;
-    /* Preview Box */ }
-    .editingBox .editingPreview .top {
-      max-height: 386px;
-      overflow-y: scroll;
-      padding: 50px;
-      box-sizing: border-box; }
-    .editingBox .editingPreview .bottom {
-      position: absolute;
-      left: 0px;
-      padding: 15px 32px 25px 0;
-      bottom: 0px;
-      width: 100%;
-      background: #eee; }
-    .editingBox .editingPreview .daWidget {
-      background: #dae4d9;
-      border: 1px solid #a6b2a6;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      width: 500px;
-      display: inline-block;
-      margin-bottom: 10px; }
-      .editingBox .editingPreview .daWidget .daHeader {
-        background: #e6ede4;
-        padding: 5px 10px;
-        border-bottom: 1px solid #a6b2a6; }
-      .editingBox .editingPreview .daWidget .daInside {
-        position: relative;
-        padding: 0px 10px 20px 10px;
-        min-height: 100px;
-        box-sizing: border-box; }
-        .editingBox .editingPreview .daWidget .daInside #previewImage {
-          z-index: 98;
-          position: relative; }
-      .editingBox .editingPreview .daWidget #loading {
-        position: absolute;
-        width: 100%;
-        top: 38px; }
-
-#popup {
-  position: fixed;
-  height: 100%;
-  top: 0;
-  z-index: 1001;
-  width: 100%;
-  text-align: center;
-  display: none; }
-  #popup #mask {
-    background: #000;
-    opacity: 0.5;
-    height: 100%;
-    width: 100%;
-    position: absolute; }
-  #popup #popupBox {
-    background: #fff;
-    padding: 50px;
-    max-width: 500px;
-    margin: 50px auto 50px;
-    position: relative;
-    z-index: 1002; }
-  #popup .scroll {
-    height: 350px;
-    overflow-y: auto; }
-  #popup .slides {
-    text-align: left; }
-    #popup .slides h3 {
-      text-align: center;
-      margin-bottom: 15px;
-      font-weight: 700; }
-    #popup .slides p {
-      margin: 15px 0; }
-    #popup .slides .button {
-      position: absolute;
-      bottom: 50px;
-      right: 50px; }
-  #popup #slide2, #popup #slide3 {
-    display: none; }
-  #popup #popupLoad {
-    position: absolute;
-    top: 2px;
-    left: 220px;
-    z-index: -1; }
-
 .font-sm {
   font-size: 14px; }
-
-#termsCheckbox {
-  margin: 5px 0; }
 
 .button {
   background: #e03e56;
@@ -616,7 +360,6 @@ form h2 {
 .newForm {
   color: rgba(255, 255, 255, 0.8);
   /* Select */
-  /* Tool tips */
   /* Check box */
   /* Range */ }
   .newForm a {
@@ -663,16 +406,6 @@ form h2 {
     margin: 2px 0 4px; }
     .newForm select.half {
       width: 49%; }
-  .newForm .tooltip {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 100%;
-    width: 18px;
-    position: relative;
-    height: 18px;
-    line-height: 18px;
-    margin: 3px 0 0 5px;
-    text-transform: none;
-    text-align: center; }
   .newForm input[type=checkbox] {
     margin-right: 2px; }
   .newForm label {
@@ -753,7 +486,70 @@ form h2 {
     /* Firefox 18- */
     color: rgba(255, 255, 255, 0.6); }
 
-/* Small tabs (tabby) */
+.style-buttons {
+  display: inline-block;
+  width: 33.5%;
+  box-sizing: border-box;
+  padding: 3px 0;
+  font-size: 14px;
+  text-align: center;
+  margin-right: -2%;
+  cursor: pointer;
+  border: 2px solid #e97889; }
+  .style-buttons:hover {
+    color: white; }
+  .style-buttons.selected {
+    background: rgba(255, 255, 255, 0.3);
+    color: white; }
+
+.tooltip {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 100%;
+  width: 18px;
+  position: relative;
+  height: 18px;
+  line-height: 18px;
+  margin: 3px 0 0 5px;
+  text-transform: none;
+  text-align: center;
+  display: inline-block;
+  color: #e03e56;
+  z-index: 100; }
+  .tooltip a {
+    font-weight: 700;
+    color: #e03e56 !important; }
+  .tooltip .tool_info {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: none;
+    line-height: 18px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: 400; }
+    .tooltip .tool_info:before {
+      content: '';
+      position: relative;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid rgba(0, 0, 0, 0.9);
+      display: block;
+      left: -25px;
+      top: 0px; }
+    .tooltip .tool_info span {
+      display: block;
+      margin-top: -20px; }
+  .tooltip:hover .tool_info {
+    display: block;
+    position: absolute;
+    width: 200px;
+    left: 30px;
+    top: -5px; }
+
 .cTabMenu {
   color: rgba(255, 255, 255, 0.8);
   margin-left: 2px; }
@@ -776,22 +572,6 @@ form h2 {
     .cTabMenu .ctab:hover {
       color: #fff; }
 
-.style-buttons {
-  display: inline-block;
-  width: 33.5%;
-  box-sizing: border-box;
-  padding: 3px 0;
-  font-size: 14px;
-  text-align: center;
-  margin-right: -2%;
-  cursor: pointer;
-  border: 2px solid #e97889; }
-  .style-buttons:hover {
-    color: white; }
-  .style-buttons.selected {
-    background: rgba(255, 255, 255, 0.3);
-    color: white; }
-
 .cPageWrap {
   clear: both; }
   .cPageWrap .cPage {
@@ -806,19 +586,6 @@ form h2 {
     padding: 10px;
     font-family: courier;
     font-size: 11px; }
-
-.rules {
-  background: #EEE;
-  padding: 20px;
-  font-size: 13px; }
-  .rules h2 {
-    font-family: 'Ubuntu';
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 13px;
-    color: #000;
-    margin-bottom: 10px; }
 
 .main_window {
   margin-left: 400px;
@@ -855,6 +622,19 @@ form h2 {
     color: #fff; }
   .block.selected {
     background: #A1334A; }
+
+.rules {
+  background: #EEE;
+  padding: 20px;
+  font-size: 13px; }
+  .rules h2 {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    color: #000;
+    margin-bottom: 10px; }
 
 /* DA Styling */
 .gr-box, .gr-body {

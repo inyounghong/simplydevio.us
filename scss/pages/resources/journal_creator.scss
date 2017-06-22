@@ -2,6 +2,8 @@
 @import "base/fonts";
 @import "base/layout";
 @import "components/new_form";
+@import "components/tooltips";
+@import "components/ctabs";
 
 
 .main_window{
@@ -47,6 +49,17 @@
     &.selected {
         background: $pink_dark;
     }
+}
+
+.rules {
+    h2 {
+        @include ubuntu;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    background: #EEE;
+    padding: 20px;
+    font-size: 13px;
 }
 
 /* DA Styling */

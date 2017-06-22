@@ -206,7 +206,7 @@ a, a:hover {
     min-height: 450px;
     line-height: 1.5em; }
 
-.title {
+.header .title {
   font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
   font-size: 44px;
   margin-top: 17px;
@@ -214,23 +214,43 @@ a, a:hover {
   line-height: 50px;
   margin-bottom: 25px;
   letter-spacing: -1px; }
-
-.map {
+.header .map {
   font-family: 'Ubuntu';
   text-transform: uppercase;
   font-weight: 700;
   color: #aaa;
   font-size: 14px;
   margin-bottom: 20px; }
-  .map a {
+  .header .map a {
     font-family: 'Ubuntu';
     text-transform: uppercase;
     font-weight: 700;
     color: #e03e56;
     font-size: 14px; }
-
-.description p {
+.header .description {
   margin-bottom: 30px; }
+  .header .description p {
+    margin: 0px 0 !important; }
+
+.button_wrap {
+  text-align: center;
+  margin: 25px 0 10px; }
+
+.sbutton {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: all .2s;
+  color: #fff !important; }
+  .sbutton:hover {
+    background: #1d2742; }
+
+ul {
+  list-style-position: inside; }
 
 .box_heading {
   font-family: 'Ubuntu';
@@ -297,51 +317,6 @@ a, a:hover {
     .large_wrap .sc_image:hover:after {
       opacity: 1; }
 
-.tab_menu {
-  width: 100.6%;
-  color: rgba(255, 255, 255, 0.8);
-  margin-left: 2px; }
-  .tab_menu .selected {
-    background: #e03e56;
-    color: #fff; }
-  .tab_menu .tabby:hover {
-    color: #fff; }
-  .tab_menu .not_selected {
-    background: #A1334A; }
-
-.tabby {
-  font-family: 'Ubuntu';
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 13px;
-  display: inline-block;
-  padding: 12px 0;
-  margin: 0 -2px;
-  text-align: center;
-  cursor: pointer;
-  width: 25%; }
-
-.button_wrap {
-  text-align: center;
-  margin: 25px 0 10px; }
-
-.sbutton {
-  font-family: 'Ubuntu';
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 13px;
-  display: inline-block;
-  padding: 10px 20px;
-  transition: all .2s;
-  color: #fff !important; }
-  .sbutton:hover {
-    background: #1d2742; }
-
-ul {
-  list-style-position: inside; }
-
 ul.updates {
   padding: 10px 30px;
   background: #eee;
@@ -349,46 +324,5 @@ ul.updates {
   list-style-type: none; }
   ul.updates li {
     margin: 15px 0; }
-
-/* NEW TOOL TIPS */
-.tooltip {
-  display: inline-block;
-  position: absolute;
-  color: #e03e56;
-  z-index: 100; }
-  .tooltip a {
-    font-weight: 700;
-    color: #e03e56 !important; }
-  .tooltip .tool_info {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    display: none;
-    line-height: 18px;
-    font-size: 14px;
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    padding: 10px 15px;
-    font-weight: 400; }
-    .tooltip .tool_info:before {
-      content: '';
-      position: relative;
-      width: 0;
-      height: 0;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-right: 10px solid rgba(0, 0, 0, 0.9);
-      display: block;
-      left: -25px;
-      top: 0px; }
-    .tooltip .tool_info span {
-      display: block;
-      margin-top: -20px; }
-  .tooltip:hover .tool_info {
-    display: block;
-    position: absolute;
-    width: 200px;
-    left: 30px;
-    top: -5px; }
 
 /*# sourceMappingURL=resources.css.map */
