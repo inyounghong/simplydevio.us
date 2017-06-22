@@ -1,6 +1,11 @@
-
-<a href="{{item.url}}" class="sc_image"><img src="/resources/images/{{item.img}}"></a>
-<div class="sc_info">
-    <h1><a href="{{item.url}}">{{item.name}}</a></h1>
-    <p>{{item.description}}</p>
+<div class="itemWrap">
+    <div class="row">
+        <div class="col-xs-3">
+            <a href="{{item.url}}" class="itemImage {{color}}"><img src="/resources/images/{{item.img}}"></a>
+        </div>
+        <div class="col-xs-9 itemInfo">
+            <h1><a href="{{item.url}}">{{item.name}}</a></h1>
+            <p>{{item.description}}</p>
+        </div>
+    </div>
 </div>

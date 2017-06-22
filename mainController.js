@@ -56,10 +56,18 @@ angular.module('mainApp')
 })
 
 // Resource
-.directive('resource', function() {
+.directive('resource', function($window) {
     return {
         restrict: 'E',
-        scope: { item: '=' },
+        scope: {
+            item: '=',
+            color: '@'
+        },
         templateUrl: '/resources/partials/resourceItem.html',
+        link: function (scope, element, attrs) {
+            element.on('click', function() {
+                $window.location.href = scope.item.url;
+            });
+        }
     }
 });

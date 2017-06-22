@@ -47,82 +47,6 @@
 .g {
   background: #25bda6; }
 
-/* FOOTER */
-#footer {
-  padding: 20px 50px;
-  color: rgba(255, 255, 255, 0.8);
-  background: #1d2742;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-  box-sizing: border-box;
-  height: 50px; }
-  #footer a {
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 600;
-    text-decoration: none; }
-
-#footer_left {
-  float: left;
-  width: 25%; }
-
-/* HEADER */
-.navwrap {
-  background: #1d2742;
-  z-index: 1000;
-  position: relative;
-  display: block;
-  height: 65px;
-  padding: 0 5%;
-  overflow: hidden; }
-  .navwrap #nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: right; }
-  .navwrap a {
-    text-decoration: none !important; }
-  .navwrap .simply {
-    float: left;
-    margin-top: 25px;
-    color: #fff;
-    font-size: 16px; }
-  .navwrap .simply a {
-    font-family: 'Ubuntu';
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 15px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    letter-spacing: 1px; }
-    .navwrap .simply a:hover {
-      color: #fff; }
-  .navwrap .menu_icon {
-    display: none;
-    color: #fff; }
-  .navwrap .menulinks {
-    height: 100%;
-    overflow: hidden; }
-  .navwrap .menulinks a {
-    font-family: 'Ubuntu';
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 13px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    background: #1d2742;
-    display: inline-block;
-    position: relative;
-    padding: 25px 15px; }
-    .navwrap .menulinks a:hover {
-      background: #111726;
-      color: #fff; }
-
 /* OPEN SANS */
 @font-face {
   font-family: 'Open Sans';
@@ -252,6 +176,82 @@ a, a:hover {
 ul {
   list-style-position: inside; }
 
+/* FOOTER */
+#footer {
+  padding: 20px 50px;
+  color: rgba(255, 255, 255, 0.8);
+  background: #1d2742;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  box-sizing: border-box;
+  height: 50px; }
+  #footer a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    text-decoration: none; }
+
+#footer_left {
+  float: left;
+  width: 25%; }
+
+/* HEADER */
+.navwrap {
+  background: #1d2742;
+  z-index: 1000;
+  position: relative;
+  display: block;
+  height: 65px;
+  padding: 0 5%;
+  overflow: hidden; }
+  .navwrap #nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: right; }
+  .navwrap a {
+    text-decoration: none !important; }
+  .navwrap .simply {
+    float: left;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 16px; }
+  .navwrap .simply a {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
+    letter-spacing: 1px; }
+    .navwrap .simply a:hover {
+      color: #fff; }
+  .navwrap .menu_icon {
+    display: none;
+    color: #fff; }
+  .navwrap .menulinks {
+    height: 100%;
+    overflow: hidden; }
+  .navwrap .menulinks a {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    background: #1d2742;
+    display: inline-block;
+    position: relative;
+    padding: 25px 15px; }
+    .navwrap .menulinks a:hover {
+      background: #111726;
+      color: #fff; }
+
 .box_heading {
   font-family: 'Ubuntu';
   text-transform: uppercase;
@@ -271,51 +271,26 @@ ul {
   .box_white p {
     margin-bottom: 20px; }
 
-.large_wrap {
-  padding: 5px 0; }
-  .large_wrap.preview {
-    background: #eee;
-    padding: 25px 30px; }
-  .large_wrap .sc_info {
-    min-height: 130px;
-    margin-left: 155px; }
-    .large_wrap .sc_info h1 {
-      font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
-      font-size: 24px;
-      font-weight: 300;
-      padding-top: 5px;
-      margin-bottom: 15px;
-      color: #e03e56; }
-  .large_wrap .sc_image {
-    width: 130px;
-    height: 130px;
-    overflow: hidden;
-    float: left;
-    position: relative;
-    background: #1d2742; }
-    .large_wrap .sc_image:after {
-      -webkit-transition: all 0.2s;
-      -moz-transition: all 0.2s;
-      -o-transition: all 0.2s;
-      transition: all 0.2s;
-      -webkit-border-radius: 100%;
-      -moz-border-radius: 100%;
-      border-radius: 100%;
-      content: url("http://www.simplydevio.us/images/wsearch.png");
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-left: -30px;
-      margin-top: -30px;
-      width: 60px;
-      height: 60px;
-      padding-left: 15px;
-      padding-top: 15px;
-      opacity: 0; }
-    .large_wrap .sc_image:hover img {
-      opacity: .6; }
-    .large_wrap .sc_image:hover:after {
-      opacity: 1; }
+.itemWrap {
+  padding: 5px 0;
+  position: relative;
+  min-height: 130px;
+  cursor: pointer; }
+  .itemWrap:hover {
+    opacity: 0.9; }
+  .itemWrap .itemInfo h1 {
+    font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #e03e56; }
+  .itemWrap .itemImage {
+    width: 100px;
+    height: 100px;
+    display: inline-block; }
+    .itemWrap .itemImage img {
+      width: 100%; }
 
 ul.updates {
   padding: 10px 30px;

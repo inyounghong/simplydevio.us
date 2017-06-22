@@ -29,11 +29,11 @@ $daBorderColor: #a6b2a6;
     font-size: $size;
 }
 
-@mixin trans($time: .2s){
-	-webkit-transition:all $time;
-    -moz-transition:all $time;
-    -o-transition:all $time;
-    transition:all $time;
+@mixin trans($property: all, $time: .2s){
+	-webkit-transition: $property $time;
+    -moz-transition: $property $time;
+    -o-transition: $property $time;
+    transition: $property $time;
 }
 
 @mixin auto($width: 1200px){
@@ -102,91 +102,4 @@ $daBorderColor: #a6b2a6;
 }
 .g {
     background: $teal;
-}
-
-
-
-/* FOOTER */
-
-#footer {
-    padding: 20px 50px;
-    color: $w80;
-    background: $blue;
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
-    box-sizing: border-box;
-    height: 50px;
-    a {
-        color: $w80;
-        font-weight: 600;
-        text-decoration: none;
-    }
-}
-
-#footer_left {
-    float: left;
-    width: 25%;
-}
-
-/* HEADER */
-
-.navwrap {
-    background: $blue;
-    z-index: 1000;
-    position: relative;
-    display: block;
-    height: 65px;
-    padding: 0 5%;
-    overflow:hidden;
-
-    #nav {
-        @include auto();
-        text-align: right;
-    }
-
-    a {
-        text-decoration: none !important;
-    }
-
-    .simply {
-        float: left;
-        margin-top: 25px;
-        color: #fff;
-        font-size: 16px;
-
-    }
-
-    .simply a {
-        @include ubuntu($w80, 15px);
-        @include trans;
-        letter-spacing: 1px;
-        &:hover {
-            color: #fff;
-        }
-
-    }
-
-    .menu_icon {
-        display: none;
-        color: #fff;
-    }
-
-    .menulinks{
-        height:100%;
-        overflow:hidden;
-    }
-
-    .menulinks a {
-        @include ubuntu;
-        @include trans;
-        background: $blue;
-        display: inline-block;
-        position: relative;
-        padding: 25px 15px;
-        &:hover {
-            background: #111726;
-            color: #fff;
-        }
-    }
 }
