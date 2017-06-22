@@ -1,0 +1,394 @@
+/* Classes */
+.mt10 {
+  margin-top: 10px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mb0 {
+  margin-bottom: 0px !important; }
+
+.mb5 {
+  margin-bottom: 5px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.mr10 {
+  margin-right: 10px; }
+
+.t {
+  background: #25bda6 !important; }
+
+.hide {
+  display: none; }
+
+.visible {
+  display: block; }
+
+.fa {
+  margin-right: 5px; }
+
+.relative {
+  position: relative; }
+
+.hover {
+  cursor: pointer; }
+
+.p {
+  background: #e03e56; }
+
+.y {
+  background: #f58c3b; }
+
+.b {
+  background: #1d2742; }
+
+.g {
+  background: #25bda6; }
+
+/* FOOTER */
+#footer {
+  padding: 20px 50px;
+  color: rgba(255, 255, 255, 0.8);
+  background: #1d2742;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  box-sizing: border-box;
+  height: 50px; }
+  #footer a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    text-decoration: none; }
+
+#footer_left {
+  float: left;
+  width: 25%; }
+
+/* HEADER */
+.navwrap {
+  background: #1d2742;
+  z-index: 1000;
+  position: relative;
+  display: block;
+  height: 65px;
+  padding: 0 5%;
+  overflow: hidden; }
+  .navwrap #nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: right; }
+  .navwrap a {
+    text-decoration: none !important; }
+  .navwrap .simply {
+    float: left;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 16px; }
+  .navwrap .simply a {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    letter-spacing: 1px; }
+    .navwrap .simply a:hover {
+      color: #fff; }
+  .navwrap .menu_icon {
+    display: none;
+    color: #fff; }
+  .navwrap .menulinks {
+    height: 100%;
+    overflow: hidden; }
+  .navwrap .menulinks a {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    background: #1d2742;
+    display: inline-block;
+    position: relative;
+    padding: 25px 15px; }
+    .navwrap .menulinks a:hover {
+      background: #111726;
+      color: #fff; }
+
+/* OPEN SANS */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-Bold-webfont.eot");
+  src: url("/fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/OpenSans-Bold-webfont.woff") format("woff"), url("/fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("/fonts/OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-Regular-webfont.eot");
+  src: url("/fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff"), url("/fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("/fonts/OpenSans-Regular-webfont.svg#open_sansbold") format("svg");
+  font-weight: 400; }
+/* SOURCE SANS PRO */
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/fonts/SourceSansPro-Regular.otf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/fonts/SourceSansPro-Bold.otf");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/fonts/SourceSansPro-Semibold.otf");
+  font-weight: 600; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/fonts/SourceSansPro-Light.otf");
+  font-weight: 300; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/fonts/SourceSansPro-ExtraLight.otf");
+  font-weight: 200; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/fonts/SourceSansPro-It.otf");
+  font-weight: 400;
+  font-style: italic; }
+/* UBUNTU */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/Ubuntu-B.ttf");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/Ubuntu-M.ttf");
+  font-weight: 600; }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/Ubuntu-R.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/Ubuntu-RI.ttf");
+  font-weight: 400;
+  font-style: italic; }
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none; }
+
+body {
+  font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  background: #f8f8f8;
+  color: #222;
+  height: 100%;
+  position: relative; }
+
+a, a:hover {
+  text-decoration: none;
+  color: #e03e56;
+  cursor: pointer; }
+
+.wrapper {
+  max-width: 1200px;
+  padding: 50px 50px;
+  box-sizing: border-box;
+  margin: 0 auto; }
+  .wrapper .mainContent {
+    min-height: 450px;
+    line-height: 1.5em; }
+
+.title {
+  font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+  font-size: 44px;
+  margin-top: 17px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: 25px;
+  letter-spacing: -1px; }
+
+.map {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 20px; }
+  .map a {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #e03e56;
+    font-size: 14px; }
+
+.description p {
+  margin-bottom: 30px; }
+
+.box_heading {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  padding: 13px 30px 13px;
+  width: 100%;
+  position: relative;
+  z-index: 10; }
+
+.box_white {
+  background: #fff;
+  padding: 30px 30px 20px;
+  box-shadow: 0 0 10px #ddd;
+  margin-bottom: 40px; }
+  .box_white p {
+    margin-bottom: 20px; }
+
+.large_wrap {
+  padding: 5px 0; }
+  .large_wrap.preview {
+    background: #eee;
+    padding: 25px 30px; }
+  .large_wrap .sc_info {
+    min-height: 130px;
+    margin-left: 155px; }
+    .large_wrap .sc_info h1 {
+      font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      padding-top: 5px;
+      margin-bottom: 15px;
+      color: #e03e56; }
+  .large_wrap .sc_image {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    background: #1d2742; }
+    .large_wrap .sc_image:after {
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      content: url("http://www.simplydevio.us/images/wsearch.png");
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -30px;
+      margin-top: -30px;
+      width: 60px;
+      height: 60px;
+      padding-left: 15px;
+      padding-top: 15px;
+      opacity: 0; }
+    .large_wrap .sc_image:hover img {
+      opacity: .6; }
+    .large_wrap .sc_image:hover:after {
+      opacity: 1; }
+
+.tab_menu {
+  width: 100.6%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 2px; }
+  .tab_menu .selected {
+    background: #e03e56;
+    color: #fff; }
+  .tab_menu .tabby:hover {
+    color: #fff; }
+  .tab_menu .not_selected {
+    background: #A1334A; }
+
+.tabby {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  display: inline-block;
+  padding: 12px 0;
+  margin: 0 -2px;
+  text-align: center;
+  cursor: pointer;
+  width: 25%; }
+
+.button_wrap {
+  text-align: center;
+  margin: 25px 0 10px; }
+
+.sbutton {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: all .2s;
+  color: #fff !important; }
+  .sbutton:hover {
+    background: #1d2742; }
+
+ul {
+  list-style-position: inside; }
+
+ul.updates {
+  padding: 10px 30px;
+  background: #eee;
+  margin: 20px 0px 0;
+  list-style-type: none; }
+  ul.updates li {
+    margin: 15px 0; }
+
+/* NEW TOOL TIPS */
+.tooltip {
+  display: inline-block;
+  position: absolute;
+  color: #e03e56;
+  z-index: 100; }
+  .tooltip a {
+    font-weight: 700;
+    color: #e03e56 !important; }
+  .tooltip .tool_info {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: none;
+    line-height: 18px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: 400; }
+    .tooltip .tool_info:before {
+      content: '';
+      position: relative;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid rgba(0, 0, 0, 0.9);
+      display: block;
+      left: -25px;
+      top: 0px; }
+    .tooltip .tool_info span {
+      display: block;
+      margin-top: -20px; }
+  .tooltip:hover .tool_info {
+    display: block;
+    position: absolute;
+    width: 200px;
+    left: 30px;
+    top: -5px; }
+
+/*# sourceMappingURL=resources.css.map */

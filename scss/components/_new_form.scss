@@ -1,5 +1,4 @@
 // New Layout May 2017
-@import "globals";
 
 $rangeBgColor: #e97889;
 
@@ -128,7 +127,7 @@ $rangeBgColor: #e97889;
 
     .scroll {
         height: 350px;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     .slides {
@@ -215,6 +214,8 @@ $rangeBgColor: #e97889;
     background: $pink;
     padding: 15px 20px;
     width: 100%;
+    height: 450px;
+    overflow-y: auto;
 }
 
 .addButton {

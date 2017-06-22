@@ -1,28 +1,32 @@
+const resources = "css/pages/resources/";
+
 angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
 .config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/', {
             templateUrl: 'views/index.html',
             controller: 'MainController',
+            css: resources + 'resources.css'
         })
         .when('/resources', {
             templateUrl: 'resources/main/resources.html',
             controller: 'MainController',
+            css: resources + 'resources.css'
         })
         .when('/resources/profile_greeting', {
             templateUrl: 'resources/profile_greeting/profile_greeting.html',
             controller: 'ProfileGreetingCtrl',
-            css: 'resources/profile_directory/css/profile_greeting.css'
+            css: resources + 'profile_greeting.css'
         })
         .when('/resources/profile_directory', {
             templateUrl: 'resources/profile_directory/profile_directory.html',
             controller: 'ProfileDirectoryCtrl',
-            css: 'resources/profile_directory/css/profile_directory.css'
+            css: resources + 'profile_directory.css'
         })
         .when('/resources/journal_creator', {
             templateUrl: 'resources/journal_creator/journal_creator.html',
             controller: 'JournalCreatorCtrl',
-            css: 'resources/journal_creator/css/journal_creator.css'
+            css: resources + 'journal_creator.css'
         })
         .when('/scripts', {
             templateUrl: 'scripts/scripts.html',

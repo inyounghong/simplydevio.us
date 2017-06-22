@@ -1,122 +1,56 @@
-.head {
-  font-weight: 700;
-  display: inline-block;
-  width: 25%;
-  vertical-align: top;
-  margin-top: 5px; }
+/*
+Error: File to import not found or unreadable: globals.
+       Load path: /Users/inyoung/mamp/SimplyDevio.us/scss
+        on line 1 of scss/form.scss
 
-input[type="text"] {
-  border: 1px solid #ccc;
-  padding: 2px 3%;
-  margin: 3px 0; }
+1: @import "globals";
+2: 
+3: @mixin col{
+4: 	vertical-align:top;
+5: 	display:inline-block;
+6: }
 
-input {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  background: #fff;
-  color: #333;
-  border: 1px solid #bbb;
-  height: 28px;
-  display: inline-block;
-  width: 100%;
-  margin: 2px 5px 2px 0;
-  padding: 0 8px; }
-  input[type=range] {
-    width: 87%;
-    border: none;
-    vertical-align: middle; }
-  input[type=checkbox] {
-    width: 13px;
-    height: 15px; }
-  input:disabled {
-    background: #ddd; }
-  input.color {
-    width: 60px !important;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0 5px;
-    position: relative; }
-
-label {
-  margin-right: 3px; }
-
-input.long {
-  margin: 8px 5px; }
-
-input.i85 {
-  width: 85%; }
-
-input.small {
-  width: 50px; }
-
-textarea {
-  border: 1px solid #ccc;
-  font-family: "Courier"; }
-
-.w35 {
-  vertical-align: top;
-  display: inline-block;
-  width: 35%; }
-
-.w65 {
-  vertical-align: top;
-  display: inline-block;
-  width: 63%; }
-
-.inputs {
-  vertical-align: top;
-  display: inline-block;
-  width: 70%;
-  position: relative; }
-  .inputs .w50 {
-    width: 47%;
-    display: inline-block;
-    position: relative;
-    margin-right: 4%; }
-    .inputs .w50:last-of-type {
-      margin-right: 0; }
-    .inputs .w50 [type="range"] {
-      width: 76% !important; }
-    .inputs .w50 .range_label {
-      width: 10%; }
-
-input[type="range"] {
-  width: 85% !important; }
-
-.range_label {
-  display: inline-block;
-  width: 5%; }
-
-.w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8 {
-  vertical-align: top;
-  display: inline-block; }
-
-.w1 {
-  width: 8%; }
-
-.w2 {
-  width: 15%; }
-
-.w4 {
-  width: 33%; }
-
-.w6 {
-  width: 50%; }
-
-.w7 {
-  width: 57%; }
-
-.w8 {
-  width: 65%; }
-
-.w12 input {
-  width: 92%;
-  padding: auto 2%; }
-
-/*# sourceMappingURL=form.css.map */
+Backtrace:
+scss/form.scss:1
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:151:in `call'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:151:in `block in _wait_for_changes'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:146:in `loop'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:146:in `_wait_for_changes'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:44:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: globals.\A        Load path: /Users/inyoung/mamp/SimplyDevio.us/scss\A         on line 1 of scss/form.scss\A \A 1: @import \"globals\";\A 2: \A 3: @mixin col{\A 4: 	vertical-align:top;\A 5: 	display:inline-block;\A 6: }"; }

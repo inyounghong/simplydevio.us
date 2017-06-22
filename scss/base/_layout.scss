@@ -1,0 +1,248 @@
+$background: #f8f8f8;
+
+// General Layout
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+body {
+    @include source();
+    background: $background;
+    color: #222;
+    height:100%;
+    position:relative;
+}
+
+a, a:hover{
+    text-decoration:none;
+    color: $pink;
+    cursor: pointer;
+}
+
+// Page layout
+
+.wrapper {
+    max-width: 1200px;
+    padding: 50px 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    .mainContent {
+        min-height: 450px;
+        line-height: 1.5em;
+    }
+}
+
+.title {
+    @include source(44px);
+    margin-top: 17px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.map {
+    @include ubuntu(#aaa, 14px);
+    margin-bottom: 20px;
+    a {
+        @include ubuntu($pink, 14px);
+    }
+}
+
+.description p {
+    margin-bottom: 30px;
+}
+
+// Boxes
+
+.box_heading {
+    @include ubuntu;
+    padding: 13px 30px 13px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.box_white {
+    background: #fff;
+    padding: 30px 30px 20px;
+    box-shadow: 0 0 10px #ddd;
+    margin-bottom: 40px;
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+// Items
+
+.large_wrap {
+    padding: 5px 0;
+
+    &.preview {
+        background: #eee;
+        padding: 25px 30px;
+    }
+
+    .sc_info {
+        min-height: 130px;
+        margin-left: 155px;
+        h1 {
+            @include source(24px);
+            font-weight: 300;
+            padding-top: 5px;
+            margin-bottom: 15px;
+            color: $pink;
+        }
+    }
+
+    .sc_image {
+        width: 130px;
+        height: 130px;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        background: $blue;
+
+        &:after {
+            @include trans();
+            @include radius(100%);
+            content: url("http://www.simplydevio.us/images/wsearch.png");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -30px;
+            margin-top: -30px;
+            width: 60px;
+            height: 60px;
+            padding-left: 15px;
+            padding-top: 15px;
+            opacity: 0;
+        }
+
+        &:hover img {
+            opacity: .6;
+        }
+
+        &:hover:after {
+            opacity: 1;
+        }
+    }
+}
+
+// Tabs
+
+.tab_menu {
+    width: 100.6%;
+    color: $w80;
+    margin-left: 2px;
+
+    .selected {
+        background: $pink;
+        color: #fff;
+    }
+    .tabby:hover {
+        color: #fff;
+    }
+    .not_selected {
+        background: $pink_dark;
+    }
+}
+
+.tabby {
+    @include ubuntu;
+    display: inline-block;
+    padding: 12px 0;
+    margin: 0 -2px;
+    text-align: center;
+    cursor: pointer;
+    width: 25%;
+}
+
+// Buttons
+
+.button_wrap {
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.sbutton {
+    @include ubuntu;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: all .2s;
+    color: #fff !important;
+    &:hover {
+        background: $blue;
+    }
+}
+
+// Lists
+
+ul {
+    list-style-position: inside;
+}
+
+ul.updates {
+    padding: 10px 30px;
+    background: #eee;
+    margin: 20px 0px 0;
+    list-style-type: none;
+    li {
+        margin: 15px 0;
+    }
+}
+
+
+/* NEW TOOL TIPS */
+.tooltip {
+    display: inline-block;
+    position: absolute;
+    color: $pink;
+    z-index:100;
+
+    a{
+        font-weight: 700;
+        color: $pink!important;
+    }
+
+    .tool_info {
+        @include radius(3px);
+        display: none;
+        line-height: 18px;
+        font-size: 14px;
+        background: $b90;
+        color: #fff;
+        padding: 10px 15px;
+        font-weight: 400;
+
+        &:before {
+            content: '';
+            position: relative;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid $b90;
+            display: block;
+            left: -25px;
+            top: 0px;
+        }
+        span {
+            display: block;
+            margin-top: -20px;
+        }
+    }
+    &:hover .tool_info {
+        display: block;
+        position: absolute;
+        width: 200px;
+        left: 30px;
+        top: -5px;
+    }
+}

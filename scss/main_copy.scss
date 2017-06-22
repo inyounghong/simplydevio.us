@@ -42,8 +42,6 @@ hr {
     line-height: 1.5em;
 }
 
-/* OLD Left Section */
-
 .title {
     @include source(44px);
     margin-top: 17px;
@@ -51,55 +49,6 @@ hr {
     line-height: 50px;
     margin-bottom: 25px;
     letter-spacing: -1px;
-}
-
-
-.section {
-    list-style: inside;
-    padding: 50px 5% 50px 5%;
-    color: #444;
-    font-weight: 400;
-    font-size: 1.05em;
-
-    a {
-        color: $pink;
-    }
-}
-
-.content {
-    @include auto;
-    margin: 30px auto 20px auto;
-    color: #444;
-    font-weight: 400;
-    font-size: 1.05em;
-
-
-
-    h1 {
-        @include source(18px);
-        color: $blue;
-        margin-bottom: 5px;
-    }
-}
-
-.left50 {
-    width: 48%;
-    float: left;
-}
-
-.right50 {
-    width: 48%;
-    float: right;
-}
-
-.left60 {
-    width: 62%;
-    float: left;
-}
-
-.right40 {
-    width: 34%;
-    float: right;
 }
 
 
@@ -151,29 +100,13 @@ hr {
     background: #198574 !important;
 }
 
-#message {
-    margin-top: 5px;
-    font-size: 24px;
-    color: #9BD13D;
-    display: inline-block;
-}
+// #message {
+//     margin-top: 5px;
+//     font-size: 24px;
+//     color: #9BD13D;
+//     display: inline-block;
+// }
 
-.mid {
-    padding-bottom: 50px;
-}
-
-tbody {
-    vertical-align: top;
-}
-
-form {
-    font-size: 0.95em;
-}
-
-
-.fl {
-    float: left;
-}
 
 .box_white p {
     margin-bottom: 20px;
@@ -207,6 +140,7 @@ ul.updates {
     }
 }
 
+/* Buttons on front page */
 .button_wrap {
     text-align: center;
     margin: 25px 0 10px;
@@ -223,12 +157,6 @@ ul.updates {
     }
 }
 
-.box_white em {
-    font-style: normal;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
 
 
 /* Resource Wraps Index */
@@ -237,11 +165,6 @@ h1.p:hover {
     background: #A1334A;
 }
 
-div.description {}
-
-p.description {
-    margin: 0px 0 10px;
-}
 
 /* Script Page Wraps */
 .sc_image {
@@ -298,45 +221,8 @@ p.description {
     }
 }
 
-.hy .sc_image:after {
-    background: $orange;
-}
-
-.hp .sc_image:after {
-    background: $pink;
-}
-
-.hb .sc_image:after {
-    background: $blue;
-}
-
-.hg .sc_image:after {
-    background: $teal;
-}
 
 
-/* FOOTER */
-
-#footer {
-    padding: 20px 50px;
-    color: $w80;
-    background: $blue;
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
-    box-sizing: border-box;
-    height: 50px;
-    a {
-        color: $w80;
-        font-weight: 600;
-        text-decoration: none;
-    }
-}
-
-#footer_left {
-    float: left;
-    width: 25%;
-}
 
 /* Journal Form Page */
 label {
