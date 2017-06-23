@@ -1,0 +1,47 @@
+<div class="wrapper">
+    <div class="mainContent">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="title">Resources</div>
+            <div class="description">
+                <p>CSS resources for DeviantArt.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left: Premium Resources -->
+            <div class="col-sm-6">
+                <div class="box_heading p max">Premium Profile Resources</div>
+                <div class="box_white hp">
+                    <p class="description">CSS Creators for customizing profile pages. Each requires a password, which can be purchased on deviantART.</p>
+                    <div class="itemWrap" ng-repeat="item in resourceItems">
+                        <resource item="item" color="p"></resource>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right -->
+            <div class="col-sm-6">
+
+                <!-- Journal Skins -->
+                <div class="box_heading y max">Journal Skins</div>
+                <div class="box_white hy">
+                    <p class="description">Free resources for DA Journal Skins.</p>
+                    <div class="itemWrap">
+                        <resource item="journalCreator" color="y"></resource>
+                    </div>
+                </div>
+
+                <!-- Tutorials -->
+                <div class="box_heading g max">Tutorials</div>
+                <div class="box_white hg">
+                    <div class="itemWrap">
+                        <resource item="tutorial" color="g"></resource>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

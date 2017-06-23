@@ -1,0 +1,86 @@
+.editingBox {
+    background: #fff;
+    position: relative;
+    height: 500px;
+    box-sizing: border-box;
+
+    .editingSideBar {
+        background: $pink;
+        width: 400px;
+        box-sizing: border-box;
+        height: 500px;
+        position: absolute;
+
+        &.sidebarPadding {
+            padding: 30px;
+        }
+
+        .button {
+            background: $w80;
+            color: $pink!important;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .editingPreview {
+        margin-left: 400px;
+        width: 64%;
+        position: relative;
+        height: 500px;
+        box-sizing: border-box;
+        display: inline-block;
+        text-align: center;
+
+        .top {
+            max-height: 386px;
+            overflow-y: scroll;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .bottom {
+            position: absolute;
+            left: 0px;
+            padding: 15px 32px 25px 0;
+            bottom: 0px;
+            width: 100%;
+            background: #eee;
+        }
+
+
+        /* Preview Box */
+        .daWidget {
+            background: $daBgColor;
+            border: 1px solid $daBorderColor;
+            @include radius(5px);
+            width: 500px;
+            display: inline-block;
+            margin-bottom: 10px;
+
+            .daHeader {
+                background: $daHeadColor;
+                padding: 5px 10px;
+                border-bottom: 1px solid $daBorderColor;
+            }
+
+            .daInside {
+                position: relative;
+                padding: 0px 10px 20px 10px;
+                min-height: 100px;
+                box-sizing: border-box;
+
+                #previewImage {
+                    z-index: 98;
+                    position: relative;
+                }
+            }
+
+            #loading {
+                position: absolute;
+                width: 100%;
+                top: 38px;
+            }
+        }
+    }
+}

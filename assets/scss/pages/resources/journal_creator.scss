@@ -1,0 +1,94 @@
+@import "base/globals";
+@import "base/fonts";
+@import "base/layout";
+@import "components/new_form";
+@import "components/tooltips";
+@import "components/ctabs";
+
+
+.main_window{
+    margin-left:400px;
+    position:relative;
+    padding: 40px;
+
+    #preview_box {
+        margin-bottom: 50px;
+    }
+}
+
+.sidebar{
+    box-sizing: border-box;
+    width: 400px;
+    position:fixed;
+    top: 65px;
+    left:0;
+    height:100%;
+    overflow:auto;
+    background: $pink_dark;
+    .side_page{
+        padding:20px;
+        display:none;
+        background: $pink;
+    }
+}
+
+.block{
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    font-size: 13px;
+    color: $w80;
+    padding: 12px 20px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+
+    &:hover {
+        background: $pink_dark;
+        color: #fff;
+    }
+    &.selected {
+        background: $pink_dark;
+    }
+}
+
+.rules {
+    h2 {
+        @include ubuntu;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    background: #EEE;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* DA Styling */
+
+.gr-box, .gr-body{
+    position:relative;
+    overflow:hidden;
+}
+
+.gr-box{
+
+    h2{
+        display:block;
+    }
+
+    .text h1{
+        font-weight:bold;
+        font-size:18px;
+        color:#414d4c;
+        font-size:18pt;
+        font-family:"Trebuchet MS";
+        margin-bottom:15px;
+    }
+
+    .text a {
+        font-weight: bold;
+    }
+
+    .commentslink:hover {
+        text-decoration: underline;
+    }
+}

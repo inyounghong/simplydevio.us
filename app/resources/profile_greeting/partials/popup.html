@@ -1,0 +1,53 @@
+<div id="popup">
+    <div id="mask" ng-click="hidePopup()"></div>
+    <div id="popupBox">
+
+        <!-- Slide 1 -->
+        <div id="slide1" class="slides">
+            <h3>Step 1: Purchase Password</h3>
+            <div class="scroll">
+                <p>To get the code for your profile greeting image, please <a href="http://fav.me/d7xy8te" target="_blank">purchase the password</a> and type it in below.</p>
+
+                <b>Important!</b> You must be a Premium Member for this greeting to work on your page.
+                <br><br>
+                <input type="text" id="password" ng-model="imageData.password" placeholder="Password">
+                <div id="termsCheckbox" class="font-sm">
+                    <input type="checkbox" id="terms1" ng-model="terms1">
+                    <label for="terms1">I agree to not share this password with anyone else, and I agree to only creating profile greetings for my own profile or a group that I am an admin for.</label>
+                </div>
+            </div>
+
+            <span id="passwordMessage" class="errorMessage">{{passwordMessage}}</span>
+            <div class="button" ng-click="checkPassword()">Next</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div id="slide2" class="slides">
+            <h3>Step 2: Enter Username</h3>
+            <div class="scroll">
+                <p>Enter your username below.</p>
+                <input type="text" id="username" ng-model="imageData.username" placeholder="Username">
+            </div>
+            <span id="usernameMessage" class="errorMessage">{{usernameMessage}}</span>
+            <div class="button" ng-click="checkUsername()">Next</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div id="slide3" class="slides">
+            <h3>Step 3: Add Code to your Profile</h3>
+
+            <div class="scroll">
+                <p>Copy and paste the following code into a widget on your profile page.</p>
+                <b>Important!</b> You must have a Visitors widget on your profile page for this greeting to work.
+
+                <textarea class="code" id="code"></textarea>
+                <p>Greets visible deviants by name and displays "visitor" for all other visitors.</p>
+                <div class="relative">
+                    <div id="generatedImage"></div>
+                    <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" id="popupLoad"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

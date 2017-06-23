@@ -1,0 +1,16 @@
+// Index and home page
+
+@import "base/globals";
+@import "base/fonts";
+@import "base/layout";
+@import "components/boxes";
+
+ul.updates {
+    padding: 10px 30px;
+    background: #eee;
+    margin: 20px 0px 0;
+    list-style-type: none;
+    li {
+        margin: 15px 0;
+    }
+}

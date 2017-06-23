@@ -1,0 +1,15 @@
+<div class="chunk">
+    <h2>Background</h2>
+    <div class="input">
+        <label><input type="checkbox" ng-model="e.useImage">Use Image</label>
+        <div ng-show="e.useImage">
+            <input type="text" ng-model="e.image" placeholder="http://">
+        </div>
+        <div ng-hide="e.useImage">
+            <label><input type="checkbox" ng-model="e.transparent">Transparent Background</label>
+            <div ng-hide="e.transparent">
+                <input minicolors type="text" ng-model="e.background" class="color mb5">
+            </div>
+        </div>
+    </div>
+</div>

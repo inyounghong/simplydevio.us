@@ -5,9 +5,8 @@
     <meta name="description" content="A CSS creator for making DeviantART gallery directories. Decorate your profile with your own fullsize gallery directory.">
     <meta name="keywords" content="deviantart, simplydevious, simplysilent, profile, gallery, directory, css, journal">
     <meta name="author" content="SimplySilent">
-    <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="../jquery.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/jscolor.js"></script>
     <title>Full-Size Gallery Directory Creator</title>

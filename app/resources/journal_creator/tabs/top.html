@@ -1,0 +1,22 @@
+<div ng-repeat="e in [j.top]" ng-include="roots.inputs + 'background.html'"></div>
+<div ng-repeat="e in [j.top]" ng-include="roots.inputs + 'align.html'"></div>
+
+<div ng-show="j.top.align != 'center'">
+    <div class="chunk">
+        <h2>Side Padding</h2>
+        <div class="input">
+            <input type="range" ng-model="j.top.paddingH" class="rangeWithLabel" min="0" max="100">
+            <div class="range_label">{{j.top.paddingH}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="chunk">
+    <h2>Padding</h2>
+    <div class="input">
+        <input type="range" ng-model="j.top.paddingV" class="rangeWithLabel" min="0" max="100">
+        <div class="range_label">{{j.top.paddingV}}</div>
+    </div>
+</div>
+
+<div ng-repeat="e in [j.top]" ng-include="roots.inputs + 'radius.html'"></div>

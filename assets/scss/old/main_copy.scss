@@ -1,0 +1,758 @@
+@import "globals";
+@import "fonts";
+
+$background: #f8f8f8;
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include source();
+    background: $background;
+    color: #222;
+    height:100%;
+    position:relative;
+}
+
+a, a:hover{
+    text-decoration:none;
+    color: $pink;
+    cursor: pointer;
+}
+
+hr {
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* New main section */
+
+.wrapper {
+    max-width: 1200px;
+    padding: 50px 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.mainContent {
+    min-height: 450px;
+    line-height: 1.5em;
+}
+
+.title {
+    @include source(44px);
+    margin-top: 17px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+
+.tab_menu {
+    width: 100.6%;
+    color: $w80;
+    margin-left: 2px;
+
+    .selected {
+        background: $pink;
+        color: #fff;
+    }
+    .tabby:hover {
+        color: #fff;
+    }
+    .not_selected {
+        background: $pink_dark;
+    }
+}
+
+.tabby {
+    @include ubuntu;
+    display: inline-block;
+    padding: 12px 0;
+    margin: 0 -2px;
+    text-align: center;
+    cursor: pointer;
+    width: 25%;
+}
+
+.small{
+    .tab_page.cpage {
+        width: 310px;
+        min-height: 300px;
+    }
+
+    .cpage textarea {
+        width: 270px;
+        height: 150px;
+        max-height: 150px;
+    }
+}
+
+.formfail .tab_page {
+    width: 310px;
+}
+
+.tabby.g:hover, .tabby.g.selected {
+    background: #198574 !important;
+}
+
+// #message {
+//     margin-top: 5px;
+//     font-size: 24px;
+//     color: #9BD13D;
+//     display: inline-block;
+// }
+
+
+.box_white p {
+    margin-bottom: 20px;
+}
+
+.description p {
+    margin-bottom: 30px;
+}
+
+/* Mapping Directory */
+.map {
+    @include ubuntu(#aaa, 14px);
+    margin-bottom: 20px;
+    a {
+        @include ubuntu($pink, 14px);
+    }
+}
+
+ul {
+    list-style-position: inside;
+}
+
+/* Front Page Slightly */
+ul.updates {
+    padding: 10px 30px;
+    background: #eee;
+    margin: 20px 0px 0;
+    list-style-type: none;
+    li {
+        margin: 15px 0;
+    }
+}
+
+/* Buttons on front page */
+.button_wrap {
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.sbutton {
+    @include ubuntu;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: all .2s;
+    color: #fff !important;
+    &:hover {
+        background: $blue;
+    }
+}
+
+
+
+/* Resource Wraps Index */
+
+h1.p:hover {
+    background: #A1334A;
+}
+
+
+/* Script Page Wraps */
+.sc_image {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    background: $blue;
+
+    &:after {
+        @include trans();
+        @include radius(100%);
+        content: url("http://www.simplydevio.us/images/wsearch.png");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -30px;
+        margin-top: -30px;
+        width: 60px;
+        height: 60px;
+        padding-left: 15px;
+        padding-top: 15px;
+        opacity: 0;
+    }
+
+    &:hover img {
+        opacity: .6;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+}
+
+.large_wrap {
+    padding: 5px 0;
+
+    &.preview {
+        background: #eee;
+        padding: 25px 30px;
+    }
+}
+
+.sc_info {
+    min-height: 130px;
+    margin-left: 155px;
+    h1 {
+        @include source(24px);
+        font-weight: 300;
+        padding-top: 5px;
+        margin-bottom: 15px;
+        color: $pink;
+    }
+}
+
+
+
+
+/* Journal Form Page */
+label {
+    color: $blue;
+    font-weight: 400;
+}
+
+#resource .hiddenrow p {
+    max-width: 700px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.colleft {
+    width: 48%;
+    float: left;
+}
+
+.colright {
+    width: 48%;
+    float: right;
+}
+
+form {
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.white {
+    max-width: 1000px;
+    background: #fff url("http://simplydevio.us/images/white.png");
+    outline: 1px solid #ddd;
+    font-size: 16px;
+    margin: 30px auto;
+    padding: 50px;
+}
+
+.ccc {
+    text-align: center;
+    width: 27%;
+    float: left;
+}
+
+
+
+.tutorial {
+    max-width: 700px;
+    span {
+        font-family: 'Courier';
+        background: #ddd;
+    }
+    img {
+        max-width: 100%;
+        margin: 10px 0 50px;
+        display: block;
+    }
+    p {
+        counter-increment: myIndex;
+        padding-left: 40px;
+        position: relative;
+        min-height: 50px;
+        &:before {
+            content: counter(myIndex);
+            font-size: 45px;
+            font-family: 'Fjalla One';
+            position: absolute;
+            left: 0px;
+            top: 14px;
+        }
+        b {
+            color: $teal;
+        }
+        i {
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+}
+
+code {
+    display: block;
+    background: #ddd;
+    padding: 5px 20px;
+    width: 80%;
+    margin: 10px 0 20px;
+
+    b {
+        color: #000 !important;
+    }
+}
+
+/* Description previews on Resource Page */
+/* Journal Form Styling */
+.add:before {
+    content: '+ ';
+}
+
+.remove:before {
+    content: '- ';
+}
+
+.add:before, .remove:before {
+    color: $pink;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.add, .remove {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.add:hover, .remove:hover {
+    color: $pink;
+}
+
+
+/* Preview Page */
+td {
+    vertical-align: middle !important;
+    position: relative;
+
+    &.w25 {
+        width: 25%;
+    }
+    &.w35 {
+        width: 35%;
+    }
+    &.w50 {
+        width: 50%;
+    }
+    &.lg, &.full {
+        width: 1000px;
+    }
+
+}
+
+.range_s input[type="range"] {
+    width: 78% !important;
+}
+
+.note {
+    @include radius(5px);
+    background: #ccc;
+    padding: 10px 20px;
+}
+
+.cols {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+
+    &.even {
+        width: 45%;
+        margin-right: 3%;
+    }
+    &.lft {
+        margin-right: 3%;
+        width: 44%;
+    }
+    &.rgt {
+        min-height: 420px;
+        width: 52%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    input[type=range] {
+        width: 80%;
+    }
+
+    td.split_range{
+        [type=range]{
+            width:75%!important;
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .cols {
+        width: 100% !important;
+        display: block;
+    }
+}
+
+#profileDirectory {
+    font-size: 16px;
+}
+
+.right_preview_box {
+    z-index: 1;
+    position: relative;
+}
+
+.box_heading {
+    @include ubuntu;
+    background: $teal;
+    padding: 13px 30px 13px;
+    width: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.box_heading.max {
+    width: initial;
+}
+
+.box_white {
+    background: #fff;
+    padding: 30px 30px 20px;
+    box-shadow: 0 0 10px #ddd;
+    margin-bottom: 40px;
+}
+
+.right_preview_box .notice, .large .notice {
+    font-size: 14px;
+    border-top: 1px dotted #000;
+    position: absolute;
+    top: 398px;
+    padding-top: 5px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+td.split_range{
+    width:35%;
+    margin-right:5%;
+
+    [type=range]{
+        width:75%!important;
+    }
+
+    &:last-of-type{
+        margin-right:0;
+    }
+}
+
+form {
+
+    .pixellong {
+        width: 30px;
+        text-align: center;
+        padding: 0 5px;
+    }
+    .desc {
+        width: 300px;
+    }
+    .infowrap {
+        width: 1000px;
+        margin: 40px auto 0;
+    }
+    .pixel, .percent {
+        width: 25px;
+        text-align: center;
+        padding: 0 5px;
+    }
+}
+
+select {
+    padding-left: 5px;
+    height: 30px;
+    border: 1px solid #bbb;
+}
+
+.password {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.contact {
+    margin-bottom: 30px;
+    float: left;
+    width: 45.5%;
+    height: 125px;
+    padding: 20px 1%;
+}
+
+/* NEW TOOL TIPS */
+.tooltip {
+    display: inline-block;
+    position: absolute;
+    color: $pink;
+    z-index:100;
+
+    a{
+        font-weight: 700;
+        color: $pink!important;
+    }
+
+    .tool_info {
+        @include radius(3px);
+        display: none;
+        line-height: 18px;
+        font-size: 14px;
+        background: $b90;
+        color: #fff;
+        padding: 10px 15px;
+        font-weight: 400;
+
+        &:before {
+            content: '';
+            position: relative;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid $b90;
+            display: block;
+            left: -25px;
+            top: 0px;
+        }
+        span {
+            display: block;
+            margin-top: -20px;
+        }
+    }
+    &:hover .tool_info {
+        display: block;
+        position: absolute;
+        width: 200px;
+        left: 30px;
+        top: -5px;
+    }
+}
+
+.navwrap {
+    background: $blue;
+    z-index: 1000;
+    position: relative;
+    display: block;
+    height: 65px;
+    padding: 0 5%;
+    overflow:hidden;
+
+    #nav {
+        @include auto();
+        text-align: right;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    .simply {
+        float: left;
+        margin-top: 25px;
+        color: #fff;
+        font-size: 16px;
+
+    }
+
+    .simply a {
+        @include ubuntu($w80, 15px);
+        @include trans;
+        letter-spacing: 1px;
+        &:hover {
+            color: #fff;
+        }
+
+    }
+
+    .menu_icon {
+        display: none;
+        color: #fff;
+    }
+
+    .menulinks{
+        height:100%;
+        overflow:hidden;
+    }
+
+    .menulinks a {
+        @include ubuntu;
+        @include trans;
+        background: $blue;
+        display: inline-block;
+        position: relative;
+        padding: 25px 15px;
+        &:hover {
+            background: #111726;
+            color: #fff;
+        }
+    }
+}
+
+
+.pp {
+    height: 10px;
+}
+
+.p {
+    background: $pink;
+}
+
+.y {
+    background: $orange;
+}
+
+.b {
+    background: $blue;
+}
+
+.g {
+    background: $teal;
+}
+
+.w {
+    color: #fff;
+}
+
+.c {
+    text-align: center;
+}
+
+.l {
+    text-align: left;
+}
+
+.r {
+    text-align: right;
+}
+
+.wbox {
+    background: url(http://simplydevio.us/images/white.png);
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+.clearing {
+    height: 20px;
+    clear: both;
+}
+
+.cccc {
+    width: 19%;
+    float: left;
+    min-width: 200px;
+}
+
+.cc {
+    width: 45%;
+    float: left;
+    min-width: 300px;
+}
+
+@font-face {
+    font-family: Lobster Two;
+    src: url(fonts/LobsterTwo-Regular.ttf), url(fonts/LobsterTwo-Regular.eot);
+}
+
+
+@font-face {
+    font-family: Sue Ellen Francisco;
+    src: url(fonts/SueEllenFrancisco.ttf), url(fonts/SueEllenFrancisco.eot);
+}
+
+
+@media screen and (max-width: 800px) {
+    .left50, .right50, .left60, .right40 {
+        float: none;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navwrap{
+        overflow: visible;
+    }
+
+    .menuwrap {
+        display: inline-block;
+        .menu_icon {
+            @include ubuntu;
+            display: block;
+            top: -5px;
+            display: inline-block;
+            position: relative;
+            padding: 25px 15px;
+            cursor: pointer;
+            img {
+                position: relative;
+                top: 5px;
+                margin-left: 5px;
+            }
+        }
+        .menulinks {
+            width: 100%;
+            display: none;
+            text-align: left;
+            position: absolute;
+            top: 65px;
+            right: 0;
+            height: 350px;
+            a {
+                display: block;
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .menulinks {
+
+        display: inline-block !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sc_image {
+        display: block;
+        text-align: center;
+        float: none;
+    }
+    .sc_image:after {
+        width: 68px;
+        height: 50px;
+        padding-left: 0px;
+        padding-top: 18px;
+    }
+    .sc_info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}

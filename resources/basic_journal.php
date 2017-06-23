@@ -1,3 +1,5 @@
+<?php header( 'Location: /#!/resources/journal_creator' ) ; ?>
+
 <!DOCTYPE html>
 <head>
     <title>Make Your Own Journal Skin for DeviantART | Simplydevio.us</title>

@@ -1,0 +1,305 @@
+/* Classes */
+.mt10 {
+  margin-top: 10px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mb0 {
+  margin-bottom: 0px !important; }
+
+.mb5 {
+  margin-bottom: 5px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.mr10 {
+  margin-right: 10px; }
+
+.t {
+  background: #25bda6 !important; }
+
+.hide {
+  display: none; }
+
+.visible {
+  display: block; }
+
+.fa {
+  margin-right: 5px; }
+
+.relative {
+  position: relative; }
+
+.hover {
+  cursor: pointer; }
+
+.p {
+  background: #e03e56; }
+
+.y {
+  background: #f58c3b; }
+
+.b {
+  background: #1d2742; }
+
+.g {
+  background: #25bda6; }
+
+/* OPEN SANS */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/assets/fonts/OpenSans-Bold-webfont.eot");
+  src: url("/assets/fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/OpenSans-Bold-webfont.woff") format("woff"), url("/assets/fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("/assets/fonts/OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/assets/fonts/OpenSans-Regular-webfont.eot");
+  src: url("/assets/fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/OpenSans-Regular-webfont.woff") format("woff"), url("/assets/fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("/assets/fonts/OpenSans-Regular-webfont.svg#open_sansbold") format("svg");
+  font-weight: 400; }
+/* SOURCE SANS PRO */
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/assets/fonts/SourceSansPro-Regular.otf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/assets/fonts/SourceSansPro-Bold.otf");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/assets/fonts/SourceSansPro-Semibold.otf");
+  font-weight: 600; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/assets/fonts/SourceSansPro-Light.otf");
+  font-weight: 300; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/assets/fonts/SourceSansPro-ExtraLight.otf");
+  font-weight: 200; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("/assets/fonts/SourceSansPro-It.otf");
+  font-weight: 400;
+  font-style: italic; }
+/* UBUNTU */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/assets/fonts/Ubuntu-B.ttf");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/assets/fonts/Ubuntu-M.ttf");
+  font-weight: 600; }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/assets/fonts/Ubuntu-R.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/assets/fonts/Ubuntu-RI.ttf");
+  font-weight: 400;
+  font-style: italic; }
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none; }
+
+body {
+  font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  background: #f8f8f8;
+  color: #222;
+  height: 100%;
+  position: relative; }
+
+a, a:hover {
+  text-decoration: none;
+  color: #e03e56;
+  cursor: pointer; }
+
+.wrapper {
+  max-width: 1200px;
+  padding: 50px 50px;
+  box-sizing: border-box;
+  margin: 0 auto; }
+  .wrapper .mainContent {
+    min-height: 450px;
+    line-height: 1.5em; }
+
+.header .title {
+  font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+  font-size: 44px;
+  margin-top: 17px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: 25px;
+  letter-spacing: -1px; }
+.header .map {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 20px; }
+  .header .map a {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #e03e56;
+    font-size: 14px; }
+.header .description {
+  margin-bottom: 30px; }
+  .header .description p {
+    margin: 0px 0 !important; }
+
+.button_wrap {
+  text-align: center;
+  margin: 25px 0 10px; }
+
+.sbutton {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: all .2s;
+  color: #fff !important; }
+  .sbutton:hover {
+    background: #1d2742; }
+
+ul {
+  list-style-position: inside; }
+
+/* FOOTER */
+#footer {
+  padding: 20px 50px;
+  color: rgba(255, 255, 255, 0.8);
+  background: #1d2742;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  box-sizing: border-box;
+  height: 50px; }
+  #footer a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    text-decoration: none; }
+
+#footer_left {
+  float: left;
+  width: 25%; }
+
+/* HEADER */
+.navwrap {
+  background: #1d2742;
+  z-index: 1000;
+  position: relative;
+  display: block;
+  height: 65px;
+  padding: 0 5%;
+  overflow: hidden; }
+  .navwrap #nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: right; }
+  .navwrap a {
+    text-decoration: none !important; }
+  .navwrap .simply {
+    float: left;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 16px; }
+  .navwrap .simply a {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
+    letter-spacing: 1px; }
+    .navwrap .simply a:hover {
+      color: #fff; }
+  .navwrap .menu_icon {
+    display: none;
+    color: #fff; }
+  .navwrap .menulinks {
+    height: 100%;
+    overflow: hidden; }
+  .navwrap .menulinks a {
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
+    background: #1d2742;
+    display: inline-block;
+    position: relative;
+    padding: 25px 15px; }
+    .navwrap .menulinks a:hover {
+      background: #111726;
+      color: #fff; }
+
+html, body {
+  display: block; }
+
+.box_heading {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  padding: 13px 30px 13px;
+  width: 100%;
+  position: relative;
+  z-index: 10; }
+
+.box_white {
+  background: #fff;
+  padding: 30px 30px 20px;
+  box-shadow: 0 0 10px #ddd;
+  margin-bottom: 40px; }
+  .box_white p {
+    margin-bottom: 20px; }
+
+.itemWrap {
+  padding: 5px 0;
+  min-height: 130px;
+  cursor: pointer; }
+  .itemWrap:hover {
+    opacity: 0.9; }
+  .itemWrap .itemInfo h1 {
+    font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #e03e56; }
+  .itemWrap .itemImage {
+    width: 100px;
+    height: 100px;
+    display: inline-block; }
+    .itemWrap .itemImage img {
+      width: 100%; }
+
+ul.updates {
+  padding: 10px 30px;
+  background: #eee;
+  margin: 20px 0px 0;
+  list-style-type: none; }
+  ul.updates li {
+    margin: 15px 0; }
+
+/*# sourceMappingURL=resources.css.map */

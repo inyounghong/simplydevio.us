@@ -1,0 +1,45 @@
+// Code Tabs and Pages
+
+.cTabMenu {
+    color: $w80;
+    margin-left: 2px;
+
+    .ctab {
+        @include ubuntu;
+        float: left;
+        padding: 12px 0;
+        margin: 0 -2px;
+        text-align: center;
+        cursor: pointer;
+        width: 25%;
+        background: $pink_dark;
+
+        &.selected {
+            background: $pink;
+            color: #fff;
+        }
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.cPageWrap {
+    clear: both;
+
+    .cPage {
+        color: #FFF;
+        padding: 20px;
+        background: $pink;
+    }
+
+    textarea {
+        margin-top: 15px;
+        background: $w30;
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        font-family: courier;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,67 @@
+// popup
+#popup{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    text-align: center;
+    display: none;
+
+    #mask {
+        background: #000;
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    #popupBox {
+        background: #fff;
+        padding: 50px;
+        max-width: 500px;
+        margin: 50px auto 50px;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .scroll {
+        height: 350px;
+        overflow-y: auto;
+    }
+
+    .slides {
+        text-align: left;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        .button {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+        }
+    }
+
+    #slide2, #slide3 {
+        display: none;
+    }
+
+    #popupLoad {
+        position: absolute;
+        top: 2px;
+        left: 220px;
+        z-index: -1;
+    }
+}
+
+#termsCheckbox {
+    margin: 5px 0;
+}

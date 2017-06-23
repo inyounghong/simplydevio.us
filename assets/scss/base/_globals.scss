@@ -1,0 +1,105 @@
+$pink: #e03e56;
+$pink50: #ec8b9a;
+$pink_dark: #A1334A;
+$orange: #f58c3b;
+$blue: #1d2742;
+$teal: #25bda6;
+
+$w30: rgba(255,255,255,.3);
+$w40: rgba(255,255,255,.4);
+$w60: rgba(255,255,255,.6);
+$w80: rgba(255,255,255,.8);
+$b80: rgba(0,0,0,.8);
+$b90: rgba(0,0,0,.9);
+
+$daBgColor: #dae4d9;
+$daHeadColor: #e6ede4;
+$daBorderColor: #a6b2a6;
+
+@mixin source($size: 15px){
+	font-family: 'Source Sans Pro', 'Open Sans', 'Trebuchet MS', sans-serif;
+	font-size: $size;
+}
+
+@mixin ubuntu($color: $w80, $size: 13px){
+	font-family: 'Ubuntu';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin trans($property: all, $time: .2s){
+	-webkit-transition: $property $time;
+    -moz-transition: $property $time;
+    -o-transition: $property $time;
+    transition: $property $time;
+}
+
+@mixin auto($width: 1200px){
+	max-width: $width;
+    margin:0 auto;
+}
+
+@mixin radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+/* Classes */
+.mt10 {
+	margin-top: 10px;
+}
+.mt30 {
+	margin-top: 30px;
+}
+
+.mb0 {
+	margin-bottom: 0px!important;
+}
+.mb5 {
+	margin-bottom: 5px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.mr10 {
+	margin-right: 10px;
+}
+
+.t {
+	background: $teal!important;
+}
+
+.hide {
+	display: none;
+}
+.visible {
+	display: block;
+}
+
+.fa {
+	margin-right: 5px;
+}
+
+.relative {
+	position: relative;
+}
+
+.hover {
+	cursor: pointer;
+}
+
+.p {
+    background: $pink;
+}
+.y {
+    background: $orange;
+}
+.b {
+    background: $blue;
+}
+.g {
+    background: $teal;
+}
