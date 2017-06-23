@@ -9,6 +9,7 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
             controller: 'MainController',
             css: resources + 'resources.css'
         })
+
         .when('/resources', {
             templateUrl: 'app/resources/index/resources.html',
             controller: 'MainController',
@@ -29,16 +30,25 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
             controller: 'JournalCreatorCtrl',
             css: resources + 'journal_creator.css'
         })
+
+        .when('/tutorials/adding-profile-css', {
+            templateUrl: 'app/tutorials/adding-profile-css.html',
+            controller: 'TutorialCtrl',
+            css: 'assets/css/pages/tutorials/tutorials.css'
+        })
+
         .when('/scripts', {
             templateUrl: 'scripts/scripts.html',
             controller: 'MainController',
             css: resources + 'resources.css'
         })
+
         .when('/contact', {
             templateUrl: 'contact/contact.html',
             controller: 'MainController',
             css: resources + 'resources.css'
         })
+
         .otherwise({ // default
             redirectTo: '/'
         });

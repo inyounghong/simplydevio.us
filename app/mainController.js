@@ -49,7 +49,7 @@ angular.module('mainApp')
     $scope.tutorial = {
         name: "Adding Profile CSS",
         description: "Learn how to use CSS on your profile page.",
-        url: '/resources/profile_tutorial.php',
+        url: '#!/tutorials/adding-profile-css',
         img: 'tutorial.png'
     };
 

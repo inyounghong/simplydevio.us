@@ -61,6 +61,7 @@
     <script src="app/factories/cTabFactory.js"></script>
 
     <!-- Controllers -->
+    <script src="app/tutorials/tutorialCtrl.js"></script>
     <script src="app/resources/profile_greeting/profileGreetingCtrl.js"></script>
     <script src="app/resources/profile_directory/profileDirectoryCtrl.js"></script>
     <script src="app/resources/journal_creator/journalCreatorCtrl.js"></script>
