@@ -1,5 +1,6 @@
 const resources = "css/pages/resources/";
 
+
 angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
 .config(['$routeProvider', function($routeProvider){
     $routeProvider
@@ -9,7 +10,7 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
             css: resources + 'resources.css'
         })
         .when('/resources', {
-            templateUrl: 'resources/main/resources.html',
+            templateUrl: 'app/resources/index/resources.html',
             controller: 'MainController',
             css: resources + 'resources.css'
         })
@@ -19,7 +20,7 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
             css: resources + 'profile_greeting.css'
         })
         .when('/resources/profile_directory', {
-            templateUrl: 'resources/profile_directory/profile_directory.html',
+            templateUrl: 'app/resources/profile_directory/profile_directory.html',
             controller: 'ProfileDirectoryCtrl',
             css: resources + 'profile_directory.css'
         })

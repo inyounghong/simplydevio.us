@@ -59,7 +59,7 @@
 
     <!-- Controllers -->
     <script src="app/resources/profile_greeting/profileGreetingCtrl.js"></script>
-    <script src="resources/profile_directory/profileDirectoryCtrl.js"></script>
+    <script src="app/resources/profile_directory/profileDirectoryCtrl.js"></script>
     <script src="app/resources/journal_creator/journalCreatorCtrl.js"></script>
 
 </body>

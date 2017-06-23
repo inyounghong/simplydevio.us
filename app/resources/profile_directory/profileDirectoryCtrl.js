@@ -7,6 +7,8 @@ angular.module('mainApp')
     $scope.tab = "tab1";
     $scope.ctab = "ctab1";
 
+    $scope.root = 'app/resources/profile_directory/';
+
     $scope.trustAsHtml = trustAsHtml;
     $scope.changeTab = changeTab;
     $scope.changeCtab = changeCtab;
@@ -333,7 +335,7 @@ angular.module('mainApp')
         var pass = $scope.data.password.toLowerCase().trim();
 
         $.ajax({
-            url: '/resources/profile_directory/php/checkPassword.php',
+            url: $scope.root + 'php/checkPassword.php',
             type: 'get',
             data: {password: pass},
             success: handlePasswordCheck,
