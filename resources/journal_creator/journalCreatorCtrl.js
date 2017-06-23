@@ -35,15 +35,22 @@ angular.module('mainApp')
     // Functions
 
     function checkit(){
-        console.log("check");
 
         var fontImportString = generateFontImportString($scope.j);
-        var css = JournalService.generateCss($scope.j);
+        var userCss = JournalService.generateCss($scope.j);
+        var deviantCss = getDeviantCss();
 
-        $scope.displayCss = css;
+        $scope.displayCss = userCss;
         $scope.displayHeader = "";
 
-        $scope.previewCss = "<style>" + fontImportString + css + "</style>";
+        $scope.previewCss = "<style>" + fontImportString + deviantCss + userCss + "</style>";
+    }
+
+    // CSS for canceling simplydevious css
+    function getDeviantCss() {
+        var str = "";
+        str += '.commentslink:hover { color: ' + $scope.j.bottom.color + '}\n\n';
+        return str;
     }
 
     function generateFontImportString (j) {

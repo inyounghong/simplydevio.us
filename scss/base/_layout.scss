@@ -163,7 +163,7 @@ ul {
 
     .menulinks a {
         @include ubuntu;
-        @include trans;
+        @include trans(background);
         background: $blue;
         display: inline-block;
         position: relative;

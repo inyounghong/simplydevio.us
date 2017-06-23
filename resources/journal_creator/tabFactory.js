@@ -20,7 +20,6 @@ angular.module('mainApp')
     }
 
     function isSelected(t) {
-        console.log(f.selectedTab);
         return f.selectedTab == t;
     }
 

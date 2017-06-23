@@ -240,10 +240,10 @@ ul {
     font-weight: 700;
     color: rgba(255, 255, 255, 0.8);
     font-size: 13px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
     background: #1d2742;
     display: inline-block;
     position: relative;
@@ -641,18 +641,18 @@ form h2 {
   position: relative;
   overflow: hidden; }
 
-#preview_box {
-  line-height: 1em; }
-
-#preview_box h2 {
+.gr-box h2 {
   display: block; }
-
-.text h1 {
+.gr-box .text h1 {
   font-weight: bold;
   font-size: 18px;
   color: #414d4c;
   font-size: 18pt;
   font-family: "Trebuchet MS";
   margin-bottom: 15px; }
+.gr-box .text a {
+  font-weight: bold; }
+.gr-box .commentslink:hover {
+  text-decoration: underline; }
 
 /*# sourceMappingURL=journal_creator.css.map */

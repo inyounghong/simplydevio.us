@@ -23,43 +23,43 @@ angular.module('mainApp')
             fullSetUp(j[key]);
         });
 
-        j.box.background.color = YELLOW;
-        j.box.background.image = BG_IMAGE_URL;
+        j.box.background = YELLOW;
+        j.box.useImage = true;
+        j.box.image = BG_IMAGE_URL;
         j.box.maxWidth = false;
         j.box.width = 900;
         j.box.radius = 10;
         j.box.padding = 50;
 
-        j.top.background.color = "FFFFFF";
+        j.top.background = "FFFFFF";
         j.top.align = "center";
         j.top.paddingV = 25;
 
         j.title.size = 42;
         j.title.bold = true;
-        j.title.margin = 10;
-
+        j.title.lineHeight = 1.1;
         j.timestamp.size = 18;
 
         j.header.size = 32;
+        j.header.lineHeight = 0.8;
 
-        j.text.background.color = "FFFFFF";
+        j.text.background = "FFFFFF";
         j.text.paddingH = 4;
         j.text.paddingV = 20;
         j.text.marginH = 0;
         j.text.marginV = 18;
         j.text.family = "Verdana";
-        j.text.lineHeight = 19;
+        j.text.lineHeight = 1.4;
 
         j.blockquote.family = "Verdana";
-        j.blockquote.background.color = YELLOW;
+        j.blockquote.background = YELLOW;
         j.blockquote.padding = 20;
 
-        j.bottom.background.color = "FFFFFF";
+        j.bottom.background = "FFFFFF";
         j.bottom.size = 20;
-        j.bottom.padding = 10;
+        j.bottom.padding = 20;
         j.bottom.bold = true;
 
-        console.log(j);
         return j;
 
 
@@ -76,10 +76,9 @@ angular.module('mainApp')
             e.size = 13;
         }
         function setUpBackground(e) {
-            e.background = {};
-            e.background.color = "#9FCE54";
-            e.background.transparent = false;
-            e.background.image = "";
+            e.background = "#9FCE54";
+            e.transparent = false;
+            e.image = "";
         }
         function setUpBorder(e) {
             e.border = {};
@@ -129,8 +128,7 @@ angular.module('mainApp')
         css += getFontFamily(j.title);
         css += getFontSize(j.title);
         css += getStyles(j.title);
-        css += 'line-height:' + px(j.title.size) + N;
-        css += 'margin-bottom:' + px(j.title.margin) + N;
+        css += getLineHeight(j.title);
         css += END;
 
         // GR-TOP TIMESTAMP JUNK
@@ -156,7 +154,7 @@ angular.module('mainApp')
         css += 'margin:' + px(j.text.marginV) + per(j.text.marginH) + N;
         css += END;
 
-        css += '.text a{';
+        css += '.text a{\n';
         css += getColor(j.text);
         css += getFontFamily(j.text);
         css += END;
@@ -187,11 +185,13 @@ angular.module('mainApp')
         css += getStyles(j.bottom);
         css += END;
 
-        css += '.text h1{\n';
+        css += '.gr-box .text h1{\n';
         css += getColor(j.header);
         css += getFontFamily(j.header);
         css += getFontSize(j.header);
         css += getTextAlign(j.header);
+        css += getStyles(j.header);
+        css += getLineHeight(j.header);
         css += END;
 
         css += '.credit{\n';
@@ -199,12 +199,12 @@ angular.module('mainApp')
         css += 'width:100%;\n';
         css += 'text-align:center;\n';
         css += 'position: absolute;\n';
-        css += 'bottom: 10px;\n}\n\n';
+        css += 'bottom: 0px;\n}\n\n';
 
         css += '.credit, .credit a{\n';
         css += 'text-decoration:none;\n'
         css += 'color: #222!important;\n';
-        css += 'font-size: 10px;\n}\n\n';
+        css += 'font-size: 9px;\n}\n\n';
 
         return css;
     }
@@ -215,15 +215,13 @@ angular.module('mainApp')
 
 
     function getBackground(e) {
-        var color = e.background.color;
-        var image = "";
-        if (e.background.transparent) {
-            color = "transparent";
+        if (e.useImage) {
+            return "background: url('" + e.image.trim() + "')" + N;
         }
-        if (e.background.image.trim()) {
-            image = " url('" + e.background.image + "')";
+        if (e.transparent) {
+            return "background: none" + N;
         }
-        return "background: " + color + image +  N;
+        return "background: " + e.background + N;
     }
 
     function getRadius(e) {
@@ -248,7 +246,7 @@ angular.module('mainApp')
     }
 
     function getLineHeight(e) {
-        return 'line-height:' + px(e.lineHeight) + N;
+        return 'line-height:' + e.lineHeight + "em" + N;
     }
     function getTextTransform(e) {
         return "text-transform: " + e.textTransform + N;

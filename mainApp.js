@@ -31,10 +31,12 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
         .when('/scripts', {
             templateUrl: 'scripts/scripts.html',
             controller: 'MainController',
+            css: resources + 'resources.css'
         })
         .when('/contact', {
             templateUrl: 'contact/contact.html',
             controller: 'MainController',
+            css: resources + 'resources.css'
         })
         .otherwise({ // default
             redirectTo: '/'

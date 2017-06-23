@@ -63,23 +63,32 @@
 }
 
 /* DA Styling */
+
 .gr-box, .gr-body{
     position:relative;
     overflow:hidden;
 }
 
-#preview_box{
-    line-height:1em;
-}
+.gr-box{
 
-#preview_box h2{
-    display:block;
-}
-.text h1{
-    font-weight:bold;
-    font-size:18px;
-    color:#414d4c;
-    font-size:18pt;
-    font-family:"Trebuchet MS";
-    margin-bottom:15px;
+    h2{
+        display:block;
+    }
+
+    .text h1{
+        font-weight:bold;
+        font-size:18px;
+        color:#414d4c;
+        font-size:18pt;
+        font-family:"Trebuchet MS";
+        margin-bottom:15px;
+    }
+
+    .text a {
+        font-weight: bold;
+    }
+
+    .commentslink:hover {
+        text-decoration: underline;
+    }
 }

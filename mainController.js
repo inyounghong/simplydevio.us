@@ -53,6 +53,10 @@ angular.module('mainApp')
         img: 'tutorial.png'
     };
 
+    // Home page
+    var newItem = profileGreeting;
+    newItem.description = "New features include: Transparent backgrounds, text centering, greetings for groups.";
+    $scope.newItems = [newItem];
 })
 
 // Resource

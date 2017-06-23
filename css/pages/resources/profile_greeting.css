@@ -240,10 +240,10 @@ ul {
     font-weight: 700;
     color: rgba(255, 255, 255, 0.8);
     font-size: 13px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
     background: #1d2742;
     display: inline-block;
     position: relative;
