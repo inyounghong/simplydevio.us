@@ -58,20 +58,3 @@ angular.module('mainApp')
     newItem.description = "New features include: Transparent backgrounds, text centering, greetings for groups.";
     $scope.newItems = [newItem];
 })
-
-// Resource
-.directive('resource', function($window) {
-    return {
-        restrict: 'E',
-        scope: {
-            item: '=',
-            color: '@'
-        },
-        templateUrl: '/resources/partials/resourceItem.html',
-        link: function (scope, element, attrs) {
-            element.on('click', function() {
-                $window.location.href = scope.item.url;
-            });
-        }
-    }
-});

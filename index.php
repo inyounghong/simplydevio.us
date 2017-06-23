@@ -6,8 +6,8 @@
     <meta name="keywords" content="deviantart, simplysilent, profile, directory, css, journal, skin">
     <meta name="author" content="SimplySilent">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="libraries/minicolors/jquery.minicolors.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/new128.png" sizes="128x128">
@@ -48,14 +48,16 @@
     <!-- <script src="js/app.js"></script> -->
     <script src="js/customOnChange.js"></script>
 
-    <!-- Services/Factories -->
+    <!-- Directives -->
     <script src="app/directives/head.js"></script>
+    <script src="app/directives/resourceItem.js"></script>
+
+    <!-- Services/Factories -->
     <script src="app/resources/journal_creator/directives/sidebarBlock.js"></script>
-    <script src="resources/services/ImportFontService.js"></script>
+    <script src="app/services/ImportFontService.js"></script>
     <script src="app/resources/journal_creator/journalService.js"></script>
     <script src="app/resources/journal_creator/tabFactory.js"></script>
-    <script src="resources/factories/cTabFactory.js"></script>
-
+    <script src="app/factories/cTabFactory.js"></script>
 
     <!-- Controllers -->
     <script src="app/resources/profile_greeting/profileGreetingCtrl.js"></script>

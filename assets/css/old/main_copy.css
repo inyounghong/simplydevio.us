@@ -1,17 +1,17 @@
 /*
 Error: File to import not found or unreadable: globals.
-       Load path: /Users/inyoung/mamp/SimplyDevio.us/scss
-        on line 1 of scss/form.scss
+       Load path: /Users/inyoung/mamp/SimplyDevio.us/assets/scss
+        on line 1 of scss/old/main_copy.scss
 
 1: @import "globals";
-2: 
-3: @mixin col{
-4: 	vertical-align:top;
-5: 	display:inline-block;
-6: }
+2: @import "fonts";
+3: 
+4: $background: #f8f8f8;
+5: 
+6: * {
 
 Backtrace:
-scss/form.scss:1
+scss/old/main_copy.scss:1
 /usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
 /usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -53,4 +53,4 @@ scss/form.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: globals.\A        Load path: /Users/inyoung/mamp/SimplyDevio.us/scss\A         on line 1 of scss/form.scss\A \A 1: @import \"globals\";\A 2: \A 3: @mixin col{\A 4: 	vertical-align:top;\A 5: 	display:inline-block;\A 6: }"; }
+  content: "Error: File to import not found or unreadable: globals.\A        Load path: /Users/inyoung/mamp/SimplyDevio.us/assets/scss\A         on line 1 of scss/old/main_copy.scss\A \A 1: @import \"globals\";\A 2: @import \"fonts\";\A 3: \A 4: $background: #f8f8f8;\A 5: \A 6: * {"; }

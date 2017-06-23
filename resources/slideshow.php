@@ -8,9 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gallery Slideshow Creator for DeviantART</title>
 
-    <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
-
-    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="screen" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/jscolor.js"></script>
     <script type="text/javascript" src="js/slideshow.js"></script>

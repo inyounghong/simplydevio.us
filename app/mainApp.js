@@ -1,4 +1,4 @@
-const resources = "css/pages/resources/";
+const resources = "assets/css/pages/resources/";
 
 
 angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
