@@ -12,7 +12,7 @@
 
     <meta name="author" content="SimplySilent">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="screen" />
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
 
