@@ -1,0 +1,6 @@
+<div id="block-{{block.id}}" class="block" ng-class="{'selected' : isSelected(block.id)}" ng-click="toggleTab(block.id)">
+    {{block.name}}
+</div>
+<div id="tab-{{block.id}}" class="side_page">
+    <ng-include src="roots.tabs + block.id + '.html'"></ng-include>
+</div>

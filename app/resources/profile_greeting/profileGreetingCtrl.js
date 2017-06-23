@@ -4,8 +4,9 @@ angular.module('mainApp')
 
     var visitor = "";
     var isLocked = true;
-    var domain = window.location.href.split("/")[2];
-    var start = '<div align="center"><img src="http://' + domain + '/resources/profile_greeting/user_greetings/';
+    const ROOT = 'app/resources/profile_greeting/';
+    var domain = window.location.href.split("/")[2] + '/';
+    var start = '<div align="center"><img src="http://' + domain + ROOT + 'user_greetings/';
     var end = '"></div>';
 
     $scope.refresh = refresh;
@@ -17,6 +18,10 @@ angular.module('mainApp')
     $scope.submitUploadFont = submitUploadFont;
 
     $scope.imageData = {};
+    $scope.roots = {
+        partials: ROOT + 'partials/',
+    }
+
 
     // Set default values
     setDefaultInputValues();
@@ -94,7 +99,7 @@ angular.module('mainApp')
         pass = pass.trim().toLowerCase();
         $scope.imageData.username = "";
         $.ajax({
-            url: '/resources/profile_greeting/php/checkGreetingPassword.php',
+            url: ROOT + 'php/checkGreetingPassword.php',
             type: 'get',
             data: {password: pass},
             success: function(res) {
@@ -131,7 +136,7 @@ angular.module('mainApp')
     // Slide 3 show codes
     function showCodes() {
         var username = getUsername();
-        $("#recommended").val(start + getFilename(username) + end);
+        $("#code").val(start + getFilename(username) + end);
     }
 
     // Slide 3 show real image
@@ -204,11 +209,11 @@ angular.module('mainApp')
     // AJAX call to create image from given [i] image details
     function postCreateImage(i, hidePopup) {
         return $.ajax({
-            url: '/resources/profile_greeting/php/createImage.php',
+            url: ROOT + 'php/createImage.php',
             type: 'get',
             data: i,
             success: function(data) {
-                $("#previewImage").attr("src", "/resources/profile_greeting/user_greetings/display.php?" + new Date().getTime());
+                $("#previewImage").attr("src", ROOT + "user_greetings/display.php?" + new Date().getTime());
                 $("#loading").hide();
                 $("#daWidget").css("opacity", "1");
                 $("#previewImage").show();
@@ -229,7 +234,7 @@ angular.module('mainApp')
     // Gets an array of all the fonts on the server
     function getFontList() {
         $.ajax({
-            url: '/resources/profile_greeting/php/getFontList.php',
+            url: ROOT + '/php/getFontList.php',
             type: 'get',
             success: function(data) {
                 $scope.fonts = data;

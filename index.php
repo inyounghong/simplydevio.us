@@ -7,10 +7,7 @@
     <meta name="author" content="SimplySilent">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
-    <!-- <link rel="stylesheet" type="text/css" href="css/main_copy.css" media="screen" /> -->
-    <!-- <link rel="stylesheet" type="text/css" href="/resources/css/resources.css" media="screen" /> -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen" />
-    <!-- <link rel="stylesheet" type="text/css" href="css/new_form.css" media="screen" /> -->
     <link rel="stylesheet" type="text/css" href="libraries/minicolors/jquery.minicolors.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/new128.png" sizes="128x128">
@@ -28,7 +25,7 @@
 <body>
 
     <?php include 'includes/menu1.html' ?>
-    <?php include 'resources/profile_greeting/php/uploadFont.php' ?>
+    <?php include 'app/resources/profile_greeting/php/uploadFont.php' ?>
 
     <!-- View -->
     <div ng-view></div>
@@ -43,8 +40,8 @@
 
 
     <!-- JS Files -->
-    <script src="mainApp.js"></script>
-    <script src="mainController.js"></script>
+    <script src="app/mainApp.js"></script>
+    <script src="app/mainController.js"></script>
     <script src="libraries/minicolors/jquery.minicolors.js"></script>
     <script src="libraries/minicolors/angular-minicolors.js"></script>
 
@@ -52,16 +49,18 @@
     <script src="js/customOnChange.js"></script>
 
     <!-- Services/Factories -->
+    <script src="app/directives/head.js"></script>
+    <script src="app/resources/journal_creator/directives/sidebarBlock.js"></script>
     <script src="resources/services/ImportFontService.js"></script>
-    <script src="resources/journal_creator/journalService.js"></script>
-    <script src="resources/journal_creator/tabFactory.js"></script>
+    <script src="app/resources/journal_creator/journalService.js"></script>
+    <script src="app/resources/journal_creator/tabFactory.js"></script>
     <script src="resources/factories/cTabFactory.js"></script>
 
 
     <!-- Controllers -->
-    <script src="resources/profile_greeting/profileGreetingCtrl.js"></script>
+    <script src="app/resources/profile_greeting/profileGreetingCtrl.js"></script>
     <script src="resources/profile_directory/profileDirectoryCtrl.js"></script>
-    <script src="resources/journal_creator/journalCreatorCtrl.js"></script>
+    <script src="app/resources/journal_creator/journalCreatorCtrl.js"></script>
 
 </body>
 </html>

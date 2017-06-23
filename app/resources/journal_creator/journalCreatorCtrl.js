@@ -13,6 +13,11 @@ angular.module('mainApp')
     $scope.trustAsHtml = trustAsHtml;
     $scope.pageUrl = PAGE_URL;
 
+    $scope.roots = {
+        inputs: 'app/resources/journal_creator/inputs/',
+        tabs: 'app/resources/journal_creator/tabs/',
+    }
+
     // Sidebar tabs
     $scope.toggleTab = TabFactory.toggleTab;
     $scope.isSelected = TabFactory.isSelected;
@@ -20,6 +25,20 @@ angular.module('mainApp')
     // Code tabs
     $scope.setCTab = CTabFactory.setTab;
     $scope.isSelectedCTab = CTabFactory.isSelected;
+
+    // Sidebar blocks
+    $scope.sidebarBlocks = [
+        {id: "box", name: "Journal Box"},
+        {id: "top", name: "Journal Top"},
+        {id: "title", name: "Journal Title"},
+        {id: "timestamp", name: "Timestamp"},
+        {id: "textBox", name: "Text Box"},
+        {id: "text", name: "Journal Text"},
+        {id: "bottom", name: "Journal Bottom"},
+        {id: "comments", name: "Comments Link"},
+        {id: "blockquote", name: "Blockquote"},
+        {id: "header", name: "Header"},
+    ];
 
 
     // Start Execution

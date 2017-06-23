@@ -1,5 +1,5 @@
-<div ng-repeat="e in [j.top]" ng-include="'/resources/journal_creator/inputs/background.html'"></div>
-<div ng-repeat="e in [j.top]" ng-include="'/resources/journal_creator/inputs/align.html'"></div>
+<div ng-repeat="e in [j.top]" ng-include="roots.inputs + 'background.html'"></div>
+<div ng-repeat="e in [j.top]" ng-include="roots.inputs + 'align.html'"></div>
 
 <div ng-show="j.top.align != 'center'">
     <div class="chunk">
@@ -19,4 +19,4 @@
     </div>
 </div>
 
-<div ng-repeat="e in [j.top]" ng-include="'/resources/journal_creator/inputs/radius.html'"></div>
+<div ng-repeat="e in [j.top]" ng-include="roots.inputs + 'radius.html'"></div>
