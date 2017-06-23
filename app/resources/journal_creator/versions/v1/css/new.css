@@ -1,0 +1,224 @@
+/* Style sheet with the new design for the Journal Skin Creator */
+
+
+
+#left{
+
+    max-width:900px;
+
+}
+
+
+
+#left h2{
+
+    font-size:30px;
+
+    line-height:40px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.main_window{
+
+    margin-left:330px;
+
+    position:relative;
+
+}
+
+
+
+#preview_box{
+
+    box-shadow:none;
+
+    background:none;
+
+}
+
+
+
+.sidebar{
+
+    width:330px;
+
+    position:fixed;
+
+    top:66px;
+
+    left:0;
+
+    height:100%;
+
+    overflow:auto;
+
+    background:#d8d8d8;
+
+    border-right:1px solid #aaa;
+
+}
+
+
+
+
+
+.side_page{
+
+    padding:20px;
+
+    display:none;
+
+    border-bottom:1px solid #ccc;
+
+    background:#fff;
+
+}
+
+
+
+.tab_page{
+
+    min-height:250px;
+
+}
+
+
+
+.cpage textarea{
+
+    max-height:140px;
+    font-family: Courier;
+
+}
+
+
+
+.show{
+
+    display:block;
+
+}
+
+
+
+.block{
+
+    font-family:'Open Sans';
+
+    font-size:15px;
+
+    color:#222;
+
+    border-bottom:1px solid #ccc;
+
+    padding:8px 20px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+
+
+}
+
+
+
+.block:after{
+
+    content:url(../../images/arrow-down.png);
+
+    position:absolute;
+
+    right:10px;
+
+    top:6px;
+
+    opacity:.3;
+
+}
+
+
+
+.block:hover{
+
+    background:#eee;
+
+}
+
+
+
+.block.selected{
+
+    background:#eee;
+
+}
+
+
+
+.block.selected:after{
+
+    content:url(../../images/arrow-up.png);
+
+}
+
+
+
+
+
+input[type=range]{
+
+    width:150px;
+
+    padding:0;
+
+}
+
+
+
+input.font{
+
+    width:175px;
+
+}
+
+
+
+.heading{
+
+    width:85px;
+
+    display:inline-block;
+
+}
+
+
+
+.preview_box a{
+
+    color:none!important;
+
+}
+
+
+
+.gr-box, .gr-body{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+input.url{
+
+    width:251px!important;
+
+}

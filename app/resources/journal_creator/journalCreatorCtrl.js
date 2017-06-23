@@ -12,6 +12,7 @@ angular.module('mainApp')
     $scope.j = {}; // Watched data
     $scope.trustAsHtml = trustAsHtml;
     $scope.pageUrl = PAGE_URL;
+    $scope.root = 'app/resources/journal_creator/';
 
     $scope.roots = {
         inputs: 'app/resources/journal_creator/inputs/',
