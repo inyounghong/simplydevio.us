@@ -3,7 +3,7 @@ const YELLOW = "#ffd65a";
 const BLUE = "#00576e";
 
 const PAGE_URL = "http://www.simplydevio.us/#!/resources/journal_creator";
-const BG_IMAGE_URL = "http://www.simplydevio.us/resources/journal_creator/images/yellow_pattern.jpg";
+const BG_IMAGE_URL = "http://www.simplydevio.us/app/resources/journal_creator/images/yellow_pattern.jpg";
 
 angular.module('mainApp')
 .controller('JournalCreatorCtrl', function ($scope, $sce, JournalService, TabFactory, CTabFactory, ImportFontService) {
