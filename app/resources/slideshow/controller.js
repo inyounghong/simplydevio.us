@@ -3,11 +3,12 @@ angular.module('mainApp')
     'use strict';
 
     $scope.j = SlideshowService.setUpJournal();
-    $scope.password = '';
     $scope.root = '/app/resources/slideshow/';
-    $scope.checkit = checkit;
-
     $scope.hideNote = true;
+    $scope.isLocked = true;
+
+    $scope.checkit = checkit;
+    $scope.$watch("j", checkit, true);
 
     // Header data
     $scope.info = {
@@ -30,7 +31,6 @@ angular.module('mainApp')
         },
     ];
 
-
     $scope.addImage = function() {
         var image = {
             url: '',
@@ -43,8 +43,6 @@ angular.module('mainApp')
         $scope.j.images.splice(index, 1);
     }
 
-    $scope.$watch("j", checkit, true);
-
     function getCompleteCss(userCss) {
         var css = $scope.userCss + '\n\n';
         css += '.gr-box{background:url("' + $scope.j.background + '") no-repeat;}';
@@ -52,9 +50,16 @@ angular.module('mainApp')
     }
 
     function checkit() {
-        $scope.userHtml = SlideshowService.getUserHtml($scope.j);
-        $scope.userCss = SlideshowService.getUserCss($scope.j);
-        $scope.userWidgetHtml = CustomBoxService.getUserWidgetHtml($scope.j.background);
+        var userHtml = SlideshowService.getUserHtml($scope.j);
+        var userCss = SlideshowService.getUserCss($scope.j);
+
         $scope.completeCss = getCompleteCss($scope.userCss);
+        $scope.completeHtml = userHtml;
+
+        if (!$scope.isLocked) {
+            $scope.userHtml = userHtml;
+            $scope.userCss = userCss;
+            $scope.userWidgetHtml = CustomBoxService.getUserWidgetHtml($scope.j.background);
+        }
     }
 });
