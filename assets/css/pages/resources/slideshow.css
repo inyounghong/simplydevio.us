@@ -702,20 +702,7 @@ form h2 {
   cursor: pointer;
   width: 25%; }
 
-.editingBox .tab_page {
-  height: 500px;
-  overflow-y: auto; }
+.thumb img {
+  margin-left: -50%; }
 
-.editingBox, .editingSidebar, .editingPreview {
-  height: 550px !important; }
-
-.daInside {
-  margin-bottom: 25px !important;
-  overflow: hidden; }
-
-.gr-box {
-  padding: 25px 10px 0px;
-  max-height: 375px;
-  overflow: hidden; }
-
-/*# sourceMappingURL=profile_directory.css.map */
+/*# sourceMappingURL=slideshow.css.map */

@@ -20,35 +20,35 @@
 
 <script>
 
-    check();
-
-    window.onresize = function(){
-        check();
-    }
-
-    function check(){
-        if ($("#menu_icon").is(":visible")){
-            document.addEventListener("mousedown", outsideClickListener);
-        }
-        else{
-            document.removeEventListener("mousedown", outsideClickListener);
-        }
-    }
-
-    function toggleMenu(){
-        if ($(".menulinks").is(":visible")){
-            $(".menulinks").slideUp(200);
-        }
-        else{
-            $(".menulinks").slideDown(200);
-        }
-    }
-
-    function outsideClickListener(){
-        if(!$(event.target).closest($('#menu_icon').parent()).length) {
-            $(".menulinks").slideUp(200);
-
-        }
-    }
+    // check();
+    //
+    // window.onresize = function(){
+    //     check();
+    // }
+    //
+    // function check(){
+    //     if ($("#menu_icon").is(":visible")){
+    //         document.addEventListener("mousedown", outsideClickListener);
+    //     }
+    //     else{
+    //         document.removeEventListener("mousedown", outsideClickListener);
+    //     }
+    // }
+    //
+    // function toggleMenu(){
+    //     if ($(".menulinks").is(":visible")){
+    //         $(".menulinks").slideUp(200);
+    //     }
+    //     else{
+    //         $(".menulinks").slideDown(200);
+    //     }
+    // }
+    //
+    // function outsideClickListener(){
+    //     if(!$(event.target).closest($('#menu_icon').parent()).length) {
+    //         $(".menulinks").slideUp(200);
+    //
+    //     }
+    // }
 
   </script>

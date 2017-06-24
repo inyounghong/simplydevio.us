@@ -4,16 +4,18 @@
     width: 100.6%;
     color: $w80;
     margin-left: 2px;
+    background: $background;
 
-    .selected {
-        background: $pink;
-        color: #fff;
+
+    .tabby {
+        background: $pink_dark;
+        &.selected {
+            background: $pink;
+            color: #fff;
+        }
     }
     .tabby:hover {
         color: #fff;
-    }
-    .not_selected {
-        background: $pink_dark;
     }
 }
 

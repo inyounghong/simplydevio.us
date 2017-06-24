@@ -48,39 +48,50 @@
             background: #eee;
         }
 
-
-        /* Preview Box */
-        .daWidget {
-            background: $daBgColor;
-            border: 1px solid $daBorderColor;
-            @include radius(5px);
-            width: 500px;
-            display: inline-block;
-            margin-bottom: 10px;
-
-            .daHeader {
-                background: $daHeadColor;
-                padding: 5px 10px;
-                border-bottom: 1px solid $daBorderColor;
-            }
-
-            .daInside {
-                position: relative;
-                padding: 0px 10px 20px 10px;
-                min-height: 100px;
-                box-sizing: border-box;
-
-                #previewImage {
-                    z-index: 98;
-                    position: relative;
-                }
-            }
-
-            #loading {
-                position: absolute;
-                width: 100%;
-                top: 38px;
-            }
+        .description{
+            max-width:800px;
         }
+    }
+}
+
+.daWidget {
+    background: $daBgColor;
+    border: 1px solid $daBorderColor;
+    @include radius(5px);
+    min-width: 500px;
+    display: inline-block;
+    margin-bottom: 10px;
+
+    .daHeader {
+        background: $daHeadColor;
+        padding: 5px 10px;
+        border-bottom: 1px solid $daBorderColor;
+    }
+
+    .daInside {
+        position: relative;
+        padding: 0px 10px 20px 10px;
+        min-height: 100px;
+        box-sizing: border-box;
+
+        #previewImage {
+            z-index: 98;
+            position: relative;
+        }
+    }
+
+    #loading {
+        position: absolute;
+        width: 100%;
+        top: 38px;
+    }
+
+    .gr-box a{
+        text-decoration:none;
+    }
+
+    .gr-box{
+        max-width:800px;
+        padding: 20px 10px;
     }
 }

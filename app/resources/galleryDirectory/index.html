@@ -1,0 +1,236 @@
+<script type="text/javascript">
+
+</script>
+    <?php include '../includes/menu1.html' ?>
+<div class="section" id="resource">
+    <div id="left">
+        <div class="title">Gallery Directory Creator</div>
+        <div class="map"><a href="/#!/resources">Resources</a> > Gallery Creator</div>
+            <!-- Start Journal Box Section -->
+            <?php include 'includes/note.html' ?>
+            <div class="cols lft">
+            <form action="" id="profileDirectory" name="example" onchange="checkit()" onsubmit="checkit(); return false">
+                <div class="tab_menu four">
+                    <div id="custom_box_link" class="tabby selected">Directory</div>
+                    <div id="buttons_link" class="tabby not_selected">Colors</div>
+                    <div id="button_name_link" class="tabby not_selected">Buttons</div>
+                    <div id="status_link" class="tabby not_selected">Purchase</div>
+                </div>
+                <table id="tab_one" class="tab_page visible">
+                    <tr>
+                        <td class="w25"><b>Background </b></td>
+                        <td class="lg"><input name="" id="customBackground" placeholder="Image Source URL"><div class="tooltip"><a href="image_tutorial.php">?</a><div class="tool_info"><span>Click for a tutorial</span></div></div></td>
+                    </tr>
+                    <tr>
+                        <td><b>Font Name</b></td>
+                        <td colspan="4"><input id="buttonFontFamily" value="Verdana"><a title="Use a Web Safe Font or Google Font here" class="tooltip">[?]</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Font Size</b></td>
+                        <td><input id="buttonSize" type="range" min="0" max="30" value="14"><span class="range_label" id="button_size_range">14</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>Position</b></td>
+                        <td><input id="topMargin" type="range" min="0" max="100" value="10"><span class="range_label" id="top_margin_range">10</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>Padding</b></td>
+                        <td colspan="4"><input id="buttonPadding" type="range" min="0" max="30" value="10"><span class="range_label" id="button_padding_range">10</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>Margin</b></td>
+                        <td colspan="4"><input id="buttonMargin" type="range" min="0" max="20" value="5"><span class="range_label" id="button_margin_range">5</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>Roundness</b></td>
+                        <td colspan="4"><input id="buttonRadius" type="range" min="0" max="20" value="0"><span class="range_label" id="button_radius_range">0</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="5"><input type="checkbox" id="includeArrow"  class="check"> <label for="includeArrow">Include arrow (&#10152;) on hover</label></td>
+                    </tr>
+                </table>
+                <div id="tab_two" class="tab_page hidden">
+                <table>
+                    <tr>
+                        <td style="width:110px;"><b>Background </b></td>
+                        <td>Normal:</td>
+                        <td><input id="buttonBackground" class="color" maxlength="6" value="5E4948"></td>
+                        <td>Hover:</td>
+                        <td><input id="buttonHoverBackground" class="color" maxlength="6" value="9FCE54"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Text Color</b></td>
+                        <td>Normal:</td>
+                        <td><input id="buttonColor" class="color" maxlength="6" value="FFFFFF"></td>
+                        <td>Hover:</td>
+                        <td><input id="buttonHoverColor" class="color" maxlength="6" value="FFFFFF"></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                </table>
+                <input type="checkbox" id="includeTransition" class="check"><label for="includeTransition">Include Transitions</label>
+            </div>
+            <div id="tab_three" class="tab_page hidden">
+                <div id="leftButtons">
+                    <table class="aButton">
+                        <tr>
+                            <td class="w35"><input class="name" name="butName" value="My Button"> </td>
+                            <td class="full"><input name="butLink" class="url" placeholder="Gallery URL"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input name="imgLink" class="url" value="http://www.simplydevio.us/resources/images/slideshow5.png"></td>
+                        </tr>
+                    </table>
+                    <table class="aButton">
+                        <tr>
+                            <td class="w35"><input class="name" name="butName" value="My Button"> </td>
+                            <td class="full"><input name="butLink" class="url" placeholder="Gallery URL"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input name="imgLink" class="url" placeholder="Image Source URL"></td>
+                        </tr>
+                    </table>
+                    <table class="aButton">
+                        <tr>
+                            <td class="w35"><input class="name" name="butName" value="My Button"> </td>
+                            <td class="full"><input name="butLink" class="url" placeholder="Gallery URL"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input name="imgLink" class="url" placeholder="Image Source URL"></td>
+                        </tr>
+                    </table>
+                </div><br>
+                <div id="addLeft" class="add">Add a Row</div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <div id="removeLeft" class="remove">Remove a Row</div>
+            </div>
+            <div id="tab_four" class="tab_page hidden">
+                To receive the codes needed to create your profile directory, please purchase the password and type it in below.
+                <br>
+                <input id="password" class="password" placeholder="Password">
+                <div id="message"></div>
+                <br>
+                <a href="http://fav.me/d75xzuy" class="buy">Purchase Password</a>
+            </div>
+<script>
+$("#addLeft").click(function(){
+    $("#leftButtons").append('<table class="aButton"><tr><td class="w35"><input class="name" name="butName" value="My Button"> </td><td class="full"><input name="butLink" class="url" placeholder="Gallery URL"></td></tr><tr><td></td><td><input name="imgLink" class="url" placeholder="Image Source URL"></td></tr></table>')
+  checkit();
+});
+$("#removeLeft").click(function(){
+    $("#leftButtons .aButton:last").remove();
+    checkit();
+});
+function toggle(){
+    $("#custom_box_link").attr('class', 'tabby not_selected');
+    $("#buttons_link").attr('class', 'tabby not_selected');
+    $("#button_name_link").attr('class', 'tabby not_selected');
+    $("#status_link").attr('class', 'tabby not_selected');
+    $(this).attr('class', 'tabby selected');
+}
+$("#custom_box_link").click(function(){
+    $("#tab_one").attr('class', 'tab_page visible');
+    $("#tab_two").attr('class', 'tab_page hidden');
+    $("#tab_three").attr('class', 'tab_page hidden');
+    $("#tab_four").attr('class', 'tab_page hidden');
+});
+$("#buttons_link").click(function(){
+    $("#tab_one").attr('class', 'tab_page hidden');
+    $("#tab_two").attr('class', 'tab_page visible');
+    $("#tab_three").attr('class', 'tab_page hidden');
+    $("#tab_four").attr('class', 'tab_page hidden');
+});
+$("#button_name_link").click(function(){
+    $("#tab_one").attr('class', 'tab_page hidden');
+    $("#tab_two").attr('class', 'tab_page hidden');
+    $("#tab_three").attr('class', 'tab_page visible');
+    $("#tab_four").attr('class', 'tab_page hidden');
+});
+$("#status_link").click(function(){
+    $("#tab_one").attr('class', 'tab_page hidden');
+    $("#tab_two").attr('class', 'tab_page hidden');
+    $("#tab_three").attr('class', 'tab_page hidden');
+    $("#tab_four").attr('class', 'tab_page visible');
+});
+$("#custom_box_link").click(toggle);
+$("#buttons_link").click(toggle);
+$("#button_name_link").click(toggle);
+$("#status_link").click(toggle);
+</script>
+            </form>
+            </div>
+            <div class="cols rgt">
+                <div class="right_preview_box">
+                    <div class="box_heading">Preview</div>
+                    <div id="preview_box"></div>
+                    <div class="notice">DeviantART has a max height of 350px, so anything below this line will be cut off!</div>
+                </div>
+            </div>
+            <div class="cols lft">
+                Need help using the codes below? Read this step-by-step <a href="profile_tutorial.php" target="_blank">tutorial</a>.
+                <br><br>
+                <div class="codes">
+                    <div class="ctab_menu">
+                        <div id="ctab1" class="tabby selected">Widget</div>
+                        <div id="ctab2" class="tabby not_selected">HTML</div>
+                        <div id="ctab3" class="tabby not_selected">CSS</div>
+                    </div>
+                    <div id="cbox1" class="tab_page cpage visible">
+                        <b>Widget Code</b>
+                        <p>Paste into the text box of your Featured Deviation Widget</p>
+                        <textarea id="widgetArea" class="textArea">These codes will appear once you purchase and type in the password.</textarea>
+                    </div>
+                    <div id="cbox2" class="tab_page cpage hidden">
+                        <b>HTML Code</b>
+                        <p>Paste into the text box of your journal in Sta.sh Writer</p>
+                        <textarea id="htmlArea" class="textArea">These codes will appear once you purchase and type in the password.</textarea>
+                    </div>
+                    <div id="cbox3" class="tab_page cpage hidden">
+                        <b>CSS Code</b>
+                        <p>Paste into the main Skin CSS section of your journal</p>
+                        <textarea id="cssArea" class="textArea">These codes will appear once you purchase and type in the password.</textarea>
+                    </div>
+                </div>
+            </div><!-- End cols lft -->
+            <br><br>
+            </div>
+        </div>
+    </div>
+<div class="section footer b">
+    <?php include '../includes/footer.html' ?>
+</div>
+<script>
+// C Pages
+function ctoggle(){
+    $("#ctab1").attr('class', 'tabby not_selected');
+    $("#ctab2").attr('class', 'tabby not_selected');
+    $("#ctab3").attr('class', 'tabby not_selected');
+    $(this).attr('class', 'tabby selected');
+}
+// Toggles box visibility
+$("#ctab1").click(ctoggle);
+$("#ctab2").click(ctoggle);
+$("#ctab3").click(ctoggle);
+function cbox_toggle(){
+    $("#cbox1").attr('class', 'tab_page cpage hidden');
+    $("#cbox2").attr('class', 'tab_page cpage hidden');
+    $("#cbox3").attr('class', 'tab_page cpage hidden');
+}
+$("#ctab1").click(function(){
+    cbox_toggle();
+    $("#cbox1").attr('class', 'tab_page cpage visible');
+});
+$("#ctab2").click(function(){
+    cbox_toggle();
+    $("#cbox2").attr('class', 'tab_page cpage visible');
+});
+$("#ctab3").click(function(){
+    cbox_toggle();
+    $("#cbox3").attr('class', 'tab_page cpage visible');
+});
+</script>
+</div>
+</body>
+</html>
