@@ -17,45 +17,17 @@
 	// 	console.log(data);
 	// })
 
-
-        function logResults(data) {
-            console.log(data);
-        }
-
-		function authorize() {
-			console.log("authorizing");
-
-            $.get("./authorize.php", function(json) {
-              console.log(json);
-            })
-
-			// $.get("https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://localhost:8888/scripts/test.php&scope=browse&state=mysessionid").done(function (data) {
-			//     console.log(data);
-			// });
-			// $.ajax({
-			// 	type: "GET",
-			//   	url: "https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://www.simplydevio.us/scripts/authorize.php&scope=browse&state=mysessionid&callback=?",
-		    // 	dataType: 'jsonp',
-            //     jsonpCallback: "logResults"
-			// })
-			// .success(function(data) {
-			// 	console.log("done");
-			// 	console.log(data);
-			// })
-
-            // $.getJSON('https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://www.simplydevio.us/scripts/authorize.php&scope=browse&state=mysessionidcallback=?','firstname=Jeff',function(res){
-            //     alert('Your name is '+res.fullname);
-            // });
+	var client_id = 4082;
+	var redirect_uri = "https://www.simplydevio.us/scripts/test/html";
+	var authlink = "https://www.deviantart.com/oauth2/authorize?response_type=token&client_id=" + client_id + "&redirect_uri=" + redirect_uri + "&scope=basic&state=mysessionid";
+	console.log(authlink);
 
 		function authorize() {
 			console.log("authorizing");
 
-			// $.get("https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://localhost:8888/scripts/test.php&scope=browse&state=mysessionid").done(function (data) {
-			//     console.log(data);
-			// });
 			$.ajax({
 				type: "GET",
-			  	url: "https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://localhost:8888/scripts/authorize.php&scope=browse&state=mysessionid",
+			  	url: authlink,
 		    	dataType: 'jsonp',
 			})
 			.success(function(data) {
@@ -65,50 +37,50 @@
 
 		}
 
-		$(document).ready(function(){
-
-
-			$("#submit").click(function(){
-				$name = $("#name").val();
-
-				try{
-					$code = $("#code").val();
-					$.ajax({
-					  url: "https://www.deviantart.com/oauth2/token?grant_type=authorization_code&client_id=4082&client_secret=049014ae5d6c334d27ffd89a96f8e4fc&redirect_uri=http://localhost:8888/scripts/test.php&code=" + $code,
-					  method: "GET",
-					  dataType: 'json'
-					})
-					.done(function(msg) {
-						console.log("yo");
-						alert("done");
-					  $("#log").html(msg);
-					});
-				}
-				catch (err){
-					console.log("ysdfo");
-					alert(window.location.href );
-				}
-
-
-
-			});
-		});
-
-
-        function getWatchers() {
-            var username = "simplysilent";
-            var token = "13a5ef8b6225d642f2de44e6a0d739914f5ee7f1f8775c1e79";
-            var url = `https://www.deviantart.com/api/v1/oauth2/user/watchers/${username}?access_token=${token}`;
-
-            $.ajax({
-			  	url: url,
-		    	dataType: 'JSON',
-                type: "GET",
-                success: function(data) {
-                    console.log(data);
-                }
-			});
-        }
+		// $(document).ready(function(){
+		//
+		//
+		// 	$("#submit").click(function(){
+		// 		$name = $("#name").val();
+		//
+		// 		try{
+		// 			$code = $("#code").val();
+		// 			$.ajax({
+		// 			  url: "https://www.deviantart.com/oauth2/token?grant_type=authorization_code&client_id=4082&client_secret=049014ae5d6c334d27ffd89a96f8e4fc&redirect_uri=http://localhost:8888/scripts/test.php&code=" + $code,
+		// 			  method: "GET",
+		// 			  dataType: 'json'
+		// 			})
+		// 			.done(function(msg) {
+		// 				console.log("yo");
+		// 				alert("done");
+		// 			  $("#log").html(msg);
+		// 			});
+		// 		}
+		// 		catch (err){
+		// 			console.log("ysdfo");
+		// 			alert(window.location.href );
+		// 		}
+		//
+		//
+		//
+		// 	});
+		// });
+		//
+		//
+        // function getWatchers() {
+        //     var username = "simplysilent";
+        //     var token = "13a5ef8b6225d642f2de44e6a0d739914f5ee7f1f8775c1e79";
+        //     var url = `https://www.deviantart.com/api/v1/oauth2/user/watchers/${username}?access_token=${token}`;
+		//
+        //     $.ajax({
+		// 	  	url: url,
+		//     	dataType: 'JSON',
+        //         type: "GET",
+        //         success: function(data) {
+        //             console.log(data);
+        //         }
+		// 	});
+        // }
 	}
 
 	</script>
@@ -121,7 +93,6 @@
 			$code = $_GET['code'];
 		}
 	?> -->
-
 
 	<a href="https://www.deviantart.com/oauth2/authorize?response_type=code&client_id=4082&redirect_uri=http://localhost:8888/scripts/authorize.php&scope=browse&state=mysessionid">Start</a>
 
