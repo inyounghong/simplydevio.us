@@ -1,7 +1,11 @@
 <?
 session_start();
 header('Content-type: image/png');
+<<<<<<< HEAD
 $visitor = 'KlodHopper';
+=======
+$visitor = 'Shafttt';
+>>>>>>> 3a9c20aed4bbe3af5d2c639688c2520e02d6a532
 $new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my page!');
 
