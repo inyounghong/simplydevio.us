@@ -17,11 +17,11 @@ function my_json_encode($data) {
         $islist = is_array($data) && ( empty($data) || array_keys($data) === range(0,count($data)-1) );
 
         if( $islist ) {
-            $json = '[' . implode(',', array_map('__json_encode', $data) ) . ']';
+            $json = '[' . implode(',', array_map('my_json_encode', $data) ) . ']';
         } else {
             $items = Array();
             foreach( $data as $key => $value ) {
-                $items[] = __json_encode("$key") . ':' . __json_encode($value);
+                $items[] = my_json_encode("$key") . ':' . my_json_encode($value);
             }
             $json = '{' . implode(',', $items) . '}';
         }
