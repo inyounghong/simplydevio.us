@@ -1,7 +1,7 @@
 <?
 session_start();
 header('Content-type: image/png');
-$visitor = 'birdmir';
+$visitor = exec('python ../python/image.py birdmir visitor');
 $new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my page!');
 
@@ -33,8 +33,8 @@ $im = imagecreatetruecolor ($width, $height);
 imagealphablending($im, true);
 imagesavealpha($im, true);
 $background = imagecolorallocate($im, 0, 0, 0);
-imagefill($im,0,0,$background);
-$color = imagecolorallocate($im, 255, 255, 255);
+imagefill($im,0,0,0x7fff0000);
+$color = imagecolorallocate($im, 0, 111, 214);
 imagettftext($im, 15, 0, $x1, $y1, $color, '../uploaded_fonts/arberkley.ttf', $new_message1);
 imagettftext($im, 15, 0, $x2, $y2, $color, '../uploaded_fonts/arberkley.ttf', $new_message2);
 imagepng($im);
