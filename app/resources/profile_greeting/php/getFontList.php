@@ -9,7 +9,7 @@ while ($i < count($files)) {
     $i++;
 }
 
-echo my_json_encode($font_array);
+echo json_encode($font_array);
 
 
 function my_json_encode($data) {
