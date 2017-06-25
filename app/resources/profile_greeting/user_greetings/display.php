@@ -1,6 +1,6 @@
 <?
 session_start();
-header('Content-type: image/png');
+// header('Content-type: image/png');
 $visitor = 'KlodHopper';
 $new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my page!');
@@ -29,14 +29,14 @@ $y1 = 20 + 15;
 $y2 = $y1 + 10 + $text_height;
 $height = $y2 + 20 + 15/2;
 
-$im = imagecreatetruecolor ($width, $height);
-imagealphablending($im, true);
-imagesavealpha($im, true);
-$background = imagecolorallocate($im, 0, 0, 0);
-imagefill($im,0,0,$background);
-$color = imagecolorallocate($im, 255, 255, 255);
-imagettftext($im, 15, 0, $x1, $y1, $color, '../uploaded_fonts/arberkley.ttf', $new_message1);
-imagettftext($im, 15, 0, $x2, $y2, $color, '../uploaded_fonts/arberkley.ttf', $new_message2);
-imagepng($im);
-imagedestroy($im);
+// $im = imagecreatetruecolor ($width, $height);
+// imagealphablending($im, true);
+// imagesavealpha($im, true);
+// $background = imagecolorallocate($im, 0, 0, 0);
+// imagefill($im,0,0,$background);
+// $color = imagecolorallocate($im, 255, 255, 255);
+// imagettftext($im, 15, 0, $x1, $y1, $color, '../uploaded_fonts/arberkley.ttf', $new_message1);
+// imagettftext($im, 15, 0, $x2, $y2, $color, '../uploaded_fonts/arberkley.ttf', $new_message2);
+// imagepng($im);
+// imagedestroy($im);
 ?>
