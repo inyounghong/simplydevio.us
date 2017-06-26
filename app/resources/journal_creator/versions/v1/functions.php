@@ -87,7 +87,7 @@ function image_repeat($id){
 // background-position
 function image_position($id){
 	echo'
-    <select name="' . $di . '" id="' . $id . '">
+    <select name="' . $id . '" id="' . $id . '">
 		<option value="" selected="selected">Image Position</option>
 		<option value="left top">Top Left</option>
 		<option value="left">Middle Left</option>

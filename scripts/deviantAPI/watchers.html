@@ -1,0 +1,133 @@
+<html>
+<head>
+
+    <link href="c3.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="c3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>Getting watchers for <span id="username"></span>.</p>
+    <p>You have <span id="numWatchers"></span> watchers.</p>
+
+    <div id="typePie"></div>
+    <div id="artistLevelPie"></div>
+    <div id="artistSpecialityPie"></div>
+    <div id="sexPie"></div>
+    <div id="countryPie"></div>
+    <!-- <div id="timezonePie"></div> -->
+
+
+    <script>
+        var username = window.location.href.split("?")[1];
+        var watcherData;
+        var processedData;
+
+        // Fill html
+        $("#username").html(username);
+
+        var info = [
+            {
+                category: 'type',
+                data: [],
+            },
+            {
+                category: 'artistLevel',
+                data: [],
+            },
+            {
+                category: 'artistSpeciality',
+                data: [],
+            },
+            {
+                category: 'sex',
+                data: [],
+            },
+            {
+                category: 'country',
+                data: [],
+            },
+            {
+                category: 'timezone',
+                data: [],
+            },
+
+
+        ]
+
+
+        d3.json("watchers.json", function(data) {
+            console.log(data);
+            watcherData = data;
+            processedData = processData();
+
+            // Make Pies
+            drawPies();
+
+            $("#numWatchers").html(watcherData.length);
+
+            console.log(info);
+        });
+
+        function drawPies() {
+            info.forEach(function(d) {
+                makePie(d);
+            })
+        }
+
+
+
+        function processData() {
+
+            // Initialize data
+            var processedData = {};
+            processedData['count'] = 0;
+
+            // Loop through watcher data
+            watcherData.forEach(function(watcher) {
+                if (watcher['username'] == null) {
+                    return;
+                }
+                processedData['count']++;
+
+                info.forEach(function(d) {
+
+                    if (watcher[d.category] == null) {
+                        // Ignore
+                    } else {
+                        var index = getIndex(watcher[d.category], d.data);
+                        if (index > -1) {
+                            d.data[index][1]++;
+                        } else {
+                            d.data.push([watcher[d.category], 1]);
+                        }
+                    }
+                });
+            });
+
+            console.log(processedData);
+            return processedData;
+        }
+
+        function getIndex(option, data) {
+            for (var i = 0; i < data.length; i++) { // data[i] = [option, count]
+                if (data[i][0] == option) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        function makePie(d) {
+            var chart = c3.generate({
+                bindto: "#" + d.category + "Pie",
+                data: {
+                    columns: d.data,
+                    type : 'pie',
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
