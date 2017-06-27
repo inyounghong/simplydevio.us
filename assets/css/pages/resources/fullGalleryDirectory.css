@@ -567,109 +567,149 @@ form h2 {
     left: 30px;
     top: -5px; }
 
-.cTabMenu {
+.editingBox {
+  background: #fff;
+  position: relative;
+  height: 500px;
+  box-sizing: border-box; }
+  .editingBox .editingSideBar {
+    background: #e03e56;
+    width: 400px;
+    box-sizing: border-box;
+    height: 500px;
+    position: absolute; }
+    .editingBox .editingSideBar.sidebarPadding {
+      padding: 30px; }
+    .editingBox .editingSideBar .button {
+      background: rgba(255, 255, 255, 0.8);
+      color: #e03e56 !important;
+      width: 100%;
+      height: auto; }
+  .editingBox .editingPreview {
+    margin-left: 400px;
+    width: 64%;
+    position: relative;
+    height: 500px;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center; }
+    .editingBox .editingPreview .top {
+      max-height: 386px;
+      overflow-y: scroll;
+      padding: 50px;
+      box-sizing: border-box; }
+    .editingBox .editingPreview .bottom {
+      position: absolute;
+      left: 0px;
+      padding: 15px 32px 25px 0;
+      bottom: 0px;
+      width: 100%;
+      background: #eee; }
+    .editingBox .editingPreview .description {
+      max-width: 800px; }
+
+.daWidget {
+  background: #dae4d9;
+  border: 1px solid #a6b2a6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  min-width: 500px;
+  display: inline-block;
+  margin-bottom: 10px; }
+  .daWidget .daHeader {
+    background: #e6ede4;
+    padding: 5px 10px;
+    border-bottom: 1px solid #a6b2a6; }
+  .daWidget .daInside {
+    position: relative;
+    padding: 0px 10px 20px 10px;
+    min-height: 100px;
+    box-sizing: border-box; }
+    .daWidget .daInside #previewImage {
+      z-index: 98;
+      position: relative; }
+  .daWidget #loading {
+    position: absolute;
+    width: 100%;
+    top: 38px; }
+  .daWidget .gr-box a {
+    text-decoration: none; }
+  .daWidget .gr-box {
+    max-width: 800px;
+    padding: 20px 10px; }
+
+#popup {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: 1001;
+  width: 100%;
+  text-align: center;
+  display: none; }
+  #popup #mask {
+    background: #000;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+  #popup #popupBox {
+    background: #fff;
+    padding: 50px;
+    max-width: 500px;
+    margin: 50px auto 50px;
+    position: relative;
+    z-index: 1002; }
+  #popup .scroll {
+    height: 350px;
+    overflow-y: auto; }
+  #popup .slides {
+    text-align: left; }
+    #popup .slides h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: 700; }
+    #popup .slides p {
+      margin: 15px 0; }
+    #popup .slides .button {
+      position: absolute;
+      bottom: 50px;
+      right: 50px; }
+  #popup #slide2, #popup #slide3 {
+    display: none; }
+  #popup #popupLoad {
+    position: absolute;
+    top: 2px;
+    left: 220px;
+    z-index: -1; }
+
+#termsCheckbox {
+  margin: 5px 0; }
+
+.tab_menu {
+  width: 100.6%;
   color: rgba(255, 255, 255, 0.8);
-  margin-left: 2px; }
-  .cTabMenu .ctab {
-    font-family: 'Ubuntu';
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 13px;
-    float: left;
-    padding: 12px 0;
-    margin: 0 -2px;
-    text-align: center;
-    cursor: pointer;
-    width: 25%;
+  margin-left: 2px;
+  background: #f8f8f8; }
+  .tab_menu .tabby {
     background: #A1334A; }
-    .cTabMenu .ctab.selected {
+    .tab_menu .tabby.selected {
       background: #e03e56;
       color: #fff; }
-    .cTabMenu .ctab:hover {
-      color: #fff; }
-
-.cPageWrap {
-  clear: both; }
-  .cPageWrap .cPage {
-    color: #FFF;
-    padding: 20px;
-    background: #e03e56; }
-  .cPageWrap textarea {
-    margin-top: 15px;
-    background: rgba(255, 255, 255, 0.3);
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    font-family: courier;
-    font-size: 11px; }
-
-.main_window {
-  margin-left: 400px;
-  position: relative;
-  padding: 40px; }
-  .main_window #preview_box {
-    margin-bottom: 50px; }
-
-.sidebar {
-  box-sizing: border-box;
-  width: 400px;
-  position: fixed;
-  top: 65px;
-  left: 0;
-  height: 100%;
-  overflow: auto;
-  background: #A1334A; }
-  .sidebar .side_page {
-    padding: 20px;
-    display: none;
-    background: #e03e56; }
-
-.block {
-  font-family: 'Open Sans';
-  text-transform: uppercase;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.8);
-  padding: 12px 20px;
-  position: relative;
-  cursor: pointer;
-  font-weight: 700; }
-  .block:hover {
-    background: #A1334A;
+  .tab_menu .tabby:hover {
     color: #fff; }
-  .block.selected {
-    background: #A1334A; }
 
-.rules {
-  background: #EEE;
-  padding: 20px;
-  font-size: 13px; }
-  .rules h2 {
-    font-family: 'Ubuntu';
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 13px;
-    color: #000;
-    margin-bottom: 10px; }
+.tabby {
+  font-family: 'Ubuntu';
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  display: inline-block;
+  padding: 12px 0;
+  margin: 0 -2px;
+  text-align: center;
+  cursor: pointer;
+  width: 25%; }
 
-/* DA Styling */
-.gr-box, .gr-body {
-  position: relative;
-  overflow: hidden; }
-
-.gr-box h2 {
-  display: block; }
-.gr-box .text h1 {
-  font-weight: bold;
-  font-size: 18px;
-  color: #414d4c;
-  font-size: 18pt;
-  font-family: "Trebuchet MS";
-  margin-bottom: 15px; }
-.gr-box .text a {
-  font-weight: bold; }
-.gr-box .commentslink:hover {
-  text-decoration: underline; }
-
-/*# sourceMappingURL=journal_creator.css.map */
+/*# sourceMappingURL=fullGalleryDirectory.css.map */

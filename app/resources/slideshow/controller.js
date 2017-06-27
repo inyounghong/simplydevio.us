@@ -20,16 +20,7 @@ angular.module('mainApp')
     }
 
     // Sidebar data
-    $scope.tabs = [
-        {
-            name: "Slideshow",
-            id: "slideshow",
-        },
-        {
-            name: "Images",
-            id: "images",
-        },
-    ];
+    $scope.tabs = ["Slideshow","Images"];
 
     $scope.addImage = function() {
         var image = {
@@ -44,7 +35,7 @@ angular.module('mainApp')
     }
 
     function getCompleteCss(userCss) {
-        var css = $scope.userCss + '\n\n';
+        var css = userCss + '\n\n';
         css += '.gr-box{background:url("' + $scope.j.background + '") no-repeat;}';
         return '<style>' + css + '</style>';
     }
@@ -53,7 +44,7 @@ angular.module('mainApp')
         var userHtml = SlideshowService.getUserHtml($scope.j);
         var userCss = SlideshowService.getUserCss($scope.j);
 
-        $scope.completeCss = getCompleteCss($scope.userCss);
+        $scope.completeCss = getCompleteCss(userCss);
         $scope.completeHtml = userHtml;
 
         if (!$scope.isLocked) {

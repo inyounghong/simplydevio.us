@@ -344,15 +344,25 @@ form h2 {
     text-transform: none; }
 
 .chunk {
-  margin: 10px 0; }
+  margin: 7px 0; }
   .chunk .input {
     display: inline-block;
-    width: 69%; }
+    width: 69%;
+    margin: 3px 0; }
   .chunk .fa-trash {
     margin-top: 7px;
     cursor: pointer; }
     .chunk .fa-trash:hover {
       color: #FFFFFF; }
+
+.small-chunks {
+  margin: 5px 0; }
+  .small-chunks .chunk {
+    margin: 5px 0; }
+  .small-chunks h2 {
+    width: 91px; }
+  .small-chunks .rangeWithBigLabel {
+    width: 83% !important; }
 
 /*
  * NEW FORM (COLORED BACKGROUND)

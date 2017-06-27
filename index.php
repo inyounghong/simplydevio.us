@@ -69,6 +69,7 @@
     <script src="app/resources/journal_creator/tabFactory.js"></script>
     <script src="app/resources/profile_directory/service.js"></script>
     <script src="app/resources/slideshow/service.js"></script>
+    <script src="app/resources/fullGalleryDirectory/service.js"></script>
 
     <!-- Controllers -->
     <script src="app/tutorials/tutorialCtrl.js"></script>
@@ -76,7 +77,7 @@
     <script src="app/resources/profile_directory/profileDirectoryCtrl.js"></script>
     <script src="app/resources/journal_creator/journalCreatorCtrl.js"></script>
     <script src="app/resources/slideshow/controller.js"></script>
-    <!-- <script src="app/resources/fullGalleryDirectory/controller.js"></script> -->
+    <script src="app/resources/fullGalleryDirectory/controller.js"></script>
     <!-- <script src="app/resources/galleryDirectory/controller.js"></script> -->
 </body>
 </html>

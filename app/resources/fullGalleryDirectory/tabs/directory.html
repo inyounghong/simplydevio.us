@@ -1,0 +1,52 @@
+<div class="chunk">
+    <h2>Background</h2>
+    <div class="input">
+        <input type="text" ng-model="j.background" placeholder="Image Source URL">
+    </div>
+</div>
+<div class="chunk">
+    <h2>Font Family</h2>
+    <div class="input">
+        <input type="text" ng-model="j.fontFamily" placeholder="Font Name">
+    </div>
+</div>
+<div class="chunk">
+    <h2>Font Size</h2>
+    <div class="input">
+        <input ng-model="j.fontSize" type="range" class="rangeWithBigLabel" min="0" max="30">
+        <div class="range_label">{{j.fontSize}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2>Position</h2>
+    <div class="input">
+        <input ng-model="j.position" type="range" class="rangeWithBigLabel" min="0" max="100">
+        <div class="range_label">{{j.position}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2>Padding</h2>
+    <div class="input">
+        <input ng-model="j.padding" type="range" class="rangeWithBigLabel" min="0" max="30">
+        <div class="range_label">{{j.padding}}</div>
+    </div>
+</div>
+<div class="chunk">
+    <h2>Margin</h2>
+    <div class="input">
+        <input ng-model="j.margin" type="range" class="rangeWithBigLabel" min="0" max="30">
+        <div class="range_label">{{j.margin}}</div>
+    </div>
+</div>
+
+<div class="chunk">
+    <h2>Options</h2>
+    <div class="input">
+        <label><input type="checkbox" ng-model="buttonsOnRight"> Buttons on Right Side</label><br>
+        <label><input type="checkbox" ng-model="includeTransitions"> Include Transitions</label><br>
+        <label><input type="checkbox" ng-model="includeShadow"> Inclde Shadow</label>
+        <div ng-show="includeShadow">
+            <input minicolors type="text" ng-model="j.shadow" class="color" max="6">
+        </div>
+    </div>
+</div>

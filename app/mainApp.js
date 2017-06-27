@@ -30,6 +30,11 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
             controller: 'SlideshowCtrl',
             css: resources + 'slideshow.css'
         })
+        .when('/resources/fullGalleryDirectory', {
+            templateUrl: 'app/resources/fullGalleryDirectory/index.html',
+            controller: 'FullGalleryDirectoryCtrl',
+            css: resources + 'fullGalleryDirectory.css'
+        })
         .when('/resources/journal_creator', {
             templateUrl: 'app/resources/journal_creator/journal_creator.html',
             controller: 'JournalCreatorCtrl',

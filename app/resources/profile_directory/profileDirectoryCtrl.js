@@ -25,24 +25,7 @@ angular.module('mainApp')
     $scope.isLocked = true;
 
     // Sidebar data
-    $scope.tabs = [
-        {
-            name: "Directory",
-            id: "directory",
-        },
-        {
-            name: "Colors",
-            id: "colors",
-        },
-        {
-            name: "Buttons",
-            id: "buttons",
-        },
-        {
-            name: "Status",
-            id: "status",
-        }
-    ];
+    $scope.tabs = ["Directory","Colors","Buttons","Status"];
 
     checkit();
 

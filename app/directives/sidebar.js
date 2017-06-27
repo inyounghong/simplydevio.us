@@ -7,7 +7,7 @@ angular.module('mainApp')
         templateUrl: 'app/directives/templates/sidebar.html',
         controller: ['$scope', function ($scope) {
 
-            $scope.selectedTab = $scope.tabs[0].id;
+            $scope.selectedTab = $scope.tabs[0];
 
             $scope.changeTab = function(tab) {
                 $scope.selectedTab = tab;
