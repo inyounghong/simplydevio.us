@@ -43,6 +43,7 @@ angular.module('mainApp')
     function checkit() {
         var userHtml = FullGalleryDirectoryService.getUserHtml($scope.j);
         var userCss = FullGalleryDirectoryService.getUserCss($scope.j);
+        console.log(userCss);
 
         $scope.completeCss = getCompleteCss(userCss);
         $scope.completeHtml = userHtml;

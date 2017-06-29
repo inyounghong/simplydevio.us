@@ -5,10 +5,16 @@ angular.module('mainApp')
     this.getUserCss = getUserCss;
 
     const END = '}\n\n';
-    const ROOT = '/app/resources/slideshow/';
+    const ROOT = '/app/resources/fullGalleryDirectory/';
+
+    const GREEN     = '9FCE54';
+    const PINK      = 'E03E56';
+    const WHITE     = 'FFFFFF';
+    const BROWN     = '5E4948';
 
     function setUpJournal() {
         var j = {
+            buttonsOnRight: true,
             background: '',
             fontFamily: 'Verdana',
             fontSize: 14,
@@ -16,6 +22,17 @@ angular.module('mainApp')
             padding: 15,
             margin: 1,
             shadow: '#000',
+            buttonColor: WHITE,
+            buttonColorHover: WHITE,
+            buttonBackground: BROWN,
+            buttonBackgroundHover: PINK,
+            galButtonColor: WHITE,
+            galButtonColorHover: WHITE,
+            galButtonBackground: GREEN,
+            galButtonBackgroundHover: PINK,
+            imageColor: PINK,
+
+
             buttons: setUpButtons()
         };
 
@@ -55,7 +72,7 @@ angular.module('mainApp')
     function getUserCss(j) {
 
         var padding = j.padding * 2;
-        var blankHeight = ((size + margin + padding + 2) * j.buttons.length) - 1;
+        var blankHeight = ((j.fontSize + j.margin + (j.padding * 2) + 2) * j.buttons.length) - 1;
 
         var css = '*{background:none; border:none; padding:0; margin:0;} \n\n';
         css += '.gr{padding:0 !important;}\n';
@@ -84,20 +101,22 @@ angular.module('mainApp')
         }
         css += '.wrap{right:0;}\n\n';
 
-        css += '.image{\n';
+        css += '.image {\n';
         css += 'display:none;\n'
         css += 'position:absolute;\n';
-        css += 'top:0;\n';
+        css += 'top: 0;\n';
         if (j.includeShadow) {
-            css += 'box-shadow: 0 0 20px #' + j.shadow + ';\n';
+            css += 'box-shadow: 0 0 20px ' + j.shadow + ';\n';
         }
-
-        css += 'background:#' + document.getElementById('imageBackground').value + ';\n';
+        css += 'background: ' + j.imageColor + ';\n';
         css += 'overflow:hidden;\n';
         css += 'height:' + blankHeight + 'px;\n';
         css += 'width:65%;\n';
-        css += 'z-index:11;}\n\n';
+        css += 'z-index:11;';
+        css += END;
+
         css += '.main .image{display:inline-block;}\n';
+
         css += '.image:after{\n';
         css += 'content:url(\'http://www.simplydevio.us/images/wsearch.png\');\n';
         css += 'height:32px;\n';
@@ -108,7 +127,9 @@ angular.module('mainApp')
         css += 'margin-left:-16px;\n';
         css += 'margin-top:-16px;\n';
         css += 'opacity:0;\n';
-        css += 'transition:all .2s;}\n\n';
+        css += 'transition:all .2s;\n';
+        css += END;
+
         css += '.image:hover:after{opacity:1;}\n';
         css += '.image:hover img{opacity:0.3;}\n\n';
 
@@ -117,40 +138,43 @@ angular.module('mainApp')
         css += 'max-width:750px!important;\n';
         css += 'max-height:750px;\n';
         css += 'display:inline;\n';
-        css += 'transition:all 0.2s;}\n\n';
-        css += '.wrap:hover .image{display:inline-block;}\n\n';
+        css += 'transition:all 0.2s;\n';
+        css += END;
+
+        css += '.wrap:hover .image{\n'
+        css += 'display:inline-block;\n';
+        css += END
+
         css += '.button{\n';
         css += 'display:block;\n';
-        css += 'color: #' + document.getElementById('buttonColor').value + '!important;\n';
-        css += 'background: #' + document.getElementById('buttonBackground').value + ';\n';
-        css += 'padding:' + document.getElementById('buttonPadding').value + 'px 0px ' + document.getElementById('buttonPadding').value + 'px 20px;\n';
-        css += 'margin-bottom:' + document.getElementById('buttonMargin').value + 'px;\n';
+        css += 'color: ' + j.buttonColor + '!important;\n';
+        css += 'background: ' + j.buttonBackground + ';\n';
+        css += 'padding:' + j.padding + 'px 0px ' + j.padding + 'px 20px;\n';
+        css += 'margin-bottom:' + j.margin + 'px;\n';
         css += 'position:relative;\n';
-            if (document.getElementById('includeTransition').checked)
-            {
-                css += 'transition:all 0.2s;}\n\n';
-            }
-            else
-            {
-                css += '}\n\n';
-            }
+        if (j.includeTransitions) {
+            css += 'transition:all 0.2s;';
+        }
+        css += END;
+
         css += '.main .button{\n';
-        css += 'background: #' + document.getElementById('buttonBackgroundGal').value + ';\n';
-        css += 'color: #' + document.getElementById('buttonColorGal').value + '!important;}\n\n';
+        css += 'background: ' + j.galButtonBackground + ';\n';
+        css += 'color: ' + j.galButtonColor + '!important;';
+        css += END;
 
         css += '.button:hover{\n';
-        css += 'color: #' + document.getElementById('buttonHoverColor').value + '!important;\n';
-        css += 'background: #' + document.getElementById('buttonHoverBackground').value + ';\n';
+        css += 'color: ' + j.buttonColorHover + '!important;\n';
+        css += 'background: ' + j.buttonBackgroundHover + ';\n';
         css += 'padding-left:30px;\n';
-        css += 'font-weight:700;}\n\n';
-        css += '.main .button:hover{\n';
-        css += 'background: #' + document.getElementById('buttonHoverBackgroundGal').value + '!important;\n';
-        css += 'color: #' + document.getElementById('buttonHoverColorGal').value + '!important;}\n\n';
+        css += 'font-weight:700;';
+        css += END;
+
+        css += '.main .button:hover {\n';
+        css += 'background: ' + j.galButtonBackgroundHover + '!important;\n';
+        css += 'color: ' + j.galButtonBackgroundColor + '!important;';
+        css += END;
 
         css += '.button:hover span{display:inline;}\n\n';
-
-        var css = '';
-
 
         return css;
     }
@@ -162,7 +186,7 @@ angular.module('mainApp')
         j.buttons.forEach(function(button, i) {
             var main = '';
             if (i === 0) {
-                main =  '<div class="wrap main">';
+                main =  ' main';
             }
             html += '<div class="wrap' + main + '">';
             html += '<a class="button" href="' + button.url + '">' + button.name + '</a>';
