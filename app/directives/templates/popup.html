@@ -6,13 +6,13 @@
         <div id="slide1" class="slides">
             <h3>Step 1: Purchase Password</h3>
             <div class="scroll">
-                <p>To receive the codes needed to create your profile directory, please <a href="http://fav.me/d73p9tr" target="_blank">purchase the password</a> and type it in below.</p>
-                <b>Important!</b> You must be a Premium Member for this greeting to work on your page.
+                <p>To receive the codes needed to create your {{info.name}}, please <a href="{{info.url}}" target="_blank">purchase the password</a> and type it in below.</p>
+                <b>Important!</b> You must be a Premium Member to add this to your page.
 
-                <input type="text" class="password" ng-model="data.password" placeholder="Password">
+                <input type="text" class="password" ng-model="password" placeholder="Password">
                 <div id="termsCheckbox" class="font-sm">
-                    <label><input type="checkbox" ng-model="data.terms">
-                    I agree to not share this password with anyone else, and I agree to only creating profile directories for my own profile or a group that I am an admin for.</label>
+                    <label><input type="checkbox" ng-model="terms">
+                    I agree to not share this password with anyone else, and I agree to only creating {{info.name_plural}} for my own profile or a group that I am an admin for.</label>
                 </div>
             </div>
 
@@ -25,7 +25,7 @@
             <h3>Step 2: Copy Codes</h3>
 
             <div class="scroll">
-                <p>Copy and paste the following code to add this directory to your profile. Please read this step-by-step <a href="http://www.simplydevio.us/resources/profile_tutorial.php" target="_blank">tutorial</a> for more details.</p>
+                <p>Copy and paste the following code to add this directory to your profile. Please read this step-by-step <a href="http://www.simplydevio.us/#!/tutorials/adding-profile-css" target="_blank">tutorial</a> for more details.</p>
 
                 <b>HTML</b>: Paste into HTML of a journal<br>
                 <textarea class="code">{{userHtml}}</textarea><br>
@@ -34,7 +34,7 @@
                 <textarea class="code">{{userCss}}</textarea><br>
 
                 <b>Widget HTML</b>: Paste into a Featured Deviation Widget<br>
-                <textarea class="code">{{userWidget}}</textarea><br>
+                <textarea class="code">{{userWidgetHtml}}</textarea><br>
             </div>
         </div>
 

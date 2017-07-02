@@ -1,0 +1,28 @@
+<div ng-repeat="button in j.buttons" row>
+    <div class="col-xs-1">
+        <i class="fa fa-trash" class="link" ng-click="deleteButton($index)"></i>
+    </div>
+    <div class="col-xs-11 small-chunks">
+        <div class="chunk">
+            <h2>Button</h2>
+            <div class="input">
+                <input type="text" class="name" ng-model="button.name" placeholder="My Gallery">
+            </div>
+            <h2>Folder Url</h2>
+            <div class="input">
+                <input type="text" class="url" ng-model="button.url" placeholder="http://">
+            </div>
+            <h2>Image Url</h2>
+            <div class="input">
+                <input type="text" class="url" ng-model="button.image" placeholder="http://">
+            </div>
+            <h2>Image Zoom</h2>
+            <div class="input">
+                <input ng-model="button.zoom" type="range" class="rangeWithBigLabel" min="300" max="1000">
+                <div class="range_label">{{button.zoom}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="addButton" ng-click="addButton()"><i class="fa fa-plus"></i> Add Button</div>

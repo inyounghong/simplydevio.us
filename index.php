@@ -52,19 +52,32 @@
     <!-- Directives -->
     <script src="app/directives/head.js"></script>
     <script src="app/directives/resourceItem.js"></script>
+    <script src="app/directives/widgetPreview.js"></script>
+    <script src="app/directives/popup.js"></script>
+    <script src="app/directives/sidebar.js"></script>
+    <script src="app/directives/resourceHeader.js"></script>
+
 
     <!-- Services/Factories -->
-    <script src="app/resources/journal_creator/directives/sidebarBlock.js"></script>
+    <script src="app/factories/cTabFactory.js"></script>
+
     <script src="app/services/ImportFontService.js"></script>
+    <script src="app/services/CustomBoxService.js"></script>
+
+    <script src="app/resources/journal_creator/directives/sidebarBlock.js"></script>
     <script src="app/resources/journal_creator/journalService.js"></script>
     <script src="app/resources/journal_creator/tabFactory.js"></script>
-    <script src="app/factories/cTabFactory.js"></script>
+    <script src="app/resources/profile_directory/service.js"></script>
+    <script src="app/resources/slideshow/service.js"></script>
+    <script src="app/resources/fullGalleryDirectory/service.js"></script>
 
     <!-- Controllers -->
     <script src="app/tutorials/tutorialCtrl.js"></script>
     <script src="app/resources/profile_greeting/profileGreetingCtrl.js"></script>
     <script src="app/resources/profile_directory/profileDirectoryCtrl.js"></script>
     <script src="app/resources/journal_creator/journalCreatorCtrl.js"></script>
-
+    <script src="app/resources/slideshow/controller.js"></script>
+    <script src="app/resources/fullGalleryDirectory/controller.js"></script>
+    <!-- <script src="app/resources/galleryDirectory/controller.js"></script> -->
 </body>
 </html>
