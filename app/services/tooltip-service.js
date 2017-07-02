@@ -9,7 +9,7 @@ angular.module('mainApp')
             },
             font: {
                 url: '/#!/tutorials/websafe-and-google-fonts',
-                text: 'Use a websafe or Google Font. Click for more info.'
+                text: 'Use a websafe or Google Font.'
             },
             widgetLink: {
                 url: '/#!/tutorials/get-link-to-profile-widget',
