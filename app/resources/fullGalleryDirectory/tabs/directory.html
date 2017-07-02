@@ -18,13 +18,6 @@
     </div>
 </div>
 <div class="chunk">
-    <h2>Position</h2>
-    <div class="input">
-        <input ng-model="j.position" type="range" class="rangeWithBigLabel" min="0" max="100">
-        <div class="range_label">{{j.position}}</div>
-    </div>
-</div>
-<div class="chunk">
     <h2>Padding</h2>
     <div class="input">
         <input ng-model="j.padding" type="range" class="rangeWithBigLabel" min="0" max="30">
@@ -40,20 +33,33 @@
 </div>
 
 <div class="chunk">
-    <h2>Options</h2>
+    <h2>Image Color</h2>
     <div class="input">
-        <label><input type="checkbox" ng-model="j.buttonsOnRight"> Buttons on Right Side</label><br>
-        <label><input type="checkbox" ng-model="j.includeTransitions"> Include Transitions</label><br>
-        <label><input type="checkbox" ng-model="j.includeShadow"> Include Shadow</label>
-        <div ng-show="j.includeShadow">
-            <input minicolors type="text" ng-model="j.shadow" class="color" max="6">
-        </div>
+        <input minicolors type="text" ng-model="j.imageColor" class="color" max="6">
     </div>
 </div>
 
 <div class="chunk">
-    <h2>Image Color</h2>
+    <h2>Transition Type</h2>
     <div class="input">
-        <input minicolors type="text" ng-model="j.imageColor" class="color" max="6">
+        <select ng-model="j.transitionType">
+            <option value="none">None</option>
+            <option value="moveText">Move Text</option>
+            <option value="letterSpacing">Increase Letter Spacing</option>
+            <option value="bold">Bold</option>
+            <option value="italicize">Italicize</option>
+        </select>
+    </div>
+</div>
+
+<div class="chunk">
+    <h2>Options</h2>
+    <div class="input">
+        <label><input type="checkbox" ng-model="j.buttonsOnRight"> Buttons on Right Side</label><br>
+        <label><input type="checkbox" ng-model="j.includeTransitions"> Smooth Transitions</label><br>
+        <label><input type="checkbox" ng-model="j.includeShadow"> Include Shadow</label>
+        <div ng-show="j.includeShadow">
+            <input minicolors type="text" ng-model="j.shadow" class="color" max="6">
+        </div>
     </div>
 </div>

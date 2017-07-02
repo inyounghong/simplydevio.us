@@ -1,11 +1,9 @@
 // Tabs
 
 .tab_menu {
-    width: 100.6%;
+    width: 100%;
     color: $w80;
-    margin-left: 2px;
     background: $background;
-
 
     .tabby {
         background: $pink_dark;
@@ -23,7 +21,6 @@
     @include ubuntu;
     display: inline-block;
     padding: 12px 0;
-    margin: 0 -2px;
     text-align: center;
     cursor: pointer;
     width: 25%;

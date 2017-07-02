@@ -16,8 +16,11 @@ angular.module('mainApp')
             // Check password
             $scope.checkPassword = function() {
                 $("#passwordMessage").fadeOut(100);
+
+                if ($scope.password == undefined) {
+                    $scope.password = '';
+                }
                 var pass = $scope.password.toLowerCase().trim();
-                console.log(pass);
 
                 $.ajax({
                     url: $scope.root + 'php/checkPassword.php',

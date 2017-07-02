@@ -12,11 +12,26 @@ angular.module('mainApp')
     const WHITE     = 'FFFFFF';
     const BROWN     = '5E4948';
 
+    this.getTabs = function() {
+        return ["Directory", "Colors", "Buttons"];
+    }
+
+    this.getInfo = function() {
+        return {
+            name: 'full-size gallery directory',
+            name_plural: 'full-size gallery directories',
+            url: 'http://fav.me/d7siwzy',
+            description: 'Make an full-size Gallery Directory for your profile.',
+            title: 'Full-size Gallery Directory'
+        }
+    }
+
     function setUpJournal() {
         var j = {
             buttonsOnRight: true,
             includeTransitions: true,
             includeShadow: true,
+            transitionType: 'moveText',
             background: '',
             fontFamily: 'Verdana',
             fontSize: 14,
@@ -74,12 +89,13 @@ angular.module('mainApp')
     function getUserCss(j) {
 
         var padding = j.padding * 2;
-        var blankHeight = ((j.fontSize + j.margin + (j.padding * 2) + 2) * j.buttons.length) - 1;
+        var lineHeight = 18;
+        var blankHeight = ((lineHeight + j.margin + (j.padding * 2) ) * j.buttons.length) - j.margin;
 
         var css = '*{background:none; border:none; padding:0; margin:0;} \n\n';
         css += '.gr{padding:0 !important;}\n';
         css += '.gr-top img, .gr1, .gr2, .gr3 {display:none;}\n';
-        css += '.gr-top, .bottom, a.external:after, .right br {display:none;}\n';
+        css += '.gr-top, .gr-box .bottom, a.external:after, .right br {display:none;}\n';
         css += 'a{text-decoration:none; font-weight:normal;}\n';
         css += '.external{display:block;}\n\n';
 
@@ -87,13 +103,13 @@ angular.module('mainApp')
         css += 'z-index:99!important;\n';
         css += 'line-height:1.2em;\n';
         css += 'font-family:' + j.fontFamily + ';\n';
-        css += 'font-size:' + j.fontSize + 'px;}\n\n';
+        css += END;
 
         css += '.text{\n';
         css += 'position:relative;\n';
         css += 'max-width:550px;\n';
         css += 'overflow:hidden;\n';
-        css += 'margin:' + j.margin + 'px auto;}\n\n';
+        css += END;
 
         if (j.buttonsOnRight) {
             css += '.right{margin-left: 65%;}\n';
@@ -107,9 +123,6 @@ angular.module('mainApp')
         css += 'display:none;\n'
         css += 'position:absolute;\n';
         css += 'top: 0;\n';
-        if (j.includeShadow) {
-            css += 'box-shadow: 0 0 20px ' + j.shadow + ';\n';
-        }
         css += 'background: ' + j.imageColor + ';\n';
         css += 'overflow:hidden;\n';
         css += 'height:' + blankHeight + 'px;\n';
@@ -117,9 +130,14 @@ angular.module('mainApp')
         css += 'z-index:11;';
         css += END;
 
-        css += '.main .image{display:inline-block;}\n';
+        css += '.main .image{\n';
+        css += 'display:inline-block;\n';
+        if (j.includeShadow) {
+            css += 'box-shadow: 0 0 20px ' + j.shadow + ';\n';
+        }
+        css += END;
 
-        css += '.image:after{\n';
+        css += '.image:after {\n';
         css += 'content:url(\'http://www.simplydevio.us/images/wsearch.png\');\n';
         css += 'height:32px;\n';
         css += 'width:32px;\n';
@@ -153,7 +171,9 @@ angular.module('mainApp')
         css += 'background: ' + j.buttonBackground + ';\n';
         css += 'padding:' + j.padding + 'px 0px ' + j.padding + 'px 20px;\n';
         css += 'margin-bottom:' + j.margin + 'px;\n';
-        css += 'position:relative;\n';
+        css += 'position: relative;\n';
+        css += 'line-height: 18px;\n';
+        css += 'font-size:' + j.fontSize + 'px;\n';
         if (j.includeTransitions) {
             css += 'transition:all 0.2s;';
         }
@@ -167,7 +187,7 @@ angular.module('mainApp')
         css += '.profileButton:hover{\n';
         css += 'color: ' + j.buttonColorHover + '!important;\n';
         css += 'background: ' + j.buttonBackgroundHover + ';\n';
-        css += 'padding-left: 30px;\n';
+        css += getTransitionType(j.transitionType);
         css += END;
 
         css += '.main .profileButton:hover {\n';
@@ -198,5 +218,21 @@ angular.module('mainApp')
         html += '</div>';
 
         return html;
+    }
+
+    function getTransitionType(transition) {
+        if (transition === "moveText") {
+            return 'padding-left: 30px;\n';
+        }
+        if (transition === "letterSpacing") {
+            return 'letter-spacing: 1px;\n';
+        }
+        if (transition === "bold") {
+            return 'font-weight: 700;\n';
+        }
+        if (transition === "italicize") {
+            return 'font-style: italic;\n';
+        }
+        return '';
     }
 });

@@ -338,7 +338,8 @@ form h2 {
   text-transform: uppercase;
   display: inline-block;
   vertical-align: top;
-  width: 100px; }
+  width: 100px;
+  margin-top: 7px; }
   form h2.sub {
     font-weight: 400;
     text-transform: none; }
@@ -349,11 +350,12 @@ form h2 {
     display: inline-block;
     width: 69%;
     margin: 3px 0; }
-  .chunk .fa-trash {
-    margin-top: 7px;
-    cursor: pointer; }
-    .chunk .fa-trash:hover {
-      color: #FFFFFF; }
+
+.fa-trash {
+  margin-top: 7px;
+  cursor: pointer; }
+  .fa-trash:hover {
+    color: #FFFFFF; }
 
 .small-chunks {
   margin: 5px 0; }
@@ -390,7 +392,7 @@ form h2 {
     -moz-border-radius: 0;
     border-radius: 0;
     width: 100%;
-    padding: 5px 10px;
+    padding: 5px 10px !important;
     height: auto;
     color: #fff;
     -webkit-appearance: none; }

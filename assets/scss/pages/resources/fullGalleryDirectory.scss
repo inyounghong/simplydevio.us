@@ -7,6 +7,16 @@
 @import "components/popup";
 @import "components/tabs";
 
-.gr-box .profileButton {
-    text-align: left;
+
+.gr-box {
+    max-height: 370px; // 350 max + 20 top
+    overflow: hidden;
+
+    .profileButton {
+        text-align: left;
+    }
+}
+
+.fa-trash {
+    margin-top: 18px;
 }
