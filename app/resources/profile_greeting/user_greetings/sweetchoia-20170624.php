@@ -1,5 +1,4 @@
 <?
-session_start();
 header('Content-type: image/png');
 $visitor = exec('python ../python/image.py sweetchoia visitor');
 $new_message1 = str_replace('visitor', $visitor, 'welcome to my page visitor');
