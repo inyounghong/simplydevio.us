@@ -1,15 +1,14 @@
 angular.module('mainApp')
-.directive('resource', function($window) {
+.directive('tooltip', function($window) {
     return {
         restrict: 'E',
         scope: {
-            item: '=',
-            color: '@'
+            info: '='
         },
-        templateUrl: 'app/directives/templates/resourceItem.html',
+        templateUrl: 'app/directives/templates/tooltip.html',
         link: function (scope, element, attrs) {
             element.on('click', function() {
-                $window.location.href = scope.item.url;
+                window.open(scope.info.url);
             });
         }
     }

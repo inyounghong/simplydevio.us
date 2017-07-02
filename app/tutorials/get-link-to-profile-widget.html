@@ -1,0 +1,44 @@
+<div class="wrapper tutorial">
+
+    <div class="header">
+        <h1 class="title">How to Get a Widget URL</h1>
+        <div class="description">
+            Step-by-step tutorial for getting links to widgets on DeviantART for your profile directory (or anything else!).
+        </div>
+    </div>
+
+    <h2>What is a Widget URL?</h2>
+    <div class="answer">
+        <p>You know on wikipedia, when you click a link in the sidebar, and the page jumps down to the corresponding section? Well, you can create something similar with the widgets on your DeviantART profile, where you can link directly to a specific widget. For example, <a href="http://simplysilent.deviantart.com/#comments">this link</a> goes directly to my comments. This works particularly well with a profile directory.
+    </div>
+
+    <h2>How do I get a Widget URL?</h2>
+    <div class="answer">
+        <p>Go to your <a href="http://me.deviantart.com">profile page</a> and right click anywhere on the page.
+        Click the option most similar to <i>Inspect Element</i>.</p>
+
+        <img src="{{root}}/images/11.png">
+
+        <p>You will get a pop-up at the bottom of the page containg a lot of HTML gibberish.
+            Ignore everything except for the little magnifying glass (Chrome) or an arrow (Firefox) in the top left corner of the pop-up screen.
+        </p>
+        <img src="{{root}}/images/12.png">
+        <img src="{{root}}/images/16.png">
+
+        <p>Click the magnifiying glass/arrow and then click the <i>icon</i> of the widget you want to link to.</p>
+        <img src="{{root}}/images/13.png">
+
+        <p>The HTML gibberish will jump to a specific part in the code that creates the icon.
+        A couple of lines above the highlighted code, there will be a <span>&lt;div id=""&gt;</span> with a unique nine digit code that refers to your widget.</p>
+        <img src="{{root}}/images/14.png">
+
+        <p>Copy that nine digit code and create URLs in the following format:</p>
+
+        <code>http://<b>username</b>.deviantart.com/#<b>000000000</b></code>
+
+        <p><b>Note:</b> To link to your comments, instead of the nine-digit code, use "comments":</p>
+
+        <code>http://<b>username</b>.deviantart.com/#<b>comments</b></code>
+    </div>
+
+</div>

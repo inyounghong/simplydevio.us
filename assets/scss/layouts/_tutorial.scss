@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 .tutorial {
     max-width: 800px;
     font-size: 18px;
@@ -7,10 +9,23 @@
         margin: 25px auto 40px;
         display: block;
     }
+    .answer {
+        margin: 10px 0 40px;
+    }
 }
 
 .header .description {
     border-bottom: 1px solid #ddd;
     padding-bottom: 30px;
     margin-bottom: 40px;
+}
+
+code {
+    font-family: 'Roboto Mono';
+    background: #444;
+    padding: 10px 15px;
+    margin: 20px 0;
+    display: block;
+    font-size: 14px;
+    color: #FFF;
 }

@@ -10,6 +10,10 @@ angular.module('mainApp')
     const NUM_BUTTONS = 5;
     const NUM_STATUS_BUTTONS = 3;
 
+    this.getTabs = function() {
+        return ["Directory","Colors","Buttons","Status"];
+    }
+
     function getUserHtml(j) {
         var html = '<div class="columns">\n';
 

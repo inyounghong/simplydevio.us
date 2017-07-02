@@ -1,5 +1,5 @@
 const resources = "assets/css/pages/resources/";
-
+const tutorialCss = 'assets/css/pages/tutorials/tutorials.css';
 
 angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
 .config(['$routeProvider', function($routeProvider){
@@ -47,16 +47,29 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
         })
 
         // Tutorials
+
         .when('/tutorials/adding-profile-css', {
             templateUrl: 'app/tutorials/adding-profile-css.html',
             controller: 'TutorialCtrl',
-            css: 'assets/css/pages/tutorials/tutorials.css'
+            css: tutorialCss
         })
         .when('/tutorials/get-image-url', {
             templateUrl: 'app/tutorials/get-image-url.html',
             controller: 'TutorialCtrl',
-            css: 'assets/css/pages/tutorials/tutorials.css'
+            css: tutorialCss
         })
+        .when('/tutorials/websafe-and-google-fonts', {
+            templateUrl: 'app/tutorials/websafe-and-google-fonts.html',
+            controller: 'TutorialCtrl',
+            css: tutorialCss
+        })
+        .when('/tutorials/get-link-to-profile-widget', {
+            templateUrl: 'app/tutorials/get-link-to-profile-widget.html',
+            controller: 'TutorialCtrl',
+            css: tutorialCss
+        })
+
+        // Other
 
         .when('/scripts', {
             templateUrl: 'scripts/scripts.html',

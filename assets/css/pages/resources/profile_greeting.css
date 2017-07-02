@@ -339,7 +339,7 @@ form h2 {
   display: inline-block;
   vertical-align: top;
   width: 100px;
-  margin-top: 5px; }
+  margin-top: 7px; }
   form h2.sub {
     font-weight: 400;
     text-transform: none; }
@@ -533,10 +533,10 @@ form h2 {
   text-align: center;
   display: inline-block;
   color: #e03e56;
-  z-index: 100; }
-  .tooltip a {
-    font-weight: 700;
-    color: #e03e56 !important; }
+  z-index: 100;
+  cursor: pointer; }
+  .tooltip:hover {
+    background: #FFF !important; }
   .tooltip .tool_info {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;

@@ -56,13 +56,15 @@
     <script src="app/directives/popup.js"></script>
     <script src="app/directives/sidebar.js"></script>
     <script src="app/directives/resourceHeader.js"></script>
+    <script src="app/directives/tooltip.js"></script>
 
 
     <!-- Services/Factories -->
     <script src="app/factories/cTabFactory.js"></script>
 
-    <script src="app/services/ImportFontService.js"></script>
-    <script src="app/services/customBoxService.js"></script>
+    <script src="app/services/import-font-service.js"></script>
+    <script src="app/services/custom-box-service.js"></script>
+    <script src="app/services/tooltip-service.js"></script>
 
     <script src="app/resources/journal_creator/directives/sidebarBlock.js"></script>
     <script src="app/resources/journal_creator/journalService.js"></script>
