@@ -15,6 +15,8 @@ angular.module('mainApp')
     function setUpJournal() {
         var j = {
             buttonsOnRight: true,
+            includeTransitions: true,
+            includeShadow: true,
             background: '',
             fontFamily: 'Verdana',
             fontSize: 14,
@@ -26,10 +28,10 @@ angular.module('mainApp')
             buttonColorHover: WHITE,
             buttonBackground: BROWN,
             buttonBackgroundHover: PINK,
-            galButtonColor: WHITE,
-            galButtonColorHover: WHITE,
-            galButtonBackground: GREEN,
-            galButtonBackgroundHover: PINK,
+            mainButtonColor: WHITE,
+            mainButtonColorHover: WHITE,
+            mainButtonBackground: GREEN,
+            mainButtonBackgroundHover: PINK,
             imageColor: PINK,
 
 
@@ -145,7 +147,7 @@ angular.module('mainApp')
         css += 'display:inline-block;\n';
         css += END
 
-        css += '.button{\n';
+        css += '.profileButton{\n';
         css += 'display:block;\n';
         css += 'color: ' + j.buttonColor + '!important;\n';
         css += 'background: ' + j.buttonBackground + ';\n';
@@ -157,21 +159,20 @@ angular.module('mainApp')
         }
         css += END;
 
-        css += '.main .button{\n';
-        css += 'background: ' + j.galButtonBackground + ';\n';
-        css += 'color: ' + j.galButtonColor + '!important;';
+        css += '.main .profileButton{\n';
+        css += 'background: ' + j.mainButtonBackground + ';\n';
+        css += 'color: ' + j.mainButtonColor + '!important;';
         css += END;
 
-        css += '.button:hover{\n';
+        css += '.profileButton:hover{\n';
         css += 'color: ' + j.buttonColorHover + '!important;\n';
         css += 'background: ' + j.buttonBackgroundHover + ';\n';
-        css += 'padding-left:30px;\n';
-        css += 'font-weight:700;';
+        css += 'padding-left: 30px;\n';
         css += END;
 
-        css += '.main .button:hover {\n';
-        css += 'background: ' + j.galButtonBackgroundHover + '!important;\n';
-        css += 'color: ' + j.galButtonBackgroundColor + '!important;';
+        css += '.main .profileButton:hover {\n';
+        css += 'background: ' + j.mainButtonBackgroundHover + '!important;\n';
+        css += 'color: ' + j.mainButtonColorHover + '!important;';
         css += END;
 
         css += '.button:hover span{display:inline;}\n\n';
@@ -189,7 +190,7 @@ angular.module('mainApp')
                 main =  ' main';
             }
             html += '<div class="wrap' + main + '">';
-            html += '<a class="button" href="' + button.url + '">' + button.name + '</a>';
+            html += '<a class="profileButton" href="' + button.url + '">' + button.name + '</a>';
             html += '<a href="' + button.url + '" class="image">';
             html += '<img src="' + button.image + '" width="' + button.zoom + '">'
             html += '</a></div>\n\n';

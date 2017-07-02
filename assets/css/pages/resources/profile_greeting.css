@@ -591,7 +591,6 @@ form h2 {
     position: relative;
     height: 500px;
     box-sizing: border-box;
-    display: inline-block;
     text-align: center; }
     .editingBox .editingPreview .top {
       max-height: 386px;
@@ -615,7 +614,6 @@ form h2 {
   -moz-border-radius: 5px;
   border-radius: 5px;
   min-width: 500px;
-  display: inline-block;
   margin-bottom: 10px; }
   .daWidget .daHeader {
     background: #e6ede4;

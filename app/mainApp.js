@@ -41,8 +41,14 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
             css: resources + 'journal_creator.css'
         })
 
+        // Tutorials
         .when('/tutorials/adding-profile-css', {
             templateUrl: 'app/tutorials/adding-profile-css.html',
+            controller: 'TutorialCtrl',
+            css: 'assets/css/pages/tutorials/tutorials.css'
+        })
+        .when('/tutorials/get-image-url', {
+            templateUrl: 'app/tutorials/get-image-url.html',
             controller: 'TutorialCtrl',
             css: 'assets/css/pages/tutorials/tutorials.css'
         })
