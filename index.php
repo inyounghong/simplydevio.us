@@ -62,7 +62,7 @@
     <script src="app/factories/cTabFactory.js"></script>
 
     <script src="app/services/ImportFontService.js"></script>
-    <script src="app/services/CustomBoxService.js"></script>
+    <script src="app/services/customBoxService.js"></script>
 
     <script src="app/resources/journal_creator/directives/sidebarBlock.js"></script>
     <script src="app/resources/journal_creator/journalService.js"></script>
