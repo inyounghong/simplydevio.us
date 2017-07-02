@@ -62,12 +62,16 @@ function simplifyWatchers($watchers) {
         $user = array();
         $user['username'] = $watcher['user']['username'];
         $user['type'] = $watcher['user']['type'];
-        $user['details'] = $watcher['user']['details'];
-        $user['geo'] = $watcher['user']['geo'];
-        $user['artist_level'] = $watcher['user']['profile']['artist_level'];
-        $user['artist_speciality'] = $watcher['user']['profile']['artist_speciality'];
-        $user['is_watching'] = $watcher['is_watching'];
-        $user['last_visit'] = $watcher['lastvisit'];
+        $user['age'] = $watcher['user']['details']['age'];
+        $user['sex'] = $watcher['user']['details']['sex'];
+        $user['country'] = $watcher['user']['geo']['country'];
+        $user['countryId'] = $watcher['user']['geo']['countryId'];
+        $user['timezone'] = $watcher['user']['geo']['timezone'];
+        $user['artistLevel'] = $watcher['user']['profile']['artist_level'];
+        $user['artistSpeciality'] = $watcher['user']['profile']['artist_speciality'];
+        $user['isWatching'] = $watcher['is_watching'];
+        $user['lastVisit'] = $watcher['lastvisit'];
+        $user['joinDate'] = $watcher['user']['details']['joindate'];
         array_push($arr, $user);
      }
      return $arr;

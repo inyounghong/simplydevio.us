@@ -51,7 +51,6 @@ function writeImageToFile($filename, $script) {
     }
 
     $string = "<?
-session_start();
 header('Content-type: image/png');
 $"."visitor"." = $visitorString;
 $"."new_message1 = str_replace('visitor', $"."visitor, '$message1');
