@@ -1,7 +1,7 @@
 <?
 session_start();
 header('Content-type: image/png');
-$visitor = 'Ango-the-Angolion';
+$visitor = exec('python ../python/image.py treepencil visitor');
 $new_message1 = str_replace('visitor', $visitor, 'Hello there, visitor! I can see you!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my profile!');
 
