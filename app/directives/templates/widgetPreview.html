@@ -1,0 +1,32 @@
+<div class="editingPreview">
+    <div class="top">
+        <div class="daWidget">
+            <div class="daHeader">Featured Deviation Widget</div>
+            <div class="daInside">
+                <div ng-bind-html="trustAsHtml(completeCss)"></div>
+                <div class="gr-box">
+                    <div class="gr-top">
+                        <div class="gr">
+                            <h2>
+                                <img src="http:/\/st.deviantart.net/minish/gruzecontrol/icons/journal.gif?2" style="vertical-align:middle">
+                                <a href="#">Devious Journal Entry</a>
+                            </h2>
+                            <span class="timestamp">Tue Oct 22, 2013, 7:04 AM</span>
+                        </div>
+                    </div>
+                    <div class="gr-body">
+                        <div class="text" ng-bind-html="trustAsHtml(completeHtml)">
+                        </div>
+                        <div class="bottom"><a class="a commentslink" href="#">No Comments</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p ng-hide="hideNote">Note: DeviantART has a max journal height of 350px, so anything bigger will be cut off!</p>
+    </div>
+
+    <div class="c bottom">
+        <p class="mb10">To get the code for this {{info.name}}, click below:</p>
+        <div class="button small-caps" id="getCode" ng-click="getCode()"><i class="fa fa-check-circle"></i> Get Code</div>
+    </div>
+</div>

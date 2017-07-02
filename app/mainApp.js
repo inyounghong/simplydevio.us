@@ -25,14 +25,35 @@ angular.module('mainApp', ['ngRoute', 'minicolors', 'ngSanitize'])
             controller: 'ProfileDirectoryCtrl',
             css: resources + 'profile_directory.css'
         })
+        .when('/resources/slideshow', {
+            templateUrl: 'app/resources/slideshow/index.html',
+            controller: 'SlideshowCtrl',
+            css: resources + 'slideshow.css'
+        })
+        .when('/resources/fullGalleryDirectory', {
+            templateUrl: 'app/resources/fullGalleryDirectory/index.html',
+            controller: 'FullGalleryDirectoryCtrl',
+            css: resources + 'fullGalleryDirectory.css'
+        })
+        // .when('/resources/fullGalleryDirectory', {
+        //     templateUrl: 'app/resources/galleryDirectory/index.html',
+        //     controller: 'GalleryDirectoryCtrl',
+        //     css: resources + 'galleryDirectory.css'
+        // })
         .when('/resources/journal_creator', {
             templateUrl: 'app/resources/journal_creator/journal_creator.html',
             controller: 'JournalCreatorCtrl',
             css: resources + 'journal_creator.css'
         })
 
+        // Tutorials
         .when('/tutorials/adding-profile-css', {
             templateUrl: 'app/tutorials/adding-profile-css.html',
+            controller: 'TutorialCtrl',
+            css: 'assets/css/pages/tutorials/tutorials.css'
+        })
+        .when('/tutorials/get-image-url', {
+            templateUrl: 'app/tutorials/get-image-url.html',
             controller: 'TutorialCtrl',
             css: 'assets/css/pages/tutorials/tutorials.css'
         })

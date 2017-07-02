@@ -338,21 +338,33 @@ form h2 {
   text-transform: uppercase;
   display: inline-block;
   vertical-align: top;
-  width: 100px; }
+  width: 100px;
+  margin-top: 7px; }
   form h2.sub {
     font-weight: 400;
     text-transform: none; }
 
 .chunk {
-  margin: 10px 0; }
+  margin: 7px 0; }
   .chunk .input {
     display: inline-block;
-    width: 69%; }
-  .chunk .fa-trash {
-    margin-top: 7px;
-    cursor: pointer; }
-    .chunk .fa-trash:hover {
-      color: #FFFFFF; }
+    width: 69%;
+    margin: 3px 0; }
+
+.fa-trash {
+  margin-top: 7px;
+  cursor: pointer; }
+  .fa-trash:hover {
+    color: #FFFFFF; }
+
+.small-chunks {
+  margin: 5px 0; }
+  .small-chunks .chunk {
+    margin: 5px 0; }
+  .small-chunks h2 {
+    width: 91px; }
+  .small-chunks .rangeWithBigLabel {
+    width: 83% !important; }
 
 /*
  * NEW FORM (COLORED BACKGROUND)
@@ -380,7 +392,7 @@ form h2 {
     -moz-border-radius: 0;
     border-radius: 0;
     width: 100%;
-    padding: 5px 10px;
+    padding: 5px 10px !important;
     height: auto;
     color: #fff;
     -webkit-appearance: none; }
@@ -581,9 +593,7 @@ form h2 {
     position: relative;
     height: 500px;
     box-sizing: border-box;
-    display: inline-block;
-    text-align: center;
-    /* Preview Box */ }
+    text-align: center; }
     .editingBox .editingPreview .top {
       max-height: 386px;
       overflow-y: scroll;
@@ -596,31 +606,38 @@ form h2 {
       bottom: 0px;
       width: 100%;
       background: #eee; }
-    .editingBox .editingPreview .daWidget {
-      background: #dae4d9;
-      border: 1px solid #a6b2a6;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      width: 500px;
-      display: inline-block;
-      margin-bottom: 10px; }
-      .editingBox .editingPreview .daWidget .daHeader {
-        background: #e6ede4;
-        padding: 5px 10px;
-        border-bottom: 1px solid #a6b2a6; }
-      .editingBox .editingPreview .daWidget .daInside {
-        position: relative;
-        padding: 0px 10px 20px 10px;
-        min-height: 100px;
-        box-sizing: border-box; }
-        .editingBox .editingPreview .daWidget .daInside #previewImage {
-          z-index: 98;
-          position: relative; }
-      .editingBox .editingPreview .daWidget #loading {
-        position: absolute;
-        width: 100%;
-        top: 38px; }
+    .editingBox .editingPreview .description {
+      max-width: 800px; }
+
+.daWidget {
+  background: #dae4d9;
+  border: 1px solid #a6b2a6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  min-width: 500px;
+  margin-bottom: 10px; }
+  .daWidget .daHeader {
+    background: #e6ede4;
+    padding: 5px 10px;
+    border-bottom: 1px solid #a6b2a6; }
+  .daWidget .daInside {
+    position: relative;
+    padding: 0px 10px 20px 10px;
+    min-height: 100px;
+    box-sizing: border-box; }
+    .daWidget .daInside #previewImage {
+      z-index: 98;
+      position: relative; }
+  .daWidget #loading {
+    position: absolute;
+    width: 100%;
+    top: 38px; }
+  .daWidget .gr-box a {
+    text-decoration: none; }
+  .daWidget .gr-box {
+    max-width: 800px;
+    padding: 20px 10px; }
 
 #popup {
   position: fixed;
@@ -670,16 +687,16 @@ form h2 {
   margin: 5px 0; }
 
 .tab_menu {
-  width: 100.6%;
+  width: 100%;
   color: rgba(255, 255, 255, 0.8);
-  margin-left: 2px; }
-  .tab_menu .selected {
-    background: #e03e56;
-    color: #fff; }
+  background: #f8f8f8; }
+  .tab_menu .tabby {
+    background: #A1334A; }
+    .tab_menu .tabby.selected {
+      background: #e03e56;
+      color: #fff; }
   .tab_menu .tabby:hover {
     color: #fff; }
-  .tab_menu .not_selected {
-    background: #A1334A; }
 
 .tabby {
   font-family: 'Ubuntu';
@@ -689,7 +706,6 @@ form h2 {
   font-size: 13px;
   display: inline-block;
   padding: 12px 0;
-  margin: 0 -2px;
   text-align: center;
   cursor: pointer;
   width: 25%; }
@@ -706,7 +722,6 @@ form h2 {
   overflow: hidden; }
 
 .gr-box {
-  padding: 25px 10px 0px;
   max-height: 375px;
   overflow: hidden; }
 

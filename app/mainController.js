@@ -21,7 +21,7 @@ angular.module('mainApp')
     var fullGallery = {
         name: "Full Gallery Directory",
         description: "Show off your best works with a gallery directory. Full-sized images put the emphasis on your artwork.",
-        url: '/resources/full_gallery_directory.php',
+        url: root + 'fullGalleryDirectory',
         img: 'full_gallery_directory.png'
     };
     var galleryDirectory = {
@@ -33,7 +33,7 @@ angular.module('mainApp')
     var slideshow = {
         name: "Gallery Slideshow",
         description: "Create a gallery slideshow to display your best artworks in style.",
-        url: '/resources/slideshow.php',
+        url: root + 'slideshow',
         img: 'gallery_slideshow.png'
     };
 
@@ -42,7 +42,7 @@ angular.module('mainApp')
     $scope.journalCreator = {
         name: "Journal Creator",
         description: "Make your own DeviantART Journal skins using this free and easy-to-use tool.",
-        url: '/resources/basic_journal.php',
+        url: root + 'journal_creator',
         img: 'journal_creator.png'
     };
 

@@ -1,0 +1,10 @@
+<form action="" class="newForm editingSidebar">
+    <!-- Tab -->
+    <div class="tab_menu normal">
+        <div ng-repeat="tab in tabs" class="tabby" ng-class="isSelected(tab) && 'selected'" ng-click="changeTab(tab)">{{tab}}</div>
+    </div>
+    <!-- Page -->
+    <div ng-repeat="tab in tabs" class="tab_page" ng-show="isSelected(tab)">
+        <ng-include src="root + 'tabs/' + tab.toLowerCase() + '.html'"></ng-include>
+    </div>
+</form>

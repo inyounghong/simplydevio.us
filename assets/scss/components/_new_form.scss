@@ -97,6 +97,8 @@ form h2 {
     display: inline-block;
     vertical-align: top;
     width: 100px;
+    margin-top: 7px;
+
     &.sub {
         font-weight: 400;
         text-transform: none;
@@ -104,22 +106,35 @@ form h2 {
 }
 
 .chunk {
-    margin: 10px 0;
+    margin: 7px 0;
 
     .input {
         display: inline-block;
         width: 69%;
-
+        margin: 3px 0;
     }
+}
 
-    .fa-trash {
-        margin-top:7px;
-        cursor: pointer;
-        &:hover {
-            color: #FFFFFF;
-        }
+.fa-trash {
+    margin-top:7px;
+    cursor: pointer;
+    &:hover {
+        color: #FFFFFF;
     }
+}
 
+// Inputs where col-xs-1 is for trash, and .col-xs-11.small-chunks is for the input
+.small-chunks {
+    margin: 5px 0;
+    .chunk {
+        margin: 5px 0;
+    }
+    h2 {
+        width: 91px;
+    }
+    .rangeWithBigLabel {
+        width: 83%!important;
+    }
 }
 
 /*
@@ -153,7 +168,7 @@ form h2 {
         border: none;
         @include radius(0);
         width: 100%;
-        padding: 5px 10px;
+        padding: 5px 10px!important;
         height: auto;
         color: #fff;
 
