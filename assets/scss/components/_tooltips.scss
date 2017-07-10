@@ -11,10 +11,10 @@
     display: inline-block;
     color: $pink;
     z-index:100;
+    cursor: pointer;
 
-    a{
-        font-weight: 700;
-        color: $pink!important;
+    &:hover {
+        background: #FFF!important;
     }
 
     .tool_info {

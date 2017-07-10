@@ -1,5 +1,5 @@
 angular.module('mainApp')
-.controller('SlideshowCtrl', function ($scope, $sce, ImportFontService, SlideshowService, CustomBoxService) {
+.controller('SlideshowCtrl', function ($scope, $sce, ImportFontService, SlideshowService, CustomBoxService, TooltipService) {
     'use strict';
 
     $scope.j = SlideshowService.setUpJournal();
@@ -10,17 +10,9 @@ angular.module('mainApp')
     $scope.checkit = checkit;
     $scope.$watch("j", checkit, true);
 
-    // Header data
-    $scope.info = {
-        name: 'slideshow',
-        name_plural: 'slideshows',
-        url: 'http://fav.me/d7ijaqd',
-        description: 'Make an image slideshow for your profile.',
-        title: 'Gallery Slideshow'
-    }
-
-    // Sidebar data
+    $scope.info = SlideshowService.getInfo();
     $scope.tabs = ["Slideshow","Images"];
+    $scope.tooltips = TooltipService.getTooltips();
 
     $scope.addImage = function() {
         var image = {

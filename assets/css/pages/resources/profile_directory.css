@@ -113,8 +113,9 @@ body {
   font-size: 15px;
   background: #f8f8f8;
   color: #222;
-  height: 100%;
-  position: relative; }
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 50px; }
 
 a, a:hover {
   text-decoration: none;
@@ -178,6 +179,8 @@ ul {
 
 /* FOOTER */
 #footer {
+  position: absolute;
+  bottom: 0;
   padding: 20px 50px;
   color: rgba(255, 255, 255, 0.8);
   background: #1d2742;
@@ -533,10 +536,10 @@ form h2 {
   text-align: center;
   display: inline-block;
   color: #e03e56;
-  z-index: 100; }
-  .tooltip a {
-    font-weight: 700;
-    color: #e03e56 !important; }
+  z-index: 100;
+  cursor: pointer; }
+  .tooltip:hover {
+    background: #FFF !important; }
   .tooltip .tool_info {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;

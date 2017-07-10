@@ -13,8 +13,9 @@ body {
     @include source();
     background: $background;
     color: #222;
-    height:100%;
     position:relative;
+    min-height: 100%;
+    padding-bottom: 50px;
 }
 
 a, a:hover{
@@ -92,6 +93,8 @@ ul {
 /* FOOTER */
 
 #footer {
+    position: absolute;
+    bottom: 0;
     padding: 20px 50px;
     color: $w80;
     background: $blue;

@@ -7,6 +7,16 @@ angular.module('mainApp')
     const END = '}\n\n';
     const ROOT = '/app/resources/slideshow/';
 
+    this.getInfo = function() {
+        return {
+            name: 'slideshow',
+            name_plural: 'slideshows',
+            url: 'http://fav.me/d7ijaqd',
+            description: 'Make an image slideshow for your profile.',
+            title: 'Gallery Slideshow'
+        };
+    }
+
     function setUpJournal() {
         var j = {};
 

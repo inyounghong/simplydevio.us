@@ -6,13 +6,14 @@ const PAGE_URL = "http://www.simplydevio.us/#!/resources/journal_creator";
 const BG_IMAGE_URL = "http://www.simplydevio.us/app/resources/journal_creator/images/yellow_pattern.jpg";
 
 angular.module('mainApp')
-.controller('JournalCreatorCtrl', function ($scope, $sce, JournalService, TabFactory, CTabFactory, ImportFontService) {
+.controller('JournalCreatorCtrl', function ($scope, $sce, JournalService, TabFactory, CTabFactory, ImportFontService, TooltipService) {
     'use strict';
 
     $scope.j = {}; // Watched data
     $scope.trustAsHtml = trustAsHtml;
     $scope.pageUrl = PAGE_URL;
     $scope.root = 'app/resources/journal_creator/';
+    $scope.tooltips = TooltipService.getTooltips();
 
     $scope.roots = {
         inputs: 'app/resources/journal_creator/inputs/',

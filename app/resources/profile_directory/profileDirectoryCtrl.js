@@ -1,5 +1,5 @@
 angular.module('mainApp')
-.controller('ProfileDirectoryCtrl', function ($scope, $sce, ImportFontService, ProfileDirectoryService) {
+.controller('ProfileDirectoryCtrl', function ($scope, $sce, ImportFontService, ProfileDirectoryService, TooltipService) {
     'use strict';
 
     $scope.info = {
@@ -7,8 +7,11 @@ angular.module('mainApp')
         name_plural: 'profile directories',
         url: 'http://fav.me/d73p9tr',
         description: 'Make a directory for your profile.',
-        title: 'Profile Directory Creator'
+        title: 'Profile Directory Creator',
     }
+
+    $scope.tooltips = TooltipService.getTooltips();
+    $scope.tabs = ProfileDirectoryService.getTabs();
 
     $scope.j = ProfileDirectoryService.setUpJournal();
     $scope.password = "";
@@ -23,9 +26,6 @@ angular.module('mainApp')
 
     $scope.checkit = checkit;
     $scope.isLocked = true;
-
-    // Sidebar data
-    $scope.tabs = ["Directory","Colors","Buttons","Status"];
 
     checkit();
 

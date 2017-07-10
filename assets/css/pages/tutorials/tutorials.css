@@ -1,4 +1,5 @@
 /* Classes */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 .mt10 {
   margin-top: 10px; }
 
@@ -113,8 +114,9 @@ body {
   font-size: 15px;
   background: #f8f8f8;
   color: #222;
-  height: 100%;
-  position: relative; }
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 50px; }
 
 a, a:hover {
   text-decoration: none;
@@ -178,6 +180,8 @@ ul {
 
 /* FOOTER */
 #footer {
+  position: absolute;
+  bottom: 0;
   padding: 20px 50px;
   color: rgba(255, 255, 255, 0.8);
   background: #1d2742;
@@ -266,10 +270,21 @@ html, body {
     max-width: 100%;
     margin: 25px auto 40px;
     display: block; }
+  .tutorial .answer {
+    margin: 10px 0 40px; }
 
 .header .description {
   border-bottom: 1px solid #ddd;
   padding-bottom: 30px;
   margin-bottom: 40px; }
+
+code {
+  font-family: 'Roboto Mono';
+  background: #444;
+  padding: 10px 15px;
+  margin: 20px 0;
+  display: block;
+  font-size: 14px;
+  color: #FFF; }
 
 /*# sourceMappingURL=tutorials.css.map */
