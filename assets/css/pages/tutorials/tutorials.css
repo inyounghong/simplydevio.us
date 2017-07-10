@@ -114,8 +114,9 @@ body {
   font-size: 15px;
   background: #f8f8f8;
   color: #222;
-  height: 100%;
-  position: relative; }
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 50px; }
 
 a, a:hover {
   text-decoration: none;
@@ -179,6 +180,8 @@ ul {
 
 /* FOOTER */
 #footer {
+  position: absolute;
+  bottom: 0;
   padding: 20px 50px;
   color: rgba(255, 255, 255, 0.8);
   background: #1d2742;

@@ -1,6 +1,6 @@
 <?
 header('Content-type: image/png');
-$visitor = 'Ikeela';
+$visitor = 'Umbreeunix';
 $new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my page!');
 
