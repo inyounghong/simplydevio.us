@@ -1,3 +1,6 @@
+<?php header( 'Location: /#!/resources/slideshow' ) ; ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
