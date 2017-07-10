@@ -622,7 +622,7 @@ function checkit()
 
                             <td></td>
 
-                            <td><input name="imgLink" class="url" value="http://www.simplydevio.us/resources/images/slideshow5.png"></td>
+                            <td><input name="imgLink" class="url" value="/app/resources/fullGalleryDirectory/images/slideshow1.png"></td>
 
                         </tr>
 

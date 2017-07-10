@@ -1,3 +1,6 @@
+<?php header( 'Location: /#!/resources/fullGalleryDirectory' ) ; ?>
+
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -319,7 +322,7 @@ function checkit()
 
             </div>
 
-            <!-- BUTTONS TAB -->
+
             <div id="box3" class="tab_page hidden">
                 <div id="leftButtons">
                     <?php
@@ -340,7 +343,6 @@ function checkit()
                 <div id="addLeft" class="add">Add a Row</div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <div id="removeLeft" class="remove">Remove a Row</div>
             </div>
-            <!-- IMAGES TAB -->
             <div id="box4" class="tab_page hidden">
                 <div id="leftImages">
                     <table>
@@ -349,7 +351,7 @@ function checkit()
                         <td class="full"><b>Image URL</b></td>
                     </tr>
                 </table>
-                <!-- Creating Image Inputs -->
+
                 <?php
                     $images = array("slideshow5.png", "slideshow6.png", "slideshow1.png", "slideshow2.png", "slideshow3.png");
                     $i = 0;
@@ -467,7 +469,7 @@ $("#tab5").click(function(){
                         <textarea id="cssArea" class="textArea">These codes will appear once you purchase and type in the password.</textarea>
                     </div>
                 </div>
-            </div> <!-- End cols left -->
+            </div>
             </div>
 
         </div>
@@ -506,4 +508,4 @@ $("#ctab3").click(function(){
 });
 </script>
 </body>
-</html>
+</html> -->
