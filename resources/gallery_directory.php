@@ -642,7 +642,7 @@ function checkit()
 
                             <td></td>
 
-                            <td><input name="imgLink" class="url" placeholder="Image Source URL"></td>
+                            <td><input name="imgLink" class="url" placeholder="Image Source URL" value="/app/resources/fullGalleryDirectory/images/slideshow2.png"></td>
 
                         </tr>
 
@@ -662,7 +662,7 @@ function checkit()
 
                             <td></td>
 
-                            <td><input name="imgLink" class="url" placeholder="Image Source URL"></td>
+                            <td><input name="imgLink" class="url" placeholder="Image Source URL" value="/app/resources/fullGalleryDirectory/images/slideshow3.png"></td>
 
                         </tr>
 
