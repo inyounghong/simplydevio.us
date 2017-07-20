@@ -6,6 +6,10 @@ angular.module('mainApp')
 
     // Returns an object with default Journal values
     function setUpJournal() {
+        const MAIN_COLOR = "F9AAAE";
+        const WHITE = "FFFFFF";
+        const MAIN_FONT = "Roboto Slab";
+
         var j = {
             box: {},
             top: {},
@@ -23,42 +27,48 @@ angular.module('mainApp')
             fullSetUp(j[key]);
         });
 
-        j.box.background = YELLOW;
+        j.box.background = WHITE;
         j.box.useImage = true;
-        j.box.image = BG_IMAGE_URL;
+        j.box.image = "https://eagoradezoito.files.wordpress.com/2011/06/2907768688_2c6c300590_z_large.jpg";
         j.box.maxWidth = false;
         j.box.width = 900;
-        j.box.radius = 10;
-        j.box.padding = 50;
+        j.box.padding = 0;
+        j.box.radius = 20;
 
-        j.top.background = "FFFFFF";
+        j.top.background = MAIN_COLOR;
         j.top.align = "center";
-        j.top.paddingV = 25;
+        j.top.paddingV = 40;
 
-        j.title.size = 42;
+        j.title.size = 18;
         j.title.bold = true;
-        j.title.lineHeight = 1.1;
-        j.timestamp.size = 18;
+        j.title.italic = true;
+        j.title.lineHeight = 2.4;
+        j.timestamp.size = 12;
 
-        j.header.size = 32;
+        j.header.size = 16;
         j.header.lineHeight = 0.8;
+        j.header.bold = true;
+        j.header.italic = true;
 
-        j.text.background = "FFFFFF";
+        j.text.background = MAIN_COLOR;
         j.text.paddingH = 4;
-        j.text.paddingV = 20;
-        j.text.marginH = 0;
-        j.text.marginV = 18;
-        j.text.family = "Verdana";
-        j.text.lineHeight = 1.4;
+        j.text.paddingV = 30;
+        j.text.marginH = 5;
+        j.text.marginV = 50;
+        j.text.lineHeight = 1.8;
+        j.text.radius = 20;
 
-        j.blockquote.family = "Verdana";
-        j.blockquote.background = YELLOW;
+        j.blockquote.background = WHITE;
+        j.blockquote.color = MAIN_COLOR;
         j.blockquote.padding = 20;
+        j.blockquote.radius = 20;
+        j.blockquote.italic = true;
 
-        j.bottom.background = "FFFFFF";
-        j.bottom.size = 20;
-        j.bottom.padding = 20;
+        j.bottom.background = MAIN_COLOR;
+        j.bottom.size = 14;
+        j.bottom.padding = 40;
         j.bottom.bold = true;
+        j.bottom.italic = true;
 
         return j;
 
@@ -67,11 +77,11 @@ angular.module('mainApp')
             setUpText(e);
             setUpBorder(e);
             setUpBackground(e);
-            e.radius = 10;
+            e.radius = 0;
         }
         function setUpText(e) {
-            e.color = BLUE;
-            e.family = "Patrick Hand SC";
+            e.color = WHITE;
+            e.family = MAIN_FONT;
             e.align = "left";
             e.size = 13;
         }
@@ -164,6 +174,7 @@ angular.module('mainApp')
         css += getBackground(j.blockquote);
         css += getRadius(j.blockquote);
         css += getColor(j.blockquote);
+        css += getStyles(j.blockquote);
         css += getFontFamily(j.blockquote);
         css += getFontSize(j.blockquote);
         css += 'padding:' + px(j.blockquote.padding) + N;
@@ -233,15 +244,9 @@ angular.module('mainApp')
 
     function getStyles(e) {
         var css = "";
-        if (e.bold) {
-            css += "font-weight: bold" + N;
-        }
-        if (e.italic) {
-            css += "font-style: italic" + N;
-        }
-        if (e.underline) {
-            css += "text-decoration: underline" + N;
-        }
+        css += "font-weight: " + (e.bold ? "700" : "400") + N;
+        css += (e.italic) ? "font-style: italic" + N : "";
+        css += (e.underline) ? "text-decoration: underline" + N : "";
         return css;
     }
 
