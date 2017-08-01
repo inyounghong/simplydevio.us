@@ -64,3 +64,4 @@
 [11-Jul-2017 12:57:05 UTC] PHP Warning:  exec(): Unable to fork [python ../python/image.py br0kenbunnies visitor] in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/br0kenbunnies-20170709.php on line 3
 [11-Jul-2017 12:57:28 UTC] PHP Warning:  exec(): Unable to fork [python ../python/image.py br0kenbunnies visitor] in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/br0kenbunnies-20170709.php on line 3
 [13-Jul-2017 01:35:24 UTC] PHP Parse error:  syntax error, unexpected 'm' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 40
+[23-Jul-2017 23:41:16 UTC] PHP Parse error:  syntax error, unexpected 'visitor' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
