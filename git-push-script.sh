@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull
 touch new.txt
 git add .
 git commit -m “Push”
