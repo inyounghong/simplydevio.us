@@ -18,3 +18,5 @@
 [29-Jul-2017 20:26:39 UTC] PHP Warning:  include(): Failed opening '../menu1.html' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/inyounghong/public_html/resources/linking_widgets_tutorial.php on line 31
 [30-Jul-2017 02:55:08 UTC] PHP Warning:  include(../menu1.html): failed to open stream: No such file or directory in /home/inyounghong/public_html/resources/linking_widgets_tutorial.php on line 31
 [30-Jul-2017 02:55:08 UTC] PHP Warning:  include(): Failed opening '../menu1.html' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/inyounghong/public_html/resources/linking_widgets_tutorial.php on line 31
+[09-Aug-2017 18:04:05 UTC] PHP Warning:  include(../menu1.html): failed to open stream: No such file or directory in /home/inyounghong/public_html/resources/linking_widgets_tutorial.php on line 31
+[09-Aug-2017 18:04:05 UTC] PHP Warning:  include(): Failed opening '../menu1.html' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/inyounghong/public_html/resources/linking_widgets_tutorial.php on line 31
