@@ -109,6 +109,7 @@ angular.module('mainApp')
         css += 'position:relative;\n';
         css += 'max-width:550px;\n';
         css += 'overflow:hidden;\n';
+        css += 'margin: 0 auto;\n';
         css += END;
 
         if (j.buttonsOnRight) {
