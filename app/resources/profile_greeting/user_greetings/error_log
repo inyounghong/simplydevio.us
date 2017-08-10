@@ -1,0 +1,12 @@
+[10-Aug-2017 17:45:07 UTC] PHP Parse error:  syntax error, unexpected '');' (T_CONSTANT_ENCAPSED_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[10-Aug-2017 17:45:08 UTC] PHP Parse error:  syntax error, unexpected 'D' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:08 UTC] PHP Parse error:  syntax error, unexpected 'Do' (T_DO) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:08 UTC] PHP Parse error:  syntax error, unexpected 'Dow' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:08 UTC] PHP Parse error:  syntax error, unexpected 'Down' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:09 UTC] PHP Parse error:  syntax error, unexpected 'Down' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:09 UTC] PHP Parse error:  syntax error, unexpected 'Down' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:09 UTC] PHP Parse error:  syntax error, unexpected 'Down' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:09 UTC] PHP Parse error:  syntax error, unexpected 'Down' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:10 UTC] PHP Parse error:  syntax error, unexpected 'Down' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:10 UTC] PHP Parse error:  syntax error, unexpected 'Down' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
+[10-Aug-2017 17:45:37 UTC] PHP Parse error:  syntax error, unexpected 'land' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 5
