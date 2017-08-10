@@ -8,7 +8,7 @@ from time import strftime
 def main():
     username = sys.argv[1]  # page to check
 
-    page = urllib2.urlopen('http://' + username + '.deviantart.com')
+    page = urllib2.urlopen('https://' + username + '.deviantart.com')
     source = page.read()
     page.close()
 
