@@ -38,7 +38,9 @@ class VisitorScraper {
         $widget = $html->find('.gr-activity', 0); // Works for super group sidebars
         $visitor = $widget->find('.text', 0);
 
-        $name_and_time[0] = $visitor->find('.username', 0)->plaintext;
+        if ($visitor != null) {
+            $name_and_time[0] = $visitor->find('.username', 0)->plaintext;
+        }
         $time = $visitor->find('.entry-count', 0)->title;
         $arr = preg_split("/\s+/", $time);
         $name_and_time[1] = $arr[3];
