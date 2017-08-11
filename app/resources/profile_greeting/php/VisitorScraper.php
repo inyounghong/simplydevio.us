@@ -5,12 +5,10 @@ include("simple_html_dom.php");
 class VisitorScraper {
 
     private $username;
-    private $visitor;
     private $alwaysDisplayName;
 
-    function __construct($username, $visitor, $alwaysDisplayName) {
+    function __construct($username, $alwaysDisplayName) {
 		$this->username = $username;
-        $this->visitor = $visitor;
         $this->alwaysDisplayName = $alwaysDisplayName;
 	}
 
@@ -25,7 +23,7 @@ class VisitorScraper {
         $time = null; // 3:14
 
         if ($name_li != null) { // Names only
-            $name = $name_li->find('span', 0)->plaintext;
+            $name = trim($name_li->find('span', 0)->plaintext);
             $time = explode(" ", $name_li->find('div', 0)->plaintext)[4];
         } else if ($avatars != null) { // Avatars only (no time)
             $name = $avatars->find('.avatar', 0)->title;
@@ -38,9 +36,8 @@ class VisitorScraper {
 
         if ($this->alwaysDisplayName || $time === null || $this->isRecentlyVisited($time)) {
             return $name;
-        } else {
-            return $this->visitor;
         }
+        return "visitor";
     }
 
     // Returns whether time is recent
@@ -56,13 +53,12 @@ class VisitorScraper {
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_ENCODING , "gzip");
+        curl_setopt($ch, CURLOPT_ENCODING, '');
         $data = curl_exec($ch);
         curl_close($ch);
         return $data;
     }
 }
-
-$visitorScraper = new VisitorScraper("SimplySilent", "visitor", true);
-echo $visitorScraper->getVisitor();
 
 ?>

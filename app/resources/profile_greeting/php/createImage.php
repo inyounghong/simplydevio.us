@@ -1,15 +1,17 @@
 <?php
 
+include("VisitorScraper.php");
+
 // Generate real image
 if ($_GET["generate"] == "true") {
-    writeImageToFile($_GET["filename"], "image.py");
+    writeImageToFile($_GET["filename"], false);
 } else {
     // Only update display image
-    writeImageToFile("display.php", "image_with_name.py");
+    writeImageToFile("display.php", true);
 }
 
 // Generates image file with name [filename] using given [image_details]
-function writeImageToFile($filename, $script) {
+function writeImageToFile($filename, $alwaysDisplayName) {
 
     $filepath = "../user_greetings/" . $filename;
     $file = fopen($filepath, "w") or die("Unable to open file!");
@@ -33,15 +35,20 @@ function writeImageToFile($filename, $script) {
 
     # If we have no visitor stored, then we need to scrape the page
     if ($visitor == "") {
-        $exec = "python ../python/$script $username $default";
-        $visitor = exec($exec);
+        // $exec = "python ../python/$script $username $default";
+        // $visitor = exec($exec);
+        $visitorScraper = new VisitorScraper($username, true);
+        $visitor = $visitorScraper->getVisitor();
     }
+    $visitorScraperString = "";
     $visitorString = "'".$visitor."'";
     echo $visitor;
 
     # For the recommended image, include execute function
-    if ($script == "image.py") {
-        $visitorString = "exec('python ../python/$script $username $default')";
+    if (!$alwaysDisplayName) {
+        // $visitorString = "exec('python ../python/$script $username $default')";
+        $visitorScraperString = '$visitorScraper = new VisitorScraper("'.$username.'", false);';
+        $visitorString = '$visitorScraper->getVisitor()';
     }
 
     if ($transparent == "true") {
@@ -52,6 +59,8 @@ function writeImageToFile($filename, $script) {
 
     $string = "<?
 header('Content-type: image/png');
+include('../php/VisitorScraper.php');
+$visitorScraperString
 $"."visitor"." = $visitorString;
 $"."new_message1 = str_replace('visitor', $"."visitor, '$message1');
 $"."new_message2 = str_replace('visitor', $"."visitor, '$message2');
