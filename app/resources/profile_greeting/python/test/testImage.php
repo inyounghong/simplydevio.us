@@ -1,4 +1,6 @@
 <?php
-$visitor = exec('python ../image.py simplysilent visitor');
+echo "testing";
+$visitor = exec('python ../image_copy.py simplysilent visitor');
 echo $visitor;
+echo "done";
 ?>
