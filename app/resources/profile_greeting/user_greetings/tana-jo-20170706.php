@@ -1,7 +1,8 @@
 <?
 header('Content-type: image/png');
-$visitor = exec('python ../python/image.py tana-jo visitor');
-$new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
+include('../php/VisitorScraper.php');
+$visitorScraper = new VisitorScraper("tana-jo", false);
+$visitor = $visitorScraper->getVisitor();$new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Enjoy my page!');
 
 $text_box1 = imagettfbbox(15, 0, '../uploaded_fonts/opensans.ttf', $new_message1);

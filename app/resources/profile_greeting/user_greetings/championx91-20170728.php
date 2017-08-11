@@ -1,6 +1,8 @@
 <?
 header('Content-type: image/png');
-$visitor = exec('python ../python/image.py championx91 visitor');
+include('../php/VisitorScraper.php');
+$visitorScraper = new VisitorScraper("championx91", false);
+$visitor = $visitorScraper->getVisitor();
 $new_message1 = str_replace('visitor', $visitor, 'Welcome visitor, enjoy your stay!');
 $new_message2 = str_replace('visitor', $visitor, '');
 

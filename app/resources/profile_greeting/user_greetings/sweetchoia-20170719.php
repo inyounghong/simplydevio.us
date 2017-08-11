@@ -1,7 +1,8 @@
 <?
 header('Content-type: image/png');
-$visitor = exec('python ../python/image.py sweetchoia visitor');
-$new_message1 = str_replace('visitor', $visitor, 'hey visitor');
+include('../php/VisitorScraper.php');
+$visitorScraper = new VisitorScraper("sweetchoia", false);
+$visitor = $visitorScraper->getVisitor();$new_message1 = str_replace('visitor', $visitor, 'hey visitor');
 $new_message2 = str_replace('visitor', $visitor, 'welcome!');
 
 $text_box1 = imagettfbbox(50, 0, '../uploaded_fonts/pacifico.ttf', $new_message1);

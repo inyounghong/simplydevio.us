@@ -1,8 +1,9 @@
 <?
 session_start();
 header('Content-type: image/png');
-$visitor = exec('python ../python/image.py xy-a-z-z visitor');
-$new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
+include('../php/VisitorScraper.php');
+$visitorScraper = new VisitorScraper("xy-a-z-z", false);
+$visitor = $visitorScraper->getVisitor();$new_message1 = str_replace('visitor', $visitor, 'Hey visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my page!');
 
 $text_box1 = imagettfbbox(41, 0, '../uploaded_fonts/where_stars_shine_the_brightest.ttf', $new_message1);

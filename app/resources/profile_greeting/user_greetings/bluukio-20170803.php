@@ -1,6 +1,8 @@
 <?
 header('Content-type: image/png');
-$visitor = exec('python ../python/image.py bluukio visitor');
+include('../php/VisitorScraper.php');
+$visitorScraper = new VisitorScraper("bluukio", false);
+$visitor = $visitorScraper->getVisitor();
 $new_message1 = str_replace('visitor', $visitor, 'Hello visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'I can see you :3c');
 

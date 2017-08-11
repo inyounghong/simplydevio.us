@@ -1,6 +1,8 @@
 <?
 header('Content-type: image/png');
-$visitor = exec('python ../python/image.py treepencil visitor');
+include('../php/VisitorScraper.php');
+$visitorScraper = new VisitorScraper("treepencil", false);
+$visitor = $visitorScraper->getVisitor();
 $new_message1 = str_replace('visitor', $visitor, 'Hey there, visitor! I can see you!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to my profile!');
 

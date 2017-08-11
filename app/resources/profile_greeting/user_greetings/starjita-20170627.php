@@ -1,8 +1,9 @@
 <?
 session_start();
 header('Content-type: image/png');
-$visitor = exec('python ../python/image.py starjita visitor');
-$new_message1 = str_replace('visitor', $visitor, '.* Hello Visitor *.');
+include('../php/VisitorScraper.php');
+$visitorScraper = new VisitorScraper("starjita", false);
+$visitor = $visitorScraper->getVisitor();$new_message1 = str_replace('visitor', $visitor, '.* Hello Visitor *.');
 $new_message2 = str_replace('visitor', $visitor, '.* please Enjoy your stay! *.');
 
 $text_box1 = imagettfbbox(18, 0, '../uploaded_fonts/cheri.TTF', $new_message1);
