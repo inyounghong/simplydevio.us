@@ -1,6 +1,8 @@
 <?
 header('Content-type: image/png');
-$visitor = exec('python ../python/image.py all-art-wanted visitor');
+include('../php/VisitorScraper.php');
+$visitorScraper = new VisitorScraper("All-Art-Wanted", false);
+$visitor = $visitorScraper->getVisitor();
 $new_message1 = str_replace('visitor', $visitor, 'visitor!');
 $new_message2 = str_replace('visitor', $visitor, 'Welcome to All-Art-Wanted');
 
