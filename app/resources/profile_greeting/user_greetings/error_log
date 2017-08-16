@@ -1006,3 +1006,84 @@
 [16-Aug-2017 05:20:19 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
 [16-Aug-2017 06:07:12 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
 [16-Aug-2017 06:26:56 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 07:17:34 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 07:23:53 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 07:32:27 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 39
+[16-Aug-2017 07:38:18 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 07:39:35 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 08:41:45 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 08:54:44 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 09:09:47 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 09:18:03 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 10:28:37 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 10:48:54 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 10:52:42 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 10:55:21 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 11:47:14 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 12:47:05 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 13:09:45 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 13:56:06 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 13:58:33 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 14:36:10 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 14:38:24 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 15:19:15 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 15:25:29 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 15:51:14 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 15:55:16 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:16 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:16 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:17 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:17 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:17 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:17 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:17 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:17 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:19 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:20 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:20 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:20 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:20 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:20 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:22 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:22 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:22 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:23 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:23 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:23 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:23 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:23 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:23 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:23 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:24 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:24 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:24 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:26 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:27 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:28 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:30 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:55:32 UTC] PHP Parse error:  syntax error, unexpected 's' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[16-Aug-2017 15:57:40 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 15:58:43 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 16:08:16 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 16:36:55 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 16:48:29 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 16:55:51 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 16:56:58 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 16:58:34 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 16:58:46 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 16:58:54 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 17:00:46 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 17:03:25 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 17:03:40 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 17:43:11 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 17:49:34 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:01:37 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:03:56 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:06:01 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:07:49 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:22:59 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:23:58 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:26:48 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:27:00 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:42:04 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
+[16-Aug-2017 18:49:45 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44

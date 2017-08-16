@@ -5,3 +5,4 @@
 [16-Aug-2017 00:19:06 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 39
 [16-Aug-2017 00:19:09 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 39
 [16-Aug-2017 00:19:42 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 39
+[16-Aug-2017 16:58:33 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 44
