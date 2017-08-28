@@ -1,3 +1,6 @@
 .DS_Store
 /app/resources/profile_greeting/user_greetings/display.php
 .htaccess
+.errordocs
+.sass-cache
+.well-known

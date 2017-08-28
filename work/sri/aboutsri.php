@@ -45,7 +45,7 @@
 
     	</div>
 
-        <div class="section g message">
+        <div class="section t message">
             <div class="container">
                 <h4>Steps</h4>
                 <h3>SRI is based on 4 main principles:</h3>

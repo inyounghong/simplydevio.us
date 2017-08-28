@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <div class="section y message">
+        <div class="section o message">
             <div class="container">
                 <h3>SRI results in greater yields, <b>increasing incomes</b> for farmers and <b>combating hunger</b>.</h3>
             </div>
