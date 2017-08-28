@@ -19,7 +19,12 @@ class VisitorScraper {
         $visitor_widget = $html->find('.gr-visitors', 0);
 
         if ($visitor_widget == null) {
-            $name_and_time = $this->scrapeGroup($html);
+            $widget = $html->find('.gr-activity', 0); // Works for super group sidebars
+            if ($widget == null) {
+                return "[Error: Add a visitor widget to your profile]";
+            } else {
+                $name_and_time = $this->scrapeGroup($widget);
+            }
         } else {
             $name_and_time = $this->scrapeProfile($visitor_widget);
         }
@@ -32,10 +37,9 @@ class VisitorScraper {
         return "visitor";
     }
 
-    function scrapeGroup($html) {
+    function scrapeGroup($widget) {
         $name_and_time = array(null, null);
 
-        $widget = $html->find('.gr-activity', 0); // Works for super group sidebars
         $visitor = $widget->find('.text', 0);
 
         if ($visitor != null) {
