@@ -1,10 +1,10 @@
 // Variables
 
-$green: #89c054
-$yellow: #db594f
+$green: #7FC356
+$yellow: #FFC459
 $yellow2: rgba(255,196,89, 0.85)
 $orange: #E89E41
-$teal: #31a69d
+$teal: #1DA7A7
 
 // Fonts
 
@@ -58,8 +58,6 @@ $teal: #31a69d
             color: #222!important
     &.o
         background: $orange
-    &.y
-        background: $yellow
 
     &.gr
         background: #f8f8f8
@@ -97,9 +95,6 @@ $teal: #31a69d
         border-top: 20px solid $teal
     &.o:after
         border-top: 20px solid $orange
-    &.y:after
-        border-top: 20px solid $yellow
-
 
 .r90
     width: 90%
@@ -185,7 +180,7 @@ $teal: #31a69d
 p.big
     font-size: 20px
     width: 70%
-    margin: 10px auto 20px
+    margin: 10px auto 40px
     line-height: 1.5em
 
 p.main
@@ -269,35 +264,24 @@ h3
 
 .button-wrap 
     text-align: center
-    margin: 0 0 10px
+    margin: 0 0 20px
 
 .button
     display: inline-block
-    border: 2px solid $orange
-    color: $orange
+    background: $green
+    color: #fff
     font-size: 13px
     padding: 10px 15px
     margin: 0 5px
+    width: 100px
     text-align: center
     +border-box
     text-transform: uppercase
     font-weight: 600
-    transition: .2s all
-
-    &.w
-        border: 2px solid #fff
-        color: #fff
-        &:hover
-            background: #fff
-            color: $green
-
-    &.t
-        background: $teal
+    +border-radius(20px)
 
     &:hover
         color: #fff
-        background: $orange
-        text-decoration: none
 
 .button-support
     background: $green
@@ -345,6 +329,9 @@ h3
         img
             position: relative
             top: -2px
+
+#support
+    background: $green
 
 em
     font-style: normal
@@ -418,18 +405,13 @@ em
     position: relative
     background: #000
 
-    #banner-logo
-        width: 250px
-        margin-bottom: 0px
-
-
-    img#banner-img
+    img
         width: 100%
         opacity: 0.6
 
     .caption
         position: absolute
-        top: 130px
+        top: 300px
         width: 100%
         text-align: center
         color: #fff
@@ -521,14 +503,6 @@ em
     p
         text-align: left
 
-.black li:hover img:first-child
-    opacity: 1
-
-.icon-hover
-    img:first-child
-        position: absolute
-        transition: .2s all
-        opacity: 0
 
 // Projects
 
@@ -577,14 +551,6 @@ em
     text-align: center
     padding: 0
 
-    a
-        color: #fff
-        text-decoration: none
-        transition: .2s all
-
-        &:hover
-            opacity: 0.8
-
     li
         list-style-type: none
         display: inline-block
@@ -593,7 +559,7 @@ em
         text-align: center
         font-weight: 400
         font-size: 17px
-        cursor: pointer
+        
         color: #fff
         margin: 0 5px
         +border-radius(5px)
@@ -602,9 +568,6 @@ em
     &.black li
         color: #222!important
         background: #fff
-
-        a
-            color: #222!important
 
     img
         margin-bottom: 10px
@@ -663,40 +626,29 @@ blockquote:after
     text-align: right
     line-height: 1.3em
     color: #bbb
-
-// Scroll to sections
-.scroll-to
-    position: relative
-    top: -50px
+    
 
 
 // Footer
 
 #footer
-    background: #444
+    background: #555
     margin-top: 20px
 
-    img
-        margin: -3px 3px 0 0
 
     *
         color: #fff
-        font-size: 13px
+        font-size: 14px
 
     .container
         color: #fff!important
-        padding: 50px 0 30px
-    ul
-        padding: 0
-        margin-bottom: 20px
+
     li
         list-style-type: none
 
     .head
         text-transform: uppercase
         font-weight: 600
-        margin: 0 0 15px
+        margin: 10px 0
 
-    p
-        margin: 0 0
 

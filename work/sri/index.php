@@ -34,20 +34,14 @@
 	<!-- Slider -->
 
 	<div class="banner">
-	    <img src="img/banner.jpg" id="banner-img" style="margin-top: -150px">
-	    
-        <div class="caption">
-        	<img src="img/logos/logo-img.png" width="250" style="margin-bottom: 30px"><br>
-        	Changing the way the world grows rice
-        </div>
+	    <img src="img/banner.jpg" style="margin-top: -150px">
+        <div class="caption">Changing the way the world grows rice</div>
 	</div>
 	
 	<div class="colored teal">
 		<div class="container">
-
-					<h1>Who We Are</h1>
-					<p class="big">SRI-Rice is at the forefront in a revolution changing how the world grows rice, a staple food for billions of people and the economic backbone of farming communities around the world.</p>
-
+			<h1>Who We Are</h1>
+			<p class="big">SRI-Rice is at the forefront in a revolution changing how the world grows rice, a staple food for billions of people and the economic backbone of farming communities around the world.</p>
 		</div>
 	</div>
 
@@ -83,11 +77,7 @@
 			<div class="floating-text float-right">
 				<h1>The Solution</h1> 
 
-				<p>Fortunately there’s an alternative. The System of Rice Intensification, or SRI, lets farmers increase yields while reducing or eliminating agrochemical use, increasing plant and soil health, reducing greenhouse gas emissions, and cutting water use up to 50%. SRI is simply a different and unexpected way of managing rice field differently, and can be used with any variety of rice. For over 10 million farmers in 50+ countries, SRI is already helping them change how rice is grown. </p>
-
-				<div class="button-wrap">
-					<a href="aboutsri.php" class="button">Learn More</a>
-				</div>
+				<p>Fortunately there’s an alternative. The System of Rice Intensification, or SRI, lets farmers increase yields while reducing or eliminating agrochemical use, increasing plant and soil health, reducing greenhouse gas emissions, and cutting water use up to 50%. SRI is simply a different and unexpected way of managing rice field differently, and can be used with any variety of rice. For over 10 million farmers in 50+ countries, SRI is already helping them change how rice is grown. <a href="aboutsri.php">Learn More</a></p>
 			</div>
 		</div>
 	</div>
@@ -97,11 +87,7 @@
 		<div class="container">
 			<h1>SRI-Rice</h1>
 
-			<p class="big">At the center of this revolution is SRI-Rice. Founded by the group responsible for spreading SRI from its humble origins in rural Madagascar, SRI-Rice has catalyzed the spread, innovation and adaptation of SRI. As the global hub of SRI… 
-
-			<div class="button-wrap">
-				<a href="aboutus.php" class="button w">Learn more</a>
-			</div>
+			<p class="big">At the center of this revolution is SRI-Rice. Founded by the group responsible for spreading SRI from its humble origins in rural Madagascar, SRI-Rice has catalyzed the spread, innovation and adaptation of SRI. As the global hub of SRI… <a href="aboutus.php">Learn more</a>
 		</div>
 	</div>
 
@@ -164,44 +150,33 @@
 	        <p class="big c">SRI-Rice is involved in supporting research and providing resources.</p>
 
 	        <ul class="img-list">
-                <li>
-                    <a href="projects.php#resources">
-                        <img src="img/icons/w_laptop.png"><br>
-                        Online Resources
-                    </a>
-                </li>
-                <li>
-                    <a href="projects.php#africa">
-                        <img src="img/icons/w_africa.png"><br>
-                        West Africa Initiatives
-                    </a>
-                </li>
-                <li>
-                    <a href="projects.php#latin-america">
-                        <img src="img/icons/w_latinamerica.png"><br>
-                        Latin America Initiatives
-                    </a>
-                </li>
-                <li>
-                    <a href="projects.php#equipment">
-                        <img src="img/icons/w_research.png" width="50" style="margin: 10px 0 14px"><br>
-                        Research
-                    </a>
-                </li>
-                <li>
-                    <a href="projects.php#equipment">
-                        <img src="img/icons/w_shovel.png"><br>
-                        Equipment
-                    </a>
-                </li>
-            </ul>
+	            <li>
+	                <img src="img/icons/computer.png"><br>
+	                Online Resources
+	            </li>
+	            <li>
+	                <img src="img/icons/africa.png"><br>
+	                West Africa Initiatives
+	            </li>
+	            <li>
+	                <img src="img/icons/latinamerica.png"><br>
+	                Latin America Initiatives
+	            </li>
+	            <li><img src="img/icons/research2.png" width="50" style="margin: 10px 0 14px"><br>
+	                Research
+	            </li>
+	            <li><img src="img/icons/shovel.png"><br>
+	                Equipment
+	            </li>
+	        </ul>
 	    </div>
 	</div>
 
 
 	<div class="container">
+		<h4>Testimonials</h4>
+		<br>
 		<div class="row quotes">
-			<br>
 			<div class="col-sm-4">
 				<blockquote>"In rice, they're using a system called the System of Rice Intensification, which allows them to use less water, less fertilizer, more safe inputs. And they're seeing a big increase, doubling or tripling of yields, and a 75 percent increase in farm incomes because of that program, which has now reached almost 10,000 farm households, and we believe will reach 125,000 over time."</blockquote>
 

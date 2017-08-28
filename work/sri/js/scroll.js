@@ -1,5 +1,5 @@
 function stickyScroll(e) {
-    if( window.pageYOffset > 50 ) {
+    if( window.pageYOffset > 300 ) {
         $('.nav-background').fadeIn(); 
         // $('.navbar a').css("color", "#000");    
     } else {

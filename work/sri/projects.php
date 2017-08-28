@@ -17,23 +17,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 
-    <script>
-        $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-        </script>
-
 </head>
 <body>
 
@@ -49,59 +32,30 @@
             <p class="main">SRI-Rice is involved in supporting research and providing resources.</p>
 
             <ul class="img-list black" >
-                <li>
-                    <a href="#resources">
-                        <div class="icon-hover">
-                            <img src="img/icons/g_computer.png">
-                            <img src="img/icons/computer.png"> 
-                        </div>
+                    <li>
+                        <img src="img/icons/computer.png"><br>
                         Online Resources
-                    </a>
-                </li>
-                <li>
-                    <a href="#africa">
-                        <div class="icon-hover">
-                            <img src="img/icons/g_africa.png">
-                            <img src="img/icons/africa.png"> 
-                        </div>
-
+                    </li>
+                    <li>
+                        <img src="img/icons/africa.png"><br>
                         West Africa Initiatives
-                    </a>
-                </li>
-                <li>
-                    <a href="#latin-america">
-                        <div class="icon-hover">
-                            <img src="img/icons/g_latinamerica.png">
-                            <img src="img/icons/latinamerica.png"> 
-                        </div>
+                    </li>
+                    <li>
+                        <img src="img/icons/latinamerica.png"><br>
                         Latin America Initiatives
-                    </a>
-                </li>
-                <li>
-                    <a href="#equipment">
-                        <div class="icon-hover">
-                            <img src="img/icons/g_research2.png">
-                            <img src="img/icons/research2.png"> 
-                        </div>
+                    </li>
+                    <li><img src="img/icons/research2.png" width="50" style="margin: 10px 0 14px"><br>
                         Research
-                    </a>
-                </li>
-                <li>
-                    <a href="#equipment">
-                        <div class="icon-hover">
-                            <img src="img/icons/g_shovel.png">
-                            <img src="img/icons/shovel.png"> 
-                        </div>
+                    </li>
+                    <li><img src="img/icons/shovel.png"><br>
                         Equipment
-                    </a>
-                </li>
-            </ul>
+                    </li>
+                </ul>
         </div>
 
-        <div class="scroll-to" id="resources"></div>
         <div class="section gr c">
-            <div class="container" >
-                <img src="img/icons/computer.png">
+            <div class="container">
+                <img src="img/icons/g_computer.png">
                 <h4>Online Resources</h4>
                 <br>
 
@@ -142,10 +96,9 @@
             </div>
         </div>
 
-        <div class="scroll-to" id="africa"></div>
-        <div class="section gr c" >
-            <div class="container" >
-                <img src="img/icons/africa.png">
+        <div class="section gr c">
+            <div class="container">
+                <img src="img/icons/g_africa.png">
                 <h4>West Africa Initiatives</h4>
                 <br>
 
@@ -197,10 +150,10 @@
             </div>
         </div>
 
-        <div class="scroll-to" id="latin-america"></div>
+
         <div class="section gr c">
-            <div class="container" >
-                <img src="img/icons/latinamerica.png">
+            <div class="container">
+                <img src="img/icons/g_latinamerica.png">
                 <h4>Latin America and Caribbean Initiatives</h4>
                 <br>
 
@@ -232,10 +185,9 @@
             </div>
         </div>
 
-        <div class="scroll-to" id="equipment"></div>
-        <div class="section gr c" >
-            <div class="container" >
-                <img src="img/icons/shovel.png">
+       <div class="section gr c">
+            <div class="container">
+                <img src="img/icons/g_shovel.png">
                 <h4>Other Projects</h4>
                 <br>
 
