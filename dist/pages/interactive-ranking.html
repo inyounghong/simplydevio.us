@@ -1,0 +1,18 @@
+<ul class="outline">
+    <li><a href="#introduction">Introduction</a></li>
+    <li ng-show={{$ctrl.project.technologies}}><a href="#technologies">Technologies</a></li>
+    <!-- <li><a href="#background">Background</a></li>
+    <li><a href="#objectives">Objectives</a></li>
+    <li><a href="#development">Development</a></li> -->
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+<p>This interactive chart built with d3.js displays the rankings of contestants on the second season of a highly-popular South Korean idol survival show, <a href="https://en.wikipedia.org/wiki/Produce_101_Season_2" target="_blank">Produce 101</a>.</p>
+
+<img src="{{$ctrl.imagePath}}/produce.png">
+
+<div ng-include="'./pages/partials/technologies.html'" ng-show="{{$ctrl.project.technologies}}"></div>
+
+<!-- <h2 id="background">Background</h2>
+<h2 id="objectives">Objectives</h2>
+<h2 id="Development">Development</h2> -->

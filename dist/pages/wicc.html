@@ -1,0 +1,38 @@
+<ul class="outline" fa-ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#design">Design Journey</a>
+        <ul>
+            <li><a href="#audience">Audience</a></li>
+            <li><a href="#design-needs">Design Needs and Solutions</a></li>
+        </ul>
+    </li>
+    <li ng-show={{$ctrl.project.technologies}}><a href="#technologies">Technologies</a></li>
+    <!-- <li><a href="#background">Background</a></li>
+    <li><a href="#objectives">Objectives</a></li>
+    <li><a href="#development">Development</a></li> -->
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+<p>WICC is a club at Cornell that aims to empower and support women in computing fields. This project involved completely redesigning an existing website for a more professional and visually-pleasing appearance, and developing a new website architecture to better organize existing content and revamp the way visitors traveled through the site.</p>
+
+<img src="{{$ctrl.imagePath}}/wicc.png">
+
+<h2 id="design">Design Journey</h2>
+
+<h3 id="audience">Audience</h3>
+<p>The WICC website needed to be built for several main audiences:</p>
+<ol>
+    <li>Students, including existing WICC members and potentially interested students.</li>
+    <li>Alumni, who may be interested in joining the alumni network.</li>
+    <li>Companies, who are interested in becoming a sponsor.</li>
+</ol>
+
+<h3 id="design-needs">Design Needs and Solutions</h3>
+
+<b>Students Interested in WICC</b>
+
+
+<div ng-include="'./pages/partials/technologies.html'" ng-show="{{$ctrl.project.technologies}}"></div>
+<!-- <h2 id="background">Background</h2>
+<h2 id="objectives">Objectives</h2>
+<h2 id="Development">Development</h2> -->

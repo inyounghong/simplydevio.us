@@ -1,0 +1,28 @@
+<ul class="outline" fa-ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li ng-show={{$ctrl.project.technologies}}><a href="#technologies">Technologies</a></li>
+    <!-- <li><a href="#background">Background</a></li>
+    <li><a href="#objectives">Objectives</a></li>
+    <li><a href="#development">Development</a></li> -->
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+<p>CUChange is a full-stack reddit-style forum for Cornell students to be able to voice their concerns to the Student Assembly. The problem was that inspired this project was two-fold: </p>
+<ol>
+    <li>Cornell students had no organized method of sending in suggestions to the Student Assembly.</li>
+    <li>The Student Assembly had no method for determining problems that the students felt most passionate about.</li>
+</ol>
+
+<p>CUChange is an online forum that allows anyone with a Cornell email to post suggestions, upvotes suggestions they support, or comment to start discussions about suggestions. Posts are categorized into the various committees of SA to allow each representative to focus on the issues that directly concern them, and posts can be filtered by most popular, newest, or oldest. Admins of the website can mark posts with different statuses, such as open, in progress, or resolved to update students on the status of their posts.</p>
+
+<p>Made with MeteorJS during the 24-hour Random Hacks of Kindness hackathon.</p>
+
+<img src="{{$ctrl.imagePath}}/cuchange.jpg">
+<img src="{{$ctrl.imagePath}}/cuchange1.png">
+
+<img src="{{$ctrl.imagePath}}/ipad_wanna.jpg" width="700">
+
+<div ng-include="'./pages/partials/technologies.html'" ng-show="{{$ctrl.project.technologies}}"></div>
+<!-- <h2 id="background">Background</h2>
+<h2 id="objectives">Objectives</h2>
+<h2 id="Development">Development</h2> -->
