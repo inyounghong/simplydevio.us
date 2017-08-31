@@ -4,7 +4,7 @@
 
 include('VisitorScraper.php');
 
-$visitorScraper = new VisitorScraper("all-art-wanted", false);
+$visitorScraper = new VisitorScraper("l3ombyx2", false);
 $visitor = $visitorScraper->getVisitor();
 echo $visitor;
 
