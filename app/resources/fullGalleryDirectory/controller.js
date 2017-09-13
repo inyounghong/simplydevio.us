@@ -18,7 +18,7 @@ angular.module('mainApp')
         var button = {
             name: 'Gallery Folder',
             url: 'http://fav.me/d41e1au',
-            image: ROOT + 'images/slideshow1.png',
+            image: $scope.root + 'images/slideshow1.png',
         };
         $scope.j.buttons.push(button);
     }
