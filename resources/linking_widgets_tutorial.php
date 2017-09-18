@@ -28,7 +28,7 @@
     </script>
 </head>
 <body>
-<?php include '../menu1.html' ?>
+<!-- <?php include '../menu1.html' ?> -->
 
     <!-- Start White Section -->
 	<div class="section" id="resource">
