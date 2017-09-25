@@ -206,3 +206,9 @@
 [24-Sep-2017 23:51:29 UTC] PHP Parse error:  syntax error, unexpected '');' (T_CONSTANT_ENCAPSED_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 9
 [24-Sep-2017 23:51:29 UTC] PHP Parse error:  syntax error, unexpected '');' (T_CONSTANT_ENCAPSED_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 9
 [25-Sep-2017 00:30:25 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[25-Sep-2017 14:02:41 UTC] PHP Parse error:  syntax error, unexpected '');' (T_CONSTANT_ENCAPSED_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[25-Sep-2017 14:27:43 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[25-Sep-2017 15:01:41 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[25-Sep-2017 15:03:36 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[25-Sep-2017 15:05:30 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[25-Sep-2017 15:05:53 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
