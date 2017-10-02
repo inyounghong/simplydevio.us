@@ -496,3 +496,14 @@
 [01-Oct-2017 10:44:42 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
 [01-Oct-2017 14:19:44 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
 [02-Oct-2017 00:06:56 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:31:06 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:31:11 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:32:54 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:33:52 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:34:11 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:35:32 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:36:12 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:36:55 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 08:37:45 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 13:06:37 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[02-Oct-2017 14:49:29 UTC] PHP Fatal error:  Call to a member function find() on null in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 48
