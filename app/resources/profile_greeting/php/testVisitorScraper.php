@@ -4,8 +4,10 @@
 
 include('VisitorScraper.php');
 
-$visitorScraper = new VisitorScraper("l3ombyx2", false);
+$username = "simplysilentsdf";
+$visitorScraper = new VisitorScraper($username, false);
 $visitor = $visitorScraper->getVisitor();
+echo "<p>$username</p>";
 echo $visitor;
 
 ?>

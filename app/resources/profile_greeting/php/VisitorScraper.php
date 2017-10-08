@@ -16,6 +16,10 @@ class VisitorScraper {
         $username = $this->username;
         $html = str_get_html($this->curl_get_contents("https://$username.deviantart.com"));
 
+        if ($html->find('.error-404', 0)) {
+            return "[Error: Incorrect username]";
+        }
+
         $visitor_widget = $html->find('.gr-visitors', 0);
 
         if ($visitor_widget == null) {
@@ -23,7 +27,11 @@ class VisitorScraper {
             if ($widget == null) {
                 return "[Error: Add a visitor widget to your profile]";
             } else {
-                $name_and_time = $this->scrapeGroup($widget);
+                $visitor = $widget->find('.text', 0);
+                if ($visitor == null) {
+                    return "[Error: Add a visitor widget]";
+                }
+                $name_and_time = $this->scrapeGroup($visitor);
             }
         } else {
             $name_and_time = $this->scrapeProfile($visitor_widget);
@@ -37,14 +45,9 @@ class VisitorScraper {
         return "visitor";
     }
 
-    function scrapeGroup($widget) {
+    function scrapeGroup($visitor) {
         $name_and_time = array(null, null);
-
-        $visitor = $widget->find('.text', 0);
-
-        if ($visitor != null) {
-            $name_and_time[0] = $visitor->find('.username', 0)->plaintext;
-        }
+        $name_and_time[0] = $visitor->find('.username', 0)->plaintext;
         $time = $visitor->find('.entry-count', 0)->title;
         $arr = preg_split("/\s+/", $time);
         $name_and_time[1] = $arr[3];
