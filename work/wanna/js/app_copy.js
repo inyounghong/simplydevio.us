@@ -1,8 +1,10 @@
 var position = 0;
 
+init();
+
 function initialize_widget(){
 /** Initializes the grid under the name of grid */
-    
+
     grid = $("#grid ul").gridster({
         namespace: '#grid',
         widget_base_dimensions: [210, 1],
@@ -21,7 +23,7 @@ function initialize_widget(){
             };
 
         },
-        draggable: 
+        draggable:
         {
             // After a widget is dropped, the environment is saved
             stop: function(event, ui, $widget) {
@@ -31,21 +33,21 @@ function initialize_widget(){
     }).data('gridster');
 }
 
-num = getTitles();
-// If there are no titles to begin with
-if (num == null){
-    num = 0;
+function init() {
+    num = getTitles();
+    // If there are no titles to begin with
+    if (num == null){
+        num = 0;
+    }
+    for (i = 0; i < num; i++){
+        prepareTitles(i);
+    }
+    prepareGrids();
+    // Program Begins
+    initialize_widget();
+    getData(0);
+    updateBar();
 }
-for (i = 0; i < num; i++){
-    prepareTitles(i);
-}
-prepareGrids();
-// Program Begins
-
-initialize_widget();
-getData(0);
-storeData();
-updateBar();
 
 
 // 'Mark as Complete' & 'Mark as Incomplete' toolbars
@@ -96,7 +98,7 @@ function updateBar(){
             if ($(this).hasClass('preview-holder')){
                 total_widgets -= 1;
             }
-        });   
+        });
         // Calculating bar width
         if (total_widgets <= 0) {
             bar_percentage = 0;
@@ -110,7 +112,7 @@ function updateBar(){
             document.getElementById('bar' + i).style.width = bar_width + 'px';
         }
         catch(e){}
-    } 
+    }
 }
 
 function initializing_chars(){
@@ -167,14 +169,14 @@ function openTooltip(element){
     widget = element.parent();
     widget.find('.tooltip').toggleClass('width');
     widget.find('.tooltip').css('cursor', 'pointer');
-    $(document).click(function(event) { 
+    $(document).click(function(event) {
         if(!$(event.target).closest(widget).length) {
             if($('.tooltip').hasClass('width')) {
                 $('.settings').removeClass('set_on');
                 $('.tooltip').removeClass('width');
                 widget.find('.tooltip').css('cursor', 'default');
             }
-        }        
+        }
     })
 }
 
@@ -196,11 +198,11 @@ function setChangeColor(input_box){
         $('.square.' + colors[i]).click(function(){
             color = $(this).attr('class').split(' ');
             color = color[1]
-            stripColors(input_box);            
+            stripColors(input_box);
             input_box.addClass(color);
             input_box.parent().addClass(color);
             storeData();
-        }); 
+        });
     }
 }
 
@@ -214,19 +216,19 @@ function stripColors(input_box){
 
 
 function addGrid(add){
-/** Adds a new title and grid space 
+/** Adds a new title and grid space
     add: [int 0, 1 for new grid] **/
     if (add === undefined){
         add = 0;
     }
     num = parseInt(getTitles()) + add;
     $('#title .title_wrap:last').remove(); // Remove the add grid button temporarily
-    
+
     prepareTitles(num, 1); // Add title spaces
     createTitles(num);
     prepareGrids();
     fixGridWidth();
-    
+
     json = grid.serialize();
     json[json.length -1].col = $('#ul .title_widget:last').attr('data-col');
     storeData(json);
@@ -237,19 +239,21 @@ function addGrid(add){
 }
 
 function cleanTitle(html){
-/** Remove color toolbox on reload 
+/** Remove color toolbox on reload
     Returns: cleaned html for title widget */
-    html = html.replace('<div class="color_tools"><div class="square teal"></div><div class="square pink"></div><div class="square yellow"></div><div class="square orange"></div></div>', ''); 
+    html = html.replace('<div class="color_tools"><div class="square teal"></div><div class="square pink"></div><div class="square yellow"></div><div class="square orange"></div></div>', '');
     html.replace(color_toolbox, '');
     return html;
 }
 
 function getData(col_index){
-/** Gets data from local storage 
+/** Gets data from local storage
     col_index: [0 or 1] index of the col that was deleted */
     grid.remove_all_widgets();
     s = JSON.parse(localStorage.getItem("positions"));
     t = JSON.parse(localStorage.getItem("title_texts"));
+    console.log(s);
+    console.log(t);
     num = getTitles();
     try{
         $.each(s, function() {
@@ -282,9 +286,15 @@ function getData(col_index){
                 prepareTitles(i);
             }
         }
+        getTitles();
+        backComplete();
+        backStarred();
+        // Make widgets have class of title_widget
+        backTitle();
     }
     // If the user has no info to begin with (new user)
     catch(err){
+        console.log(err);
         $('#title .title_wrap:last').remove();
         fixGridWidth();
         prepareTitles(0); // Add title spaces
@@ -306,14 +316,10 @@ function getData(col_index){
         json[json.length - 2].row = 4;
         json[json.length - 1].row = 8;
         storeData(json);
-        getData();
+        location.reload(); // Reload
     }
-    getTitles();
-    backComplete();
-    backStarred();
-    // Make widgets have class of title_widget
-    backTitle();
-    
+
+
 }
 
 function backTitle(){
@@ -349,7 +355,7 @@ function createTitles(index, color, value){
     grid.disable($('#title_input' + index));
 
     // Issues arise when a not-last grid is deleted -- this ensures the new title scoots one right
-    correct_col = $('.title_input').length; 
+    correct_col = $('.title_input').length;
     $('li:last').attr('data-col', correct_col);
 }
 
@@ -365,7 +371,7 @@ function deleteGrid(element){
     numberTitles();
 
     fixGridWidth();
-    setTimeout(function(){ 
+    setTimeout(function(){
         storeData();
     }, 50); // This appears to be necessary
 }
@@ -385,7 +391,7 @@ function clearGrid(element){
 }
 
 function addWidget(element){
-/** Adds a widget to the grid when the button is pressed 
+/** Adds a widget to the grid when the button is pressed
     element: .plus, child of widget */
     // Only run if no other widgets are active
     if ($('#textarea').length == 0){
@@ -403,7 +409,7 @@ function getTextHtml(widget){
         widget_html = '';
     }
     return widget_html;
-    
+
 }
 
 function editWidget(element, n){
@@ -434,11 +440,11 @@ function editWidget(element, n){
           });
 
         // Edit text area configs
-        
+
         $('#textarea').height(((height + 1)*TEXT_HEIGHT));
         editor.focus();
         grid.disable($('#textarea').parent()); // No dragging a widget open for editing
-        
+
         document.addEventListener("mousedown", outsideClickListener);
         document.addEventListener("keydown", enterKeyListener);
     }
@@ -446,7 +452,7 @@ function editWidget(element, n){
 
 function configToolbar(widget){
 /** Sets up the toolbar for completed and starred widgets
-    widget: widget */ 
+    widget: widget */
     toolbar = $toolbar;
     if (widget.hasClass('comp')){
         toolbar = $toolbar_complete;
@@ -459,7 +465,7 @@ function configToolbar(widget){
 
 function starWidget(element){
 /** Stars the widget
-    element: Some grand child of the widget, the star button */ 
+    element: Some grand child of the widget, the star button */
     var widget = element.parent().parent();
     var textarea = widget.find('#textarea')
     if (widget.hasClass('starred')){
@@ -471,7 +477,7 @@ function starWidget(element){
         widget.addClass('starred');
     }
     saveWidgetText(textarea);
-    
+
 }
 
 function cleanText(text){
@@ -511,15 +517,15 @@ function clearWidgets(){
 
 
 function scootTitles(id){ // Say grid 1 is deleted
-    $.each($('.title_wrap'), function(index) { // when you get to the new grid 1 
+    $.each($('.title_wrap'), function(index) { // when you get to the new grid 1
         if (index >= id){
             $(this).attr('id', 'title_wrap' + index); // set to id 1
             $(this).find('.del_title').attr('id', 'del_title' + index);
             $(this).find('.bar').attr('id', 'bar' + (index + 1));
             //$(this).find('.title_input').attr('id', 'title' + index);
-            
+
         }
-    });  
+    });
 }
 
 function scootGrids(id){
@@ -544,12 +550,12 @@ function scootGrids(id){
     }
 
     backTitle();
-    
-    setTimeout(function(){ 
+
+    setTimeout(function(){
         storeData(json);
         getData();
     }, 250);
-    
+
 }
 
 
@@ -577,7 +583,7 @@ function storeTitles(){
 /** Stores title data in local storage */
     t = $("form").serializeArray();
     localStorage.setItem("title_texts", JSON.stringify(t));
-    setTimeout(function(){ 
+    setTimeout(function(){
         num = $('.title_input').length;
         localStorage.setItem("titles", num);
     }, 1);
@@ -605,7 +611,7 @@ function getTitles(){
 }
 
 function deleteWidget(element){
-/** Delete the widget 
+/** Delete the widget
     element: Some grand child of widget */
     grid.enable($('#textarea').parent()); // Make draggable again
     element.parent().parent().addClass("activ");
@@ -631,7 +637,7 @@ function completeWidget(element){
 
 function saveOnReady(){
 /** Saving the text on BLUR or ENTER */
-    
+
     /*$('textarea').blur(function() {
         saveWidgetText($(this));
     });
@@ -648,7 +654,7 @@ function outsideClickListener(event){
         if(!$(event.target).closest($('#textarea').parent()).length) {
             saveWidgetText($('#textarea'));
             document.removeEventListener("click", outsideClickListener);
-        }    
+        }
     }
 }
 
@@ -703,7 +709,7 @@ function saveWidgetText(textarea){
 }
 
 function editWidgetHeight(widget, add, min){
-/** Edit the height of the widget 
+/** Edit the height of the widget
     widget: jQuery wrapped widget
     add: [int] units to add to the height of the widget
     min: [int: optional] minimum height */
@@ -722,7 +728,7 @@ function getGridHeight(){
 }
 
 function checkStatus(textarea){
-/** Checks for status of the widget (comp, starred) and adds to text (s, stars)  
+/** Checks for status of the widget (comp, starred) and adds to text (s, stars)
     textarea: child to widget */
     var comp = '';
     var star = '';
