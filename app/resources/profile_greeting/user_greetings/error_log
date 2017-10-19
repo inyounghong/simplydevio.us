@@ -95,3 +95,5 @@
 [16-Oct-2017 17:00:57 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
 [16-Oct-2017 17:05:50 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
 [16-Oct-2017 17:07:29 UTC] PHP Parse error:  syntax error, unexpected '5' (T_LNUMBER) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[19-Oct-2017 09:10:57 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[19-Oct-2017 13:48:36 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
