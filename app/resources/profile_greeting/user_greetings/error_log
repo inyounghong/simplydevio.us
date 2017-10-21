@@ -116,3 +116,6 @@
 [20-Oct-2017 18:56:36 UTC] PHP Parse error:  syntax error, unexpected 'S' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
 [20-Oct-2017 18:56:40 UTC] PHP Parse error:  syntax error, unexpected 'S' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
 [20-Oct-2017 18:56:48 UTC] PHP Parse error:  syntax error, unexpected 'S' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[21-Oct-2017 13:05:57 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 36
+[21-Oct-2017 13:05:57 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 36
+[21-Oct-2017 13:06:07 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 36
