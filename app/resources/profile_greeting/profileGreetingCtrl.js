@@ -42,7 +42,7 @@ angular.module('mainApp')
         $scope.imageData.paddingX = 20;
         $scope.imageData.paddingY = 20;
         $scope.imageData.lineSpacing = 10;
-        $scope.imageData.transparent = false;
+        $scope.imageData.transparent = true;
         $scope.imageData.font = "arberkley.ttf";
     }
 
@@ -178,6 +178,13 @@ angular.module('mainApp')
 
     // Generates an object of all image details to be passed in AJAX call
     function generateImageObject() {
+        // Fix color and background fields if empty
+        if ($scope.imageData.color.trim() == "") {
+            $scope.imageData.color = "#FFFFFF";
+        }
+        if ($scope.imageData.background.trim() == "") {
+            $scope.imageData.background = "#000000";
+        }
         var i = $scope.imageData;
         i.color = $scope.imageData.color;
         i.background = $scope.imageData.background;

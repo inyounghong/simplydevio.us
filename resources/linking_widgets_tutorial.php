@@ -28,7 +28,7 @@
     </script>
 </head>
 <body>
- <?php include '../menu1.html' ?>
+
 
      Start White Section
 	<div class="section" id="resource">
@@ -77,7 +77,6 @@
 
 </div>
 
-<?php include '../includes/footer.html'; ?>
 
 </body>
 </html> -->
