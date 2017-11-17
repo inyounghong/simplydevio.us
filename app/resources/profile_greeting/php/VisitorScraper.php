@@ -16,7 +16,7 @@ class VisitorScraper {
         $username = $this->username;
         $html = str_get_html($this->curl_get_contents("https://$username.deviantart.com"));
 
-        if ($html->find('.error-404', 0)) {
+        if (!$html || $html->find('.error-404', 0)) {
             return "[Error: Incorrect username]";
         }
 
