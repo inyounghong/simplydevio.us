@@ -1,6 +1,6 @@
 /*
 Error: File to import not found or unreadable: globals.
-       Load path: /Users/inyoung/mamp/SimplyDevio.us/assets/scss
+       Load path: /Users/inyoung/mamp/simplydevio.us/assets/scss
         on line 1 of scss/old/form.scss
 
 1: @import "globals";
@@ -42,15 +42,17 @@ scss/old/form.scss:1
 /usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 /usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
 /usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:151:in `call'
-/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:151:in `block in _wait_for_changes'
-/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:146:in `loop'
-/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:146:in `_wait_for_changes'
-/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.4.1/lib/listen/listener.rb:44:in `block in start'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: globals.\A        Load path: /Users/inyoung/mamp/SimplyDevio.us/assets/scss\A         on line 1 of scss/old/form.scss\A \A 1: @import \"globals\";\A 2: \A 3: @mixin col{\A 4: 	vertical-align:top;\A 5: 	display:inline-block;\A 6: }"; }
+  content: "Error: File to import not found or unreadable: globals.\A        Load path: /Users/inyoung/mamp/simplydevio.us/assets/scss\A         on line 1 of scss/old/form.scss\A \A 1: @import \"globals\";\A 2: \A 3: @mixin col{\A 4: 	vertical-align:top;\A 5: 	display:inline-block;\A 6: }"; }
