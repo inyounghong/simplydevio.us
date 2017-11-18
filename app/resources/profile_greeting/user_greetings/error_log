@@ -9,3 +9,5 @@
 [16-Nov-2017 18:13:01 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
 [16-Nov-2017 22:44:05 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
 [16-Nov-2017 23:08:38 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[17-Nov-2017 10:40:50 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 19
+[17-Nov-2017 17:27:46 UTC] PHP Fatal error:  Class 'VisitorScraper' not found in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/championx91-20170728.php on line 4
