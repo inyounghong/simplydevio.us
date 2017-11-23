@@ -19,8 +19,8 @@ function writeImageToFile($filename, $alwaysDisplayName) {
     $visitor = $_GET['visitor'];
     $username = $_GET['username'];
     $default = $_GET['default'];
-    $message1 = $_GET['message1'];
-    $message2 = $_GET['message2'];
+    $message1 = $_GET['messageCleaned1'];
+    $message2 = $_GET['messageCleaned2'];
     $font = $_GET['font'];
     $font_size = $_GET['fontSize'];
     $paddingX = $_GET['paddingX'];

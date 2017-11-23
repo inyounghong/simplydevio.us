@@ -176,6 +176,24 @@ angular.module('mainApp')
         return username.trim().toLowerCase();
     }
 
+    function insert(str, index, value) {
+        return str.substr(0, index) + value + str.substr(index);
+    }
+
+    // Escapes single quote
+    function replaceQuote(str) {
+        if (str == null) return;
+        var length = str.length;
+        for (var i = 0; i < length; i++) {
+            if (str[i] == "'" && (i == 0 || str[i-1] != "\\")) {
+                str = insert(str, i, '\\');
+                length++;
+                i++;
+            }
+        }
+        return str;
+    }
+
     // Generates an object of all image details to be passed in AJAX call
     function generateImageObject() {
         // Fix color and background fields if empty
@@ -186,6 +204,8 @@ angular.module('mainApp')
             $scope.imageData.background = "#000000";
         }
         var i = $scope.imageData;
+        i.messageCleaned1 = replaceQuote(i.message1)
+        i.messageCleaned2 = replaceQuote(i.message2)
         i.color = $scope.imageData.color;
         i.background = $scope.imageData.background;
         i.username = getUsername();
