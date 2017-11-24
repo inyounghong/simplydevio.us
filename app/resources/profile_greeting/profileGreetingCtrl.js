@@ -182,7 +182,7 @@ angular.module('mainApp')
 
     // Escapes single quote
     function replaceQuote(str) {
-        if (str == null) return;
+        if (str == null) return "";
         var length = str.length;
         for (var i = 0; i < length; i++) {
             if (str[i] == "'" && (i == 0 || str[i-1] != "\\")) {
