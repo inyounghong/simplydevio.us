@@ -184,3 +184,7 @@
 [02-Dec-2017 22:38:04 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
 [02-Dec-2017 22:38:06 UTC] PHP Notice:  Undefined index: messageCleaned1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 22
 [02-Dec-2017 22:38:06 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
+[06-Dec-2017 13:58:20 UTC] PHP Notice:  Undefined index: messageCleaned1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 22
+[06-Dec-2017 13:58:20 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
+[06-Dec-2017 13:58:22 UTC] PHP Notice:  Undefined index: messageCleaned1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 22
+[06-Dec-2017 13:58:22 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
