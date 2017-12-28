@@ -188,3 +188,15 @@
 [06-Dec-2017 13:58:20 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
 [06-Dec-2017 13:58:22 UTC] PHP Notice:  Undefined index: messageCleaned1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 22
 [06-Dec-2017 13:58:22 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
+[27-Dec-2017 20:42:48 UTC] PHP Notice:  Trying to get property of non-object in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 69
+[27-Dec-2017 20:42:48 UTC] PHP Notice:  Undefined offset: 1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 71
+[27-Dec-2017 20:42:48 UTC] PHP Notice:  Undefined offset: 5 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 72
+[27-Dec-2017 20:44:16 UTC] PHP Notice:  Trying to get property of non-object in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 69
+[27-Dec-2017 20:44:16 UTC] PHP Notice:  Undefined offset: 1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 71
+[27-Dec-2017 20:44:16 UTC] PHP Notice:  Undefined offset: 5 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 72
+[27-Dec-2017 20:44:34 UTC] PHP Notice:  Trying to get property of non-object in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 69
+[27-Dec-2017 20:44:34 UTC] PHP Notice:  Undefined offset: 1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 71
+[27-Dec-2017 20:44:34 UTC] PHP Notice:  Undefined offset: 5 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 72
+[27-Dec-2017 20:44:40 UTC] PHP Notice:  Trying to get property of non-object in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 69
+[27-Dec-2017 20:44:40 UTC] PHP Notice:  Undefined offset: 1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 71
+[27-Dec-2017 20:44:40 UTC] PHP Notice:  Undefined offset: 5 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 72
