@@ -95,3 +95,4 @@
 [27-Dec-2017 21:48:42 UTC] PHP Notice:  Trying to get property of non-object in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 69
 [27-Dec-2017 21:48:42 UTC] PHP Notice:  Undefined offset: 1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 71
 [27-Dec-2017 21:48:42 UTC] PHP Notice:  Undefined offset: 5 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 72
+[30-Dec-2017 22:57:36 UTC] PHP Parse error:  syntax error, unexpected 'rue' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 34
