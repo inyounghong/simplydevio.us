@@ -96,3 +96,46 @@
 [27-Dec-2017 21:48:42 UTC] PHP Notice:  Undefined offset: 1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 71
 [27-Dec-2017 21:48:42 UTC] PHP Notice:  Undefined offset: 5 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 72
 [30-Dec-2017 22:57:36 UTC] PHP Parse error:  syntax error, unexpected 'rue' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 34
+[01-Jan-2018 00:38:34 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:34 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:34 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:34 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:34 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:34 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:34 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:35 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:35 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:36 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:36 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:36 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:36 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:37 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:37 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:38 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:40 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:41 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:42 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:42 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:42 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:42 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:49 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:50 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:51 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:51 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:51 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:51 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:38:51 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:13 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:13 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:14 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:14 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:14 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:14 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:16 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:16 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:16 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:17 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:17 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:17 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:17 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[01-Jan-2018 00:44:17 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
