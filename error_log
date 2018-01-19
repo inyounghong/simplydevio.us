@@ -1,0 +1,3 @@
+[18-Jan-2018 18:00:24 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/ClassScraper.php on line 19
+[18-Jan-2018 18:05:12 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/ClassScraper.php on line 19
+[18-Jan-2018 18:10:28 UTC] PHP Fatal error:  Call to a member function find() on boolean in /home/inyounghong/public_html/ClassScraper.php on line 19
