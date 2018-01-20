@@ -18,7 +18,7 @@ function curl_get_contents($url) {
 $html = str_get_html(curl_get_contents("https://classes.cornell.edu/browse/roster/SP18/class/PE/1520"));
 $class_section = $html->find('.heavy-left', 0);
 if($class_section->find('.open-status-open', 0)) {
-    mail('ih235@cornell.edu', 'Archery Open', '');
+    mail('dmk254@cornell.edu', 'Archery class is open!', '');
 }
 
 
