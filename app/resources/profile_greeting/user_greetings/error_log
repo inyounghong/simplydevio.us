@@ -301,3 +301,6 @@
 [22-Jan-2018 20:55:50 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
 [22-Jan-2018 20:55:50 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
 [22-Jan-2018 20:55:50 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[25-Jan-2018 22:43:57 UTC] PHP Notice:  Trying to get property of non-object in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 69
+[25-Jan-2018 22:43:57 UTC] PHP Notice:  Undefined offset: 1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 71
+[25-Jan-2018 22:43:57 UTC] PHP Notice:  Undefined offset: 5 in /home/inyounghong/public_html/app/resources/profile_greeting/php/VisitorScraper.php on line 72
