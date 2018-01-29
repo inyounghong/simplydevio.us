@@ -204,3 +204,17 @@
 [19-Jan-2018 18:52:49 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
 [19-Jan-2018 18:52:52 UTC] PHP Notice:  Undefined index: messageCleaned1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 22
 [19-Jan-2018 18:52:52 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: generate in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 6
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: visitor in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 19
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: username in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 20
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: default in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 21
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: messageCleaned1 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 22
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: messageCleaned2 in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 23
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: font in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 24
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: fontSize in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 25
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: paddingX in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 26
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: paddingY in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 27
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: lineSpacing in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 28
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: transparent in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 29
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: color in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 33
+[28-Jan-2018 21:37:56 UTC] PHP Notice:  Undefined index: background in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 34
