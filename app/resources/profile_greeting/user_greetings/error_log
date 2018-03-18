@@ -441,3 +441,13 @@
 [01-Mar-2018 22:05:28 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
 [01-Mar-2018 22:05:29 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
 [03-Mar-2018 09:16:58 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 9
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 33
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagealphablending() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 34
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagesavealpha() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 35
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 36
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagefill() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 37
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagettftext() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 39
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagettftext() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 40
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 41
+[17-Mar-2018 20:25:14 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 42
