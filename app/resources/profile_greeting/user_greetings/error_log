@@ -597,3 +597,7 @@
 [04-Jun-2018 13:07:38 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
 [04-Jun-2018 13:07:38 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
 [04-Jun-2018 13:07:38 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[09-Jun-2018 19:12:22 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 17
+[10-Jun-2018 00:55:37 UTC] PHP Parse error:  syntax error, unexpected '2' (T_LNUMBER) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 13
+[10-Jun-2018 03:21:37 UTC] PHP Parse error:  syntax error, unexpected '$new_message2' (T_VARIABLE) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
+[10-Jun-2018 03:21:43 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 9
