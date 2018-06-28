@@ -247,3 +247,4 @@
 [03-May-2018 11:35:06 UTC] PHP Notice:  Undefined index: transparent in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 29
 [03-May-2018 11:35:06 UTC] PHP Notice:  Undefined index: color in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 33
 [03-May-2018 11:35:06 UTC] PHP Notice:  Undefined index: background in /home/inyounghong/public_html/app/resources/profile_greeting/php/createImage.php on line 34
+[27-Jun-2018 21:41:34 UTC] PHP Notice:  Undefined index: password in /home/inyounghong/public_html/app/resources/profile_greeting/php/checkGreetingPassword.php on line 3
