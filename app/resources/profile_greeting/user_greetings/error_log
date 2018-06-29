@@ -618,3 +618,4 @@
 [27-Jun-2018 21:21:15 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
 [27-Jun-2018 21:21:18 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
 [27-Jun-2018 21:21:19 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 38
+[28-Jun-2018 22:04:10 UTC] PHP Parse error:  syntax error, unexpected 'visitor' (T_STRING) in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 7
