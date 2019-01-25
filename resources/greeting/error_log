@@ -273,3 +273,11 @@
 [30-Dec-2018 05:04:21 UTC] PHP Warning:  imagettftext() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 30
 [30-Dec-2018 05:04:21 UTC] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 31
 [30-Dec-2018 05:04:21 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 32
+[24-Jan-2019 15:28:05 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 25
+[24-Jan-2019 15:28:05 UTC] PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 26
+[24-Jan-2019 15:28:05 UTC] PHP Warning:  imagefill() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 27
+[24-Jan-2019 15:28:05 UTC] PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 28
+[24-Jan-2019 15:28:05 UTC] PHP Warning:  imagettftext() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 29
+[24-Jan-2019 15:28:05 UTC] PHP Warning:  imagettftext() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 30
+[24-Jan-2019 15:28:05 UTC] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 31
+[24-Jan-2019 15:28:05 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/resources/greeting/neiio62.php on line 32
