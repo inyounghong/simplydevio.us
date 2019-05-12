@@ -750,3 +750,6 @@
 [29-Aug-2018 10:58:43 UTC] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 41
 [29-Aug-2018 10:58:43 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 42
 [10-Feb-2019 15:56:05 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 9
+[11-May-2019 22:02:14 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 36
+[11-May-2019 22:02:14 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 36
+[11-May-2019 22:02:14 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/inyounghong/public_html/app/resources/profile_greeting/user_greetings/display.php on line 36
